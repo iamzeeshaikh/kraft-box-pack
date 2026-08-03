@@ -497,6 +497,11 @@ def main() -> None:
             "seoDescription": decode(m.get("_yoast_wpseo_metadesc")),
             "focusKeyword": decode(m.get("_yoast_wpseo_focuskw")),
             "primaryCategory": m.get("_yoast_wpseo_primary_product_cat", ""),
+            # The page-view counter the old site's Elementor addon kept. It is
+            # the only real demand signal in the exports — WooCommerce's
+            # "featured" flag is unset on every product and total_sales is
+            # populated for just ten — so it is what "most popular" means here.
+            "views": int(m.get("_eael_post_view_count", "0") or 0),
         }
 
     # A description may spell a product link with the display name's casing;

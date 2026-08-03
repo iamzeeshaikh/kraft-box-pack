@@ -5,7 +5,7 @@ import FeatureStrip from '../components/home/FeatureStrip.astro';
 import ProductGrid from '../components/ProductGrid.astro';
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import { products, pages } from '../data/content';
+import { products, popular, pages } from '../data/content';
 import * as schema from '../lib/schema';
 
 import brownKraft from '../assets/site/brown-kraft-packaging.jpg';
@@ -37,17 +37,22 @@ const description =
   'that protect your products and care for the environment.';
 
 /**
- * The old home page linked to every one of the 158 products. That is kept: the
- * grid below carries the same links, so no product loses the internal link it
- * had, and the cards outside the first row load lazily.
+ * The old home page listed all 158 products. It now shows the twenty most
+ * viewed, at the owner's request, with a link through to the full catalogue.
+ *
+ * Every product still has its own page and is still linked from `/products/`
+ * and from its category, so nothing becomes unreachable — but the 138 products
+ * no longer linked from the home page do lose one inbound internal link each.
+ * That trade is recorded in INTERNAL_LINK_PRESERVATION_REPORT.md.
  */
+const featured = popular(20);
 const pageSchema = [
   schema.webPage('/', title, description),
   ...schema.collectionPage(
     '/',
-    'Custom kraft boxes',
+    'Most requested custom kraft boxes',
     description,
-    products.map((p) => ({ name: p.name, url: p.url })),
+    featured.map((p) => ({ name: p.name, url: p.url })),
   ),
 ];
 ---
@@ -96,9 +101,15 @@ const pageSchema = [
     <div class="wrap">
       <div class="section__head">
         <h2 id="all-heading">Browse Our High-Quality Custom Kraft Boxes</h2>
-        <p>All {products.length} styles we manufacture, made to your dimensions and artwork.</p>
+        <p>
+          Our twenty most-requested styles. All {products.length} are made to your
+          own dimensions and artwork.
+        </p>
       </div>
-      <ProductGrid products={products} />
+      <ProductGrid products={featured} />
+      <p class="all-link">
+        <a href="/products/" class="btn btn--kraft">View all {products.length} kraft boxes</a>
+      </p>
     </div>
   </section>
 
@@ -205,26 +216,18 @@ const pageSchema = [
     padding-inline: 2rem;
   }
 
-  /* The migrated home copy is long; two columns keep the measure readable. */
-  .home-prose {
-    max-width: 100%;
+  .all-link {
+    display: flex;
+    justify-content: center;
+    margin: clamp(1.5rem, 1.2rem + 1vw, 2.5rem) 0 0;
   }
 
-  @media (min-width: 1000px) {
-    .home-prose {
-      column-count: 2;
-      column-gap: 3rem;
-    }
-
-    .home-prose :global(h2),
-    .home-prose :global(h3) {
-      break-after: avoid;
-    }
-
-    .home-prose :global(p),
-    .home-prose :global(ul),
-    .home-prose :global(ol) {
-      break-inside: avoid;
-    }
+  /* Single column, as the live site sets it. The page container is wide so the
+     hero heading fits on one line, but running body copy the full width of that
+     container gives a 200-character measure that is unreadable, so the prose
+     keeps its own limit. */
+  .home-prose {
+    max-width: 78ch;
+    margin-inline: auto;
   }
 </style>

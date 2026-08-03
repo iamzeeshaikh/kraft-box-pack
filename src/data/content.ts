@@ -49,6 +49,8 @@ interface RawProduct {
   focusKeyword: string;
   primaryCategory: string;
   words: number;
+  /** Page views recorded by the old site, the only demand signal in the export. */
+  views: number;
 }
 
 export interface Product extends RawProduct {
@@ -166,6 +168,16 @@ export function productsIn(slug: string): Product[] {
   }
   return products.filter((p) => p.categories.some((c) => descendants.has(c)));
 }
+
+/**
+ * The most-viewed products, for the homepage.
+ *
+ * Ranked by the page-view counter the old site kept for every product. That is
+ * the only real measure of demand in the exports: WooCommerce's "featured"
+ * flag is unset on all 158, and `total_sales` is populated for only ten.
+ */
+export const popular = (limit = 20): Product[] =>
+  [...products].sort((a, b) => b.views - a.views || a.name.localeCompare(b.name)).slice(0, limit);
 
 /** Top-level categories, for the homepage and footer. */
 export const topCategories = categories.filter((c) => !c.parent);
