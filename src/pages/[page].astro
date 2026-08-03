@@ -1,0 +1,53 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { pages } from '../data/content';
+
+const META: Record<string, { title: string; description: string }> = {
+  'about-us': {
+    title: 'About Kraft Box Pack | Custom Kraft Packaging Manufacturer',
+    description:
+      'Kraft Box Pack manufactures custom kraft packaging for retail, food, gifting and ' +
+      'industrial use, with free design assistance and wholesale pricing.',
+  },
+  'privacy-policy': {
+    title: 'Privacy Policy | Kraft Box Pack',
+    description:
+      'How Kraft Box Pack collects, uses and protects the personal information you submit ' +
+      'through this website.',
+  },
+  'terms-conditions': {
+    title: 'Terms & Conditions | Kraft Box Pack',
+    description:
+      'The terms that apply to orders, artwork, production and delivery of custom kraft ' +
+      'packaging from Kraft Box Pack.',
+  },
+  refund_returns: {
+    title: 'Refund and Returns Policy | Kraft Box Pack',
+    description:
+      'Kraft Box Pack refund and returns policy for custom-printed kraft packaging orders.',
+  },
+};
+
+/**
+ * The migrated WordPress pages that are pure prose: the policies and About.
+ * Home, products and contact are built by hand because they need components
+ * the exported markup cannot express. Declared inside `getStaticPaths` because
+ * that function is hoisted and cannot see module-scope consts.
+ */
+export function getStaticPaths() {
+  const PROSE = ['about-us', 'privacy-policy', 'terms-conditions', 'refund_returns'];
+  return pages
+    .filter((p) => PROSE.includes(p.slug))
+    .map((page) => ({ params: { page: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const meta = META[page.slug];
+---
+<PageLayout
+  title={page.seoTitle || meta?.title || `${page.title} | Kraft Box Pack`}
+  description={page.seoDescription || meta?.description || ''}
+  path={page.url}
+  heading={page.title}
+  html={page.html}
+/>

@@ -1,0 +1,42 @@
+---
+import { SITE_URL, SITE_NAME } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  /** Set where a page must not be indexed (thank-you, search results). */
+  noindex?: boolean;
+  /** Overrides the self-referencing canonical, for the duplicate category. */
+  canonical?: string;
+  image?: string;
+}
+
+const { title, description, path, noindex = false, canonical, image } = Astro.props;
+const url = new URL(path, SITE_URL).href;
+const canonicalUrl = canonical ? new URL(canonical, SITE_URL).href : url;
+const ogImage = image ? new URL(image, SITE_URL).href : undefined;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+{
+  noindex ? (
+    <meta name="robots" content="noindex, follow" />
+  ) : (
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  )
+}
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}

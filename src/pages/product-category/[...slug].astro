@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ProductGrid from '../../components/ProductGrid.astro';
+import QuoteBand from '../../components/QuoteBand.astro';
+import { categories, productsIn } from '../../data/content';
+import * as schema from '../../lib/schema';
+
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    // `url` is `/product-category/a/b/`, and the rest parameter wants `a/b`.
+    params: { slug: category.url.replace('/product-category/', '').replace(/\/$/, '') },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props;
+const items = productsIn(category.slug);
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Products', url: '/products/' },
+  ...(category.parentRef ? [{ name: category.parentRef.name, url: category.parentRef.url }] : []),
+  { name: category.name, url: category.url },
+];
+
+/**
+ * WordPress published two categories both named "Kraft Cosmetic Boxes" — one
+ * top-level, one nested under Kraft Packaging Boxes with a misspelt slug. Both
+ * URLs are live and linked to, so both are kept; the misspelt one points its
+ * canonical at the correctly-spelled category so the pair is not competing.
+ */
+const DUPLICATE_OF: Record<string, string> = {
+  'karft-cosmetic-boxes': '/product-category/kraft-cosmetic-boxes/',
+};
+const canonical = DUPLICATE_OF[category.slug];
+
+const title =
+  `${category.name} | Custom Wholesale ${category.name.includes('Boxes') ? 'Packaging' : 'Boxes'}`;
+---
+
+<BaseLayout
+  title={title}
+  description={category.metaDescription}
+  path={category.url}
+  canonical={canonical}
+  schema={[...schema.categoryNode(category), schema.breadcrumbs(category.url, crumbs)]}
+>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <div class="wrap cat">
+    <h1>{category.name}</h1>
+    {category.description ? (
+      <div class="prose cat__intro" set:html={category.description} />
+    ) : (
+      <p class="cat__intro">
+        {items.length} custom {category.name.toLowerCase()} made to your dimensions,
+        with free design assistance and an 8-10 business day turnaround.
+      </p>
+    )}
+
+    {category.children.length > 0 && (
+      <nav class="cat__children" aria-label="Subcategories">
+        <h2>Browse by type</h2>
+        <ul role="list">
+          {category.children.map((c) => <li><a href={c.url} class="btn btn--ghost">{c.name}</a></li>)}
+        </ul>
+      </nav>
+    )}
+  </div>
+
+  <section class="section" aria-labelledby="cat-products">
+    <div class="wrap">
+      <h2 id="cat-products" class="visually-hidden">
+        {items.length} products in {category.name}
+      </h2>
+      <ProductGrid products={items} />
+    </div>
+  </section>
+
+  <QuoteBand
+    heading={`Need a quote for ${category.name.toLowerCase()}?`}
+    body="Send your dimensions, quantity and artwork and we will price it for you."
+  />
+</BaseLayout>
+
+<style>
+  .cat { padding-block: clamp(1.5rem, 1.2rem + 1.4vw, 2.5rem) 0; }
+  .cat h1 { margin-bottom: 0.4em; }
+  .cat__intro { color: var(--ink-soft); max-width: 72ch; }
+
+  .cat__children { margin-top: 1.5rem; }
+  .cat__children h2 { font-size: var(--step-1); }
+  .cat__children ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cat__children li { margin: 0; }
+</style>

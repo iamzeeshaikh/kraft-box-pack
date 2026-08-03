@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import { resolveAll } from '../../lib/images';
+import type { ProductImage } from '../../data/content';
+
+interface Props {
+  images: ProductImage[];
+  name: string;
+}
+
+const { images, name } = Astro.props;
+const resolved = resolveAll(images);
+const [main, ...rest] = resolved;
+---
+
+{
+  main && (
+    <div class="gallery" data-gallery>
+      <div class="gallery__stage">
+        <Image
+          src={main.image}
+          alt={main.alt}
+          widths={[480, 900]}
+          sizes="(min-width: 900px) 460px, 92vw"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          id="gallery-main"
+          class="gallery__img"
+        />
+      </div>
+
+      {rest.length > 0 && (
+        <ul class="gallery__thumbs" role="list">
+          {resolved.map((img, i) => (
+            <li>
+              <button
+                type="button"
+                class:list={['thumb', i === 0 && 'is-active']}
+                aria-pressed={i === 0 ? 'true' : 'false'}
+                data-full={img.image.src}
+                data-alt={img.alt}
+              >
+                <Image
+                  src={img.image}
+                  alt=""
+                  widths={[120]}
+                  loading="eager"
+                  decoding="async"
+                />
+                <span class="visually-hidden">
+                  Show image {i + 1} of {resolved.length} for {name}
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+
+<style>
+  .gallery__stage {
+    aspect-ratio: 1;
+    background: var(--surface-alt);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery__thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0.65rem 0 0;
+    padding: 0;
+  }
+
+  .gallery__thumbs li {
+    margin: 0;
+  }
+
+  .thumb {
+    display: block;
+    width: 100%;
+    padding: 0;
+    aspect-ratio: 1;
+    background: var(--surface-alt);
+    border: 2px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .thumb :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .thumb:hover {
+    border-color: var(--kraft-light);
+  }
+
+  .thumb.is-active {
+    border-color: var(--kraft);
+  }
+</style>
+
+<script>
+  import { wireGallery } from '../../scripts/gallery';
+  wireGallery();
+</script>

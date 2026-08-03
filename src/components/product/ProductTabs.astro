@@ -1,0 +1,109 @@
+---
+import SpecTable from './SpecTable.astro';
+import FaqAccordion from './FaqAccordion.astro';
+import type { Product } from '../../data/content';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+
+/**
+ * Only offer a tab that has something behind it. Every product currently has
+ * all three, but a future import with no specifications should drop the tab
+ * rather than render an empty panel.
+ */
+const tabs = [
+  { id: 'description', label: 'Description', show: Boolean(product.description) },
+  { id: 'specifications', label: 'Specifications', show: product.specs.rows.length > 0 },
+  { id: 'faqs', label: 'FAQs', show: product.faqs.length > 0 },
+].filter((t) => t.show);
+---
+
+<div class="tabs" data-tabs>
+  <div class="tabs__list" role="tablist" aria-label="Product information">
+    {
+      tabs.map((tab, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`tab-${tab.id}`}
+          aria-controls={`panel-${tab.id}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+          class="tabs__tab"
+        >
+          {tab.label}
+        </button>
+      ))
+    }
+  </div>
+
+  {
+    tabs.map((tab, i) => (
+      <section
+        role="tabpanel"
+        id={`panel-${tab.id}`}
+        aria-labelledby={`tab-${tab.id}`}
+        tabindex="0"
+        hidden={i !== 0}
+        class="tabs__panel"
+      >
+        {tab.id === 'description' && (
+          <div class="prose" set:html={product.description} />
+        )}
+        {tab.id === 'specifications' && <SpecTable specs={product.specs} name={product.name} />}
+        {tab.id === 'faqs' && <FaqAccordion faqs={product.faqs} />}
+      </section>
+    ))
+  }
+</div>
+
+<style>
+  .tabs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 1.75rem;
+  }
+
+  .tabs__tab {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    padding: 0.7rem 1.1rem;
+    min-height: 44px;
+    font: inherit;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .tabs__tab:hover {
+    color: var(--kraft-dark);
+  }
+
+  .tabs__tab[aria-selected='true'] {
+    color: var(--kraft-dark);
+    border-bottom-color: var(--kraft);
+  }
+
+  .tabs__panel {
+    /* Focusable for keyboard users arriving from the tab strip; no ring needed
+       until they actually tab into it. */
+    outline: none;
+  }
+
+  .tabs__panel .prose {
+    max-width: 78ch;
+  }
+</style>
+
+<script>
+  import { wireTabs } from '../../scripts/tabs';
+  wireTabs();
+</script>

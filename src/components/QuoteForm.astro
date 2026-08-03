@@ -1,0 +1,294 @@
+---
+/**
+ * The quote request form.
+ *
+ * One component covers every placement: the hero panel, the product sidebar,
+ * the contact page and the dark band above the footer. `compact` switches to
+ * the two-column dark styling the old footer used; `product` pre-fills and
+ * locks the product field so the enquiry arrives attributed.
+ */
+interface Props {
+  id: string;
+  compact?: boolean;
+  product?: string;
+  heading?: string;
+  intro?: string;
+}
+
+const { id, compact = false, product, heading, intro } = Astro.props;
+const field = (name: string) => `${id}-${name}`;
+---
+
+<form
+  class:list={['qf', compact && 'qf--compact']}
+  id={id}
+  method="post"
+  action="/api/quote/"
+  enctype="multipart/form-data"
+  novalidate
+  data-quote-form
+>
+  {heading && <h2 class="qf__heading">{heading}</h2>}
+  {intro && <p class="qf__intro">{intro}</p>}
+
+  <div class="qf__grid">
+    <div class="qf__field">
+      <label for={field('name')}>Name <span aria-hidden="true">*</span></label>
+      <input
+        type="text"
+        id={field('name')}
+        name="name"
+        autocomplete="name"
+        required
+        maxlength="120"
+      />
+    </div>
+
+    <div class="qf__field">
+      <label for={field('email')}>Email <span aria-hidden="true">*</span></label>
+      <input
+        type="email"
+        id={field('email')}
+        name="email"
+        autocomplete="email"
+        required
+        maxlength="180"
+      />
+    </div>
+
+    <div class="qf__field">
+      <label for={field('phone')}>Phone</label>
+      <input
+        type="tel"
+        id={field('phone')}
+        name="phone"
+        autocomplete="tel"
+        maxlength="40"
+      />
+    </div>
+
+    <div class="qf__field">
+      <label for={field('company')}>Company</label>
+      <input
+        type="text"
+        id={field('company')}
+        name="company"
+        autocomplete="organization"
+        maxlength="120"
+      />
+    </div>
+
+    <div class="qf__field qf__field--wide">
+      <label for={field('product')}>Product</label>
+      <input
+        type="text"
+        id={field('product')}
+        name="product"
+        value={product}
+        readonly={product ? true : undefined}
+        maxlength="160"
+      />
+    </div>
+
+    <div class="qf__field qf__field--wide">
+      <label for={field('message')}>
+        Your packaging requirements <span aria-hidden="true">*</span>
+      </label>
+      <textarea id={field('message')} name="message" rows={compact ? 3 : 4} required maxlength="4000"
+      ></textarea>
+    </div>
+
+    <div class="qf__field qf__field--wide">
+      <label for={field('file')}>Artwork or reference file <span class="qf__hint">(optional, JPG PNG PDF AI EPS ZIP, max 8&nbsp;MB)</span></label>
+      <input
+        type="file"
+        id={field('file')}
+        name="attachment"
+        accept=".jpg,.jpeg,.png,.pdf,.ai,.eps,.zip,image/jpeg,image/png,application/pdf,application/zip"
+      />
+    </div>
+  </div>
+
+  {/* Bots fill every field they can see; people never see this one. */}
+  <div class="qf__trap" aria-hidden="true">
+    <label for={field('website')}>Leave this field empty</label>
+    <input type="text" id={field('website')} name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <button type="submit" class:list={['btn', compact ? 'btn--primary' : 'btn--kraft', 'btn--block']}>
+    Submit
+  </button>
+
+  <p class="qf__status" role="status" aria-live="polite" data-quote-status></p>
+</form>
+
+<style>
+  .qf {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: clamp(1rem, 0.85rem + 0.7vw, 1.5rem);
+    box-shadow: var(--shadow);
+  }
+
+  .qf__heading {
+    font-size: var(--step-2);
+    margin-bottom: 0.35em;
+  }
+
+  .qf__intro {
+    color: var(--muted);
+    font-size: var(--step--1);
+    margin-bottom: 1rem;
+  }
+
+  .qf__grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  }
+
+  .qf__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+  }
+
+  .qf__field--wide {
+    grid-column: 1 / -1;
+  }
+
+  .qf label {
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .qf label span[aria-hidden] {
+    color: var(--danger);
+  }
+
+  .qf__hint {
+    font-weight: 400;
+    color: var(--muted);
+  }
+
+  .qf :is(input, textarea) {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.55rem 0.7rem;
+    font: inherit;
+    font-size: var(--step-0);
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid #c8c5c0;
+    border-radius: var(--radius);
+  }
+
+  .qf textarea {
+    resize: vertical;
+  }
+
+  .qf :is(input, textarea):focus-visible {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px var(--green-tint);
+    outline: none;
+  }
+
+  .qf input[readonly] {
+    background: var(--surface-alt);
+    color: var(--ink-soft);
+  }
+
+  .qf input[type='file'] {
+    padding: 0.45rem;
+    font-size: var(--step--1);
+  }
+
+  .qf [aria-invalid='true'] {
+    border-color: var(--danger);
+  }
+
+  .qf__error {
+    color: var(--danger);
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .qf button {
+    margin-top: 1rem;
+  }
+
+  .qf__trap {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .qf__status {
+    margin: 0.85rem 0 0;
+    font-size: var(--step--1);
+    font-weight: 600;
+    min-height: 1.2em;
+  }
+
+  .qf__status[data-state='ok'] {
+    color: var(--green-dark);
+  }
+
+  .qf__status[data-state='error'] {
+    color: var(--danger);
+  }
+
+  /* --- dark variant, as used above the footer ---------------------------- */
+  .qf--compact {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .qf--compact label {
+    color: #eae7e2;
+  }
+
+  /* The dark red used on white is only 2.08:1 against the dark panel. */
+  .qf--compact label span[aria-hidden] {
+    color: #ff9b93;
+  }
+
+  .qf--compact .qf__hint {
+    color: #b9b5af;
+  }
+
+  .qf--compact :is(input, textarea) {
+    background: #3a3a3a;
+    border-color: #4e4e4e;
+    color: #fff;
+  }
+
+  .qf--compact :is(input, textarea)::placeholder {
+    color: #b0aca6;
+  }
+
+  .qf--compact input[readonly] {
+    background: #333;
+    color: #d4d0cb;
+  }
+
+  .qf--compact .qf__status[data-state='ok'] {
+    color: #8fdc97;
+  }
+
+  .qf--compact .qf__status[data-state='error'] {
+    color: #ff9b93;
+  }
+</style>
+
+<script>
+  import { wireQuoteForms } from '../scripts/quote-form';
+  wireQuoteForms();
+</script>

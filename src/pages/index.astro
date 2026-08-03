@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import FeatureStrip from '../components/home/FeatureStrip.astro';
+import ProductGrid from '../components/ProductGrid.astro';
+import Icon from '../components/Icon.astro';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { products, topCategories, pages } from '../data/content';
+import { primary } from '../lib/images';
+import * as schema from '../lib/schema';
+
+const home = pages.find((p) => p.slug === 'home');
+
+/** Six shots for the hero collage, taken from products that have imagery. */
+const collage = products
+  .map((p) => ({ hero: primary(p.images), url: p.url }))
+  .filter((c): c is { hero: { image: ImageMetadata; alt: string }; url: string } =>
+    c.hero !== undefined)
+  .slice(0, 6);
+
+const title = 'Kraft Box Pack | Custom Kraft Boxes & Packaging, Wholesale';
+const description =
+  'Eco-friendly Kraft boxes at KraftBoxPack. Durable, sustainable packaging solutions ' +
+  'that protect your products and care for the environment.';
+
+/**
+ * The old home page linked to every one of the 158 products. That is kept: the
+ * grid below carries the same links, so no product loses the internal link it
+ * had, and the cards outside the first row load lazily.
+ */
+const pageSchema = [
+  schema.webPage('/', title, description),
+  ...schema.collectionPage(
+    '/',
+    'Custom kraft boxes',
+    description,
+    products.map((p) => ({ name: p.name, url: p.url })),
+  ),
+];
+---
+
+<BaseLayout title={title} description={description} path="/" schema={pageSchema}>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__form">
+        <QuoteForm
+          id="hero-quote"
+          heading="Get A Quick Quote"
+          intro="Tell us what you need and we will price it within one business day."
+        />
+      </div>
+
+      <div class="hero__body">
+        <h1>Eco-Friendly Kraft Boxes for Every Packaging Need</h1>
+        <p class="hero__lead">
+          Choose Kraft, choose green — a step towards sustainability for your packaging needs.
+        </p>
+
+        <ul class="hero__collage" role="list">
+          {
+            collage.map((c, i) => (
+              <li>
+                <a href={c.url}>
+                  <Image
+                    src={c.hero.image}
+                    alt={c.hero.alt}
+                    widths={[220, 420]}
+                    sizes="(min-width: 900px) 220px, 45vw"
+                    loading={i < 3 ? 'eager' : 'lazy'}
+                    fetchpriority={i === 0 ? 'high' : 'auto'}
+                    decoding="async"
+                  />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+
+        <p class="hero__actions">
+          <a href="/get-a-quote/" class="btn btn--primary">Get A Free Quote</a>
+          <a href="/products/" class="btn btn--ghost">Browse all products</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <FeatureStrip />
+
+  <section class="section section--alt" aria-labelledby="cats-heading">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="cats-heading">Shop kraft packaging by category</h2>
+        <p>
+          {topCategories.length} ranges covering food, retail, gifting, cosmetics,
+          pharma and industrial use.
+        </p>
+      </div>
+      <ul class="cats" role="list">
+        {
+          topCategories.map((c) => (
+            <li>
+              <a href={c.url}>
+                <Icon name="check" size={18} />
+                <span>{c.name}</span>
+                <small>{c.items.length} products</small>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="all-heading">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="all-heading">Browse Our High-Quality Custom Kraft Boxes</h2>
+        <p>All {products.length} styles we manufacture, made to your dimensions and artwork.</p>
+      </div>
+      <ProductGrid products={products} />
+    </div>
+  </section>
+
+  {
+    home?.html && (
+      <section class="section section--alt" aria-labelledby="about-heading">
+        <div class="wrap">
+          <h2 id="about-heading" class="visually-hidden">About our kraft packaging</h2>
+          <div class="prose home-prose" set:html={home.html} />
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .hero {
+    background: linear-gradient(180deg, var(--kraft-tint), var(--surface));
+    padding-block: clamp(1.5rem, 1.2rem + 1.6vw, 3rem);
+  }
+
+  .hero__inner {
+    display: grid;
+    gap: clamp(1.5rem, 1.2rem + 1.6vw, 2.5rem);
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  @media (min-width: 900px) {
+    .hero__inner {
+      grid-template-columns: minmax(300px, 340px) 1fr;
+    }
+  }
+
+  .hero__body h1 {
+    color: var(--kraft-dark);
+    margin-bottom: 0.3em;
+  }
+
+  .hero__lead {
+    font-size: var(--step-1);
+    color: var(--ink-soft);
+    max-width: 52ch;
+  }
+
+  .hero__collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+    gap: 0.75rem;
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+  }
+
+  .hero__collage li {
+    margin: 0;
+  }
+
+  .hero__collage a {
+    display: block;
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+
+  .hero__collage :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s;
+  }
+
+  .hero__collage a:hover :global(img) {
+    transform: scale(1.05);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+  }
+
+  .cats {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cats li {
+    margin: 0;
+  }
+
+  .cats a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 100%;
+    padding: 0.85rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .cats a:hover {
+    border-color: var(--kraft);
+    background: var(--kraft-tint);
+    color: var(--kraft-dark);
+  }
+
+  .cats svg {
+    color: var(--green);
+    flex: none;
+  }
+
+  .cats small {
+    margin-left: auto;
+    color: var(--muted);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  /* The migrated home copy is long; two columns keep the measure readable. */
+  .home-prose {
+    max-width: 100%;
+  }
+
+  @media (min-width: 1000px) {
+    .home-prose {
+      column-count: 2;
+      column-gap: 3rem;
+    }
+
+    .home-prose :global(h2),
+    .home-prose :global(h3) {
+      break-after: avoid;
+    }
+
+    .home-prose :global(p),
+    .home-prose :global(ul),
+    .home-prose :global(ol) {
+      break-inside: avoid;
+    }
+  }
+</style>

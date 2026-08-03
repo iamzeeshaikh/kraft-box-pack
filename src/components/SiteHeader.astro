@@ -1,0 +1,253 @@
+---
+import { NAV, CONTACT, PROMO, SITE_NAME } from '../data/site';
+import Icon from './Icon.astro';
+
+const path = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href);
+---
+
+<div class="utility">
+  <div class="wrap utility__inner">
+    <p class="utility__contact">
+      <a href={`tel:${CONTACT.phone}`}><Icon name="phone" size={16} />{CONTACT.phoneDisplay}</a>
+      <a href={`mailto:${CONTACT.email}`}><Icon name="mail" size={16} />{CONTACT.email}</a>
+    </p>
+    <p class="utility__promo">{PROMO}</p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a href="/" class="logo" aria-label={`${SITE_NAME} home`}>
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path d="M16 3 29 9v14l-13 6L3 23V9z" /><path d="M3 9l13 6 13-6M16 15v14" />
+        </svg>
+      </span>
+      <span class="logo__text">Kraft Box<br />Pack</span>
+    </a>
+
+    <button
+      type="button"
+      class="burger"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      data-menu-toggle
+    >
+      <span class="burger__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Primary" data-menu>
+      <ul class="nav__list">
+        {
+          NAV.map((item) => (
+            <li>
+              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+        <li class="nav__cta">
+          <a href="/get-a-quote/" class="btn btn--primary">Get a Quote</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .utility {
+    background: var(--green);
+    color: #fff;
+    font-size: var(--step--1);
+  }
+
+  .utility__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.25rem;
+    padding-block: 0.4rem;
+  }
+
+  .utility p {
+    margin: 0;
+  }
+
+  .utility__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+  }
+
+  .utility__contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #fff;
+    text-decoration: none;
+    /* 44px tall on touch, without stretching the bar on the desktop layout. */
+    padding-block: 0.3rem;
+  }
+
+  .utility__contact a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .utility__promo {
+    background: var(--surface-dark);
+    color: #fff;
+    font-weight: 700;
+    padding: 0.25rem 0.9rem;
+    border-radius: 999px;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 0.65rem;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--kraft-dark);
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.05;
+    margin-right: auto;
+  }
+
+  .logo__mark {
+    color: var(--kraft);
+    flex: none;
+  }
+
+  .burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    /* Full 44px target: the old site collapsed this to a 16px tap area. */
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .burger__bars {
+    display: grid;
+    gap: 4px;
+  }
+
+  .burger__bars span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav__list li {
+    margin: 0;
+  }
+
+  .nav__list a:not(.btn) {
+    display: block;
+    padding: 0.55rem 0.15rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: var(--step--1);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav__list a:not(.btn):hover,
+  .nav__list a[aria-current='page'] {
+    color: var(--kraft-dark);
+    border-bottom-color: var(--kraft);
+  }
+
+  @media (max-width: 1040px) {
+    .burger {
+      display: inline-flex;
+    }
+
+    .nav {
+      position: absolute;
+      inset: 100% 0 auto;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow-lg);
+      padding: 0.5rem 1rem 1rem;
+      /* The old site left the closed menu sitting over the header, swallowing
+         clicks on the logo. Hidden means hidden, on both axes. */
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+    }
+
+    .nav[data-open='true'] {
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+      transform: none;
+    }
+
+    .nav__list {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .nav__list li + li {
+      border-top: 1px solid var(--line);
+    }
+
+    .nav__list a:not(.btn) {
+      padding: 0.85rem 0.25rem;
+    }
+
+    .nav__cta {
+      margin-top: 0.75rem;
+      border-top: 0 !important;
+    }
+  }
+</style>
+
+<script>
+  import { wireMenu } from '../scripts/menu';
+  wireMenu();
+</script>

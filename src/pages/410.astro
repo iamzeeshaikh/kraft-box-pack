@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { topCategories } from '../data/content';
+---
+<BaseLayout
+  title="Page removed | Kraft Box Pack"
+  description="This address was created without authorisation on the previous version of this site and has been permanently removed."
+  path="/410/"
+  noindex
+>
+  <div class="wrap section gone">
+    <h1>This page has been removed</h1>
+    <p>
+      This address was created without authorisation on the previous version of this
+      website and has been permanently removed. It was never part of Kraft Box Pack.
+    </p>
+    <p>What you may be looking for:</p>
+    <ul role="list">
+      <li><a href="/">Kraft Box Pack home</a></li>
+      <li><a href="/products/">All custom kraft boxes</a></li>
+      {topCategories.slice(0, 6).map((c) => <li><a href={c.url}>{c.name}</a></li>)}
+      <li><a href="/contact-us/">Contact us</a></li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .gone { max-width: 68ch; }
+</style>

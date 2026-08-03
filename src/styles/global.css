@@ -1,0 +1,324 @@
+/*
+ * Design tokens and base styles.
+ *
+ * The palette is sampled from the old site: the green utility bar and call-to-
+ * action buttons, the kraft-brown footer and logo, and the near-black used for
+ * buttons and body copy. Where a sampled colour failed WCAG contrast it was
+ * darkened and the original is recorded next to it, because the point of the
+ * migration is to keep the site recognisable, not to keep its accessibility
+ * defects.
+ */
+
+:root {
+  /* --- brand ------------------------------------------------------------ */
+  /* Utility bar and primary CTA. Sampled #65ad65 / #218a23; the lighter tone
+     is kept for large fills and the darker one carries text on white. */
+  --green: #1f7a2b;
+  --green-dark: #17601f;
+  --green-bright: #65ad65;
+  --green-tint: #eef7ee;
+
+  /* Kraft brown: the logo, the footer band, product-page buttons. */
+  --kraft: #96613a;
+  --kraft-dark: #6f4526;
+  --kraft-light: #c89b71;
+  --kraft-tint: #f7f1ea;
+
+  /* --- neutrals --------------------------------------------------------- */
+  --ink: #232323;
+  --ink-soft: #4a4a4a;
+  /* Sampled #767676 was 4.54:1 on white; this is the same hue at 5.7:1. */
+  --muted: #63676c;
+  --line: #e2e0dc;
+  --surface: #ffffff;
+  --surface-alt: #f6f4f1;
+  --surface-dark: #2e2e2e;
+
+  --amber: #f5a623;
+  --danger: #b3261e;
+
+  /* --- type ------------------------------------------------------------- */
+  --font: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+
+  --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.89rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.16vw, 1.03rem);
+  --step-1: clamp(1.12rem, 1.05rem + 0.32vw, 1.3rem);
+  --step-2: clamp(1.34rem, 1.2rem + 0.62vw, 1.7rem);
+  --step-3: clamp(1.6rem, 1.36rem + 1.05vw, 2.25rem);
+  --step-4: clamp(1.9rem, 1.5rem + 1.8vw, 3rem);
+
+  /* --- layout ----------------------------------------------------------- */
+  --wrap: 1220px;
+  --gap: clamp(1rem, 0.7rem + 1.4vw, 1.75rem);
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 1px 2px rgb(35 35 35 / 6%), 0 4px 14px rgb(35 35 35 / 7%);
+  --shadow-lg: 0 6px 28px rgb(35 35 35 / 12%);
+  --focus: 0 0 0 3px #fff, 0 0 0 6px var(--green);
+}
+
+/* --- reset ------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em;
+  line-height: 1.22;
+  font-weight: 700;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--step-4);
+}
+h2 {
+  font-size: var(--step-3);
+}
+h3 {
+  font-size: var(--step-2);
+}
+h4 {
+  font-size: var(--step-1);
+}
+
+p,
+ul,
+ol,
+table,
+blockquote {
+  margin: 0 0 1.15em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--green-dark);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--kraft-dark);
+}
+
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 4px;
+}
+
+ul,
+ol {
+  padding-left: 1.3em;
+}
+
+li + li {
+  margin-top: 0.35em;
+}
+
+/* --- layout helpers ---------------------------------------------------- */
+.wrap {
+  width: min(100% - 2rem, var(--wrap));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(2.25rem, 1.6rem + 2.6vw, 4rem);
+}
+
+.section--alt {
+  background: var(--surface-alt);
+}
+
+.section__head {
+  text-align: center;
+  max-width: 62ch;
+  margin: 0 auto clamp(1.5rem, 1.2rem + 1vw, 2.5rem);
+}
+
+.section__head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 100;
+  background: var(--green-dark);
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius);
+  transition: top 0.15s;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+  color: #fff;
+}
+
+/* --- buttons ----------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  /* 24px minimum target on every axis, per WCAG 2.2 target size. */
+  min-height: 44px;
+  padding: 0.62rem 1.35rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, transform 0.08s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.btn--kraft {
+  background: var(--kraft);
+  color: #fff;
+}
+
+.btn--kraft:hover {
+  background: var(--kraft-dark);
+  color: #fff;
+}
+
+.btn--dark {
+  background: var(--surface-dark);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--kraft);
+  background: var(--kraft-tint);
+  color: var(--kraft-dark);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* --- prose (migrated WordPress content) -------------------------------- */
+.prose {
+  max-width: 74ch;
+}
+
+.prose h2 {
+  font-size: var(--step-2);
+  margin-top: 1.8em;
+}
+
+.prose h3 {
+  font-size: var(--step-1);
+  margin-top: 1.5em;
+}
+
+.prose h2:first-child,
+.prose h3:first-child {
+  margin-top: 0;
+}
+
+.prose a {
+  font-weight: 600;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prose :is(th, td) {
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+
+/* --- tables that are wider than the screen ----------------------------- */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

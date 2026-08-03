@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Icon from '../components/Icon.astro';
+import { FEATURES } from '../data/site';
+import * as schema from '../lib/schema';
+
+const path = '/get-a-quote/';
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Get a Quote', url: path }];
+const title = 'Get a Free Quote | Custom Kraft Boxes | Kraft Box Pack';
+const description =
+  'Request a free quote for custom kraft packaging. Send your size, quantity and artwork ' +
+  'and we reply with wholesale pricing within one business day.';
+
+const steps = [
+  { title: 'Send your requirements', body: 'Box style, dimensions, quantity and any artwork you already have.' },
+  { title: 'We price it', body: 'You get wholesale pricing and a structural recommendation within one business day.' },
+  { title: 'Approve a proof', body: 'Free design assistance and a digital proof before anything goes to press.' },
+  { title: 'Production and delivery', body: 'Standard turnaround is 8-10 business days, with rush production available.' },
+];
+---
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  schema={[schema.webPage(path, title, description), schema.breadcrumbs(path, crumbs)]}
+>
+  <Breadcrumbs crumbs={crumbs} />
+  <div class="wrap quote section">
+    <div>
+      <h1>Get a free quote</h1>
+      <p class="quote__lead">
+        Tell us what you are packing and we will recommend a structure and price it.
+        There is no charge for design assistance or for a digital proof.
+      </p>
+
+      <ol class="steps">
+        {steps.map((s) => (
+          <li><h2>{s.title}</h2><p>{s.body}</p></li>
+        ))}
+      </ol>
+
+      <ul class="quote__points" role="list">
+        {FEATURES.map((f) => <li><Icon name="check" size={18} />{f.title}</li>)}
+      </ul>
+    </div>
+
+    <div>
+      <QuoteForm id="quote-page" heading="Request your quote" />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .quote { display: grid; gap: clamp(1.5rem, 1.2rem + 2vw, 3rem); align-items: start; }
+  @media (min-width: 880px) { .quote { grid-template-columns: 1fr minmax(320px, 460px); } }
+  .quote h1 { margin-bottom: 0.4em; }
+  .quote__lead { font-size: var(--step-1); color: var(--ink-soft); max-width: 56ch; }
+  .steps { counter-reset: step; list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 1.1rem; }
+  .steps li { margin: 0; padding-left: 3rem; position: relative; }
+  .steps li::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 2.1rem; height: 2.1rem; display: grid; place-items: center;
+    border-radius: 50%; background: var(--green-tint); color: var(--green-dark); font-weight: 700;
+  }
+  .steps h2 { font-size: var(--step-0); margin-bottom: 0.2em; }
+  .steps p { margin: 0; color: var(--muted); font-size: var(--step--1); }
+  .quote__points { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 0.5rem; font-weight: 600; font-size: var(--step--1); }
+  .quote__points li { display: flex; gap: 0.5rem; align-items: center; margin: 0; }
+  .quote__points svg { color: var(--green); flex: none; }
+</style>

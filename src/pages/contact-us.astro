@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Icon from '../components/Icon.astro';
+import { CONTACT, SOCIAL } from '../data/site';
+import { pages } from '../data/content';
+import * as schema from '../lib/schema';
+
+const page = pages.find((p) => p.slug === 'contact-us');
+const path = '/contact-us/';
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Contact Us', url: path }];
+const title = 'Contact Kraft Box Pack | Custom Packaging Enquiries';
+const description =
+  'Contact Kraft Box Pack for custom kraft packaging. Email info@kraftboxpack.com, ' +
+  'call +1-929-2141-874, or send your requirements through the form.';
+---
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  schema={[schema.webPage(path, title, description), schema.breadcrumbs(path, crumbs)]}
+>
+  <Breadcrumbs crumbs={crumbs} />
+  <div class="wrap contact section">
+    <div>
+      <h1>Contact us</h1>
+      {page?.html && <div class="prose" set:html={page.html} />}
+
+      <ul class="contact__list" role="list">
+        <li>
+          <Icon name="mail" size={20} />
+          <div><strong>Email</strong><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></div>
+        </li>
+        <li>
+          <Icon name="phone" size={20} />
+          <div><strong>Phone</strong><a href={`tel:${CONTACT.phone}`}>{CONTACT.phoneDisplay}</a></div>
+        </li>
+        <li>
+          <Icon name="pin" size={20} />
+          <div><strong>Address</strong><address>{CONTACT.address.display}</address></div>
+        </li>
+      </ul>
+
+      <ul class="contact__social" role="list">
+        {SOCIAL.map((s) => (
+          <li>
+            <a href={s.href} rel="noopener noreferrer nofollow" target="_blank" class="btn btn--ghost">
+              <Icon name={s.name.toLowerCase()} size={18} />{s.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <QuoteForm
+        id="contact-quote"
+        heading="Send us your requirements"
+        intro="Include size, quantity and artwork if you have it. We reply within one business day."
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact { display: grid; gap: clamp(1.5rem, 1.2rem + 2vw, 3rem); align-items: start; }
+  @media (min-width: 860px) { .contact { grid-template-columns: 1fr 1fr; } }
+  .contact h1 { margin-bottom: 0.5em; }
+  .contact__list { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 1rem; }
+  .contact__list li { display: flex; gap: 0.85rem; margin: 0; }
+  .contact__list svg { color: var(--green); flex: none; margin-top: 0.2em; }
+  .contact__list strong { display: block; }
+  .contact__list address { font-style: normal; color: var(--ink-soft); }
+  .contact__social { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; margin: 1.5rem 0 0; padding: 0; }
+  .contact__social li { margin: 0; }
+</style>

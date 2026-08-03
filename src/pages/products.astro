@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ProductGrid from '../components/ProductGrid.astro';
+import QuoteBand from '../components/QuoteBand.astro';
+import { products, categories, pages } from '../data/content';
+import * as schema from '../lib/schema';
+
+const page = pages.find((p) => p.slug === 'products');
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Products', url: '/products/' },
+];
+
+const title = 'All Custom Kraft Boxes | Wholesale Packaging | Kraft Box Pack';
+const description =
+  `Browse all ${products.length} custom kraft box styles across ${categories.length} ranges — ` +
+  'food, retail, gift, cosmetic, pharma and industrial packaging, made to your size.';
+---
+<BaseLayout
+  title={title}
+  description={description}
+  path="/products/"
+  schema={[
+    ...schema.collectionPage('/products/', 'All products', description,
+      products.map((p) => ({ name: p.name, url: p.url }))),
+    schema.breadcrumbs('/products/', crumbs),
+  ]}
+>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <div class="wrap intro">
+    <h1>All custom kraft boxes</h1>
+    <p class="intro__lead">
+      Every style we manufacture, made to your dimensions with free design assistance
+      and an 8-10 business day turnaround.
+    </p>
+
+    <nav class="jump" aria-label="Jump to category">
+      <h2 class="visually-hidden">Categories</h2>
+      <ul role="list">
+        {categories.map((c) => (
+          <li><a href={c.url} class="btn btn--ghost">{c.name} <span>{c.items.length}</span></a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+
+  <section class="section" aria-labelledby="all">
+    <div class="wrap">
+      <h2 id="all" class="visually-hidden">All {products.length} products</h2>
+      <ProductGrid products={products} />
+    </div>
+  </section>
+
+  {page?.html && (
+    <section class="section section--alt">
+      <div class="wrap"><div class="prose" set:html={page.html} /></div>
+    </section>
+  )}
+
+  <QuoteBand
+    heading="Not sure which style fits your product?"
+    body="Send us the dimensions and what you are packing — we will recommend a structure and price it."
+  />
+</BaseLayout>
+
+<style>
+  .intro { padding-block: clamp(1.5rem, 1.2rem + 1.4vw, 2.5rem) 0; }
+  .intro h1 { margin-bottom: 0.35em; }
+  .intro__lead { color: var(--ink-soft); max-width: 62ch; font-size: var(--step-1); }
+  .jump ul {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    list-style: none; margin: 1.25rem 0 0; padding: 0;
+  }
+  .jump li { margin: 0; }
+  .jump .btn { font-size: var(--step--1); min-height: 38px; padding: 0.4rem 0.85rem; }
+  .jump span {
+    background: var(--kraft-tint); color: var(--kraft-dark);
+    border-radius: 999px; padding: 0.05rem 0.45rem; font-size: 0.78em; font-weight: 700;
+  }
+</style>

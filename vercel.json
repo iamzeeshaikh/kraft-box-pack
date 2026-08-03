@@ -1,0 +1,120 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/cart",
+      "destination": "/get-a-quote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cart/",
+      "destination": "/get-a-quote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/checkout",
+      "destination": "/get-a-quote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/checkout/",
+      "destination": "/get-a-quote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/my-account",
+      "destination": "/contact-us/",
+      "statusCode": 301
+    },
+    {
+      "source": "/my-account/",
+      "destination": "/contact-us/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Custom-Gift-Boxes/",
+      "destination": "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Karft-Cosmetic-Boxes/",
+      "destination": "/product-category/kraft-packaging-boxes/karft-cosmetic-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Kraft-Packaging-Boxes/",
+      "destination": "/product-category/kraft-packaging-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Colored-Kraft-Boxes/",
+      "destination": "/product-category/colored-kraft-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Kraft-Wrapping-&-Accessories/",
+      "destination": "/product-category/kraft-wrapping-accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Kraft-Gift-&-Specialty-Boxes/",
+      "destination": "/product-category/kraft-gift-specialty-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shop",
+      "destination": "/products/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shop/",
+      "destination": "/products/",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

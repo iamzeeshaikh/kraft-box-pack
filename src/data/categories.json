@@ -1,0 +1,330 @@
+[
+ {
+  "slug": "colored-kraft-boxes",
+  "name": "Colored Kraft Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "black-kraft-boxes",
+   "brown-kraft-boxes",
+   "colored-kraft-paper",
+   "kraft-boxes-with-lid",
+   "kraft-minimalist-boxes",
+   "kraft-thermal-kraft-boxes"
+  ],
+  "url": "/product-category/colored-kraft-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "jewelry-accessories-boxes",
+  "name": "Jewelry & Accessories Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-bracelet-packaging-boxes",
+   "kraft-earring-packaging-boxes",
+   "kraft-jewelry-insert-boxes",
+   "kraft-ring-packaging-boxes",
+   "kraft-watch-packaging-boxes"
+  ],
+  "url": "/product-category/jewelry-accessories-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-apparel-boxes",
+  "name": "Kraft Apparel Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-apparel-packaging-boxes",
+   "kraft-belt-packaging-boxes",
+   "kraft-scarf-boxes",
+   "kraft-sock-packaging-boxes",
+   "kraft-t-shirt-boxes",
+   "kraft-underwear-packaging-boxes"
+  ],
+  "url": "/product-category/kraft-apparel-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-art-boxes",
+  "name": "Kraft Art Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-art-supply-packaging",
+   "kraft-brochure-packaging-boxes",
+   "kraft-calendar-boxes",
+   "kraft-cd-dvd-packaging",
+   "kraft-certificate-boxes",
+   "kraft-document-mailers",
+   "kraft-photo-frame-boxes"
+  ],
+  "url": "/product-category/kraft-art-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-cosmetic-boxes",
+  "name": "Kraft Cosmetic Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-beauty-kit-boxes",
+   "kraft-mascara-boxes"
+  ],
+  "url": "/product-category/kraft-cosmetic-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-display-packaging",
+  "name": "Kraft Display Packaging",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-hanging-display-boxes",
+   "kraft-pop-display-boxes",
+   "kraft-retail-display-trays",
+   "kraft-shelf-ready-packaging"
+  ],
+  "url": "/product-category/kraft-display-packaging/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-electronics-boxes",
+  "name": "Kraft Electronics Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-badge-packaging-boxes",
+   "kraft-keychain-packaging-boxes",
+   "kraft-notebook-packaging",
+   "kraft-pen-packaging-boxes",
+   "kraft-pencil-packaging-boxes",
+   "kraft-stationery-boxes"
+  ],
+  "url": "/product-category/kraft-electronics-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-food-packaging",
+  "name": "Kraft Food Packaging",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-brownie-packaging-boxes",
+   "kraft-chocolate-packaging-boxes",
+   "kraft-coffee-packaging-boxes",
+   "kraft-donut-packaging-boxes",
+   "kraft-egg-cartons",
+   "kraft-frozen-food-boxes",
+   "kraft-fruit-packaging-boxes",
+   "kraft-granola-bar-boxes",
+   "kraft-juice-bottle-carriers",
+   "kraft-macaron-packaging-boxes",
+   "kraft-meat-packaging-boxes",
+   "kraft-milk-bottle-carriers",
+   "kraft-muffin-packaging-boxes",
+   "kraft-noodle-packaging-boxes",
+   "kraft-pastry-boxes",
+   "kraft-popcorn-packaging-boxes",
+   "kraft-salad-boxes",
+   "kraft-sandwich-wedge-boxes",
+   "kraft-seafood-boxes",
+   "kraft-snack-packaging-boxes",
+   "kraft-sushi-packaging-boxes",
+   "kraft-tea-packaging-boxes",
+   "kraft-vegetable-packaging-boxes"
+  ],
+  "url": "/product-category/kraft-food-packaging/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-gift-specialty-boxes",
+  "name": "Kraft Gift & Specialty Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-box-with-window",
+   "kraft-candle-boxes",
+   "kraft-candy-boxes",
+   "kraft-cupcake-boxes",
+   "kraft-display-boxes",
+   "kraft-gift-boxes-with-lids",
+   "kraft-jewelry-boxes",
+   "kraft-necklace-box",
+   "kraft-paper-gift-boxes",
+   "kraft-pillow-boxes",
+   "kraft-round-boxes",
+   "large-kraft-gift-boxes",
+   "mini-kraft-boxes",
+   "small-kraft-boxes"
+  ],
+  "url": "/product-category/kraft-gift-specialty-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-industrial-packaging",
+  "name": "Kraft Industrial Packaging",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-bulk-shipping-crates",
+   "kraft-chemical-safe-boxes",
+   "kraft-eco-friendly-compostable-boxes",
+   "kraft-heavy-duty-storage-boxes",
+   "kraft-industrial-parts-boxes",
+   "kraft-insulated-cold-boxes",
+   "kraft-recycled-kraft-boxes"
+  ],
+  "url": "/product-category/kraft-industrial-packaging/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-luxury-packaging",
+  "name": "Kraft Luxury Packaging",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-cylindrical-boxes",
+   "kraft-hexagon-boxes",
+   "kraft-magnetic-closure-boxes",
+   "kraft-octagon-boxes",
+   "kraft-pyramid-boxes",
+   "kraft-rigid-boxes",
+   "kraft-triangle-boxes",
+   "kraft-tube-packaging"
+  ],
+  "url": "/product-category/kraft-luxury-packaging/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-packaging-boxes",
+  "name": "Kraft Packaging Boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "custom-kraft-bags",
+   "kraft-bakery-bags",
+   "kraft-bakery-boxes",
+   "kraft-cake-boxes",
+   "kraft-cardboard-boxes",
+   "kraft-cookie-boxes",
+   "kraft-corrugated-boxes",
+   "kraft-dispenser-boxes",
+   "kraft-drawer-boxes",
+   "kraft-favor-boxes",
+   "kraft-food-boxes",
+   "kraft-gable-boxes",
+   "kraft-mailer-boxes",
+   "kraft-paper-treat-bags",
+   "kraft-paperboard-boxes",
+   "kraft-pizza-boxes",
+   "kraft-shipping-boxes",
+   "kraft-shoe-boxes",
+   "kraft-storage-boxes",
+   "kraft-take-out-boxes",
+   "kraft-treat-boxes"
+  ],
+  "url": "/product-category/kraft-packaging-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-pharma-boxes",
+  "name": "Kraft Pharma boxes",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-first-aid-kit-boxes",
+   "kraft-medicine-packaging-boxes",
+   "kraft-ppe-packaging-boxes",
+   "kraft-supplement-boxes",
+   "kraft-syrup-packaging-boxes",
+   "kraft-vitamin-packaging-boxes"
+  ],
+  "url": "/product-category/kraft-pharma-boxes/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-toy-packaging",
+  "name": "Kraft Toy Packaging",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-baby-product-boxes",
+   "kraft-board-game-packaging-boxes",
+   "kraft-puzzle-packaging-boxes",
+   "kraft-toy-packaging-boxes"
+  ],
+  "url": "/product-category/kraft-toy-packaging/",
+  "parentName": ""
+ },
+ {
+  "slug": "kraft-wrapping-accessories",
+  "name": "Kraft Wrapping & Accessories",
+  "parent": "",
+  "description": "",
+  "products": [
+   "kraft-boxes-for-gifts",
+   "kraft-paper-boxes",
+   "kraft-paper-dispenser-boxes",
+   "kraft-paper-gift-wrapping",
+   "kraft-paper-packaging"
+  ],
+  "url": "/product-category/kraft-wrapping-accessories/",
+  "parentName": ""
+ },
+ {
+  "slug": "custom-gift-boxes",
+  "name": "Custom Gift Boxes",
+  "parent": "kraft-gift-specialty-boxes",
+  "description": "",
+  "products": [
+   "kraft-bouquet-boxes",
+   "kraft-candy-favor-boxes",
+   "kraft-drawer-gift-boxes",
+   "kraft-event-favor-boxes",
+   "kraft-flip-top-rigid-boxes",
+   "kraft-flower-boxes",
+   "kraft-gift-card-boxes",
+   "kraft-gift-hamper-boxes",
+   "kraft-giveaway-packaging-boxes",
+   "kraft-heart-shaped-boxes",
+   "kraft-influencer-boxes",
+   "kraft-invitation-boxes",
+   "kraft-lid-base-rigid-boxes",
+   "kraft-liquor-gift-boxes",
+   "kraft-luxury-magnet-boxes",
+   "kraft-marketing-kit-boxes",
+   "kraft-pillow-gift-boxes",
+   "kraft-pr-packaging-boxes",
+   "kraft-promotional-boxes",
+   "kraft-rectangular-gift-boxes",
+   "kraft-ribbon-closure-boxes",
+   "kraft-round-gift-containers",
+   "kraft-shoulder-boxes",
+   "kraft-square-gift-boxes",
+   "kraft-subscription-boxes"
+  ],
+  "url": "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "parentName": "Kraft Gift & Specialty Boxes"
+ },
+ {
+  "slug": "karft-cosmetic-boxes",
+  "name": "Kraft Cosmetic Boxes",
+  "parent": "kraft-packaging-boxes",
+  "description": "",
+  "products": [
+   "kraft-beard-oil-boxes",
+   "kraft-candle-sleeve-boxes",
+   "kraft-eyelash-packaging-boxes",
+   "kraft-lip-balm-packaging-boxes",
+   "kraft-makeup-palette-boxes",
+   "kraft-perfume-boxes",
+   "kraft-skincare-boxes",
+   "kraft-soap-sleeve-boxes",
+   "kraft-wax-melt-boxes"
+  ],
+  "url": "/product-category/kraft-packaging-boxes/karft-cosmetic-boxes/",
+  "parentName": "Kraft Packaging Boxes"
+ }
+]

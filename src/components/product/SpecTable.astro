@@ -1,0 +1,128 @@
+---
+import type { SpecTable } from '../../data/content';
+
+interface Props {
+  specs: SpecTable;
+  name: string;
+}
+
+const { specs, name } = Astro.props;
+
+/**
+ * The source table is six columns wide, and only the first two are a genuine
+ * attribute/value pair — the remaining four repeat generic option lists that do
+ * not describe the attribute in column one. Nothing is discarded: the summary
+ * list gives the pair that actually reads as a specification, and the full
+ * table follows underneath in a container that scrolls sideways, so every cell
+ * the old site published is still on the page.
+ */
+const hasExtraColumns = specs.headers.length > 2;
+---
+<div class="specs">
+  {specs.pairs.length > 0 && (
+    <>
+      <h3 class="specs__heading">Key specifications</h3>
+      <dl class="specs__list">
+        {specs.pairs.map((row) => (
+          <div class="specs__row">
+            <dt>{row.label}</dt>
+            <dd>{row.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </>
+  )}
+
+  {hasExtraColumns && (
+    <details class="specs__more">
+      <summary>Show the full options table</summary>
+      <p class="specs__note">
+        Material, finishing, add-on and application options published for {name}.
+        Scroll sideways to see every column.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <caption class="visually-hidden">Full specification options for {name}</caption>
+          <thead>
+            <tr>{specs.headers.map((h) => <th scope="col">{h}</th>)}</tr>
+          </thead>
+          <tbody>
+            {specs.rows.map((row) => (
+              <tr>
+                {row.map((cell, i) =>
+                  i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>,
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </details>
+  )}
+</div>
+
+<style>
+  .specs__heading { font-size: var(--step-1); margin-bottom: 0.8em; }
+
+  .specs__list {
+    margin: 0 0 1.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .specs__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    padding: 0.65rem 0.9rem;
+  }
+
+  @media (min-width: 560px) {
+    .specs__row { grid-template-columns: minmax(140px, 30%) 1fr; gap: 1rem; }
+  }
+
+  .specs__row:nth-child(odd) { background: var(--surface-alt); }
+
+  .specs__list dt { font-weight: 700; margin: 0; }
+  .specs__list dd { margin: 0; color: var(--ink-soft); }
+
+  .specs__more summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--kraft-dark);
+    padding: 0.6rem 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .specs__note { color: var(--muted); font-size: var(--step--1); }
+
+  .specs table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+
+  .specs :is(th, td) {
+    border-bottom: 1px solid var(--line);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+    min-width: 150px;
+  }
+
+  .specs thead th {
+    background: var(--kraft-tint);
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+  }
+
+  /* Pin the attribute column so a sideways scroll keeps its label in view. */
+  .specs tbody th {
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+    font-weight: 700;
+  }
+
+  .specs tbody tr:nth-child(even) :is(th, td) { background: var(--surface-alt); }
+</style>

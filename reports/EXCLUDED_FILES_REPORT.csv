@@ -1,0 +1,18 @@
+item,category,reason
+product #3092 (kraft-recycled-boxes),draft,Unpublished in WordPress; never had a public URL
+product #3094 (),draft,Unpublished in WordPress; never had a public URL
+product #3135 (),draft,Unpublished in WordPress; never had a public URL
+product #3164 (),draft,Unpublished in WordPress; never had a public URL
+product #3170 (),draft,Unpublished in WordPress; never had a public URL
+product #3253 (),draft,Unpublished in WordPress; never had a public URL
+product #3278 (),draft,Unpublished in WordPress; never had a public URL
+product #3279 (),draft,Unpublished in WordPress; never had a public URL
+product #3295 (),draft,Unpublished in WordPress; never had a public URL
+product #3312 (),draft,Unpublished in WordPress; never had a public URL
+product #3313 (),draft,Unpublished in WordPress; never had a public URL
+product #3319 (),draft,Unpublished in WordPress; never had a public URL
+product #3328 (),draft,Unpublished in WordPress; never had a public URL
+page /cart/,WooCommerce transactional page,"Cart, checkout and account pages have no role in a quote-led static site"
+page /checkout/,WooCommerce transactional page,"Cart, checkout and account pages have no role in a quote-led static site"
+page /my-account/,WooCommerce transactional page,"Cart, checkout and account pages have no role in a quote-led static site"
+/products/ hardcoded product list,stale content,29 links to burger-box products that 404 on the live site; superseded by the generated grid of all 158 real products

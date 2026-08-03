@@ -1,0 +1,70 @@
+---
+import type { Faq } from '../../data/content';
+
+interface Props {
+  faqs: Faq[];
+  heading?: string;
+}
+
+const { faqs, heading } = Astro.props;
+---
+{heading && <h2 class="faq__heading">{heading}</h2>}
+
+<div class="faq">
+  {faqs.map((faq, i) => (
+    <details class="faq__item" name="product-faq" open={i === 0}>
+      <summary>
+        <span class="faq__q">{faq.question}</span>
+        <span class="faq__icon" aria-hidden="true"></span>
+      </summary>
+      <div class="faq__a prose" set:html={faq.answer} />
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq__heading { font-size: var(--step-2); }
+
+  .faq {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .faq__item + .faq__item { border-top: 1px solid var(--line); }
+
+  .faq summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    min-height: 44px;
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+    background: var(--surface);
+  }
+
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary:hover { background: var(--kraft-tint); color: var(--kraft-dark); }
+
+  .faq__icon {
+    flex: none;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform 0.18s;
+  }
+
+  .faq__item[open] .faq__icon { transform: rotate(225deg) translate(-3px, -3px); }
+
+  .faq__a {
+    padding: 0 1rem 1rem;
+    max-width: 72ch;
+  }
+
+  .faq__a :global(p:last-child) { margin-bottom: 0; }
+</style>

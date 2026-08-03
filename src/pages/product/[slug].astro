@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import ProductGallery from '../../components/product/ProductGallery.astro';
+import ProductTabs from '../../components/product/ProductTabs.astro';
+import ProductGrid from '../../components/ProductGrid.astro';
+import Icon from '../../components/Icon.astro';
+import { products, relatedTo } from '../../data/content';
+import { resolveAll } from '../../lib/images';
+import * as schema from '../../lib/schema';
+import { FEATURES } from '../../data/site';
+
+export function getStaticPaths() {
+  return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
+}
+
+const { product } = Astro.props;
+const related = relatedTo(product);
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Products', url: '/products/' },
+  ...(product.primary ? [{ name: product.primary.name, url: product.primary.url }] : []),
+  { name: product.name, url: product.url },
+];
+
+const imageUrls = resolveAll(product.images).map((i) => i.image.src);
+
+const title = product.seoTitle || `${product.name} | Custom Wholesale Packaging`;
+const description =
+  product.seoDescription ||
+  product.plainShort.slice(0, 155) ||
+  `Custom ${product.name.toLowerCase()} at wholesale prices from Kraft Box Pack.`;
+
+const pageSchema = [
+  schema.product(product, imageUrls),
+  schema.breadcrumbs(product.url, crumbs),
+  ...(product.faqs.length ? [schema.faqPage(product.url, product.faqs)] : []),
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={product.url}
+  image={imageUrls[0]}
+  schema={pageSchema}
+>
+  <Breadcrumbs crumbs={crumbs} />
+
+  <div class="wrap product">
+    <div class="product__intro">
+      <h1>{product.name}</h1>
+      {product.shortDescription && (
+        <div class="product__short prose" set:html={product.shortDescription} />
+      )}
+
+      <ul class="product__points" role="list">
+        {FEATURES.map((f) => (
+          <li><Icon name={f.icon} size={18} />{f.title}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="product__media">
+      <ProductGallery images={product.images} name={product.name} />
+    </div>
+
+    <aside class="product__aside" aria-labelledby="quote-heading">
+      <QuoteForm
+        id="product-quote"
+        product={product.name}
+        heading="Get a Quick Quote"
+        intro="Tell us your size, quantity and artwork. We reply within one business day with pricing."
+      />
+    </aside>
+  </div>
+
+  <div class="wrap product__detail">
+    <h2 class="visually-hidden">Product details</h2>
+    <ProductTabs product={product} />
+  </div>
+
+  {related.length > 0 && (
+    <section class="section section--alt" aria-labelledby="related-heading">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="related-heading">Related kraft boxes</h2>
+          <p>
+            Other {product.primary?.name.toLowerCase() ?? 'kraft boxes'} customers
+            look at alongside {product.name.toLowerCase()}.
+          </p>
+        </div>
+        <ProductGrid products={related} />
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .product {
+    display: grid;
+    gap: clamp(1.25rem, 1rem + 1.6vw, 2.5rem);
+    padding-block: clamp(1.5rem, 1.2rem + 1.4vw, 2.5rem);
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  @media (min-width: 760px) {
+    .product { grid-template-columns: 1fr 1fr; }
+    .product__aside { grid-column: 1 / -1; }
+  }
+
+  @media (min-width: 1080px) {
+    .product { grid-template-columns: 1.05fr 1fr 0.95fr; }
+    .product__aside { grid-column: auto; position: sticky; top: 90px; }
+  }
+
+  .product h1 { margin-bottom: 0.45em; }
+
+  .product__short {
+    color: var(--ink-soft);
+    max-width: 60ch;
+  }
+
+  .product__points {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .product__points li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0;
+  }
+
+  .product__points svg { color: var(--green); flex: none; }
+
+  .product__detail {
+    padding-bottom: clamp(2rem, 1.6rem + 1.8vw, 3.5rem);
+  }
+</style>

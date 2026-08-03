@@ -1,0 +1,58 @@
+---
+import Seo from '../components/Seo.astro';
+import JsonLd from '../components/JsonLd.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { organization, website, graph } from '../lib/schema';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  canonical?: string;
+  image?: string;
+  /** Page-specific JSON-LD nodes, merged into the site-wide @graph. */
+  schema?: unknown[];
+}
+
+const {
+  title,
+  description,
+  path,
+  noindex = false,
+  canonical,
+  image,
+  schema = [],
+} = Astro.props;
+
+const document = graph([organization(), website(), ...schema]);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1f7a2b" />
+    <Seo
+      title={title}
+      description={description}
+      path={path}
+      noindex={noindex}
+      canonical={canonical}
+      image={image}
+    />
+    <JsonLd data={document} />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

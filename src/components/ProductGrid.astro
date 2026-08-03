@@ -1,0 +1,25 @@
+---
+import ProductCard from './ProductCard.astro';
+import type { Product } from '../data/content';
+
+interface Props { products: Product[]; headingLevel?: 'h2' | 'h3' }
+const { products, headingLevel = 'h3' } = Astro.props;
+---
+<ul class="grid" role="list">
+  {products.map((p, i) => (
+    <li><ProductCard product={p} priority={i < 4} headingLevel={headingLevel} /></li>
+  ))}
+</ul>
+
+<style>
+  .grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .grid > li { margin: 0; display: flex; }
+  .grid > li > :global(*) { width: 100%; }
+</style>
