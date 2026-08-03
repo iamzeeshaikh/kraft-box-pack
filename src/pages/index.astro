@@ -62,7 +62,7 @@ const pageSchema = [
       <div class="hero__body">
         <h1>Eco-Friendly Kraft Boxes for Every Packaging Need</h1>
         <p class="hero__lead">
-          Choose Kraft, Choose Green – A Step Towards Sustainability for your packaging needs.
+          Choose Kraft, Choose Green – A Step Towards Sustainability. packaging needs.
         </p>
 
         <ul class="hero__collage" role="list">
@@ -139,7 +139,7 @@ const pageSchema = [
 
   @media (min-width: 900px) {
     .hero__inner {
-      grid-template-columns: minmax(290px, 330px) 1fr;
+      grid-template-columns: minmax(320px, 400px) 1fr;
     }
 
     .hero__body {
@@ -167,7 +167,7 @@ const pageSchema = [
     display: grid;
     /* Three across, as the design shows, collapsing to two on a phone. */
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(0.75rem, 0.6rem + 0.7vw, 1.5rem);
+    gap: clamp(0.75rem, 0.5rem + 1.1vw, 2rem);
     list-style: none;
     margin: clamp(1.25rem, 1rem + 1vw, 2rem) 0 0;
     padding: 0;
@@ -182,9 +182,9 @@ const pageSchema = [
   .hero__collage li {
     margin: 0;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    padding: 0.5rem;
+    padding: clamp(0.5rem, 0.35rem + 0.6vw, 1rem);
   }
 
   .hero__collage :global(img) {

@@ -77,17 +77,20 @@ const field = (name: string) => `${id}-${name}`;
       />
     </div>
 
-    <div class="qf__field">
-      <label for={field('company')} class:list={[hero && 'visually-hidden']}>Company</label>
-      <input
-        type="text"
-        id={field('company')}
-        name="company"
-        autocomplete="organization"
-        maxlength="120"
-        placeholder={hero ? 'Company' : undefined}
-      />
-    </div>
+    {/* The live hero form is Name, Email, Phone, Product, Message. Company is
+        offered only on the fuller forms, where there is room for it. */}
+    {!hero && (
+      <div class="qf__field">
+        <label for={field('company')}>Company</label>
+        <input
+          type="text"
+          id={field('company')}
+          name="company"
+          autocomplete="organization"
+          maxlength="120"
+        />
+      </div>
+    )}
 
     <div class="qf__field qf__field--wide">
       <label for={field('product')} class:list={[hero && 'visually-hidden']}>Product</label>

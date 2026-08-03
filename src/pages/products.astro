@@ -36,6 +36,18 @@ const description =
       and an 8-10 business day turnaround.
     </p>
 
+    <form class="find" id="find" role="search">
+      <label for="product-filter">Search products</label>
+      <input
+        type="search"
+        id="product-filter"
+        placeholder="Search all 158 kraft box styles…"
+        autocomplete="off"
+        data-product-filter
+      />
+      <p class="find__count" role="status" aria-live="polite" data-product-count></p>
+    </form>
+
     <nav class="jump" aria-label="Jump to category">
       <h2 class="visually-hidden">Categories</h2>
       <ul role="list">
@@ -63,12 +75,35 @@ const description =
     heading="Not sure which style fits your product?"
     body="Send us the dimensions and what you are packing — we will recommend a structure and price it."
   />
+
+  <script>
+    import { wireProductFilter } from '../scripts/product-filter';
+    wireProductFilter();
+  </script>
 </BaseLayout>
 
 <style>
   .intro { padding-block: clamp(1.5rem, 1.2rem + 1.4vw, 2.5rem) 0; }
   .intro h1 { margin-bottom: 0.35em; }
   .intro__lead { color: var(--ink-soft); max-width: 62ch; font-size: var(--step-1); }
+  .find { margin-top: 1.5rem; max-width: 520px; }
+  .find label { display: block; font-weight: 600; font-size: var(--step--1); margin-bottom: 0.3rem; }
+  .find input {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.55rem 0.9rem;
+    font: inherit;
+    border: 1px solid #c8c5c0;
+    border-radius: 999px;
+    background: var(--surface);
+  }
+  .find input:focus-visible {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px var(--green-tint);
+    outline: none;
+  }
+  .find__count { margin: 0.5rem 0 0; font-size: var(--step--1); color: var(--muted); }
+
   .jump ul {
     display: flex; flex-wrap: wrap; gap: 0.5rem;
     list-style: none; margin: 1.25rem 0 0; padding: 0;

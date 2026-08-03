@@ -5,7 +5,7 @@ import type { Product } from '../data/content';
 interface Props { products: Product[]; headingLevel?: 'h2' | 'h3' }
 const { products, headingLevel = 'h3' } = Astro.props;
 ---
-<ul class="grid" role="list">
+<ul class="grid" role="list" data-product-grid>
   {products.map((p, i) => (
     <li><ProductCard product={p} priority={i < 4} headingLevel={headingLevel} /></li>
   ))}
@@ -22,5 +22,8 @@ const { products, headingLevel = 'h3' } = Astro.props;
     padding: 0;
   }
   .grid > li { margin: 0; display: flex; }
+  /* `display: flex` above outranks the user-agent rule for [hidden], so the
+     filter would set the attribute and nothing would disappear. */
+  .grid > li[hidden] { display: none; }
   .grid > li > :global(*) { width: 100%; }
 </style>
