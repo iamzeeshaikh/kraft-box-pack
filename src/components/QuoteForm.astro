@@ -20,6 +20,19 @@ interface Props {
 
 const { id, compact = false, hero = false, product, heading, intro } = Astro.props;
 const field = (name: string) => `${id}-${name}`;
+
+/**
+ * Small glyphs sitting inside each field. Decorative — every input still has a
+ * real label — but they give the column a rhythm instead of five identical
+ * pills, and they make the form scannable before it is read.
+ */
+const ICONS: Record<string, string> = {
+  name: 'M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-5 0-9 2.7-9 6v2h18v-2c0-3.3-4-6-9-6z',
+  email: 'M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.5l8 4.5 8-4.5V6H4zm16 2.8-7.5 4.2a1 1 0 0 1-1 0L4 8.8V18h16z',
+  phone: 'M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z',
+  product: 'M12 2 3 6.5v11L12 22l9-4.5v-11zm0 2.2 6.5 3.3L12 10.8 5.5 7.5zM5 9.2l6 3v7.3l-6-3zm8 10.3v-7.3l6-3v7.3z',
+  message: 'M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2zm0 2v12.1L7.2 16H20V5z',
+};
 ---
 
 <form
@@ -39,6 +52,8 @@ const field = (name: string) => `${id}-${name}`;
       <label for={field('name')} class:list={[hero && 'visually-hidden']}>
         Name <span aria-hidden="true">*</span>
       </label>
+      <span class="qf__wrap">
+      {hero && <svg class="qf__icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d={ICONS.name} /></svg>}
       <input
         type="text"
         id={field('name')}
@@ -48,12 +63,15 @@ const field = (name: string) => `${id}-${name}`;
         maxlength="120"
         placeholder={hero ? 'Name' : undefined}
       />
+      </span>
     </div>
 
     <div class="qf__field">
       <label for={field('email')} class:list={[hero && 'visually-hidden']}>
         Email <span aria-hidden="true">*</span>
       </label>
+      <span class="qf__wrap">
+      {hero && <svg class="qf__icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d={ICONS.email} /></svg>}
       <input
         type="email"
         id={field('email')}
@@ -63,10 +81,13 @@ const field = (name: string) => `${id}-${name}`;
         maxlength="180"
         placeholder={hero ? 'Email' : undefined}
       />
+      </span>
     </div>
 
     <div class="qf__field">
       <label for={field('phone')} class:list={[hero && 'visually-hidden']}>Phone</label>
+      <span class="qf__wrap">
+      {hero && <svg class="qf__icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d={ICONS.phone} /></svg>}
       <input
         type="tel"
         id={field('phone')}
@@ -75,6 +96,7 @@ const field = (name: string) => `${id}-${name}`;
         maxlength="40"
         placeholder={hero ? 'Phone' : undefined}
       />
+      </span>
     </div>
 
     {/* The live hero form is Name, Email, Phone, Product, Message. Company is
@@ -94,6 +116,8 @@ const field = (name: string) => `${id}-${name}`;
 
     <div class="qf__field qf__field--wide">
       <label for={field('product')} class:list={[hero && 'visually-hidden']}>Product</label>
+      <span class="qf__wrap">
+      {hero && <svg class="qf__icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d={ICONS.product} /></svg>}
       <input
         type="text"
         id={field('product')}
@@ -103,12 +127,15 @@ const field = (name: string) => `${id}-${name}`;
         maxlength="160"
         placeholder={hero ? 'Product' : undefined}
       />
+      </span>
     </div>
 
     <div class="qf__field qf__field--wide">
       <label for={field('message')} class:list={[hero && 'visually-hidden']}>
         Your packaging requirements <span aria-hidden="true">*</span>
       </label>
+      <span class="qf__wrap qf__wrap--area">
+      {hero && <svg class="qf__icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d={ICONS.message} /></svg>}
       <textarea
         id={field('message')}
         name="message"
@@ -117,6 +144,7 @@ const field = (name: string) => `${id}-${name}`;
         maxlength="4000"
         placeholder={hero ? 'Message' : undefined}
       ></textarea>
+      </span>
     </div>
 
     <div class:list={['qf__field', 'qf__field--wide', hero && 'qf__file']}>
@@ -145,6 +173,14 @@ const field = (name: string) => `${id}-${name}`;
   >
     Submit
   </button>
+
+  {hero && (
+    <p class="qf__promise">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"
+        ><path d="M9.6 16.2 4.8 11.4l-1.4 1.4 6.2 6.2L21 7.6l-1.4-1.4z" /></svg>
+      Reply within one business day &middot; Free design &middot; No obligation
+    </p>
+  )}
 
   <p class="qf__status" role="status" aria-live="polite" data-quote-status></p>
 
@@ -288,25 +324,82 @@ const field = (name: string) => `${id}-${name}`;
     padding: 0 0 1.4rem;
     overflow: hidden;
     border-color: #e6e1da;
-    box-shadow: 0 2px 4px rgb(35 35 35 / 5%), 0 12px 32px rgb(35 35 35 / 8%);
+    background-color: #fff;
+    background-image: linear-gradient(180deg, #fff 0%, #fdfbf8 100%);
+    box-shadow: 0 2px 4px rgb(35 35 35 / 5%), 0 14px 36px rgb(134 95 52 / 12%);
   }
 
   /* The green pill heading sits flush across the top of the panel. */
   .qf--hero .qf__heading {
-    background: var(--green);
+    /* The colour is stated as well as the gradient: it is the fallback, and it
+       is what a contrast checker can actually measure. */
+    background-color: var(--green);
+    background-image: linear-gradient(135deg, var(--green) 0%, #2aa32c 100%);
     color: #fff;
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     letter-spacing: -0.01em;
     text-align: center;
-    margin: 0 0 1.35rem;
-    padding: 0.85rem 1rem;
-    border-radius: 20px 20px 26px 26px;
+    margin: 0 0 1.25rem;
+    padding: 0.9rem 1rem;
+    border-radius: 20px 20px 28px 28px;
+    box-shadow: 0 4px 14px rgb(33 136 35 / 25%);
   }
 
   .qf--hero .qf__grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.65rem;
     padding-inline: 1.15rem;
+  }
+
+  /* The glyph is positioned over the field, so the control keeps room for it
+     rather than the text running underneath — the mistake that made the icons
+     unreadable on the previous migration. */
+  .qf__wrap {
+    position: relative;
+    display: block;
+  }
+
+  .qf__icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--kraft-light);
+    pointer-events: none;
+    transition: color 0.15s;
+  }
+
+  .qf__wrap--area .qf__icon {
+    top: 1rem;
+    transform: none;
+  }
+
+  .qf--hero .qf__wrap :is(input, textarea) {
+    padding-left: 2.7rem;
+  }
+
+  .qf__wrap:focus-within .qf__icon {
+    color: var(--green);
+  }
+
+  .qf__promise {
+    /* Not flex: on a narrow column the text wraps to a second line and a flex
+       icon is left stranded beside the block. Inline keeps it with the words. */
+    display: block;
+    text-align: center;
+    margin: 0.9rem 1.15rem 0;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  .qf__promise svg {
+    display: inline;
+    vertical-align: -2px;
+    margin-right: 0.3rem;
+    color: var(--green);
   }
 
   .qf--hero :is(input, textarea) {
@@ -343,6 +436,7 @@ const field = (name: string) => `${id}-${name}`;
   .qf--hero .qf__file {
     align-items: center;
     gap: 0.5rem;
+    padding: 0.15rem 0.2rem 0;
   }
 
   .qf--hero input[type='file'] {
@@ -373,10 +467,19 @@ const field = (name: string) => `${id}-${name}`;
 
   .qf--hero button {
     display: block;
-    margin: 1.35rem auto 0;
-    min-width: 170px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(134 95 52 / 35%);
+    width: calc(100% - 2.3rem);
+    margin: 1.25rem auto 0;
+    border-radius: 999px;
+    font-size: 1.02rem;
+    letter-spacing: 0.01em;
+    background-color: var(--kraft);
+    background-image: linear-gradient(135deg, var(--kraft) 0%, #9a6f40 100%);
+    box-shadow: 0 4px 14px rgb(134 95 52 / 32%);
+  }
+
+  .qf--hero button:hover {
+    background-color: var(--kraft-dark);
+    background-image: linear-gradient(135deg, var(--kraft-dark) 0%, var(--kraft) 100%);
   }
 
   .qf--hero .qf__status {

@@ -58,7 +58,7 @@ const pageSchema = [
       {product.shortDescription && (
         <div class="product__short prose" set:html={product.shortDescription} />
       )}
-      <QuoteForm id="product-quote" hero product={product.name} />
+      <QuoteForm id="product-quote" hero heading="Get A Quick Quote" product={product.name} />
     </div>
 
     <div class="product__media">

@@ -96,6 +96,18 @@ for (const path of PAGES) {
       // colour against the background is not something a person can perceive.
       if (r.width <= 1 || r.height <= 1 || s.clipPath.startsWith('inset(50%')) continue;
       if (el.closest('.visually-hidden')) continue;
+      // Hidden by an ancestor rather than by its own styles: the honeypot
+      // field lives in an aria-hidden, clip-path'd wrapper.
+      if (el.closest('[aria-hidden="true"]')) continue;
+      let hiddenByAncestor = false;
+      for (let n = el.parentElement; n; n = n.parentElement) {
+        const ps = getComputedStyle(n);
+        if (ps.clipPath.startsWith('inset(50%') || ps.visibility === 'hidden') {
+          hiddenByAncestor = true;
+          break;
+        }
+      }
+      if (hiddenByAncestor) continue;
       // only leaf-ish nodes, to avoid measuring a wrapper's inherited colour
       if ([...el.children].some((c) => c.textContent?.trim())) continue;
 

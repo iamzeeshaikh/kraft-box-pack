@@ -111,10 +111,15 @@ export function wireQuoteForms(root: ParentNode = document): void {
         };
 
         if (res.ok && data.ok) {
+          // Every successful submission lands on the thank-you page, so the
+          // outcome is a real page a visitor can be sent back to, and so
+          // conversions are countable in analytics. The inline message is
+          // still set first, in case navigation is blocked or slow.
           status.dataset.state = 'ok';
-          status.textContent =
-            'Thank you — your request has been sent. We reply within one business day.';
+          status.textContent = 'Thank you — your request has been sent.';
           form.reset();
+          window.location.assign('/thank-you/');
+          return;
         } else {
           status.dataset.state = 'error';
           status.textContent =
