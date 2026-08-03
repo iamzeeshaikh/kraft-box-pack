@@ -17,12 +17,12 @@ export const CONTACT = {
   /** As printed on the old site, hyphens and all. */
   phoneDisplay: '+1-929-2141-874',
   address: {
-    street: '1686 78th St',
+    street: '1639 70th St',
     locality: 'Brooklyn',
     region: 'NY',
     postalCode: '11204',
     country: 'US',
-    display: '1686 78th St, Brooklyn, New York, 11204 USA',
+    display: '1639 70th St, Brooklyn, New York, 11204 USA',
   },
 } as const;
 
@@ -31,6 +31,9 @@ export const CONTACT = {
  * Kept because it is the business's own standing offer, not a fabricated one.
  */
 export const PROMO = 'Email Us To Get 25% OFF';
+
+/** The copyright line, worded exactly as the live footer prints it. */
+export const COPYRIGHT = 'Copyright © Kraft Box Pack by KBP';
 
 /** Exactly the two profiles the old footer linked to, upgraded to https. */
 export const SOCIAL = [

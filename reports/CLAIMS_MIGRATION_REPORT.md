@@ -25,7 +25,7 @@ each one.
 | Round-the-clock availability, affordable pricing, experts' consultation, quick turnaround | Migrated homepage copy | Old homepage's own closing list, migrated verbatim |
 | Phone +1-929-2141-874 | Header, footer, contact page, schema | Live site header and footer |
 | info@kraftboxpack.com | Header, footer, contact page, schema | Live site header and footer |
-| 1686 78th St, Brooklyn, New York, 11204 USA | Footer, contact page, `Organization` schema | Live site footer |
+| 1639 70th St, Brooklyn, New York, 11204 USA | Footer, contact page, `Organization` schema | Live site footer |
 | Facebook and LinkedIn profiles | Footer, contact page, `sameAs` | Live site footer (upgraded `http:` → `https:`) |
 | "Email Us To Get 25% OFF" | Utility bar | Live site utility bar |
 
@@ -56,6 +56,13 @@ one restates facts from the table above and asserts nothing new:
 Category pages without a WordPress description fall back to a generated
 sentence naming the product count and repeating the turnaround and design
 claims above. No category page states anything not already in this table.
+
+## Correction
+
+An earlier revision of this migration recorded the address as **1686 78th St**,
+read from a low-resolution screenshot. That was wrong. The live site's own
+footer prints **1639 70th St, Brooklyn, New York, 11204 USA**, and that is what
+the site and its `Organization` schema now carry. Corrected 3 August 2026.
 
 ## Deliberately absent
 
