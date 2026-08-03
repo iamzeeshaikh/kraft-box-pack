@@ -24,16 +24,24 @@ export default defineConfig({
     // way on the previous migration, where tabs and accordions were dead in
     // production while working locally.
     csp: {
+      // The live-chat widget is the one third party the site loads. Its origin
+      // is named explicitly rather than the policy being loosened: it needs to
+      // load its script, call back to its own API, and open its panel in a
+      // frame. Nothing else is granted.
       directives: [
         "default-src 'self'",
-        "img-src 'self' data:",
+        "img-src 'self' data: https://chat.zeeops.dev",
         "font-src 'self' data:",
-        "connect-src 'self'",
+        "connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev",
+        "frame-src https://chat.zeeops.dev",
         "form-action 'self'",
         "base-uri 'self'",
         "object-src 'none'",
-        "frame-src 'none'",
       ],
+      // Astro owns script-src so it can add a hash per inlined chunk; the
+      // widget's origin is appended to what it generates rather than replacing
+      // it, which is why it goes here and not in `directives`.
+      scriptDirective: { resources: ["'self'", 'https://chat.zeeops.dev'] },
       styleDirective: { resources: ["'self'", "'unsafe-inline'"] },
     },
   },

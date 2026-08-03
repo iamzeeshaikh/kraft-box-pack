@@ -197,8 +197,13 @@ for (const p of pages.filter((x) => /noindex/.test(x.robots))) {
 // --------------------------------------------------------------------- CSP
 // Every script the pages load must be same-origin, or the policy will kill it.
 for (const p of pages) {
-  const external = [...p.html.matchAll(/<script[^>]+src="(https?:\/\/[^"]+)"/g)].map((m) => m[1]);
-  check(external.length === 0, `${p.path}: no third-party scripts`, external.join(', '));
+  // One third party is allowed on purpose: the live-chat widget, whose origin
+  // is named in the CSP. Anything else appearing here is a regression.
+  const ALLOWED_SCRIPT_HOSTS = ['chat.zeeops.dev'];
+  const external = [...p.html.matchAll(/<script[^>]+src="(https?:\/\/[^"]+)"/g)]
+    .map((m) => m[1])
+    .filter((u) => !ALLOWED_SCRIPT_HOSTS.includes(new URL(u).host));
+  check(external.length === 0, `${p.path}: no unexpected third-party scripts`, external.join(', '));
   const inlineHandlers = [...p.body.matchAll(/\son(?:click|load|error|submit)=/gi)];
   check(inlineHandlers.length === 0, `${p.path}: no inline event handlers`);
 }

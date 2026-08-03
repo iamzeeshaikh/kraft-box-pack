@@ -54,5 +54,9 @@ const document = graph([organization(), website(), ...schema]);
       <slot />
     </main>
     <SiteFooter />
+
+    {/* ZeeOps live chat. Loaded last and deferred so it never blocks render;
+        its origin is allow-listed in the CSP in astro.config.mjs. */}
+    <script src="https://chat.zeeops.dev/widget.js?siteId=kraftboxpack" defer is:inline></script>
   </body>
 </html>
