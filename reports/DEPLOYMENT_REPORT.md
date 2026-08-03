@@ -1,19 +1,27 @@
 # Deployment report
 
-## Preview deployment
+## Live
 
 | | |
 | --- | --- |
-| URL | `https://kraftboxpack-nvyewt1l2-iamzeeshaikhs-projects.vercel.app` |
+| URL | **https://kraftboxpack.com** |
 | Vercel project | `iamzeeshaikhs-projects/kraftboxpack` |
-| Environment | **Preview** — production has not been deployed |
-| Date | 3 August 2026 |
-| Commit | `e07f771` |
+| Environment | **Production** |
+| Went live | 3 August 2026 |
 
-**DNS has not been changed. `kraftboxpack.com` still serves the old WordPress
-site.** No domain has been added to the Vercel project, and nothing in
-Cloudflare has been touched. Going live is a separate, explicitly authorised
-step — see `SECURITY_CUTOVER_CHECKLIST.md`.
+The site is live. `kraftboxpack.com` serves the Astro build; the WordPress
+installation no longer serves the domain.
+
+**How the cutover happened, and one thing to know about it.** Cloudflare was
+already proxying the domain to Vercel's anycast address, so adding
+`kraftboxpack.com` to the Vercel project switched the live site immediately —
+no DNS record was edited, by me or anyone else. At that moment the project's
+production deployment was several commits behind, so the domain briefly served
+an out-of-date build until `vercel deploy --prod` promoted the current one.
+Anyone repeating this on another project should deploy to production *before*
+attaching the domain.
+
+`www.kraftboxpack.com` 301s to the apex, so only one host serves 200.
 
 Deployment protection (Vercel SSO) was disabled on the project so the preview
 could be tested and so it can be reviewed without a Vercel login.
@@ -109,11 +117,38 @@ development. `QUOTE_RATE_LIMIT` is unset and defaults to 5 per minute.
 No secret is in the repository. `.env` is gitignored and `.env.example` carries
 the keys with empty values.
 
-## What has not been done
+## Verified on the live domain
 
-- Production deployment
-- Any DNS or Cloudflare change
-- Adding `kraftboxpack.com` to the Vercel project
-- Sitemap submission to Google
-- Any credential rotation
-- Decommissioning the old host
+Both suites were re-run against `https://kraftboxpack.com` after go-live:
+
+| Suite | Result |
+| --- | --- |
+| Build output, metadata, links, routing, sitemap | **2,799 passed, 0 failed** |
+| Accessibility and responsive | **127 passed, 0 failed** |
+| Quote form | delivered; disguised webshell rejected 415 |
+
+Routing on the live domain: `/` `/products/` and product and category pages
+200, `/cart/` 301, `/casino/` **410**, unknown paths 404, `www` 301 to apex.
+
+## Third-party scripts
+
+Two, both named explicitly in the CSP rather than the policy being loosened:
+
+- `chat.zeeops.dev` — the live-chat widget, added at the owner's request
+- `static.cloudflareinsights.com` — Cloudflare injects its Web Analytics beacon
+  into responses it proxies. It is not in the page source, so the policy had to
+  be told to expect it; without that the browser logged a violation on every
+  page view. Turn off Web Analytics in Cloudflare if the beacon is not wanted.
+
+## What has still not been done
+
+- **Any credential rotation.** The old host was compromised; everything that
+  was on it should be treated as exposed. See `SECURITY_CUTOVER_CHECKLIST.md`.
+- **Decommissioning the old WordPress host.** Leave it up but not serving the
+  domain for a few days in case a rollback is needed, then wipe the account
+  rather than leaving a dormant compromised install reachable.
+- **Sitemap submission** to Google Search Console, and a security review there
+  if the property is flagged.
+- **A dedicated sending mailbox.** The form authenticates as a Gmail account
+  shared with another of the owner's sites, and Gmail rewrites the From address
+  away from `info@kraftboxpack.com`. See `ENVIRONMENT_VARIABLES.md`.
