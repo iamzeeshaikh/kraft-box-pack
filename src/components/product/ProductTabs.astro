@@ -99,8 +99,11 @@ const tabs = [
     outline: none;
   }
 
+  /* The description is the page's main content and the layout gives it the
+     full container, so it is not held to the narrower reading measure the
+     sidebar prose uses. */
   .tabs__panel .prose {
-    max-width: 78ch;
+    max-width: 100%;
   }
 </style>
 

@@ -5,6 +5,7 @@ import QuoteForm from '../../components/QuoteForm.astro';
 import ProductGallery from '../../components/product/ProductGallery.astro';
 import ProductTabs from '../../components/product/ProductTabs.astro';
 import ProductGrid from '../../components/ProductGrid.astro';
+import TrustBadges from '../../components/product/TrustBadges.astro';
 
 import { products, relatedTo } from '../../data/content';
 import { resolveAll } from '../../lib/images';
@@ -50,6 +51,8 @@ const pageSchema = [
   <Breadcrumbs crumbs={crumbs} />
 
   <div class="wrap product">
+    <div class="product__secure"><TrustBadges variant="secure" /></div>
+
     <div class="product__intro">
       <h1>{product.name}</h1>
       {product.shortDescription && (
@@ -63,6 +66,7 @@ const pageSchema = [
       <p class="product__cta">
         <a href="/get-a-quote/" class="btn btn--kraft">Get a Quote</a>
       </p>
+      <TrustBadges />
     </div>
 
     <aside class="product__aside" aria-label="What is included">
@@ -77,7 +81,7 @@ const pageSchema = [
     </aside>
   </div>
 
-  <div class="wrap product__detail">
+  <div class="wrap product__detail" data-full-width>
     <h2 class="visually-hidden">Product details</h2>
     <ProductTabs product={product} />
   </div>
@@ -99,6 +103,15 @@ const pageSchema = [
 </BaseLayout>
 
 <style>
+  /* The badge strip spans the grid and sits above it, right-aligned, as the
+     design places it beside the product title. */
+  .product__secure {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
   .product {
     display: grid;
     gap: clamp(1.25rem, 1rem + 1.6vw, 2.5rem);

@@ -119,7 +119,7 @@ const field = (name: string) => `${id}-${name}`;
       ></textarea>
     </div>
 
-    <div class="qf__field qf__field--wide">
+    <div class:list={['qf__field', 'qf__field--wide', hero && 'qf__file']}>
       <label for={field('file')} class:list={[hero && 'visually-hidden']}>
         Artwork or reference file
         <span class="qf__hint">(optional, JPG PNG PDF AI EPS ZIP, max 8&nbsp;MB)</span>
@@ -284,62 +284,111 @@ const field = (name: string) => `${id}-${name}`;
 
   /* --- hero variant, matching the supplied design ------------------------ */
   .qf--hero {
-    border-radius: 18px;
-    padding: 0 0 1.1rem;
+    border-radius: 20px;
+    padding: 0 0 1.4rem;
     overflow: hidden;
+    border-color: #e6e1da;
+    box-shadow: 0 2px 4px rgb(35 35 35 / 5%), 0 12px 32px rgb(35 35 35 / 8%);
   }
 
   /* The green pill heading sits flush across the top of the panel. */
   .qf--hero .qf__heading {
     background: var(--green);
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.55rem;
+    letter-spacing: -0.01em;
     text-align: center;
-    margin: 0 0 1.1rem;
-    padding: 0.7rem 1rem;
-    border-radius: 18px 18px 26px 26px;
+    margin: 0 0 1.35rem;
+    padding: 0.85rem 1rem;
+    border-radius: 20px 20px 26px 26px;
   }
 
   .qf--hero .qf__grid {
     grid-template-columns: 1fr;
-    gap: 0.7rem;
-    padding-inline: 1rem;
+    gap: 0.75rem;
+    padding-inline: 1.15rem;
   }
 
   .qf--hero :is(input, textarea) {
     border-radius: 999px;
-    border-color: #d6d2cc;
-    padding-inline: 1.1rem;
+    border-color: #ddd8d1;
+    background: #fcfbfa;
+    padding-inline: 1.2rem;
+    transition: border-color 0.15s, background-color 0.15s, box-shadow 0.15s;
+  }
+
+  .qf--hero :is(input, textarea)::placeholder {
+    color: #8c877f;
+  }
+
+  .qf--hero :is(input, textarea):hover {
+    border-color: #c6bfb6;
+  }
+
+  .qf--hero :is(input, textarea):focus-visible {
+    background: #fff;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px var(--green-tint);
   }
 
   .qf--hero textarea {
-    border-radius: 20px;
-    padding-block: 0.7rem;
+    border-radius: 22px;
+    padding-block: 0.8rem;
+    min-height: 130px;
+  }
+
+  /* The default file control is a browser widget that ignores most styling;
+     the label is turned into the button and the real input is kept
+     screen-reader reachable but out of the way. */
+  .qf--hero .qf__file {
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .qf--hero input[type='file'] {
     border: 0;
-    padding-inline: 0;
+    background: none;
+    padding: 0;
     border-radius: 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  .qf--hero input[type='file']::file-selector-button {
+    margin-right: 0.6rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid #ddd8d1;
+    border-radius: 999px;
+    background: #f4f1ec;
+    font: inherit;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+  }
+
+  .qf--hero input[type='file']::file-selector-button:hover {
+    background: var(--kraft-tint);
+    border-color: var(--kraft-light);
   }
 
   .qf--hero button {
     display: block;
-    margin: 1rem auto 0;
-    min-width: 150px;
-    border-radius: 6px;
+    margin: 1.35rem auto 0;
+    min-width: 170px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(134 95 52 / 35%);
   }
 
   .qf--hero .qf__status {
-    padding-inline: 1rem;
+    padding-inline: 1.15rem;
     text-align: center;
   }
 
   .qf__payments {
     display: block;
-    width: min(100%, 250px);
+    width: min(100%, 240px);
     height: auto;
-    margin: 1.1rem auto 0;
+    margin: 1.35rem auto 0;
   }
 
   /* --- dark variant, as used above the footer ---------------------------- */

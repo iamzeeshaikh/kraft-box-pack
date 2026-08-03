@@ -1,0 +1,91 @@
+---
+/**
+ * The carrier, payment and certification badges the product pages carry.
+ *
+ * These are the site's own images, served from `public/` unchanged. They are
+ * decorative reassurance rather than content, so each carries alt text naming
+ * what it shows and nothing more.
+ */
+interface Props {
+  /** `secure` is the compact "Payment Secure By" strip beside the title. */
+  variant?: 'full' | 'secure';
+}
+const { variant = 'full' } = Astro.props;
+
+const BADGES = [
+  { src: '/art/fedex.png', alt: 'FedEx delivery', w: 344, h: 146 },
+  { src: '/art/payment-methods.png', alt: 'PayPal, SSL secure connection, Visa and Mastercard', w: 465, h: 70 },
+  { src: '/art/payments.png', alt: 'Visa, Mastercard, American Express, JCB, Apple Pay and Google Pay', w: 1024, h: 407 },
+  { src: '/art/dmca.png', alt: 'DMCA protected', w: 250, h: 125 },
+  { src: '/art/ssl.png', alt: 'SSL secured', w: 70, h: 70 },
+  { src: '/art/iso-fsc.webp', alt: 'FSC and ISO certified', w: 300, h: 120 },
+];
+---
+
+{
+  variant === 'secure' ? (
+    <div class="secure">
+      <span class="secure__label">Payment Secure By</span>
+      <img src="/art/secure-icons.png" alt="Money-back guarantee and Comodo secure" width="193" height="99" loading="lazy" decoding="async" />
+      <img src="/art/payment-methods.png" alt="PayPal, Visa and Mastercard accepted" width="465" height="70" loading="lazy" decoding="async" />
+    </div>
+  ) : (
+    <ul class="badges" role="list">
+      {BADGES.map((b) => (
+        <li>
+          <img src={b.src} alt={b.alt} width={b.w} height={b.h} loading="lazy" decoding="async" />
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+<style>
+  .secure {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px dashed #c8c5c0;
+    border-radius: 8px;
+  }
+
+  .secure__label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .secure img {
+    height: 24px;
+    width: auto;
+  }
+
+  .badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: clamp(0.75rem, 0.6rem + 0.8vw, 1.75rem);
+    list-style: none;
+    margin: clamp(1.25rem, 1rem + 1vw, 2rem) 0 0;
+    padding: 0;
+  }
+
+  .badges li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .badges img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 52px;
+    object-fit: contain;
+  }
+</style>
