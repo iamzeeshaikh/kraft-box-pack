@@ -18,3 +18,4 @@ reports/_*.json
 # OS
 .DS_Store
 *.log
+.vercel

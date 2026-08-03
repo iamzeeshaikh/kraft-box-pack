@@ -147,9 +147,21 @@ const pageSchema = [
     align-items: start;
   }
 
+  /* On a phone the single column would put a seven-field form above the H1,
+     so a visitor is asked to fill something in before being told what the
+     site sells. The heading and product shots come first; the form keeps its
+     place in the source order for the desktop layout below. */
+  .hero__body {
+    order: -1;
+  }
+
   @media (min-width: 900px) {
     .hero__inner {
       grid-template-columns: minmax(300px, 340px) 1fr;
+    }
+
+    .hero__body {
+      order: 0;
     }
   }
 
