@@ -78,20 +78,24 @@ export const FEATURES = [
     title: 'Custom Design, Sizes & Style',
     body: 'Boxes built to your dimensions, with structural options for retail, e-commerce and gifting.',
     icon: 'ruler',
+    art: 'boxes-gif-unscreen.gif',
   },
   {
     title: 'Free Design Assistance',
     body: 'Our team prepares your artwork and sends a digital proof before anything goes to press.',
     icon: 'pencil',
+    art: 'gif-boxes.gif',
   },
   {
     title: 'High Quality Offset Printing',
     body: 'Offset, digital and screen printing in CMYK or PMS, with matte, gloss and spot UV finishes.',
     icon: 'printer',
+    art: 'offset-press.gif',
   },
   {
     title: 'Fast Shipping 8-10 Business Days',
     body: 'Standard turnaround is 8-10 business days, with rush production available on request.',
     icon: 'truck',
+    art: 'delivery-icon-giff.gif',
   },
 ] as const;

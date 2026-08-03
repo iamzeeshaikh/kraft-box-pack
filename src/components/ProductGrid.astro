@@ -15,7 +15,8 @@ const { products, headingLevel = 'h3' } = Astro.props;
   .grid {
     display: grid;
     gap: var(--gap);
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+    /* Four across on desktop, as the design shows, stepping down cleanly. */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
     list-style: none;
     margin: 0;
     padding: 0;

@@ -34,7 +34,14 @@ const hero = primary(product.images);
     </div>
     <Heading class="card__title">{product.name}</Heading>
   </a>
-  <p class="card__cta"><span class="btn btn--dark btn--block">Get a Quote</span></p>
+  <p class="card__cta">
+    <span class="btn btn--dark btn--block">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"
+        ><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM1 2h3.3l.9 4H22l-2.6 9H7.3L5.5 6M6.2 8l1.3 5h10.4l1.4-5z"
+      /></svg>
+      Get a Quote
+    </span>
+  </p>
 </article>
 
 <style>
@@ -89,5 +96,13 @@ const hero = primary(product.images);
   .card:hover .card__title { color: var(--kraft-dark); }
   .card__cta { margin: 0; padding: 0 0.75rem 0.75rem; }
   /* A span, not a button: the whole card is already one link. */
-  .card__cta .btn { pointer-events: none; font-size: var(--step--1); min-height: 38px; }
+  .card__cta .btn {
+    pointer-events: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    min-height: 38px;
+    border-radius: 0;
+  }
 </style>

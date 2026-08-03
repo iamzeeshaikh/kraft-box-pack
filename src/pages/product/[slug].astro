@@ -5,7 +5,7 @@ import QuoteForm from '../../components/QuoteForm.astro';
 import ProductGallery from '../../components/product/ProductGallery.astro';
 import ProductTabs from '../../components/product/ProductTabs.astro';
 import ProductGrid from '../../components/ProductGrid.astro';
-import Icon from '../../components/Icon.astro';
+
 import { products, relatedTo } from '../../data/content';
 import { resolveAll } from '../../lib/images';
 import * as schema from '../../lib/schema';
@@ -55,25 +55,25 @@ const pageSchema = [
       {product.shortDescription && (
         <div class="product__short prose" set:html={product.shortDescription} />
       )}
-
-      <ul class="product__points" role="list">
-        {FEATURES.map((f) => (
-          <li><Icon name={f.icon} size={18} />{f.title}</li>
-        ))}
-      </ul>
+      <QuoteForm id="product-quote" hero product={product.name} />
     </div>
 
     <div class="product__media">
       <ProductGallery images={product.images} name={product.name} />
+      <p class="product__cta">
+        <a href="/get-a-quote/" class="btn btn--kraft">Get a Quote</a>
+      </p>
     </div>
 
-    <aside class="product__aside" aria-labelledby="quote-heading">
-      <QuoteForm
-        id="product-quote"
-        product={product.name}
-        heading="Get a Quick Quote"
-        intro="Tell us your size, quantity and artwork. We reply within one business day with pricing."
-      />
+    <aside class="product__aside" aria-label="What is included">
+      <ul role="list">
+        {FEATURES.map((f) => (
+          <li>
+            <img src={`/art/${f.art}`} alt="" width="150" height="110" loading="lazy" decoding="async" />
+            <span>{f.title}</span>
+          </li>
+        ))}
+      </ul>
     </aside>
   </div>
 
@@ -112,9 +112,11 @@ const pageSchema = [
     .product__aside { grid-column: 1 / -1; }
   }
 
+  /* The supplied design puts the enquiry form on the left, the gallery in the
+     middle and the four service graphics down the right-hand edge. */
   @media (min-width: 1080px) {
-    .product { grid-template-columns: 1.05fr 1fr 0.95fr; }
-    .product__aside { grid-column: auto; position: sticky; top: 90px; }
+    .product { grid-template-columns: 1.1fr 1.2fr 0.5fr; }
+    .product__aside { grid-column: auto; }
   }
 
   .product h1 { margin-bottom: 0.45em; }
@@ -122,26 +124,53 @@ const pageSchema = [
   .product__short {
     color: var(--ink-soft);
     max-width: 60ch;
+    margin-bottom: 1.25rem;
   }
 
-  .product__points {
-    display: grid;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 1.25rem 0 0;
-    padding: 0;
-    font-size: var(--step--1);
-    font-weight: 600;
-  }
-
-  .product__points li {
+  .product__cta {
     display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    margin: 0;
+    justify-content: center;
+    margin: 1.25rem 0 0;
   }
 
-  .product__points svg { color: var(--green); flex: none; }
+  .product__aside ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr));
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 1080px) {
+    .product__aside ul { grid-template-columns: 1fr; }
+  }
+
+  .product__aside li {
+    margin: 0;
+    text-align: center;
+    padding: 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .product__aside img {
+    /* The delivery graphic is 1024x582; fixing the height would push it wider
+       than this column and crop it, so the width leads and the height follows. */
+    width: 100%;
+    height: auto;
+    max-height: 84px;
+    margin: 0 auto 0.4rem;
+    object-fit: contain;
+  }
+
+  .product__aside span {
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
 
   .product__detail {
     padding-bottom: clamp(2rem, 1.6rem + 1.8vw, 3.5rem);

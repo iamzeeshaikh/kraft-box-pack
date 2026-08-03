@@ -1,0 +1,24 @@
+---
+/**
+ * The site logo: the kraft bag mark and wordmark supplied as one artwork.
+ *
+ * Rendered at a fixed intrinsic size rather than through <Image>'s responsive
+ * pipeline, because it is a small flat-colour PNG that gains nothing from
+ * multiple renditions and is needed immediately in the header.
+ */
+import { Image } from 'astro:assets';
+import logo from '../assets/site/logo.png';
+import { SITE_NAME } from '../data/site';
+
+interface Props { height?: number }
+const { height = 58 } = Astro.props;
+---
+<a href="/" class="logo" aria-label={`${SITE_NAME} home`}>
+  <Image src={logo} alt={SITE_NAME} height={height} width={Math.round(height * 3.5)} loading="eager" />
+</a>
+
+<style>
+  .logo { display: inline-flex; align-items: center; flex: none; }
+  .logo :global(img) { width: auto; height: auto; max-height: 58px; }
+  @media (max-width: 600px) { .logo :global(img) { max-height: 46px; } }
+</style>

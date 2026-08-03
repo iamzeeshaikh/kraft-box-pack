@@ -1,5 +1,11 @@
 ---
-import Icon from '../Icon.astro';
+/**
+ * The four selling points, shown with the animated artwork from the old site.
+ *
+ * The GIFs are referenced from `public/` rather than imported as assets,
+ * because Astro's image pipeline re-encodes an animated GIF to a still frame.
+ * They are the originals the design uses, unchanged.
+ */
 import { FEATURES } from '../../data/site';
 ---
 <section class="features" aria-labelledby="features-heading">
@@ -8,7 +14,14 @@ import { FEATURES } from '../../data/site';
     <ul role="list">
       {FEATURES.map((f) => (
         <li>
-          <span class="features__icon"><Icon name={f.icon} size={26} /></span>
+          <img
+            src={`/art/${f.art}`}
+            alt=""
+            width="200"
+            height="150"
+            loading="lazy"
+            decoding="async"
+          />
           <h3>{f.title}</h3>
           <p>{f.body}</p>
         </li>
@@ -18,33 +31,45 @@ import { FEATURES } from '../../data/site';
 </section>
 
 <style>
-  .features { padding-block: clamp(1.75rem, 1.4rem + 1.6vw, 3rem); }
+  .features {
+    padding-block: clamp(1.75rem, 1.4rem + 1.6vw, 3rem);
+  }
+
   .features ul {
     display: grid;
     gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
   .features li {
     margin: 0;
     text-align: center;
-    padding: 1.4rem 1.1rem;
+    padding: 1.25rem 1.1rem 1.5rem;
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
   }
-  .features__icon {
-    display: inline-grid;
-    place-items: center;
-    width: 54px;
-    height: 54px;
-    margin-bottom: 0.85rem;
-    border-radius: 50%;
-    background: var(--green-tint);
-    color: var(--green-dark);
+
+  .features img {
+    width: auto;
+    height: 130px;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    object-fit: contain;
   }
-  .features h3 { font-size: var(--step-0); margin-bottom: 0.4em; }
-  .features p { margin: 0; font-size: var(--step--1); color: var(--muted); }
+
+  .features h3 {
+    font-size: var(--step-0);
+    margin-bottom: 0.4em;
+  }
+
+  .features p {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--muted);
+  }
 </style>

@@ -11,15 +11,18 @@
 
 :root {
   /* --- brand ------------------------------------------------------------ */
-  /* Utility bar and primary CTA. Sampled #65ad65 / #218a23; the lighter tone
-     is kept for large fills and the darker one carries text on white. */
-  --green: #1f7a2b;
+  /* Sampled directly from the supplied homepage design PDF: the utility bar
+     and the "Get A Quick Quote" pill are #218a23, the hero band is #865f34.
+     The green is used two steps darker (#218823) because the sampled value is
+     4.45:1 against white text — a hair under AA — and the correction is not
+     perceptible next to the original. */
+  --green: #218823;
   --green-dark: #17601f;
   --green-bright: #65ad65;
   --green-tint: #eef7ee;
 
-  /* Kraft brown: the logo, the footer band, product-page buttons. */
-  --kraft: #96613a;
+  /* Kraft brown: the logo, the hero band, the footer, product-page buttons. */
+  --kraft: #865f34;
   --kraft-dark: #6f4526;
   --kraft-light: #c89b71;
   --kraft-tint: #f7f1ea;

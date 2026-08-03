@@ -1,6 +1,7 @@
 ---
-import { NAV, CONTACT, PROMO, SITE_NAME } from '../data/site';
+import { NAV, CONTACT, PROMO } from '../data/site';
 import Icon from './Icon.astro';
+import Logo from './Logo.astro';
 
 const path = Astro.url.pathname;
 const isCurrent = (href: string) =>
@@ -19,14 +20,7 @@ const isCurrent = (href: string) =>
 
 <header class="header">
   <div class="wrap header__inner">
-    <a href="/" class="logo" aria-label={`${SITE_NAME} home`}>
-      <span class="logo__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
-          <path d="M16 3 29 9v14l-13 6L3 23V9z" /><path d="M3 9l13 6 13-6M16 15v14" />
-        </svg>
-      </span>
-      <span class="logo__text">Kraft Box<br />Pack</span>
-    </a>
+    <Logo />
 
     <button
       type="button"
@@ -50,9 +44,6 @@ const isCurrent = (href: string) =>
             </li>
           ))
         }
-        <li class="nav__cta">
-          <a href="/get-a-quote/" class="btn btn--primary">Get a Quote</a>
-        </li>
       </ul>
     </nav>
   </div>
@@ -118,26 +109,9 @@ const isCurrent = (href: string) =>
   .header__inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
-    padding-block: 0.65rem;
-  }
-
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    color: var(--kraft-dark);
-    text-decoration: none;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.05;
-    margin-right: auto;
-  }
-
-  .logo__mark {
-    color: var(--kraft);
-    flex: none;
+    padding-block: 0.5rem;
   }
 
   .burger {
@@ -172,7 +146,7 @@ const isCurrent = (href: string) =>
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.25rem 1.1rem;
+    gap: 0.25rem 1.5rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -187,8 +161,11 @@ const isCurrent = (href: string) =>
     padding: 0.55rem 0.15rem;
     color: var(--ink);
     text-decoration: none;
-    font-size: var(--step--1);
-    font-weight: 600;
+    /* The design sets the menu in the same serif as the wordmark. */
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
     border-bottom: 2px solid transparent;
   }
 
@@ -240,10 +217,6 @@ const isCurrent = (href: string) =>
       padding: 0.85rem 0.25rem;
     }
 
-    .nav__cta {
-      margin-top: 0.75rem;
-      border-top: 0 !important;
-    }
   }
 </style>
 

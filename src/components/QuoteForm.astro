@@ -10,17 +10,20 @@
 interface Props {
   id: string;
   compact?: boolean;
+  /** The homepage/product-page styling: green pill heading, placeholder-only
+      fields and the payment badges, exactly as the supplied design shows. */
+  hero?: boolean;
   product?: string;
   heading?: string;
   intro?: string;
 }
 
-const { id, compact = false, product, heading, intro } = Astro.props;
+const { id, compact = false, hero = false, product, heading, intro } = Astro.props;
 const field = (name: string) => `${id}-${name}`;
 ---
 
 <form
-  class:list={['qf', compact && 'qf--compact']}
+  class:list={['qf', compact && 'qf--compact', hero && 'qf--hero']}
   id={id}
   method="post"
   action="/api/quote/"
@@ -29,11 +32,13 @@ const field = (name: string) => `${id}-${name}`;
   data-quote-form
 >
   {heading && <h2 class="qf__heading">{heading}</h2>}
-  {intro && <p class="qf__intro">{intro}</p>}
+  {intro && !hero && <p class="qf__intro">{intro}</p>}
 
   <div class="qf__grid">
     <div class="qf__field">
-      <label for={field('name')}>Name <span aria-hidden="true">*</span></label>
+      <label for={field('name')} class:list={[hero && 'visually-hidden']}>
+        Name <span aria-hidden="true">*</span>
+      </label>
       <input
         type="text"
         id={field('name')}
@@ -41,11 +46,14 @@ const field = (name: string) => `${id}-${name}`;
         autocomplete="name"
         required
         maxlength="120"
+        placeholder={hero ? 'Name' : undefined}
       />
     </div>
 
     <div class="qf__field">
-      <label for={field('email')}>Email <span aria-hidden="true">*</span></label>
+      <label for={field('email')} class:list={[hero && 'visually-hidden']}>
+        Email <span aria-hidden="true">*</span>
+      </label>
       <input
         type="email"
         id={field('email')}
@@ -53,33 +61,36 @@ const field = (name: string) => `${id}-${name}`;
         autocomplete="email"
         required
         maxlength="180"
+        placeholder={hero ? 'Email' : undefined}
       />
     </div>
 
     <div class="qf__field">
-      <label for={field('phone')}>Phone</label>
+      <label for={field('phone')} class:list={[hero && 'visually-hidden']}>Phone</label>
       <input
         type="tel"
         id={field('phone')}
         name="phone"
         autocomplete="tel"
         maxlength="40"
+        placeholder={hero ? 'Phone' : undefined}
       />
     </div>
 
     <div class="qf__field">
-      <label for={field('company')}>Company</label>
+      <label for={field('company')} class:list={[hero && 'visually-hidden']}>Company</label>
       <input
         type="text"
         id={field('company')}
         name="company"
         autocomplete="organization"
         maxlength="120"
+        placeholder={hero ? 'Company' : undefined}
       />
     </div>
 
     <div class="qf__field qf__field--wide">
-      <label for={field('product')}>Product</label>
+      <label for={field('product')} class:list={[hero && 'visually-hidden']}>Product</label>
       <input
         type="text"
         id={field('product')}
@@ -87,19 +98,29 @@ const field = (name: string) => `${id}-${name}`;
         value={product}
         readonly={product ? true : undefined}
         maxlength="160"
+        placeholder={hero ? 'Product' : undefined}
       />
     </div>
 
     <div class="qf__field qf__field--wide">
-      <label for={field('message')}>
+      <label for={field('message')} class:list={[hero && 'visually-hidden']}>
         Your packaging requirements <span aria-hidden="true">*</span>
       </label>
-      <textarea id={field('message')} name="message" rows={compact ? 3 : 4} required maxlength="4000"
+      <textarea
+        id={field('message')}
+        name="message"
+        rows={compact ? 3 : hero ? 5 : 4}
+        required
+        maxlength="4000"
+        placeholder={hero ? 'Message' : undefined}
       ></textarea>
     </div>
 
     <div class="qf__field qf__field--wide">
-      <label for={field('file')}>Artwork or reference file <span class="qf__hint">(optional, JPG PNG PDF AI EPS ZIP, max 8&nbsp;MB)</span></label>
+      <label for={field('file')} class:list={[hero && 'visually-hidden']}>
+        Artwork or reference file
+        <span class="qf__hint">(optional, JPG PNG PDF AI EPS ZIP, max 8&nbsp;MB)</span>
+      </label>
       <input
         type="file"
         id={field('file')}
@@ -115,11 +136,26 @@ const field = (name: string) => `${id}-${name}`;
     <input type="text" id={field('website')} name="website" tabindex="-1" autocomplete="off" />
   </div>
 
-  <button type="submit" class:list={['btn', compact ? 'btn--primary' : 'btn--kraft', 'btn--block']}>
+  <button
+    type="submit"
+    class:list={['btn', compact ? 'btn--primary' : 'btn--kraft', !hero && 'btn--block']}
+  >
     Submit
   </button>
 
   <p class="qf__status" role="status" aria-live="polite" data-quote-status></p>
+
+  {hero && (
+    <img
+      class="qf__payments"
+      src="/art/payment-image.jpeg"
+      alt="PayPal, SSL secure connection, Visa and Mastercard accepted"
+      width="331"
+      height="152"
+      loading="lazy"
+      decoding="async"
+    />
+  )}
 </form>
 
 <style>
@@ -241,6 +277,66 @@ const field = (name: string) => `${id}-${name}`;
 
   .qf__status[data-state='error'] {
     color: var(--danger);
+  }
+
+  /* --- hero variant, matching the supplied design ------------------------ */
+  .qf--hero {
+    border-radius: 18px;
+    padding: 0 0 1.1rem;
+    overflow: hidden;
+  }
+
+  /* The green pill heading sits flush across the top of the panel. */
+  .qf--hero .qf__heading {
+    background: var(--green);
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 0 1.1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 18px 18px 26px 26px;
+  }
+
+  .qf--hero .qf__grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding-inline: 1rem;
+  }
+
+  .qf--hero :is(input, textarea) {
+    border-radius: 999px;
+    border-color: #d6d2cc;
+    padding-inline: 1.1rem;
+  }
+
+  .qf--hero textarea {
+    border-radius: 20px;
+    padding-block: 0.7rem;
+  }
+
+  .qf--hero input[type='file'] {
+    border: 0;
+    padding-inline: 0;
+    border-radius: 0;
+  }
+
+  .qf--hero button {
+    display: block;
+    margin: 1rem auto 0;
+    min-width: 150px;
+    border-radius: 6px;
+  }
+
+  .qf--hero .qf__status {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .qf__payments {
+    display: block;
+    width: min(100%, 250px);
+    height: auto;
+    margin: 1.1rem auto 0;
   }
 
   /* --- dark variant, as used above the footer ---------------------------- */
