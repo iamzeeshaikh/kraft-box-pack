@@ -4,7 +4,7 @@
 
 | | |
 | --- | --- |
-| URL | `https://kraftboxpack-9nqkrjwkv-iamzeeshaikhs-projects.vercel.app` |
+| URL | `https://kraftboxpack-nvyewt1l2-iamzeeshaikhs-projects.vercel.app` |
 | Vercel project | `iamzeeshaikhs-projects/kraftboxpack` |
 | Environment | **Preview** — production has not been deployed |
 | Date | 3 August 2026 |

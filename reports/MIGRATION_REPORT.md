@@ -12,7 +12,7 @@ answered with 410.
 
 **DNS has not been changed.** `kraftboxpack.com` still serves the old site.
 
-Preview: `https://kraftboxpack-9nqkrjwkv-iamzeeshaikhs-projects.vercel.app`
+Preview: `https://kraftboxpack-nvyewt1l2-iamzeeshaikhs-projects.vercel.app`
 
 ## What was migrated
 

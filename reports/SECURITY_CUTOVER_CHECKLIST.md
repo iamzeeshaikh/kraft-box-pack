@@ -12,7 +12,7 @@ brief.
 
 - [ ] **Review the preview deployment.** Check the homepage, several product
       pages, a category page and the quote form. URL:
-      `https://kraftboxpack-9nqkrjwkv-iamzeeshaikhs-projects.vercel.app`
+      `https://kraftboxpack-nvyewt1l2-iamzeeshaikhs-projects.vercel.app`
 - [ ] **Confirm the quote form reaches the right mailbox.** It currently sends
       to `shanimazhar82@gmail.com` and authenticates as a Gmail account shared
       with another site — see `ENVIRONMENT_VARIABLES.md`. Decide whether that is
