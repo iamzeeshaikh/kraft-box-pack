@@ -24,24 +24,37 @@ export default defineConfig({
     // way on the previous migration, where tabs and accordions were dead in
     // production while working locally.
     csp: {
-      // The live-chat widget is the one third party the site loads. Its origin
-      // is named explicitly rather than the policy being loosened: it needs to
-      // load its script, call back to its own API, and open its panel in a
-      // frame. Nothing else is granted.
+      // Two third parties are allowed, both named explicitly rather than the
+      // policy being loosened:
+      //
+      //   chat.zeeops.dev        the live-chat widget — script, its own API
+      //                          over https and wss, and its panel frame
+      //   cloudflareinsights.com Cloudflare injects its Web Analytics beacon
+      //                          into responses it proxies. It is not in the
+      //                          page source, so the CSP has to expect it or
+      //                          the browser reports a violation on every view.
+      //                          Turning off Web Analytics in Cloudflare is the
+      //                          alternative if the beacon is not wanted.
       directives: [
         "default-src 'self'",
         "img-src 'self' data: https://chat.zeeops.dev",
         "font-src 'self' data:",
-        "connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev",
+        "connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev https://cloudflareinsights.com",
         "frame-src https://chat.zeeops.dev",
         "form-action 'self'",
         "base-uri 'self'",
         "object-src 'none'",
       ],
-      // Astro owns script-src so it can add a hash per inlined chunk; the
-      // widget's origin is appended to what it generates rather than replacing
-      // it, which is why it goes here and not in `directives`.
-      scriptDirective: { resources: ["'self'", 'https://chat.zeeops.dev'] },
+      // Astro owns script-src so it can add a hash per inlined chunk; these
+      // origins are appended to what it generates rather than replacing it,
+      // which is why they go here and not in `directives`.
+      scriptDirective: {
+        resources: [
+          "'self'",
+          'https://chat.zeeops.dev',
+          'https://static.cloudflareinsights.com',
+        ],
+      },
       styleDirective: { resources: ["'self'", "'unsafe-inline'"] },
     },
   },

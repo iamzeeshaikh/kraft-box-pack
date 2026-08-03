@@ -21,11 +21,16 @@ const fail = [];
 const check = (ok, label) => (ok ? pass++ : fail.push(label));
 
 const browser = await chromium.launch();
+// Runs against a remote origin as well as localhost, where a page load can
+// legitimately take longer than Playwright's 30s default.
+const NAV_TIMEOUT = Number(process.env.QA_TIMEOUT ?? 60000);
 
 // ------------------------------------------------------------- responsive
 for (const [w, h] of VIEWPORTS) {
   const ctx = await browser.newContext({ viewport: { width: w, height: h } });
   const page = await ctx.newPage();
+  page.setDefaultTimeout(NAV_TIMEOUT);
+  page.setDefaultNavigationTimeout(NAV_TIMEOUT);
   for (const path of PAGES) {
     await page.goto(BASE + path, { waitUntil: 'load' });
     const overflow = await page.evaluate(() => {
@@ -53,6 +58,8 @@ for (const [w, h] of VIEWPORTS) {
 // --------------------------------------------------- contrast + tap targets
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
 const page = await ctx.newPage();
+page.setDefaultTimeout(NAV_TIMEOUT);
+page.setDefaultNavigationTimeout(NAV_TIMEOUT);
 
 for (const path of PAGES) {
   await page.goto(BASE + path, { waitUntil: 'load' });
