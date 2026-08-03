@@ -216,9 +216,35 @@ def fix_heading_order(h: str) -> str:
     return "".join(out)
 
 
+# The business changed its telephone number after the exports were taken. The
+# old one is written into the copy of several pages, so it is replaced here
+# rather than by hand — otherwise re-running the extractor would reinstate it.
+OLD_PHONES = [
+    r"\+?1[-.\s]?929[-.\s]?2141[-.\s]?874",
+    r"\+?1[-.\s]?\(?929\)?[-.\s]?214[-.\s]?1874",
+]
+NEW_PHONE_DISPLAY = "(503) 358-0443"
+NEW_PHONE_TEL = "+15033580443"
+phones_rewritten: Counter = Counter()
+
+
+def rewrite_phone(raw: str) -> str:
+    """Replace the retired telephone number wherever it appears in copy."""
+    if not raw:
+        return raw
+    out = raw
+    for pattern in OLD_PHONES:
+        # tel: hrefs need the dialling form, visible text the printed form.
+        out, n = re.subn(rf'(href="tel:){pattern}(")', rf"\g<1>{NEW_PHONE_TEL}\g<2>", out, flags=re.I)
+        phones_rewritten["tel href"] += n
+        out, n = re.subn(pattern, NEW_PHONE_DISPLAY, out, flags=re.I)
+        phones_rewritten["visible text"] += n
+    return out
+
+
 def prepare(raw: str) -> str:
     """normalise -> demote -> paragraphs -> sanitise, for every field."""
-    return clean_html(autop(demote_h1(normalise(raw))))
+    return rewrite_phone(clean_html(autop(demote_h1(normalise(raw)))))
 
 
 # --------------------------------------------------------------------- structure
@@ -656,6 +682,8 @@ def main() -> None:
     print(f"conflicts   {len(conflicts)}")
     print(f"link fixups {sum(link_fixups_applied.values())} rewritten "
           f"({len(link_fixups_applied)} distinct malformed URLs)")
+    print(f"phone       {sum(phones_rewritten.values())} old numbers rewritten "
+          f"({dict(phones_rewritten)})")
     print(f"dead links  {sum(dead_links.values())} unwrapped "
           f"({len(dead_links)} distinct 404 destinations)")
     (REPORTS / "_conflicts.json").write_text(json.dumps(conflicts, indent=1))

@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import { CONTACT } from '../data/site';
 ---
 <PageLayout
   title="Thank you | Kraft Box Pack"
@@ -13,8 +14,8 @@ import PageLayout from '../layouts/PageLayout.astro';
     one business day with pricing and a structural recommendation.
   </p>
   <p>
-    If it is urgent, call <a href="tel:+19292141874">+1-929-2141-874</a> or email
-    <a href="mailto:info@kraftboxpack.com">info@kraftboxpack.com</a>.
+    If it is urgent, call <a href={`tel:${CONTACT.phone}`}>{CONTACT.phoneDisplay}</a> or email
+    <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
   </p>
   <p><a href="/products/">Browse all custom kraft boxes</a></p>
 </PageLayout>

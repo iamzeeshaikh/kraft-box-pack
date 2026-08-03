@@ -13,9 +13,9 @@ export const BRAND_NAME = 'Kraft Box Pack';
 export const CONTACT = {
   email: 'info@kraftboxpack.com',
   /** As dialled. */
-  phone: '+19292141874',
-  /** As printed on the old site, hyphens and all. */
-  phoneDisplay: '+1-929-2141-874',
+  phone: '+15033580443',
+  /** As printed. */
+  phoneDisplay: '(503) 358-0443',
   address: {
     street: '1639 70th St',
     locality: 'Brooklyn',

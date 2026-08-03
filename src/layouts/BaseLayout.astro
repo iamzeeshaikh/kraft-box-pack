@@ -35,7 +35,13 @@ const document = graph([organization(), website(), ...schema]);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {/* The kraft-bag mark from the logo artwork. A PNG set rather than an SVG
+        because the logo is supplied as raster; .ico is kept so that browsers
+        and crawlers requesting /favicon.ico by convention are answered. */}
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#1f7a2b" />
     <Seo
       title={title}
