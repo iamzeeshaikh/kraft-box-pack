@@ -36,4 +36,43 @@ export function wireMenu(): void {
   wide.addEventListener('change', (e) => {
     if (e.matches) set(false);
   });
+
+  wireSubmenus(menu);
+}
+
+/**
+ * The category dropdowns. Desktop opens them on hover/focus via CSS alone;
+ * the caret button is what makes them work for touch and keyboard, and it is
+ * the whole accordion on the phone layout.
+ */
+function wireSubmenus(menu: HTMLElement): void {
+  const items = Array.from(menu.querySelectorAll<HTMLElement>('[data-sub-toggle]'))
+    .map((btn) => btn.closest('li'))
+    .filter((li): li is HTMLLIElement => li !== null);
+
+  const setSub = (li: HTMLLIElement, open: boolean) => {
+    li.dataset.open = String(open);
+    li.querySelector('[data-sub-toggle]')?.setAttribute('aria-expanded', String(open));
+  };
+
+  const closeAll = (except?: HTMLLIElement) => {
+    for (const li of items) if (li !== except && li.dataset.open === 'true') setSub(li, false);
+  };
+
+  for (const li of items) {
+    li.querySelector<HTMLButtonElement>('[data-sub-toggle]')?.addEventListener('click', () => {
+      const open = li.dataset.open === 'true';
+      closeAll(li);
+      setSub(li, !open);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAll();
+  });
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as Node;
+    if (!items.some((li) => li.contains(target))) closeAll();
+  });
 }

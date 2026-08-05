@@ -87,6 +87,27 @@ export function wireQuoteForms(root: ParentNode = document): void {
       field.addEventListener('input', () => clearError(field));
     }
 
+    // The hero form hides the native file control, so the chosen file name is
+    // echoed into the caption next to the "Attach artwork" button.
+    const fileInput = form.querySelector<HTMLInputElement>('input[type="file"]');
+    const fileName = form.querySelector<HTMLElement>('[data-file-name]');
+    if (fileInput && fileName) {
+      const idle = fileName.textContent;
+      const show = () => {
+        const file = fileInput.files?.[0];
+        if (file) {
+          const mb = file.size / (1024 * 1024);
+          fileName.textContent = `${file.name} (${mb < 0.1 ? '<0.1' : mb.toFixed(1)} MB)`;
+          fileName.dataset.set = 'true';
+        } else {
+          fileName.textContent = idle;
+          delete fileName.dataset.set;
+        }
+      };
+      fileInput.addEventListener('change', show);
+      form.addEventListener('reset', () => setTimeout(show));
+    }
+
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (!status || !submit) return;

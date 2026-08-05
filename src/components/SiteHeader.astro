@@ -1,11 +1,28 @@
 ---
 import { NAV, CONTACT, PROMO, SOCIAL } from '../data/site';
+import categories from '../data/categories.json';
+import products from '../data/products.json';
 import Icon from './Icon.astro';
 import Logo from './Logo.astro';
 
 const path = Astro.url.pathname;
 const isCurrent = (href: string) =>
   href === '/' ? path === '/' : path.startsWith(href);
+
+/**
+ * Each category link in the menu opens a dropdown of the products WordPress
+ * filed under it, read from the same exports that build the category pages —
+ * so the menu can never list a product the site does not have.
+ */
+const productBySlug = new Map(products.map((p) => [p.slug, { name: p.name, url: p.url }]));
+const subFor = (href: string) => {
+  const slug = href.match(/product-category\/([^/]+)/)?.[1];
+  const cat = categories.find((c) => c.slug === slug);
+  return (cat?.products ?? [])
+    .map((s) => productBySlug.get(s))
+    .filter((p): p is { name: string; url: string } => Boolean(p));
+};
+const navItems = NAV.map((item) => ({ ...item, sub: subFor(item.href) }));
 ---
 
 <div class="utility">
@@ -58,13 +75,46 @@ const isCurrent = (href: string) =>
     <nav id="primary-nav" class="nav" aria-label="Primary" data-menu>
       <ul class="nav__list">
         {
-          NAV.map((item) => (
-            <li>
-              <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
-                {item.label}
-              </a>
-            </li>
-          ))
+          navItems.map((item, i) =>
+            item.sub.length === 0 ? (
+              <li>
+                <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                  {item.label}
+                </a>
+              </li>
+            ) : (
+              <li class="nav__item--sub">
+                <span class="nav__row">
+                  <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+                    {item.label}
+                  </a>
+                  <button
+                    type="button"
+                    class="nav__caret"
+                    aria-expanded="false"
+                    aria-controls={`nav-sub-${i}`}
+                    data-sub-toggle
+                  >
+                    <Icon name="chevron" size={13} />
+                    <span class="visually-hidden">Open {item.label} submenu</span>
+                  </button>
+                </span>
+                <ul
+                  class:list={['nav__sub', item.sub.length >= 10 && 'nav__sub--cols']}
+                  id={`nav-sub-${i}`}
+                >
+                  <li class="nav__sub-all">
+                    <a href={item.href}>View all {item.label}</a>
+                  </li>
+                  {item.sub.map((p) => (
+                    <li>
+                      <a href={p.url}>{p.name}</a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ),
+          )
         }
       </ul>
     </nav>
@@ -252,6 +302,123 @@ const isCurrent = (href: string) =>
     border-bottom-color: var(--kraft);
   }
 
+  /* --- dropdown menus ---------------------------------------------------- */
+  .nav__item--sub {
+    position: relative;
+  }
+
+  .nav__row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.05rem;
+  }
+
+  .nav__caret {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+
+  .nav__caret:hover {
+    color: var(--kraft-dark);
+    background: var(--kraft-tint);
+  }
+
+  .nav__caret :global(svg) {
+    transform: rotate(90deg);
+    transition: transform 0.15s;
+  }
+
+  .nav__item--sub:hover .nav__caret :global(svg),
+  .nav__item--sub:focus-within .nav__caret :global(svg),
+  .nav__item--sub[data-open='true'] .nav__caret :global(svg) {
+    transform: rotate(270deg);
+  }
+
+  .nav__sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    min-width: 250px;
+    margin: 0;
+    padding: 0.45rem;
+    list-style: none;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 0.15s, transform 0.15s, visibility 0.15s;
+  }
+
+  .nav__item--sub:hover .nav__sub,
+  .nav__item--sub:focus-within .nav__sub,
+  .nav__item--sub[data-open='true'] .nav__sub {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* The widest panels sit under the right end of the bar; opening them to the
+     left keeps them inside the viewport. */
+  .nav__list > li:nth-last-child(-n + 2) .nav__sub {
+    left: auto;
+    right: 0;
+  }
+
+  .nav__sub--cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    column-gap: 0.35rem;
+  }
+
+  .nav__sub li {
+    margin: 0;
+  }
+
+  /* Dropdown entries read as a list, not as more menu bar: body face, no
+     underline rule, a soft hover fill instead. */
+  .nav__list .nav__sub a:not(.btn) {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 0;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+
+  .nav__list .nav__sub a:not(.btn):hover,
+  .nav__list .nav__sub a[aria-current='page'] {
+    background: var(--kraft-tint);
+    color: var(--kraft-dark);
+  }
+
+  .nav__sub-all {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .nav__list .nav__sub-all a:not(.btn) {
+    font-weight: 700;
+    color: var(--kraft-dark);
+  }
+
   @media (max-width: 1040px) {
     .burger {
       display: inline-flex;
@@ -294,6 +461,59 @@ const isCurrent = (href: string) =>
       padding: 0.85rem 0.25rem;
     }
 
+    /* On the phone the dropdown becomes an accordion: the caret button gets a
+       full-size target and the sub list folds out in place, indented. */
+    .nav__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .nav__row a {
+      flex: 1;
+    }
+
+    .nav__caret {
+      width: 44px;
+      height: 44px;
+    }
+
+    .nav__sub {
+      display: none;
+      position: static;
+      min-width: 0;
+      padding: 0 0 0.6rem 0.85rem;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+      transition: none;
+    }
+
+    .nav__item--sub[data-open='true'] .nav__sub {
+      display: block;
+    }
+
+    .nav__sub--cols {
+      display: none;
+      grid-template-columns: 1fr;
+    }
+
+    .nav__item--sub[data-open='true'] .nav__sub--cols {
+      display: block;
+    }
+
+    .nav__sub li + li {
+      border-top: 0;
+    }
+
+    .nav__sub-all {
+      border-bottom: 1px solid var(--line);
+    }
   }
 </style>
 
