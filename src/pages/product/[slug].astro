@@ -87,7 +87,7 @@ const pageSchema = [
       <ul role="list">
         {FEATURES.map((f) => (
           <li>
-            <img src={`/art/${f.art}`} alt="" width="150" height="110" loading="lazy" decoding="async" />
+            <img src={`/art/${f.art}`} alt={`${f.title} — Kraft Box Pack`} width="150" height="110" loading="lazy" decoding="async" />
             <span>{f.title}</span>
           </li>
         ))}

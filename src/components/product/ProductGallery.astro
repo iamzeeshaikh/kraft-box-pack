@@ -38,19 +38,17 @@ const [main, ...rest] = resolved;
                 type="button"
                 class:list={['thumb', i === 0 && 'is-active']}
                 aria-pressed={i === 0 ? 'true' : 'false'}
+                aria-label={`View image ${i + 1} of ${resolved.length} for ${name}`}
                 data-full={img.image.src}
                 data-alt={img.alt}
               >
                 <Image
                   src={img.image}
-                  alt=""
+                  alt={img.alt || `${name} image ${i + 1}`}
                   widths={[120]}
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                 />
-                <span class="visually-hidden">
-                  Show image {i + 1} of {resolved.length} for {name}
-                </span>
               </button>
             </li>
           ))}

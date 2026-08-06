@@ -17,7 +17,12 @@ const assets = import.meta.glob<{ default: ImageMetadata }>(
 
 /** `../assets/products/2024-08-foo.jpg` -> `2024-08-foo.jpg` */
 const byName = new Map(
-  Object.entries(assets).map(([path, mod]) => [path.split('/').pop()!, mod.default]),
+  Object.entries(assets)
+    .map(([path, mod]) => [path.split('/').pop()!, mod.default] as const)
+    // macOS AppleDouble sidecars (`._foo.jpg`) are resource forks, not images;
+    // on exFAT/network volumes they appear beside every real file and would
+    // otherwise shadow it in this map and break the build.
+    .filter(([name]) => !name.startsWith('._')),
 );
 
 export function localName(url: string): string {
