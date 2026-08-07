@@ -6,6 +6,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { organization, website, graph } from '../lib/schema';
 import '../styles/global.css';
 
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 interface Props {
   title: string;
   description: string;
@@ -64,5 +65,6 @@ const document = graph([organization(), website(), ...schema]);
     {/* ZeeOps live chat. Loaded last and deferred so it never blocks render;
         its origin is allow-listed in the CSP in astro.config.mjs. */}
     <script src="https://chat.zeeops.dev/widget.js?siteId=kraftboxpack" defer is:inline></script>
+      <WhatsAppButton />
   </body>
 </html>
