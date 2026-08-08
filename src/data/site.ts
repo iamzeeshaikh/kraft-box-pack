@@ -51,10 +51,12 @@ export const NAV = [
   { label: 'Kraft Gift & Specialty Boxes', href: '/product-category/kraft-gift-specialty-boxes/' },
   { label: 'Kraft Packaging Boxes', href: '/product-category/kraft-packaging-boxes/' },
   { label: 'Kraft Wrapping & Accessories', href: '/product-category/kraft-wrapping-accessories/' },
+  { label: 'Blog', href: '/blog/' },
 ] as const;
 
 export const FOOTER_COMPANY = [
   { label: 'About Us', href: '/about-us/' },
+  { label: 'Blog', href: '/blog/' },
   { label: 'Contact Us', href: '/contact-us/' },
   { label: 'All Products', href: '/products/' },
   { label: 'Privacy Policy', href: '/privacy-policy/' },
