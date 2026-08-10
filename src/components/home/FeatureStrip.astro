@@ -2,9 +2,13 @@
 /**
  * The four selling points, shown with the animated artwork from the old site.
  *
- * The GIFs are referenced from `public/` rather than imported as assets,
- * because Astro's image pipeline re-encodes an animated GIF to a still frame.
- * They are the originals the design uses, unchanged.
+ * The artwork is referenced from `public/` rather than imported as an asset,
+ * because Astro's image pipeline re-encodes an animated image to a still frame.
+ *
+ * The four source GIFs totalled 2.78MB — boxes-gif-unscreen alone was 1.5MB at
+ * 480x360 for a box laid out 130px tall — so they are now animated WebP at
+ * 340px and, where the source ran above 40 frames, half the frame rate. Same
+ * animations, 2.78MB down to 306KB.
  */
 import { FEATURES } from '../../data/site';
 ---

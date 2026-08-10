@@ -62,9 +62,11 @@ const document = graph([organization(), website(), ...schema]);
     </main>
     <SiteFooter />
 
-    {/* ZeeOps live chat. Loaded last and deferred so it never blocks render;
-        its origin is allow-listed in the CSP in astro.config.mjs. */}
-    <script src="https://chat.zeeops.dev/widget.js?siteId=kraftboxpack" defer is:inline></script>
+    {/* ZeeOps live chat, deferred to the first interaction (or 6s after load)
+        so its 23KB and its site-config request never compete with the page's
+        own LCP. See public/chat-loader.js. Conversations land in the dashboard
+        at chat.zeeops.dev under the `kraftboxpack` site. */}
+    <script src="/chat-loader.js" defer></script>
       <WhatsAppButton />
   </body>
 </html>
