@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { BLOG_POSTS } from '../../lib/blog';
+import { blogPosting, breadcrumbs } from '../../lib/schema';
 
 export function getStaticPaths() {
   return BLOG_POSTS.map((post) => ({ params: { slug: post.slug }, props: { post } }));
@@ -28,6 +29,7 @@ const published = new Date(post.date + 'T12:00:00Z').toLocaleDateString('en-US',
   description={post.metaDescription}
   path={post.url}
   image={post.image}
+  schema={[blogPosting(post), breadcrumbs(post.url, crumbs)]}
 >
   <Breadcrumbs crumbs={crumbs} />
 

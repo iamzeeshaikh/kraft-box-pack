@@ -2,10 +2,21 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { BLOG_POSTS } from '../../lib/blog';
+import { breadcrumbs, collectionPage } from '../../lib/schema';
 
 const crumbs = [
   { name: 'Home', url: '/' },
   { name: 'Blog', url: '/blog/' },
+];
+
+const schema = [
+  ...collectionPage(
+    '/blog/',
+    'Kraft Box Pack Blog',
+    'Guides on kraft box materials, window cartons, lidded gift boxes, shipping formats and food safe packaging.',
+    BLOG_POSTS.map((p) => ({ name: p.title, url: p.url })),
+  ),
+  breadcrumbs('/blog/', crumbs),
 ];
 
 const fmt = (iso: string) =>
@@ -20,6 +31,7 @@ const fmt = (iso: string) =>
   title="Blog | Kraft Box Pack"
   description="Guides on kraft box materials, window cartons, lidded gift boxes, shipping formats and food safe packaging for buyers."
   path="/blog/"
+  schema={schema}
 >
   <Breadcrumbs crumbs={crumbs} />
 

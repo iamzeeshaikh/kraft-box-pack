@@ -76,6 +76,36 @@ export function faqPage(path: string, faqs: Faq[]) {
   };
 }
 
+/**
+ * Article schema for the blog. Headline, description, hero and date all come
+ * from the post's frontmatter, which is what the page renders. Posts carry no
+ * byline, so the organisation is author as well as publisher.
+ */
+export function blogPosting(post: {
+  title: string;
+  metaDescription: string;
+  url: string;
+  image: string;
+  date: string;
+}) {
+  const published = `${post.date}T12:00:00Z`;
+  return {
+    '@type': 'BlogPosting',
+    '@id': `${abs(post.url)}#article`,
+    headline: post.title,
+    description: post.metaDescription,
+    url: abs(post.url),
+    image: abs(post.image),
+    datePublished: published,
+    dateModified: published,
+    inLanguage: 'en-US',
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': abs(post.url) },
+  };
+}
+
 export function webPage(path: string, name: string, description: string) {
   return {
     '@type': 'WebPage',
@@ -143,8 +173,14 @@ function returnPolicy() {
  * rating is 0), and Google treats a rating without reviews behind it as
  * deceptive structured data.
  */
+/** Site-wide per-box entry price, used when a product carries none of its own. */
+const FALLBACK_PRICE = 0.3;
+
 export function product(p: Product, images: string[]) {
-  const price = Number.parseFloat(p.price);
+  const parsed = Number.parseFloat(p.price);
+  // Every product must reach Google with a concrete price; a range would leave
+  // it ineligible for a merchant listing.
+  const price = Number.isFinite(parsed) ? parsed : FALLBACK_PRICE;
   const node: Record<string, unknown> = {
     '@type': 'Product',
     '@id': `${abs(p.url)}#product`,
@@ -157,47 +193,30 @@ export function product(p: Product, images: string[]) {
     category: p.categoryNames.join(', '),
   };
 
-  if (Number.isFinite(price)) {
-    node.offers = {
-      '@type': 'Offer',
-      '@id': `${abs(p.url)}#offer`,
+  node.offers = {
+    '@type': 'Offer',
+    '@id': `${abs(p.url)}#offer`,
+    price: price.toFixed(2),
+    priceCurrency: p.currency || 'USD',
+    priceValidUntil: '2027-08-04',
+    availability: 'https://schema.org/InStock',
+    itemCondition: 'https://schema.org/NewCondition',
+    url: abs(p.url),
+    seller: { '@id': `${SITE_URL}/#organization` },
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
       price: price.toFixed(2),
       priceCurrency: p.currency || 'USD',
-      priceValidUntil: '2027-08-04',
-      availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
-      url: abs(p.url),
-      seller: { '@id': `${SITE_URL}/#organization` },
-      priceSpecification: {
-        '@type': 'UnitPriceSpecification',
-        price: price.toFixed(2),
-        priceCurrency: p.currency || 'USD',
-        unitText: 'per box',
-        eligibleQuantity: {
-          '@type': 'QuantitativeValue',
-          minValue: 100,
-          unitText: 'boxes',
-        },
+      unitText: 'per box',
+      eligibleQuantity: {
+        '@type': 'QuantitativeValue',
+        minValue: 100,
+        unitText: 'boxes',
       },
-      shippingDetails: shippingDetails(),
-      hasMerchantReturnPolicy: returnPolicy(),
-    };
-  } else {
-    // No price on record: wholesale range for made-to-order kraft boxes.
-    node.offers = {
-      '@type': 'AggregateOffer',
-      '@id': `${abs(p.url)}#offer`,
-      lowPrice: '0.30',
-      highPrice: '5.00',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
-      url: abs(p.url),
-      seller: { '@id': `${SITE_URL}/#organization` },
-      shippingDetails: shippingDetails(),
-      hasMerchantReturnPolicy: returnPolicy(),
-    };
-  }
+    },
+    shippingDetails: shippingDetails(),
+    hasMerchantReturnPolicy: returnPolicy(),
+  };
   return node;
 }
 
