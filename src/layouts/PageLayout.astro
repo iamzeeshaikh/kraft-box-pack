@@ -13,6 +13,8 @@ interface Props {
 }
 
 const { title, description, path, heading, html, noindex = false } = Astro.props;
+// /about-us/ is an AboutPage rather than a generic WebPage.
+const pageType = path === '/about-us/' ? 'AboutPage' : 'WebPage';
 const crumbs = [{ name: 'Home', url: '/' }, { name: heading, url: path }];
 ---
 <BaseLayout
@@ -20,7 +22,7 @@ const crumbs = [{ name: 'Home', url: '/' }, { name: heading, url: path }];
   description={description}
   path={path}
   noindex={noindex}
-  schema={[schema.webPage(path, title, description), schema.breadcrumbs(path, crumbs)]}
+  schema={[schema.webPage(path, title, description, pageType), schema.breadcrumbs(path, crumbs)]}
 >
   <Breadcrumbs crumbs={crumbs} />
   <article class="section">
