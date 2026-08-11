@@ -26,7 +26,11 @@ const faqs = written?.faqs ?? product.faqs;
  * rather than render an empty panel.
  */
 const tabs = [
-  { id: 'description', label: 'Description', show: Boolean(product.description) },
+  /* Recreated products carry no imported WordPress prose, so the tab has to
+     follow whichever source will actually render — otherwise a page with
+     hand-written content and no legacy description shows no description at
+     all, which is how the four recreated products first built. */
+  { id: 'description', label: 'Description', show: Boolean(written || product.description) },
   { id: 'specifications', label: 'Specifications', show: product.specs.rows.length > 0 },
   { id: 'faqs', label: 'FAQs', show: faqs.length > 0 },
 ].filter((t) => t.show);

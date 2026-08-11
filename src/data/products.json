@@ -42887,5 +42887,121 @@
       }
     ],
     "words": 486
+  },
+  {
+    "id": "recreated-kraft-diffuser-boxes",
+    "slug": "kraft-diffuser-boxes",
+    "name": "Kraft Diffuser Boxes",
+    "url": "/product/kraft-diffuser-boxes/",
+    "categories": [
+      "kraft-gift-specialty-boxes"
+    ],
+    "thumbnail": "",
+    "gallery": [],
+    "seoTitle": "Custom Kraft Diffuser Boxes Wholesale | Kraft Box Pack",
+    "seoDescription": "Kraft reed diffuser boxes sized to the reeds rather than the bottle, with liner options for transit. Wholesale pricing and free design help.",
+    "focusKeyword": "Kraft Diffuser Boxes",
+    "primaryCategory": "",
+    "views": 0,
+    "sku": "",
+    "price": "0.3",
+    "currency": "USD",
+    "inStock": true,
+    "shortDescription": "",
+    "description": "",
+    "specs": {
+      "headers": [],
+      "rows": []
+    },
+    "faqs": [],
+    "images": [],
+    "words": 0
+  },
+  {
+    "id": "recreated-kraft-corporate-gift-boxes",
+    "slug": "kraft-corporate-gift-boxes",
+    "name": "Kraft Corporate Gift Boxes",
+    "url": "/product/kraft-corporate-gift-boxes/",
+    "categories": [
+      "custom-gift-boxes"
+    ],
+    "thumbnail": "",
+    "gallery": [],
+    "seoTitle": "Kraft Corporate Gift Boxes Wholesale | Kraft Box Pack",
+    "seoDescription": "Corporate gift boxes made to your contents, with compartmented fitments and restrained branding. Wholesale pricing and free design assistance.",
+    "focusKeyword": "Kraft Corporate Gift Boxes",
+    "primaryCategory": "",
+    "views": 0,
+    "sku": "",
+    "price": "0.3",
+    "currency": "USD",
+    "inStock": true,
+    "shortDescription": "",
+    "description": "",
+    "specs": {
+      "headers": [],
+      "rows": []
+    },
+    "faqs": [],
+    "images": [],
+    "words": 0
+  },
+  {
+    "id": "recreated-kraft-diy-kit-boxes",
+    "slug": "kraft-diy-kit-boxes",
+    "name": "Kraft DIY Kit Boxes",
+    "url": "/product/kraft-diy-kit-boxes/",
+    "categories": [
+      "kraft-art-boxes"
+    ],
+    "thumbnail": "",
+    "gallery": [],
+    "seoTitle": "Custom Kraft DIY Kit Boxes Wholesale | Kraft Box Pack",
+    "seoDescription": "DIY kit boxes with a compartment per component so nothing is missing on opening. Custom sizes, print and wholesale pricing.",
+    "focusKeyword": "Kraft DIY Kit Boxes",
+    "primaryCategory": "",
+    "views": 0,
+    "sku": "",
+    "price": "0.3",
+    "currency": "USD",
+    "inStock": true,
+    "shortDescription": "",
+    "description": "",
+    "specs": {
+      "headers": [],
+      "rows": []
+    },
+    "faqs": [],
+    "images": [],
+    "words": 0
+  },
+  {
+    "id": "recreated-kraft-cosmetic-serum-boxes",
+    "slug": "kraft-cosmetic-serum-boxes",
+    "name": "Kraft Cosmetic Serum Boxes",
+    "url": "/product/kraft-cosmetic-serum-boxes/",
+    "categories": [
+      "kraft-cosmetic-boxes"
+    ],
+    "thumbnail": "",
+    "gallery": [],
+    "seoTitle": "Kraft Cosmetic Serum Boxes Wholesale | Kraft Box Pack",
+    "seoDescription": "Serum cartons sized with the dropper seated and a coated inner face so a leak cannot mark the outside. Wholesale pricing, free dielines.",
+    "focusKeyword": "Kraft Cosmetic Serum Boxes",
+    "primaryCategory": "",
+    "views": 0,
+    "sku": "",
+    "price": "0.3",
+    "currency": "USD",
+    "inStock": true,
+    "shortDescription": "",
+    "description": "",
+    "specs": {
+      "headers": [],
+      "rows": []
+    },
+    "faqs": [],
+    "images": [],
+    "words": 0
   }
 ]

@@ -136,6 +136,11 @@
       "source": "/product-category/kraft-packaging-boxes/karft-cosmetic-boxes/",
       "destination": "/product-category/kraft-cosmetic-boxes/",
       "statusCode": 301
+    },
+    {
+      "source": "/product/Kraft-Diffuser-Boxes/",
+      "destination": "/product/kraft-diffuser-boxes/",
+      "statusCode": 301
     }
   ],
   "headers": [

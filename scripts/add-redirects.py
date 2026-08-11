@@ -34,9 +34,9 @@ REDIRECTS = [
 
     # Uppercase variants Google still holds. Lowercase URL consistency.
     ('/product/Kraft-T-Shirt-Boxes/', '/product/kraft-t-shirt-boxes/', 'Lowercase canonical'),
-    # NOTE: /product/Kraft-Diffuser-Boxes/ is held back until the lowercase
-    # page is created — see PRODUCT-AUDIT.md. The guard below refuses to point
-    # a redirect at a URL that does not exist, which is how this was caught.
+    # The lowercase page now exists, so the uppercase variant Google holds can
+    # finally be pointed at it.
+    ('/product/Kraft-Diffuser-Boxes/', '/product/kraft-diffuser-boxes/', 'Lowercase canonical'),
     ('/product-category/Kraft-Food-Packaging/', '/product-category/kraft-food-packaging/',
      'Lowercase canonical'),
     ('/product-category/Kraft-Industrial-Packaging/', '/product-category/kraft-industrial-packaging/',

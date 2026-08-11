@@ -26,16 +26,16 @@ this gap.
 
 | URL | Impressions | Clicks | Position | Decision |
 |---|---|---|---|---|
-| `/product/kraft-diffuser-boxes/` | 251 | 4 | 24.8 | **Held.** No equivalent live page. Recreate or redirect — business decision. |
-| `/product/kraft-corporate-gift-boxes/` | 170 | 1 | 39.4 | **Held.** Distinct B2B intent, no equivalent. |
+| `/product/kraft-diffuser-boxes/` | 251 | 4 | 24.8 | **Recreated** as a full page with written content. |
+| `/product/kraft-corporate-gift-boxes/` | 170 | 1 | 39.4 | **Recreated** as a full page with written content. |
 | `/product/kraft-clothing-packaging-boxes/` | 93 | 1 | 11.3 | 301 → kraft-apparel-packaging-boxes (same product, different term) |
-| `/product/kraft-diy-kit-boxes/` | 59 | 3 | 7.1 | **Held.** Ranks at 7.1 with no equivalent. |
-| `/product/kraft-cosmetic-serum-boxes/` | 49 | 0 | 13.8 | **Held.** Distinct product, no equivalent. |
+| `/product/kraft-diy-kit-boxes/` | 59 | 3 | 7.1 | **Recreated** as a full page with written content. |
+| `/product/kraft-cosmetic-serum-boxes/` | 49 | 0 | 13.8 | **Recreated** as a full page with written content. |
 | `/product/kraft-menu-packaging-boxes/` | 17 | 0 | 12.1 | 301 → kraft-brochure-packaging-boxes (same format) |
 | `/product/kraft-pill-boxes/` | 13 | 0 | 5.0 | 301 → kraft-medicine-packaging-boxes |
 | `/product/kraft-counter-display-stands/` | 7 | 3 | 2.1 | 301 → kraft-display-boxes |
 | `/product/kraft-craft-kit-boxes/` | 4 | 0 | 1.8 | 301 → kraft-art-supply-packaging |
-| `/product/Kraft-Diffuser-Boxes/` | 2 | 0 | 4.0 | Case variant — held with the lowercase decision |
+| `/product/Kraft-Diffuser-Boxes/` | 2 | 0 | 4.0 | 301 → the recreated lowercase page |
 
 ## Legacy image URLs, and why they are not redirected
 
@@ -85,8 +85,21 @@ updated too — the brief asked for every reference, not just the route.
 
 ## Redirect integrity
 
-27 redirects, **0 chains**. `scripts/add-redirects.py` refuses to write a
+28 redirects, **0 chains**. `scripts/add-redirects.py` refuses to write a
 redirect whose destination does not exist in the build or is itself a redirect
 source. It caught one of each while this was being written, which is why the
-four lost products with no equivalent are held rather than pointed at 404s.
+uppercase diffuser variant stayed out of the config until its lowercase page
+existed. It is in now.
+
+## The four recreated products
+
+None had an equivalent page — a reed diffuser is not a candle, a serum bottle is
+not a jar of cream, a corporate gift programme is not a hamper, and a project
+kit is not an art supply set. Redirecting them would have thrown away 529
+impressions and four ranking positions.
+
+They are built as full pages with hand-written content and ten FAQs each. They
+carry **no photography**, so they are excluded from the Merchant feed until it
+exists — see `IMAGE-GAPS.md`. The catalogue is now 162 products, of which 158
+are in the feed.
 

@@ -11,6 +11,7 @@ import { giftSpecialtyContent } from './gift-specialty'
 import { packagingBoxesContent } from './packaging-boxes'
 import { foodContent } from './food'
 import { giftContent } from './gift'
+import { recreatedContent } from './recreated'
 
 export type { ProductContent, ProductSection, ProductFaq } from './types'
 
@@ -34,6 +35,7 @@ const ALL: ProductContentMap = {
   ...packagingBoxesContent,
   ...foodContent,
   ...giftContent,
+  ...recreatedContent,
 }
 
 export const contentFor = (slug: string): ProductContent | undefined => ALL[slug]

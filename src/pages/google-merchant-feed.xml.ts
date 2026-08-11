@@ -32,7 +32,18 @@ const esc = (s: string) =>
     .replace(/"/g, '&quot;');
 
 export const GET: APIRoute = () => {
-  const items = products.map((p) => {
+  /*
+   * A feed item with no image is disapproved by Merchant Center, and Merchant
+   * listings are 44% of this site's organic clicks — so a product without
+   * photography is left out of the feed entirely rather than sent as an item
+   * that will fail review. Its page still builds and is still indexable.
+   *
+   * Currently that is the four products recreated after the migration dropped
+   * them. See IMAGE-GAPS.md.
+   */
+  const items = products
+    .filter((p) => resolveAll(p.images).length > 0)
+    .map((p) => {
     const images = resolveAll(p.images).map((i) => absolute(i.image.src));
     const price = Number.parseFloat(p.price);
     const description =

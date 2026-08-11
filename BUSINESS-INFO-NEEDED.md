@@ -59,18 +59,11 @@ Mastercard and PayPal marks on a page with no checkout is confusing at best.
    migration and has not been recreated. If genuine reviews are collected, they
    should appear as visible text on the page, not only inside structured data.
 
-## Lost products worth a decision
+## Lost products — resolved
 
-Ten product pages were dropped in the WordPress migration and several still
-rank. Five have been redirected to the live page serving the same intent. Four
-have distinct demand and no equivalent, so they currently 404:
+All ten have been dealt with. Five redirected to the live page serving the same
+intent; the four with distinct demand and no equivalent were **recreated as full
+pages** with hand-written content.
 
-| URL | Impressions | Position |
-|---|---|---|
-| `/product/kraft-diffuser-boxes/` | 251 | 24.8 |
-| `/product/kraft-corporate-gift-boxes/` | 170 | 39.4 |
-| `/product/kraft-diy-kit-boxes/` | 59 | 7.1 |
-| `/product/kraft-cosmetic-serum-boxes/` | 49 | 13.8 |
-
-Each is a product the business plausibly makes. Confirm whether to recreate
-them as pages or redirect them to the closest live product.
+They need photography before they can enter the Merchant feed. Shot lists are in
+`IMAGE-GAPS.md`.

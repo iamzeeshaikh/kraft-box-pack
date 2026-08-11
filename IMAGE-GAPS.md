@@ -57,6 +57,28 @@ Dropping the payment and security graphics would remove roughly 110 KB from
 every page load and resolve the credibility question at the same time. That is
 a business decision, not a technical one.
 
+### Photography needed — four products, blocking their Merchant feed entry
+
+The four products recreated after the migration dropped them have **no
+photography at all**. Rather than borrow another product's images and present
+them as these, the galleries are empty and the products are **excluded from the
+Google Merchant feed** — a feed item without an image is disapproved, and
+Merchant listings are 44% of this site's organic clicks.
+
+Their pages still build, are indexable and carry full written content, so the
+ranking positions they still hold are recovered either way.
+
+| Product | Impressions | Position | Shots needed |
+|---|---|---|---|
+| Kraft Diffuser Boxes | 251 | 24.8 | Carton with bottle and full-length reeds, showing the height relationship |
+| Kraft Corporate Gift Boxes | 170 | 39.4 | Open box with a mixed set at a level height |
+| Kraft DIY Kit Boxes | 59 | 7.1 | Open box showing a compartment per component |
+| Kraft Cosmetic Serum Boxes | 49 | 13.8 | Carton beside a dropper bottle with the dropper seated |
+
+Once photographed, add the files to `src/assets/products/` and the entries to
+`images` in `products.json` — the feed picks them up automatically, since the
+exclusion is driven by whether images resolve rather than by a list.
+
 ### Not requested from the business
 
 No product is missing photography, so there is nothing to commission on that
