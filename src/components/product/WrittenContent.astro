@@ -1,12 +1,14 @@
 ---
 /**
- * The hand-written body for a product, shown in place of the imported
- * WordPress description where one has been written.
+ * The hand-written detail for a product, shown *after* the imported copy rather
+ * than instead of it.
  *
- * The preserved-links block at the end is not optional and is not driven by
- * the written content. It renders the internal links the original copy
- * carried, so replacing that copy cannot drop them. Each link sits in its own
- * list item, which keeps every paragraph to at most one internal link.
+ * The preserved-links block only renders where there is no imported copy on the
+ * page. Its whole purpose was to stop a rewrite dropping the internal links the
+ * original carried — but the original now renders in full, with every one of
+ * those links back inside the sentence it was written into, which is where they
+ * belong and where they are worth something. Repeating them as a bare list
+ * underneath would be duplication, not insurance.
  */
 import type { ProductContent } from '../../data/product-content'
 import type { PreservedLink } from '../../data/product-content'
@@ -15,12 +17,15 @@ interface Props {
   content: ProductContent
   preserved: PreservedLink[]
   productName: string
+  /** True when the imported prose renders above this, carrying its own links. */
+  hasImported?: boolean
 }
 
-const { content, preserved, productName } = Astro.props
+const { content, preserved, productName, hasImported = false } = Astro.props
+const showPreserved = !hasImported && preserved.length > 0
 ---
 
-<div class="written prose">
+<div class:list={['written', 'prose', hasImported && 'written--after']}>
   {content.sections.map((s) => (
     <section class="written__block">
       <h2>{s.h2}</h2>
@@ -61,7 +66,7 @@ const { content, preserved, productName } = Astro.props
     </p>
   )}
 
-  {preserved.length > 0 && (
+  {showPreserved && (
     <aside class="written__also" aria-labelledby="also-heading">
       <h2 id="also-heading">Also worth looking at</h2>
       <ul>
@@ -76,6 +81,14 @@ const { content, preserved, productName } = Astro.props
 </div>
 
 <style>
+  /* A rule and a little air where the written detail follows the imported
+     copy, so the two read as sections of one page rather than a seam. */
+  .written--after {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
   .written__block + .written__block { margin-top: 2rem; }
 
   .written__block h2 {

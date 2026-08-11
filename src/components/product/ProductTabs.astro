@@ -11,9 +11,19 @@ interface Props {
 
 const { product } = Astro.props;
 
-/* Hand-written content replaces the imported WordPress copy where one exists.
-   The preserved links are passed separately and render either way, so a
-   rewritten product cannot lose the internal links its old copy carried. */
+/*
+ * The imported copy is the body; the hand-written sections are added on top.
+ *
+ * This used to be an either/or — where written content existed it REPLACED the
+ * import. That cut the median product from 1,356 words to 141 and pulled every
+ * contextual link out of its sentence into a list at the foot of the page. The
+ * brief was to refresh the copy and add value to it, not to substitute a
+ * summary for it.
+ *
+ * So both render: the imported prose keeps its headings, spec tables and inline
+ * links exactly where they were, and the written sections follow as the
+ * product-specific detail the import did not carry.
+ */
 const written = contentFor(product.slug);
 const preserved = preservedLinksFor(product.slug);
 
@@ -65,12 +75,19 @@ const tabs = [
         hidden={i !== 0}
         class="tabs__panel"
       >
-        {tab.id === 'description' &&
-          (written ? (
-            <WrittenContent content={written} preserved={preserved} productName={product.name} />
-          ) : (
-            <div class="prose" set:html={product.description} />
-          ))}
+        {tab.id === 'description' && (
+          <>
+            {product.description && <div class="prose" set:html={product.description} />}
+            {written && (
+              <WrittenContent
+                content={written}
+                preserved={preserved}
+                productName={product.name}
+                hasImported={Boolean(product.description)}
+              />
+            )}
+          </>
+        )}
         {tab.id === 'specifications' && <SpecTable specs={product.specs} name={product.name} />}
         {tab.id === 'faqs' && <FaqAccordion faqs={faqs} />}
       </section>

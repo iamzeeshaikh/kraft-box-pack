@@ -50,9 +50,18 @@ All six were followed. Where a claim could not be evidenced it was flagged in
 
 ## Content
 
-- **All 162 product pages hand-written.** Intro, two or three sections chosen
-  for that product, one contextual outbound link and ten product-specific FAQs.
-  Product body similarity above 20%: **1 pair → 0**.
+- **The imported copy is the body; the written sections add to it.** This was
+  briefly the other way round — written content *replaced* the import, which cut
+  the median product page from 1,356 words to 141 and pulled every contextual
+  link out of its sentence into a list at the foot of the page. The brief was to
+  refresh the copy and add value, not to substitute a summary for it. Both now
+  render: the imported prose keeps its headings, spec tables and inline links
+  exactly where they were, and the written sections follow as the
+  product-specific detail. Description panel: **1,517 words median**, with
+  **630 internal links inline**, a median of four per product.
+- **All 162 products carry hand-written detail** on top of that — sections
+  chosen for that product, a contextual link and ten product-specific FAQs.
+  Product body similarity above 20%: **0 pairs**.
 - **The four recreated products have galleries.** None had photography of its
   own, so each borrows the closest genuine kraft format already in the media
   library. Alt text describes what the photograph shows rather than claiming to
@@ -113,10 +122,12 @@ All six were followed. Where a claim could not be evidenced it was flagged in
 
 ## Internal linking
 
-- **309 links frozen before any copy was replaced.** Every product linked out
-  from its imported body text, and rewriting by hand would have dropped all of
-  them silently. They render independently of the new content. Verified after
-  the rewrite: 309 of 309 intact.
+- **All 467 of the imported copy's internal links are back in their sentences.**
+  They were nearly lost: written content briefly replaced the imported copy, and
+  a frozen list at the foot of each page kept 309 of them from 404ing. That
+  audit reported "309 of 309 intact" — but it was measuring against the frozen
+  list, not against the original, which held 467. The imported copy now renders
+  in full and the links are inline again where they belong.
 - New contextual links added on top, one per section, descriptive anchors only.
 - `relatedProducts` had an alphabetical tiebreak, so every product in a category
   surfaced the same four siblings — 35 groups of pages shared an identical

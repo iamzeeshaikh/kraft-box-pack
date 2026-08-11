@@ -38,7 +38,7 @@ inferred from the source. Reproduce with the commands listed against each item.
 | Orphan pages | **0** |
 | Paragraphs with more than one internal link | **0** |
 | Generic anchors ("click here", "read more") | **0** |
-| Preserved links from the imported copy | **309 of 309 intact** |
+| Inline links from the imported copy | **467 of 467 rendering in their original sentences** |
 | Redirects | 28, **0 chains**, none to the homepage |
 
 ## Schema

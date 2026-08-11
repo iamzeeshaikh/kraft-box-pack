@@ -35,19 +35,27 @@ Reproduce by re-running the extraction in `scripts/content-audit.py`.
 - **Verified destinations.** 0 broken internal links across 194 pages.
 - **No orphans.** 0 pages without an inbound link.
 
-## The 309 preserved links
+## The imported copy's own links
 
-Every product page linked out from its imported body copy — 309 links across
-141 destinations, generally the parent category plus one related product.
-Rewriting 158 products by hand would have dropped all of them silently, one
-product at a time, with nothing to catch it.
+Every product page linked out from its imported body text — **467 internal
+links** across the catalogue, a median of three per page, written into the
+sentences rather than listed at the end.
 
-They were therefore frozen into `src/data/product-content/preserved-links.json`
-**before** any copy was replaced, and the template renders them independently of
-whatever the new content says. Verified after the rewrite: **309 of 309 still
-present.**
+Those links were nearly lost. The hand-written content was for a while rendered
+*instead of* the imported copy, which took the links with it. A frozen copy in
+`src/data/product-content/preserved-links.json` kept 309 of them alive as a list
+at the foot of each page, so nothing 404'd — but a link in a list is not a link
+in a sentence, and the audit that reported "309 of 309 intact" was measuring
+against that frozen list rather than against what the original actually
+contained. Measured against the original, 157 homepage links and one product
+link were not in the frozen set at all.
 
-New contextual links were added on top rather than replacing them.
+The imported copy now renders in full, so all **467 of 467** are back inside the
+sentences they were written into, and the frozen list only renders on the four
+recreated products, which have no imported copy to carry links of their own.
+
+The lesson is the one this project keeps relearning: check against the source,
+not against your own extract of it.
 
 ## Most-linked destinations
 
