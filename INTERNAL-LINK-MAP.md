@@ -10,24 +10,20 @@ Reproduce by re-running the extraction in `scripts/content-audit.py`.
 
 | From | To | Links |
 |---|---|---|
-| product | product | 1203 |
-| category | product | 189 |
-| product | category | 159 |
-| other | product | 158 |
-| product | other | 158 |
-| home | product | 20 |
+| product | product | 1416 |
+| product | category | 326 |
+| product | other | 324 |
+| category | product | 204 |
+| product | home | 163 |
+| other | product | 162 |
+| category | other | 32 |
+| other | category | 22 |
+| home | product | 21 |
 | blog | product | 18 |
-| category | other | 16 |
-| other | category | 6 |
-| home | category | 5 |
-| product | blog | 5 |
-| blog | blog | 5 |
-| other | other | 4 |
-| home | other | 2 |
-| product | home | 1 |
-| blog | home | 1 |
-| blog | other | 1 |
-| other | home | 1 |
+| category | home | 16 |
+| blog | blog | 15 |
+| other | home | 9 |
+| blog | home | 7 |
 
 ## Rules enforced
 
@@ -36,7 +32,7 @@ Reproduce by re-running the extraction in `scripts/content-audit.py`.
   than by discipline.
 - **Descriptive anchors.** No "click here", "read more", "view" or "explore".
   The content audit checks for these and reports 0 generic anchors.
-- **Verified destinations.** 0 broken internal links across 190 pages.
+- **Verified destinations.** 0 broken internal links across 194 pages.
 - **No orphans.** 0 pages without an inbound link.
 
 ## The 309 preserved links
@@ -82,9 +78,9 @@ New contextual links were added on top rather than replacing them.
 
 - **No link loops built for SEO.** Reciprocal links exist only where both pages
   genuinely reference each other's subject.
-- **Products are not in the footer.** Adding 158 links to every page would
+- **Products are not in the footer.** Adding 162 links to every page would
   flatten the link graph and tell a crawler nothing.
-- **The home page links to 20 products, not 158.** The remaining 138 are reached
+- **The home page links to 20 products, not 162.** The remaining 142 are reached
   through `/products/` and their category, which is a more meaningful path than
   a wall of links.
 

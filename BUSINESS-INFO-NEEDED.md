@@ -34,7 +34,7 @@ decision is the business's.
 | ISO / FSC lockup | `public/art/iso-fsc.webp` | Certificate numbers and expiry for each |
 | DMCA | `public/art/dmca.png` | Whether a DMCA Protected subscription is current |
 | SSL / secure connection | `public/art/ssl.png`, `secure-icons.png` | These depict security rather than prove it. HTTPS and HSTS are genuinely in place; the graphics add nothing and could be dropped without loss. |
-| Certificate graphic | `public/art/certificate.png` (190 pages) | What certificate this represents |
+| Certificate graphic | `public/art/certificate.png` (194 pages) | What certificate this represents |
 | FedEx | `public/art/fedex.png` | Whether a carrier partnership is contractual or the logo is decorative |
 | Payment marks | `payments.png`, `payment-methods.png`, `payment-image.jpeg` | Whether card payment is actually accepted, given the site is quote-based with no checkout |
 
