@@ -3,8 +3,10 @@
 Rebuild of kraftboxpack.com, August 2026. Everything here is on `main` and
 **not deployed** — the business asked to review locally first.
 
-Preview: `npx serve dist/client -l 4399` (not `serve -s`, which is SPA mode and
-serves the homepage for every URL).
+Preview: `npm run build && node scripts/preview-server.mjs`, then
+http://localhost:4321. Restart the server after a rebuild or it serves the old
+output. Not `npx serve -s`, which is SPA mode and returns the homepage for
+every URL.
 
 ## Constraints the business set
 
@@ -20,7 +22,7 @@ All six were followed. Where a claim could not be evidenced it was flagged in
 
 ## URLs and redirects
 
-- Reconciled 294 Search Console landing pages against 190 built routes. Every
+- Reconciled 294 Search Console landing pages against 194 built routes. Every
   URL in the gap classified — see `MIGRATION-RECONCILIATION.md`.
 - **12 one-to-one 301s added**, recovering product URLs that were returning 404
   while still ranking: `kraft-craft-kit-boxes` at position 1.8,
@@ -31,7 +33,7 @@ All six were followed. Where a claim could not be evidenced it was flagged in
   products, position 43.1) merged into `kraft-cosmetic-boxes` (2 products,
   position 15.6); nine products moved, route removed, 301 added, and all 11
   internal references in product body copy updated.
-- 27 redirects total, **0 chains**, none pointing at the homepage.
+- 28 redirects total, **0 chains**, none pointing at the homepage.
 - 95 legacy `/wp-content/uploads/*.jpg` URLs deliberately left to 404 —
   redirecting an image to an HTML page is a soft-404 pattern.
 
@@ -57,7 +59,9 @@ All six were followed. Where a claim could not be evidenced it was flagged in
   be the product, and no borrowed shot carries printed branding that contradicts
   its page — beard-oil cartons were the closest structural match for the serum
   page and were rejected because the box reads `BEARD`. Products with no image:
-  **4 → 0**. Merchant feed: **158 → 162 items**.
+  **4 → 0**. The feed is deliberately **held at 158 items** on the client's
+  instruction — the four are listed in `HELD_BACK` in the feed endpoint, and
+  emptying that list is all it takes to send them.
 - **The analytics layer was blocked by the site's own CSP on every page.** It
   used `define:vars`, which forces `is:inline`, and Astro emits no CSP hash for
   an inline script — so `dataLayer` was never created and not one of the twelve
@@ -75,6 +79,15 @@ All six were followed. Where a claim could not be evidenced it was flagged in
 - **All 16 category pages written.** They had imported with empty descriptions,
   so the template fell back to one generated sentence and all of them read
   alike. Category similarity: **136 pairs → 0**.
+- **Kraft Toy Packaging deepened** — it was the thinnest content page on the
+  site at 621 words against a 1,127-word ceiling. Search Console showed why it
+  was worth the time: "board game shipping box" sits at 87 impressions and
+  position 23.4 with no clicks, and "blank"/"replacement board game boxes"
+  convert at high CTR. Nothing on the page addressed either. It now separates
+  the retail game box from the corrugated outer a game ships in, says plainly
+  that reprint runs start at the 100-unit minimum so a single lost lid is not
+  something this route serves, and carries a structure table. 621 → 1,162 words.
+  Thin pages: **7 → 6**.
 - **Home page** gained Industries, Customization, Process, ten FAQs and a
   closing quote band. Hero copy replaced — it had led with an environmental
   slogan over a lead that ended mid-sentence.

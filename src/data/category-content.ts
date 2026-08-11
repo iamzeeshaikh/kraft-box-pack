@@ -720,12 +720,34 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         h2: 'Showing the contents without opening',
         body: [
           'A window or a printed representation of the contents does more work here than in almost any other category, because the purchase decision happens in front of the shelf. Where a window is not practical, a clear photographic panel serves the same purpose.',
+          'A window costs stiffness in the panel it sits in, so the board usually steps up a grade to compensate — worth knowing before the aperture is drawn, because it changes the quote rather than just the artwork. Keeping the aperture away from the corners and creases preserves most of that strength.',
+          'The other panel that earns its space is the back. It is where an adult looks for the age grading, the piece count and the warning text, and a layout that leaves room for those marks before design begins avoids a redraw once the compliance copy arrives.',
         ],
       },
       {
         h2: 'Board game and puzzle structures',
         body: [
           'Game boxes take repeated opening over years rather than one journey, and the lid is a wear component. A telescoping lid with a properly specified crease survives that; a plain tuck does not. Puzzle boxes carry concentrated weight for their size, so the base matters more than the walls.',
+          'Depth is the specification most often got wrong. A lid and base sized to the contents exactly will bind as soon as humidity swells the board, so the lid is cut fractionally oversize on purpose. Too much and the lid slides off in a stack; the tolerance is small and it is set at dieline stage.',
+        ],
+        table: {
+          caption: 'Structure by what the pack has to survive',
+          head: ['Product', 'Structure', 'Why'],
+          rows: [
+            ['Board game, opened for years', 'Telescoping lid and base', 'The lid is a wear part and takes the handling'],
+            ['Puzzle, heavy for its size', 'Lid and base, reinforced base', 'Weight sits on the base for the whole life of the pack'],
+            ['Shelf toy needing visibility', 'Tuck end with a window', 'Buying decision happens without opening'],
+            ['Building set with many pieces', 'Lid and base with a fitted insert', 'Loose pieces read as an incomplete product'],
+            ['Baby product', 'Tuck end or lid and base', 'Judged on perceived hygiene as much as strength'],
+            ['Outer for shipping a game', 'Corrugated mailer, separate', 'Protects the printed box rather than replacing it'],
+          ],
+        },
+      },
+      {
+        h2: 'Shipping a game, and reprinting a box',
+        body: [
+          'A board game box and the box a board game ships in are two different things, and buying one when you needed the other is a common and expensive mistake. The printed lid and base is the retail pack — it is not built to be posted on its own, because corner crush lands on exactly the edges the customer sees first. A plain corrugated mailer sized to the game takes that damage instead, and costs a fraction of reprinting the retail pack.',
+          'Reprinting the retail box itself — blank stock for a self-published game, or a replacement run for a title already in print — is made to order here from your dieline rather than pulled from stock sizes. That suits a publisher, a retailer or a crowdfunding run. It does not suit replacing one lost lid: production starts at 100 units, so a single box is not something this route can do, and it is better to know that now than after an enquiry.',
         ],
       },
     ],
@@ -746,6 +768,8 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'How do I keep packaging cost down on a low-priced toy?', answer: 'Fewer press passes and a simpler structure. Two colours on kraft with a good die-cut usually does more than four colours with a finish at this price point.' },
       { question: 'Can one box size cover several products?', answer: 'Often two or three sizes cover a range while sharing one board and print system, which keeps the shelf presence consistent without shipping empty space.' },
       { question: 'Are recycled and recyclable options available?', answer: 'Yes across this range. A plain die-cut window aperture rather than a filmed one keeps the pack in the paper stream if that claim matters to you.' },
+      { question: 'What box should a board game ship in?', answer: 'A separate corrugated mailer sized to the game, not the printed lid and base. Posting the retail box on its own puts crush damage on the edges the customer sees first, and a plain outer costs far less than reprinting the pack.' },
+      { question: 'Can I order blank or replacement board game boxes?', answer: 'Yes, made to your dieline rather than from stock sizes, which suits a self-published title, a reprint or a retailer. Production starts at 100 units, so it is not a route for replacing a single lost lid.' },
     ],
   },
 

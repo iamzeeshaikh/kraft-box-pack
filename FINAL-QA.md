@@ -7,7 +7,7 @@ inferred from the source. Reproduce with the commands listed against each item.
 
 | Check | Result | Command |
 |---|---|---|
-| Type check | **0 errors** across 85 files | `npx astro check --minimumSeverity error` |
+| Type check | **0 errors** across 86 files | `npx astro check --minimumSeverity error` |
 | Production build | **194 pages**, no warnings | `npm run build` |
 | JavaScript shipped | **4.2 KB total** across the whole site | `find dist/client/_astro -name "*.js"` |
 
@@ -26,7 +26,7 @@ inferred from the source. Reproduce with the commands listed against each item.
 | Identical FAQ sets | **0** |
 | Identical heading sequences | **0** |
 | Duplicated paragraph instances | 202 (from a floor of shared business facts) |
-| Thin pages under 600 words | 7 — all legal or index pages |
+| Thin pages under 600 words | 6 — all legal or index pages |
 
 `python3 scripts/content-audit.py`
 
