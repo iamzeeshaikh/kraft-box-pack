@@ -1,0 +1,628 @@
+{
+ "black-kraft-boxes": [
+  "/product-category/colored-kraft-boxes/",
+  "/product/brown-kraft-boxes/"
+ ],
+ "brown-kraft-boxes": [
+  "/product-category/colored-kraft-boxes/",
+  "/product/kraft-boxes-with-lid/"
+ ],
+ "colored-kraft-paper": [
+  "/product-category/colored-kraft-boxes/",
+  "/product/black-kraft-boxes/"
+ ],
+ "custom-kraft-bags": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-dispenser-boxes/"
+ ],
+ "kraft-apparel-packaging-boxes": [
+  "/product-category/kraft-apparel-boxes/",
+  "/product/kraft-t-shirt-boxes/"
+ ],
+ "kraft-art-supply-packaging": [
+  "/product-category/kraft-art-boxes/"
+ ],
+ "kraft-baby-product-boxes": [
+  "/product-category/kraft-toy-packaging/",
+  "/product/kraft-toy-packaging-boxes/"
+ ],
+ "kraft-badge-packaging-boxes": [
+  "/product-category/kraft-electronics-boxes/",
+  "/product/kraft-keychain-packaging-boxes/"
+ ],
+ "kraft-bakery-bags": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-food-boxes/"
+ ],
+ "kraft-bakery-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-shipping-boxes/"
+ ],
+ "kraft-beard-oil-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-mascara-boxes/"
+ ],
+ "kraft-beauty-kit-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-makeup-palette-boxes/"
+ ],
+ "kraft-belt-packaging-boxes": [
+  "/product-category/kraft-apparel-boxes/",
+  "/product/kraft-scarf-boxes/"
+ ],
+ "kraft-board-game-packaging-boxes": [
+  "/product-category/kraft-toy-packaging/",
+  "/product/kraft-puzzle-packaging-boxes/"
+ ],
+ "kraft-bouquet-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-flower-boxes/"
+ ],
+ "kraft-box-with-window": [
+  "/blog/how-kraft-boxes-with-windows-are-designed/",
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-gift-boxes-with-lids/"
+ ],
+ "kraft-boxes-for-gifts": [
+  "/product-category/kraft-wrapping-accessories/",
+  "/product/kraft-paper-gift-wrapping/"
+ ],
+ "kraft-boxes-with-lid": [
+  "/product-category/colored-kraft-boxes/",
+  "/product/black-kraft-boxes/"
+ ],
+ "kraft-bracelet-packaging-boxes": [
+  "/product-category/jewelry-accessories-boxes/",
+  "/product/kraft-earring-packaging-boxes/"
+ ],
+ "kraft-brochure-packaging-boxes": [
+  "/product-category/kraft-art-boxes/"
+ ],
+ "kraft-brownie-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-macaron-packaging-boxes/"
+ ],
+ "kraft-bulk-shipping-crates": [
+  "/product-category/kraft-industrial-packaging/",
+  "/product/kraft-industrial-parts-boxes/"
+ ],
+ "kraft-cake-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-mailer-boxes/"
+ ],
+ "kraft-calendar-boxes": [
+  "/product-category/kraft-art-boxes/",
+  "/product/kraft-cd-dvd-packaging/"
+ ],
+ "kraft-candle-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-jewelry-boxes/"
+ ],
+ "kraft-candle-sleeve-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-beauty-kit-boxes/"
+ ],
+ "kraft-candy-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-gift-boxes-with-lids/"
+ ],
+ "kraft-candy-favor-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-event-favor-boxes/"
+ ],
+ "kraft-cardboard-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-drawer-boxes/"
+ ],
+ "kraft-cd-dvd-packaging": [
+  "/product-category/kraft-art-boxes/",
+  "/product/kraft-document-mailers/"
+ ],
+ "kraft-certificate-boxes": [
+  "/product-category/kraft-art-boxes/",
+  "/product/kraft-photo-frame-boxes/"
+ ],
+ "kraft-chemical-safe-boxes": [
+  "/product-category/kraft-industrial-packaging/",
+  "/product/kraft-heavy-duty-storage-boxes/"
+ ],
+ "kraft-chocolate-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-popcorn-packaging-boxes/"
+ ],
+ "kraft-coffee-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-tea-packaging-boxes/"
+ ],
+ "kraft-cookie-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-shipping-boxes/"
+ ],
+ "kraft-corrugated-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-favor-boxes/"
+ ],
+ "kraft-cupcake-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-candy-boxes/"
+ ],
+ "kraft-cylindrical-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-rigid-boxes/"
+ ],
+ "kraft-dispenser-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-shoe-boxes/"
+ ],
+ "kraft-display-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/mini-kraft-boxes/"
+ ],
+ "kraft-document-mailers": [
+  "/product-category/kraft-art-boxes/",
+  "/product/kraft-certificate-boxes/"
+ ],
+ "kraft-donut-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-pastry-boxes/"
+ ],
+ "kraft-drawer-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-mailer-boxes/"
+ ],
+ "kraft-drawer-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-luxury-magnet-boxes/"
+ ],
+ "kraft-earring-packaging-boxes": [
+  "/product-category/jewelry-accessories-boxes/",
+  "/product/kraft-jewelry-insert-boxes/"
+ ],
+ "kraft-eco-friendly-compostable-boxes": [
+  "/product-category/kraft-industrial-packaging/"
+ ],
+ "kraft-egg-cartons": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-vegetable-packaging-boxes/"
+ ],
+ "kraft-event-favor-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-influencer-boxes/"
+ ],
+ "kraft-eyelash-packaging-boxes": [
+  "/product-category/kraft-cosmetic-boxes/"
+ ],
+ "kraft-favor-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-storage-boxes/"
+ ],
+ "kraft-first-aid-kit-boxes": [
+  "/product-category/kraft-pharma-boxes/",
+  "/product/kraft-supplement-boxes/"
+ ],
+ "kraft-flip-top-rigid-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-lid-base-rigid-boxes/"
+ ],
+ "kraft-flower-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-candy-favor-boxes/"
+ ],
+ "kraft-food-boxes": [
+  "/blog/food-safe-kraft-packaging-for-bakeries-and-takeout/",
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-gable-boxes/"
+ ],
+ "kraft-frozen-food-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-salad-boxes/"
+ ],
+ "kraft-fruit-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-seafood-boxes/"
+ ],
+ "kraft-gable-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-cake-boxes/"
+ ],
+ "kraft-gift-boxes-with-lids": [
+  "/blog/kraft-gift-boxes-with-lids-for-retail-products/",
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/mini-kraft-boxes/"
+ ],
+ "kraft-gift-card-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-invitation-boxes/"
+ ],
+ "kraft-gift-hamper-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-luxury-magnet-boxes/"
+ ],
+ "kraft-giveaway-packaging-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/"
+ ],
+ "kraft-granola-bar-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-coffee-packaging-boxes/"
+ ],
+ "kraft-hanging-display-boxes": [
+  "/product-category/kraft-display-packaging/",
+  "/product/kraft-pop-display-boxes/"
+ ],
+ "kraft-heart-shaped-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-ribbon-closure-boxes/"
+ ],
+ "kraft-heavy-duty-storage-boxes": [
+  "/product-category/kraft-industrial-packaging/",
+  "/product/kraft-bulk-shipping-crates/"
+ ],
+ "kraft-hexagon-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-cylindrical-boxes/"
+ ],
+ "kraft-industrial-parts-boxes": [
+  "/product-category/kraft-industrial-packaging/",
+  "/product/kraft-bulk-shipping-crates/"
+ ],
+ "kraft-influencer-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-marketing-kit-boxes/"
+ ],
+ "kraft-insulated-cold-boxes": [
+  "/product-category/kraft-industrial-packaging/",
+  "/product/kraft-thermal-kraft-boxes/"
+ ],
+ "kraft-invitation-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-round-gift-containers/"
+ ],
+ "kraft-jewelry-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-paper-gift-boxes/"
+ ],
+ "kraft-jewelry-insert-boxes": [
+  "/product-category/jewelry-accessories-boxes/",
+  "/product/kraft-earring-packaging-boxes/"
+ ],
+ "kraft-juice-bottle-carriers": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-egg-cartons/"
+ ],
+ "kraft-keychain-packaging-boxes": [
+  "/product-category/kraft-electronics-boxes/",
+  "/product/kraft-badge-packaging-boxes/"
+ ],
+ "kraft-lid-base-rigid-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-drawer-gift-boxes/"
+ ],
+ "kraft-lip-balm-packaging-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-soap-sleeve-boxes/"
+ ],
+ "kraft-liquor-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-gift-hamper-boxes/"
+ ],
+ "kraft-luxury-magnet-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-gift-hamper-boxes/"
+ ],
+ "kraft-macaron-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-muffin-packaging-boxes/"
+ ],
+ "kraft-magnetic-closure-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-rigid-boxes/"
+ ],
+ "kraft-mailer-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-bakery-boxes/"
+ ],
+ "kraft-makeup-palette-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-eyelash-packaging-boxes/"
+ ],
+ "kraft-marketing-kit-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-promotional-boxes/"
+ ],
+ "kraft-mascara-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-lip-balm-packaging-boxes/"
+ ],
+ "kraft-meat-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-frozen-food-boxes/"
+ ],
+ "kraft-medicine-packaging-boxes": [
+  "/product-category/kraft-pharma-boxes/",
+  "/product/kraft-vitamin-packaging-boxes/"
+ ],
+ "kraft-milk-bottle-carriers": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-juice-bottle-carriers/"
+ ],
+ "kraft-minimalist-boxes": [
+  "/product-category/colored-kraft-boxes/",
+  "/product/black-kraft-boxes/"
+ ],
+ "kraft-muffin-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-donut-packaging-boxes/"
+ ],
+ "kraft-necklace-box": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-candy-boxes/"
+ ],
+ "kraft-noodle-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-sushi-packaging-boxes/"
+ ],
+ "kraft-notebook-packaging": [
+  "/product-category/kraft-electronics-boxes/",
+  "/product/kraft-stationery-boxes/"
+ ],
+ "kraft-octagon-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-triangle-boxes/"
+ ],
+ "kraft-paper-boxes": [
+  "/blog/kraft-paper-box-materials-and-board-grades-explained/",
+  "/product-category/kraft-wrapping-accessories/",
+  "/product/kraft-paper-dispenser-boxes/"
+ ],
+ "kraft-paper-dispenser-boxes": [
+  "/product-category/kraft-wrapping-accessories/",
+  "/product/kraft-paper-packaging/"
+ ],
+ "kraft-paper-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-paper-gift-boxes/"
+ ],
+ "kraft-paper-gift-wrapping": [
+  "/product-category/kraft-wrapping-accessories/",
+  "/product/kraft-paper-packaging/"
+ ],
+ "kraft-paper-packaging": [
+  "/product-category/kraft-wrapping-accessories/",
+  "/product/kraft-paper-dispenser-boxes/"
+ ],
+ "kraft-paper-treat-bags": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-cookie-boxes/"
+ ],
+ "kraft-paperboard-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-dispenser-boxes/"
+ ],
+ "kraft-pastry-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-chocolate-packaging-boxes/"
+ ],
+ "kraft-pen-packaging-boxes": [
+  "/product-category/kraft-electronics-boxes/",
+  "/product/kraft-badge-packaging-boxes/"
+ ],
+ "kraft-pencil-packaging-boxes": [
+  "/product-category/kraft-electronics-boxes/",
+  "/product/kraft-notebook-packaging/"
+ ],
+ "kraft-perfume-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-skincare-boxes/"
+ ],
+ "kraft-photo-frame-boxes": [
+  "/product-category/kraft-art-boxes/"
+ ],
+ "kraft-pillow-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/large-kraft-gift-boxes/"
+ ],
+ "kraft-pillow-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-heart-shaped-boxes/"
+ ],
+ "kraft-pizza-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-cookie-boxes/"
+ ],
+ "kraft-pop-display-boxes": [
+  "/product-category/kraft-display-packaging/"
+ ],
+ "kraft-popcorn-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-snack-packaging-boxes/"
+ ],
+ "kraft-ppe-packaging-boxes": [
+  "/product-category/kraft-pharma-boxes/"
+ ],
+ "kraft-pr-packaging-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-subscription-boxes/"
+ ],
+ "kraft-promotional-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-giveaway-packaging-boxes/"
+ ],
+ "kraft-puzzle-packaging-boxes": [
+  "/product-category/kraft-toy-packaging/",
+  "/product/kraft-toy-packaging-boxes/"
+ ],
+ "kraft-pyramid-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-octagon-boxes/"
+ ],
+ "kraft-rectangular-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-square-gift-boxes/"
+ ],
+ "kraft-recycled-kraft-boxes": [
+  "/product-category/kraft-industrial-packaging/",
+  "/product/kraft-insulated-cold-boxes/"
+ ],
+ "kraft-retail-display-trays": [
+  "/product-category/kraft-display-packaging/",
+  "/product/kraft-display-boxes/"
+ ],
+ "kraft-ribbon-closure-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-shoulder-boxes/"
+ ],
+ "kraft-rigid-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-magnetic-closure-boxes/"
+ ],
+ "kraft-ring-packaging-boxes": [
+  "/product-category/jewelry-accessories-boxes/",
+  "/product/kraft-watch-packaging-boxes/"
+ ],
+ "kraft-round-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-box-with-window/"
+ ],
+ "kraft-round-gift-containers": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-rectangular-gift-boxes/"
+ ],
+ "kraft-salad-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-sushi-packaging-boxes/"
+ ],
+ "kraft-sandwich-wedge-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-brownie-packaging-boxes/"
+ ],
+ "kraft-scarf-boxes": [
+  "/product-category/kraft-apparel-boxes/"
+ ],
+ "kraft-seafood-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-meat-packaging-boxes/"
+ ],
+ "kraft-shelf-ready-packaging": [
+  "/product-category/kraft-display-packaging/"
+ ],
+ "kraft-shipping-boxes": [
+  "/blog/kraft-shipping-boxes-and-kraft-mailer-boxes-compared/",
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-cardboard-boxes/"
+ ],
+ "kraft-shoe-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-mailer-boxes/"
+ ],
+ "kraft-shoulder-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-flip-top-rigid-boxes/"
+ ],
+ "kraft-skincare-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-perfume-boxes/"
+ ],
+ "kraft-snack-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-granola-bar-boxes/"
+ ],
+ "kraft-soap-sleeve-boxes": [
+  "/product-category/kraft-cosmetic-boxes/"
+ ],
+ "kraft-sock-packaging-boxes": [
+  "/product-category/kraft-apparel-boxes/",
+  "/product/kraft-belt-packaging-boxes/"
+ ],
+ "kraft-square-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-pillow-gift-boxes/"
+ ],
+ "kraft-stationery-boxes": [
+  "/product-category/kraft-electronics-boxes/",
+  "/product/kraft-pen-packaging-boxes/"
+ ],
+ "kraft-storage-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-corrugated-boxes/"
+ ],
+ "kraft-subscription-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product/kraft-bouquet-boxes/"
+ ],
+ "kraft-supplement-boxes": [
+  "/product-category/kraft-pharma-boxes/",
+  "/product/kraft-vitamin-packaging-boxes/"
+ ],
+ "kraft-sushi-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-sandwich-wedge-boxes/"
+ ],
+ "kraft-syrup-packaging-boxes": [
+  "/product-category/kraft-pharma-boxes/",
+  "/product/kraft-first-aid-kit-boxes/"
+ ],
+ "kraft-t-shirt-boxes": [
+  "/product-category/kraft-apparel-boxes/",
+  "/product/kraft-apparel-packaging-boxes/"
+ ],
+ "kraft-take-out-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-mailer-boxes/"
+ ],
+ "kraft-tea-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-coffee-packaging-boxes/"
+ ],
+ "kraft-thermal-kraft-boxes": [
+  "/product-category/colored-kraft-boxes/",
+  "/product/kraft-boxes-with-lid/"
+ ],
+ "kraft-toy-packaging-boxes": [
+  "/product-category/kraft-apparel-boxes/",
+  "/product/kraft-baby-product-boxes/"
+ ],
+ "kraft-treat-boxes": [
+  "/product-category/kraft-packaging-boxes/",
+  "/product/kraft-dispenser-boxes/"
+ ],
+ "kraft-triangle-boxes": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-hexagon-boxes/"
+ ],
+ "kraft-tube-packaging": [
+  "/product-category/kraft-luxury-packaging/",
+  "/product/kraft-pyramid-boxes/"
+ ],
+ "kraft-underwear-packaging-boxes": [
+  "/product-category/kraft-apparel-boxes/",
+  "/product/kraft-sock-packaging-boxes/"
+ ],
+ "kraft-vegetable-packaging-boxes": [
+  "/product-category/kraft-food-packaging/",
+  "/product/kraft-fruit-packaging-boxes/"
+ ],
+ "kraft-vitamin-packaging-boxes": [
+  "/product-category/kraft-pharma-boxes/",
+  "/product/kraft-medicine-packaging-boxes/"
+ ],
+ "kraft-watch-packaging-boxes": [
+  "/product-category/jewelry-accessories-boxes/",
+  "/product/kraft-ring-packaging-boxes/"
+ ],
+ "kraft-wax-melt-boxes": [
+  "/product-category/kraft-cosmetic-boxes/",
+  "/product/kraft-candle-sleeve-boxes/"
+ ],
+ "large-kraft-gift-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-candle-boxes/"
+ ],
+ "mini-kraft-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-candy-boxes/"
+ ],
+ "small-kraft-boxes": [
+  "/product-category/kraft-gift-specialty-boxes/",
+  "/product/kraft-cupcake-boxes/"
+ ]
+}

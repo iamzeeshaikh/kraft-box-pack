@@ -11,6 +11,7 @@ import { products, relatedTo } from '../../data/content';
 import { resolveAll } from '../../lib/images';
 import * as schema from '../../lib/schema';
 import { SEO_OVERRIDES } from '../../data/seo-overrides';
+import { contentFor } from '../../data/product-content';
 import { FEATURES } from '../../data/site';
 
 export function getStaticPaths() {
@@ -44,10 +45,15 @@ const description =
   product.plainShort.slice(0, 155) ||
   `Custom ${product.name.toLowerCase()} at wholesale prices from Kraft Box Pack.`;
 
+/* The FAQ schema has to describe the FAQs the page actually renders. Where a
+   product has been rewritten those are its own, not the imported set. */
+const written = contentFor(product.slug);
+const visibleFaqs = written?.faqs ?? product.faqs;
+
 const pageSchema = [
   schema.product(product, imageUrls),
   schema.breadcrumbs(product.url, crumbs),
-  ...(product.faqs.length ? [schema.faqPage(product.url, product.faqs)] : []),
+  ...(visibleFaqs.length ? [schema.faqPage(product.url, visibleFaqs)] : []),
 ];
 ---
 

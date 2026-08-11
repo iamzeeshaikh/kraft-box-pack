@@ -1,0 +1,114 @@
+---
+/**
+ * The hand-written body for a product, shown in place of the imported
+ * WordPress description where one has been written.
+ *
+ * The preserved-links block at the end is not optional and is not driven by
+ * the written content. It renders the internal links the original copy
+ * carried, so replacing that copy cannot drop them. Each link sits in its own
+ * list item, which keeps every paragraph to at most one internal link.
+ */
+import type { ProductContent } from '../../data/product-content'
+import type { PreservedLink } from '../../data/product-content'
+
+interface Props {
+  content: ProductContent
+  preserved: PreservedLink[]
+  productName: string
+}
+
+const { content, preserved, productName } = Astro.props
+---
+
+<div class="written prose">
+  {content.sections.map((s) => (
+    <section class="written__block">
+      <h2>{s.h2}</h2>
+      {s.body.map((p) => <p>{p}</p>)}
+
+      {s.list && (
+        <>
+          {s.list.title && <h3>{s.list.title}</h3>}
+          <ul>{s.list.items.map((i) => <li>{i}</li>)}</ul>
+        </>
+      )}
+
+      {s.table && (
+        <div class="table-scroll">
+          <table>
+            <caption>{s.table.caption}</caption>
+            <thead>
+              <tr>{s.table.head.map((h) => <th scope="col">{h}</th>)}</tr>
+            </thead>
+            <tbody>
+              {s.table.rows.map((r) => (
+                <tr>
+                  {r.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </section>
+  ))}
+
+  {content.link && (
+    <p class="written__link">
+      {content.link.lead}
+      <a href={content.link.href}>{content.link.anchor}</a>
+      {content.link.tail}
+    </p>
+  )}
+
+  {preserved.length > 0 && (
+    <aside class="written__also" aria-labelledby="also-heading">
+      <h2 id="also-heading">Also worth looking at</h2>
+      <ul>
+        {preserved.map((l) => (
+          <li>
+            <a href={l.href}>{l.name}</a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )}
+</div>
+
+<style>
+  .written__block + .written__block { margin-top: 2rem; }
+
+  .written__block h2 {
+    font-size: var(--step-2);
+    margin-bottom: 0.5em;
+  }
+
+  .written__link {
+    margin-top: 1.75rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid var(--kraft-light);
+    color: var(--ink-soft);
+  }
+
+  .written__also {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .written__also h2 {
+    font-size: var(--step-1);
+    margin-bottom: 0.6em;
+  }
+
+  .written__also ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .written__also li { margin: 0; }
+</style>

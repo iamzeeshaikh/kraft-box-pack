@@ -1,13 +1,24 @@
 ---
 import SpecTable from './SpecTable.astro';
 import FaqAccordion from './FaqAccordion.astro';
+import WrittenContent from './WrittenContent.astro';
 import type { Product } from '../../data/content';
+import { contentFor, preservedLinksFor } from '../../data/product-content';
 
 interface Props {
   product: Product;
 }
 
 const { product } = Astro.props;
+
+/* Hand-written content replaces the imported WordPress copy where one exists.
+   The preserved links are passed separately and render either way, so a
+   rewritten product cannot lose the internal links its old copy carried. */
+const written = contentFor(product.slug);
+const preserved = preservedLinksFor(product.slug);
+
+/* Where a product has been rewritten its own FAQs replace the imported set. */
+const faqs = written?.faqs ?? product.faqs;
 
 /**
  * Only offer a tab that has something behind it. Every product currently has
@@ -17,7 +28,7 @@ const { product } = Astro.props;
 const tabs = [
   { id: 'description', label: 'Description', show: Boolean(product.description) },
   { id: 'specifications', label: 'Specifications', show: product.specs.rows.length > 0 },
-  { id: 'faqs', label: 'FAQs', show: product.faqs.length > 0 },
+  { id: 'faqs', label: 'FAQs', show: faqs.length > 0 },
 ].filter((t) => t.show);
 ---
 
@@ -50,11 +61,14 @@ const tabs = [
         hidden={i !== 0}
         class="tabs__panel"
       >
-        {tab.id === 'description' && (
-          <div class="prose" set:html={product.description} />
-        )}
+        {tab.id === 'description' &&
+          (written ? (
+            <WrittenContent content={written} preserved={preserved} productName={product.name} />
+          ) : (
+            <div class="prose" set:html={product.description} />
+          ))}
         {tab.id === 'specifications' && <SpecTable specs={product.specs} name={product.name} />}
-        {tab.id === 'faqs' && <FaqAccordion faqs={product.faqs} />}
+        {tab.id === 'faqs' && <FaqAccordion faqs={faqs} />}
       </section>
     ))
   }
