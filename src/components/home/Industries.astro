@@ -1,0 +1,111 @@
+---
+/**
+ * What we supply, by sector.
+ *
+ * Each card carries one line about what makes packaging for that sector
+ * different, and links to the range that serves it — so the section is a
+ * routing device for buyers who know their industry but not our category
+ * names, rather than a badge wall.
+ */
+import { INDUSTRIES } from '../../data/home-content'
+---
+
+<section class="section ind" aria-labelledby="ind-heading">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <h2 id="ind-heading">Packaging by what you sell</h2>
+      <p>
+        A candle, a supplement bottle and a folded shirt have almost nothing in
+        common as packaging problems. These are the sectors we quote most.
+      </p>
+    </div>
+
+    <ul class="ind__grid" role="list" data-reveal-group>
+      {INDUSTRIES.map((i) => (
+        <li class="ind__card">
+          <h3>{i.name}</h3>
+          <p>{i.note}</p>
+          <a href={i.href}>{i.anchor}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .ind__grid {
+    display: grid;
+    /* auto-fit put four across at desktop, leaving a two-card orphan row. Six
+       cards read better as two rows of three. */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--gap);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 1080px) {
+    .ind__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  .ind__card {
+    margin: 0;
+    padding: 1.35rem 1.4rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    /* The kraft rule is what ties these to the brand without a coloured fill. */
+    border-top: 3px solid var(--kraft);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .ind__card:hover,
+  .ind__card:focus-within {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-top-color: var(--green);
+  }
+
+  .ind__card h3 {
+    margin: 0;
+    font-size: var(--step-1);
+    line-height: 1.25;
+  }
+
+  .ind__card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: var(--step--1);
+    flex: 1;
+  }
+
+  .ind__card a {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--kraft-dark);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .ind__card a::after {
+    content: ' →';
+    /* Kept out of the accessible name by being purely decorative text; the
+       anchor already reads as a destination. */
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .ind__card:hover a::after { transform: translateX(3px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ind__card,
+    .ind__card a::after { transition: none; }
+    .ind__card:hover { transform: none; }
+  }
+</style>

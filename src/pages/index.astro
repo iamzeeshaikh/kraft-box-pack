@@ -2,7 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import QuoteForm from '../components/QuoteForm.astro';
 import FeatureStrip from '../components/home/FeatureStrip.astro';
+import Industries from '../components/home/Industries.astro';
+import Customization from '../components/home/Customization.astro';
+import Process from '../components/home/Process.astro';
+import FaqAccordion from '../components/product/FaqAccordion.astro';
+import QuoteBand from '../components/QuoteBand.astro';
 import ProductGrid from '../components/ProductGrid.astro';
+import { HOME_FAQS } from '../data/home-content';
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import { products, popular, pages } from '../data/content';
@@ -52,6 +58,8 @@ const description = seo.description;
 const featured = popular(20);
 const pageSchema = [
   schema.webPage('/', title, description),
+  /* The FAQ block below is visible on the page, so the schema matches it exactly. */
+  schema.faqPage('/', HOME_FAQS),
   ...schema.collectionPage(
     '/',
     'Most requested custom kraft boxes',
@@ -69,9 +77,16 @@ const pageSchema = [
       </div>
 
       <div class="hero__body">
-        <h1>Eco-Friendly Kraft Boxes for Every Packaging Need</h1>
+        {/* The old heading led on "Eco-Friendly … for Every Packaging Need"
+            with a lead that ended mid-sentence — "A Step Towards
+            Sustainability. packaging needs." Neither said what the company
+            sells or to whom, on the page carrying 33,242 impressions at a
+            0.55% click-through rate. */}
+        <h1>Custom Printed Kraft Boxes, Built to Your Size</h1>
         <p class="hero__lead">
-          Choose Kraft, Choose Green – A Step Towards Sustainability. packaging needs.
+          Wholesale packaging for US brands, cut on a fresh dieline rather than
+          picked from stock sizes. Free design assistance, 100-unit minimum, and
+          a written quote within one business day.
         </p>
 
         <ul class="hero__collage" role="list">
@@ -103,7 +118,7 @@ const pageSchema = [
 
   <section class="section" aria-labelledby="all-heading">
     <div class="wrap">
-      <div class="section__head">
+      <div class="section__head" data-reveal>
         <h2 id="all-heading">Browse Our High-Quality Custom Kraft Boxes</h2>
         <p>
           Our twenty most-requested styles. All {products.length} are made to your
@@ -117,6 +132,12 @@ const pageSchema = [
     </div>
   </section>
 
+  <Industries />
+
+  <Customization />
+
+  <Process />
+
   {
     home?.html && (
       <section class="section section--alt" aria-labelledby="about-heading">
@@ -127,6 +148,21 @@ const pageSchema = [
       </section>
     )
   }
+
+  <section class="section home-faq" aria-labelledby="home-faq-heading">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <h2 id="home-faq-heading">Questions buyers ask first</h2>
+        <p>Minimums, pricing, turnaround and artwork, answered before you enquire.</p>
+      </div>
+      <FaqAccordion faqs={HOME_FAQS} />
+    </div>
+  </section>
+
+  <QuoteBand
+    heading="Tell us what you are packing"
+    body="Send your dimensions, quantity and artwork. You get a board grade, a structure, a print method and a written price — usually within one business day."
+  />
 </BaseLayout>
 
 <style>

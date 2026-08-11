@@ -1,0 +1,176 @@
+---
+/**
+ * A kraft box built from six CSS-transformed faces.
+ *
+ * Why CSS rather than a 3D library: this is decoration, and shipping a WebGL
+ * runtime to render one cuboid would cost more than every other script on the
+ * page put together. Six divs and a transform cost nothing and animate on the
+ * compositor.
+ *
+ * Progressive enhancement, in this order:
+ *   - No 3D support (`transform-style: preserve-3d` unsupported) — the faces
+ *     collapse and the flat fallback panel behind them is what shows.
+ *   - Reduced motion — the box renders, at a fixed angle, without rotating.
+ *   - Otherwise — a slow rotation, pausing when the section is off-screen so
+ *     it is not animating in a background tab.
+ *
+ * It is `aria-hidden` and carries no information. Everything it illustrates is
+ * stated in the text beside it.
+ */
+
+interface Props {
+  /** Overall size in pixels; the faces are derived from it. */
+  size?: number
+}
+
+const { size = 190 } = Astro.props
+---
+
+<div class="scene" style={`--box: ${size}px`} aria-hidden="true">
+  <div class="scene__fallback"></div>
+  <div class="box" data-box>
+    <div class="face face--front"></div>
+    <div class="face face--back"></div>
+    <div class="face face--right"></div>
+    <div class="face face--left"></div>
+    <div class="face face--top">
+      <span class="flap flap--a"></span>
+      <span class="flap flap--b"></span>
+    </div>
+    <div class="face face--bottom"></div>
+  </div>
+</div>
+
+<style>
+  .scene {
+    /* Declared here as well as inline. A custom property that fails to resolve
+       makes every calc() using it invalid, which collapsed the whole scene to
+       zero height — the section rendered as an empty column. With a default on
+       the element the inline value overrides it and a missing one is harmless. */
+    --box: 190px;
+    /* The perspective origin sits above centre so the open top reads as the
+       top of the box rather than as a flat lid. */
+    perspective: 900px;
+    perspective-origin: 50% 35%;
+    width: calc(var(--box, 190px) * 2);
+    height: calc(var(--box, 190px) * 1.9);
+    display: grid;
+    place-items: center;
+    margin-inline: auto;
+  }
+
+  /* Shown only where preserve-3d is unavailable, so the space is never empty. */
+  .scene__fallback {
+    position: absolute;
+    width: calc(var(--box, 190px) * 1.05);
+    height: calc(var(--box, 190px) * 0.8);
+    border-radius: var(--radius);
+    background: linear-gradient(150deg, var(--kraft-light), var(--kraft));
+    box-shadow: var(--shadow-lg);
+  }
+
+  .box {
+    position: relative;
+    width: var(--box, 190px);
+    height: var(--box, 190px);
+    transform-style: preserve-3d;
+    transform: rotateX(-22deg) rotateY(-28deg);
+    animation: turn 26s linear infinite;
+  }
+
+  /* Where preserve-3d works, the fallback is redundant. */
+  @supports (transform-style: preserve-3d) {
+    .scene__fallback { display: none; }
+  }
+
+  .face {
+    position: absolute;
+    inset: 0;
+    /* Two flat tones plus a soft edge highlight reads as board without needing
+       a texture image. */
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / 14%), transparent 55%),
+      var(--kraft);
+    border: 1px solid rgb(0 0 0 / 12%);
+  }
+
+  .face--front  { transform: translateZ(calc(var(--box, 190px) / 2)); }
+  .face--back   { transform: rotateY(180deg) translateZ(calc(var(--box, 190px) / 2)); }
+  .face--right  { transform: rotateY(90deg) translateZ(calc(var(--box, 190px) / 2)); background: var(--kraft-dark); }
+  .face--left   { transform: rotateY(-90deg) translateZ(calc(var(--box, 190px) / 2)); background: var(--kraft-dark); }
+  .face--bottom { transform: rotateX(-90deg) translateZ(calc(var(--box, 190px) / 2)); background: var(--kraft-dark); }
+
+  /* The top is the inside of the box, so it is darker and sits below the flaps. */
+  .face--top {
+    transform: rotateX(90deg) translateZ(calc(var(--box, 190px) / 2));
+    background: #5c3a1f;
+    border-color: rgb(0 0 0 / 22%);
+  }
+
+  /* Two half-lid flaps folded outward, which is what makes it read as a box
+     rather than as a cube. */
+  .flap {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(160deg, var(--kraft-light), var(--kraft));
+    border: 1px solid rgb(0 0 0 / 12%);
+    backface-visibility: hidden;
+  }
+
+  .flap--a {
+    top: 0;
+    transform-origin: top center;
+    transform: rotateX(-118deg);
+  }
+
+  .flap--b {
+    bottom: 0;
+    transform-origin: bottom center;
+    transform: rotateX(118deg);
+  }
+
+  @keyframes turn {
+    from { transform: rotateX(-22deg) rotateY(-28deg); }
+    to   { transform: rotateX(-22deg) rotateY(332deg); }
+  }
+
+  /* Paused by the observer below when the section is not in view. */
+  .box[data-paused] { animation-play-state: paused; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .box { animation: none; }
+  }
+
+  @media (max-width: 640px) {
+    .scene { width: 100%; height: calc(var(--box, 190px) * 1.6); }
+  }
+</style>
+
+<script>
+  // A rotation nobody is looking at is wasted compositor work, and on a laptop
+  // it is wasted battery. Pause whenever the box leaves the viewport.
+  function watchBoxes() {
+    const boxes = document.querySelectorAll<HTMLElement>('[data-box]')
+    if (!boxes.length || !('IntersectionObserver' in window)) return
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) e.target.removeAttribute('data-paused')
+          else e.target.setAttribute('data-paused', '')
+        }
+      },
+      { threshold: 0 },
+    )
+    boxes.forEach((b) => io.observe(b))
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', watchBoxes, { once: true })
+  } else {
+    watchBoxes()
+  }
+  document.addEventListener('astro:page-load', watchBoxes)
+</script>

@@ -7,6 +7,7 @@ import { organization, website, graph } from '../lib/schema';
 import '../styles/global.css';
 
 import WhatsAppButton from '../components/WhatsAppButton.astro';
+import Motion from '../components/Motion.astro';
 interface Props {
   title: string;
   description: string;
@@ -60,6 +61,7 @@ const document = graph([organization(), website(), ...schema]);
     <SiteHeader />
     <main id="main">
       <slot />
+      <Motion />
     </main>
     <SiteFooter />
 
