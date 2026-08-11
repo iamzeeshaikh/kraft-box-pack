@@ -30,6 +30,24 @@ const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = Number(import.meta.env.QUOTE_RATE_LIMIT ?? 5);
 const hits = new Map<string, number[]>();
 
+/**
+ * Submission tokens already handled, so a retry does not send twice. Same
+ * lifetime characteristics as the rate limiter — per instance, bounded, and
+ * not a substitute for a real store if this ever needs to be exact.
+ */
+const seenTokens = new Map<string, number>();
+const TOKEN_TTL_MS = 10 * 60 * 1000;
+
+function recentlySent(token: string): boolean {
+  const at = seenTokens.get(token);
+  return at !== undefined && Date.now() - at < TOKEN_TTL_MS;
+}
+
+function remember(token: string): void {
+  seenTokens.set(token, Date.now());
+  if (seenTokens.size > 5000) seenTokens.clear();
+}
+
 function rateLimited(ip: string): boolean {
   const now = Date.now();
   const recent = (hits.get(ip) ?? []).filter((t) => now - t < WINDOW_MS);
@@ -100,6 +118,49 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   const product = singleLine(clean(form.get('product'), 160));
   const message = clean(form.get('message'), MAX_FIELD);
 
+  /* Optional specification step. All of it is optional by design — making any
+     of it required would cost more enquiries than the detail is worth. */
+  const spec = {
+    dimensions: singleLine(clean(form.get('dimensions'), 80)),
+    unit: singleLine(clean(form.get('unit'), 20)),
+    quantity: singleLine(clean(form.get('quantity'), 20)),
+    material: singleLine(clean(form.get('material'), 60)),
+    printing: singleLine(clean(form.get('printing'), 60)),
+    finish: singleLine(clean(form.get('finish'), 60)),
+    neededBy: singleLine(clean(form.get('needed_by'), 20)),
+    zip: singleLine(clean(form.get('zip'), 12)),
+  };
+
+  /* Attribution. Not personal data — the landing page, campaign parameters,
+     referrer and a coarse device class, which is what tells the business
+     which pages actually produce enquiries. */
+  const attribution = {
+    landingPage: singleLine(clean(form.get('landing_page'), 300)),
+    referrer: singleLine(clean(form.get('referrer'), 300)),
+    utm: singleLine(clean(form.get('utm'), 300)),
+    device: singleLine(clean(form.get('device'), 60)),
+  };
+
+  /*
+   * Duplicate guard.
+   *
+   * The client disables the button and holds an in-flight flag, but neither
+   * survives a browser retrying a request whose response was lost. The token
+   * is minted per form render, so the same submission arriving twice carries
+   * the same one and the second is acknowledged without sending a second
+   * email — answering ok rather than an error, because from the sender's
+   * point of view it did go through.
+   */
+  const token = singleLine(clean(form.get('submit_token'), 40));
+  if (token) {
+    if (recentlySent(token)) {
+      return wantsJson
+        ? json({ ok: true, duplicate: true }, 200)
+        : new Response(null, { status: 303, headers: { location: '/thank-you/' } });
+    }
+    remember(token);
+  }
+
   if (!name || !email || !message) return fail('Name, email and message are required.', 400);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return fail('Enter a valid email address.', 400);
 
@@ -144,6 +205,16 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     auth: { user: String(SMTP_USER), pass: String(SMTP_PASS) },
   });
 
+  const specLines = [
+    spec.dimensions && `Dimensions:  ${spec.dimensions}${spec.unit ? ` ${spec.unit}` : ''}`,
+    spec.quantity && `Quantity:    ${spec.quantity}`,
+    spec.material && `Material:    ${spec.material}`,
+    spec.printing && `Printing:    ${spec.printing}`,
+    spec.finish && `Finish:      ${spec.finish}`,
+    spec.neededBy && `Needed by:   ${spec.neededBy}`,
+    spec.zip && `Delivery ZIP: ${spec.zip}`,
+  ].filter(Boolean);
+
   const lines = [
     `Name:    ${name}`,
     `Email:   ${email}`,
@@ -155,6 +226,13 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     message,
     '',
     attachments.length ? `Attachment: ${attachments[0].filename}` : 'Attachment: none',
+    ...(specLines.length ? ['', 'Specification:', ...specLines] : []),
+    '',
+    '--- where this came from ---',
+    attribution.landingPage && `Page:     ${attribution.landingPage}`,
+    attribution.referrer && `Referrer: ${attribution.referrer}`,
+    attribution.utm && `Campaign: ${attribution.utm}`,
+    attribution.device && `Device:   ${attribution.device}`,
   ].filter(Boolean);
 
   try {
@@ -172,6 +250,52 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   } catch (error) {
     console.error('quote: send failed', error);
     return fail('Sorry, that could not be sent. Please email info@kraftboxpack.com.', 502);
+  }
+
+  /*
+   * Acknowledgement to the sender.
+   *
+   * Sent after the internal email has succeeded, and deliberately not allowed
+   * to fail the request: the enquiry has already reached the business, so a
+   * bounced acknowledgement is a logging matter rather than something the
+   * visitor should be shown an error for.
+   *
+   * It restates what was sent so the sender has a record, and it sets
+   * expectations with the published turnaround rather than inventing one.
+   */
+  try {
+    await transport.sendMail({
+      from: {
+        name: String(SMTP_FROM_NAME ?? 'Kraft Box Pack'),
+        address: String(SMTP_FROM_EMAIL ?? SMTP_USER),
+      },
+      to: { name, address: email },
+      subject: 'We have your quote request — Kraft Box Pack',
+      text: [
+        `Hi ${name.split(' ')[0] || name},`,
+        '',
+        'Thank you for your enquiry. We have it, and you can expect a written',
+        'reply with a specification and a price within one business day.',
+        '',
+        product ? `Product: ${product}` : null,
+        '',
+        'What you sent us:',
+        message,
+        ...(specLines.length ? ['', 'Specification:', ...specLines] : []),
+        attachments.length ? `\nAttachment: ${attachments[0].filename}` : null,
+        '',
+        'If anything above is wrong, just reply to this email and we will',
+        'correct it before quoting.',
+        '',
+        'Kraft Box Pack',
+        'info@kraftboxpack.com · (503) 358-0443',
+      ]
+        .filter((l) => l !== null)
+        .join('\n'),
+    });
+  } catch (error) {
+    // The enquiry is already delivered; the sender should not see an error.
+    console.error('quote: acknowledgement to sender failed', error);
   }
 
   if (wantsJson) return json({ ok: true }, 200);

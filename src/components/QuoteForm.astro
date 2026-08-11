@@ -221,6 +221,106 @@ const ICONS: Record<string, string> = {
     </div>
   </div>
 
+
+  {/* ------------------------------------------------------------------
+      Optional specification step.
+
+      Collapsed by default and inside a <details>, so it costs nothing to a
+      visitor who only wants to send a quick enquiry and is available without
+      JavaScript to one who wants to be precise. Everything here is optional
+      — making any of it required would cost more enquiries than the detail
+      is worth.
+     ------------------------------------------------------------------ */}
+  <details class="qf__more">
+    <summary>Add specification details <span>optional</span></summary>
+
+    <div class="qf__grid">
+      <div class="qf__row">
+        <label for={field('dimensions')}>Internal dimensions</label>
+        <input type="text" id={field('dimensions')} name="dimensions"
+          placeholder="Length x Width x Height" autocomplete="off" />
+      </div>
+
+      <div class="qf__row qf__row--narrow">
+        <label for={field('unit')}>Unit</label>
+        <select id={field('unit')} name="unit">
+          <option value="">Select</option>
+          <option>Inches</option>
+          <option>Centimetres</option>
+          <option>Millimetres</option>
+        </select>
+      </div>
+
+      <div class="qf__row qf__row--narrow">
+        <label for={field('quantity')}>Quantity</label>
+        <input type="number" id={field('quantity')} name="quantity"
+          min="100" step="1" inputmode="numeric" placeholder="100" />
+      </div>
+
+      <div class="qf__row">
+        <label for={field('material')}>Material preference</label>
+        <select id={field('material')} name="material">
+          <option value="">No preference — advise me</option>
+          <option>Kraft paperboard</option>
+          <option>White SBS</option>
+          <option>Recycled paperboard</option>
+          <option>Corrugated</option>
+          <option>Rigid greyboard</option>
+        </select>
+      </div>
+
+      <div class="qf__row">
+        <label for={field('printing')}>Printing</label>
+        <select id={field('printing')} name="printing">
+          <option value="">No preference — advise me</option>
+          <option>Unprinted</option>
+          <option>1 colour</option>
+          <option>2 colours</option>
+          <option>Full colour (CMYK)</option>
+          <option>Pantone (PMS) match</option>
+        </select>
+      </div>
+
+      <div class="qf__row">
+        <label for={field('finish')}>Finish</label>
+        <select id={field('finish')} name="finish">
+          <option value="">No preference — advise me</option>
+          <option>None</option>
+          <option>Matte lamination</option>
+          <option>Gloss lamination</option>
+          <option>Spot UV</option>
+          <option>Foil stamping</option>
+          <option>Embossing or debossing</option>
+        </select>
+      </div>
+
+      <div class="qf__row qf__row--narrow">
+        <label for={field('needed_by')}>Needed by</label>
+        <input type="date" id={field('needed_by')} name="needed_by" />
+      </div>
+
+      <div class="qf__row qf__row--narrow">
+        <label for={field('zip')}>Delivery ZIP</label>
+        <input type="text" id={field('zip')} name="zip" inputmode="numeric"
+          autocomplete="postal-code" maxlength="10" placeholder="10001" />
+      </div>
+    </div>
+  </details>
+
+
+  {/*
+    Attribution, filled in by the script below rather than rendered, so a
+    cached page cannot serve one visitor's referrer to another. None of this
+    is personal data — it is the landing page, the campaign parameters, the
+    referrer and a coarse device class, which is what tells the business
+    which pages actually produce enquiries.
+  */}
+  <input type="hidden" name="landing_page" value="" />
+  <input type="hidden" name="referrer" value="" />
+  <input type="hidden" name="utm" value="" />
+  <input type="hidden" name="device" value="" />
+  <input type="hidden" name="submit_token" value="" />
+
   {/* Bots fill every field they can see; people never see this one. */}
   <div class="qf__trap" aria-hidden="true">
     <label for={field('website')}>Leave this field empty</label>
