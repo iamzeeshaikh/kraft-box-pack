@@ -167,7 +167,7 @@ export const foodContent: ProductContentMap = {
     ],
     link: {
       lead: 'For other decorated bakery items with the same clearance problem, ',
-      href: '/product/kraft-cupcake-packaging-boxes/',
+      href: '/product/kraft-cupcake-boxes/',
       anchor: 'cupcake boxes hold each item in a cup',
       tail: '.',
     },
