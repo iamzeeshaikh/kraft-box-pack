@@ -8,10 +8,15 @@ import '../styles/global.css';
 
 import WhatsAppButton from '../components/WhatsAppButton.astro';
 import Motion from '../components/Motion.astro';
+import Analytics from '../components/Analytics.astro';
 interface Props {
   title: string;
   description: string;
   path: string;
+  /** Page classification for analytics: home | product | category | blog | other. */
+  pageType?: string;
+  /** Product or category name, where the page has one. */
+  itemName?: string;
   noindex?: boolean;
   canonical?: string;
   image?: string;
@@ -62,6 +67,7 @@ const document = graph([organization(), website(), ...schema]);
     <main id="main">
       <slot />
       <Motion />
+      <Analytics pageType={Astro.props.pageType ?? 'other'} itemName={Astro.props.itemName} />
     </main>
     <SiteFooter />
 

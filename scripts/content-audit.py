@@ -53,11 +53,23 @@ for f in glob.glob(DIST + '/**/index.html', recursive=True):
     can = re.search(r'<link rel="canonical" href="([^"]*)"', h)
     og = re.search(r'<meta property="og:title" content="([^"]*)"', h)
 
-    # FAQ questions: <summary><span>Q</span> is the FAQ pattern; a bare
-    # <summary> also matches footer accordions and inflates every page.
-    faq_vis = [text(x) for x in re.findall(r'<summary[^>]*>\s*<span[^>]*>(.*?)</span>', h, re.S)]
-    if not faq_vis:
-        faq_vis = [text(x) for x in re.findall(r'<summary[^>]*>(.*?)</summary>', h, re.S)]
+    # FAQ questions come only from the FAQ accordion, which marks every entry
+    # with class="faq__item".
+    #
+    # Matching on <summary> alone counts the footer accordions, and matching on
+    # <summary><span> additionally counts the quote form's "Add specification
+    # details" disclosure — which is how this check briefly reported two
+    # "identical FAQ sets" that were really just the same form on several pages.
+    # Anchoring to the component's own class is the only reading that cannot
+    # drift as new disclosure widgets are added.
+    faq_vis = [
+        text(m.group(1))
+        for m in re.finditer(
+            r'<details[^>]*class="[^"]*faq__item[^"]*"[^>]*>\s*<summary[^>]*>\s*<span[^>]*>(.*?)</span>',
+            h,
+            re.S,
+        )
+    ]
 
     faq_schema, n_faqpage, schema_types = [], 0, set()
     for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):

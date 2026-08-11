@@ -36,6 +36,8 @@ const faqs = post.faqs ?? [];
   title={post.metaTitle}
   description={post.metaDescription}
   path={post.url}
+  pageType="blog"
+  itemName={post.title}
   image={post.image}
   schema={[
     blogPosting(post),

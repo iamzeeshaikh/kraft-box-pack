@@ -1,0 +1,95 @@
+---
+/**
+ * Analytics, gated on configuration.
+ *
+ * No measurement ID exists for this property yet, and inventing one would
+ * silently send nothing while looking wired up. So nothing loads unless
+ * `PUBLIC_GA4_ID` is set — set it and the tag, the page-type events and the
+ * interaction tracking below all start working with no other change.
+ *
+ * The event layer itself is NOT gated. `dataLayer` is always created and every
+ * event is always pushed to it, so a tag manager added later receives the full
+ * history of interactions without anything being re-instrumented. That also
+ * means the events can be verified in the console today, before any account
+ * exists.
+ *
+ * Nothing here sends a form field value. The events carry page type, product
+ * or category name, and the element that was clicked — never a name, an email,
+ * a phone number or anything typed into the quote form.
+ */
+interface Props {
+  /** 'home' | 'product' | 'category' | 'blog' | 'other' */
+  pageType?: string
+  /** Product or category name, where the page has one. */
+  itemName?: string
+}
+
+const { pageType = 'other', itemName } = Astro.props
+const GA4_ID = import.meta.env.PUBLIC_GA4_ID
+---
+
+{
+  GA4_ID && (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />
+      <script is:inline define:vars={{ GA4_ID }}>
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+          window.dataLayer.push(arguments)
+        }
+        window.gtag = gtag
+        gtag('js', new Date())
+        // Page views are sent manually below so the page type travels with them.
+        gtag('config', GA4_ID, { send_page_view: false })
+      </script>
+    </>
+  )
+}
+
+<script is:inline define:vars={{ pageType, itemName }}>
+  /* The queue exists whether or not a tag is configured, so events are never
+     lost to the absence of an account and can be inspected today. */
+  window.dataLayer = window.dataLayer || []
+
+  function track(event, detail) {
+    const payload = Object.assign({ event: event }, detail || {})
+    window.dataLayer.push(payload)
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', event, detail || {})
+    }
+  }
+  window.kbpTrack = track
+
+  track('page_view', { page_type: pageType, item_name: itemName || undefined })
+
+  if (pageType === 'product') track('product_view', { item_name: itemName })
+  if (pageType === 'category') track('category_view', { item_name: itemName })
+
+  /* One delegated listener rather than a listener per element, so adding a
+     phone number or a CTA anywhere on the site needs no further wiring. */
+  document.addEventListener(
+    'click',
+    function (e) {
+      const link = e.target instanceof Element ? e.target.closest('a') : null
+      if (!link) return
+      const href = link.getAttribute('href') || ''
+
+      if (href.startsWith('tel:')) {
+        track('phone_click', { page_type: pageType })
+      } else if (href.startsWith('mailto:')) {
+        track('email_click', { page_type: pageType })
+      } else if (href.includes('wa.me') || href.includes('whatsapp')) {
+        track('whatsapp_click', { page_type: pageType })
+      } else if (link.classList.contains('btn')) {
+        /* The link text identifies the CTA. It is authored copy, never
+           anything a visitor typed. */
+        track('cta_click', {
+          page_type: pageType,
+          cta_text: (link.textContent || '').trim().slice(0, 60),
+          destination: href,
+        })
+      }
+    },
+    { passive: true },
+  )
+</script>
