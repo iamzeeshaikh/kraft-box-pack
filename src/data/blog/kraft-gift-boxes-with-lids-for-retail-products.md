@@ -7,6 +7,53 @@ image: /images/blog/kraft-gift-boxes-with-lids-tissue.webp
 imageAlt: Three kraft gift boxes with fitted lids and tissue paper on a table
 imageWidth: 1280
 imageHeight: 720
+updated: '2026-08-11'
+faqs:
+  - question: Why does my lid stick or fall off?
+    answer: >-
+      The tolerance between too loose and too tight is narrow on a two-piece box,
+      and it is what the format is judged on. It cannot be assessed from a drawing,
+      so a physical sample before the run is worth the step.
+  - question: How deep should the lid be?
+    answer: >-
+      An appearance decision rather than a structural one. A shallow lid shows more
+      of the printed base; a deep lid covers most of the box and reads as more
+      substantial.
+  - question: Rigid or folding construction?
+    answer: >-
+      Rigid holds its fit better over repeated opening and feels heavier. Folding
+      ships flat and costs considerably less. The deciding question is whether the
+      box gets kept.
+  - question: Do I need an insert?
+    answer: >-
+      If the contents can move, yes. The lid comes off and the contents are seen in
+      that instant, so anything that has shifted in transit is the first thing
+      registered.
+  - question: Can the lid and base be different colours?
+    answer: >-
+      Yes. They are separate components that can run on different stocks, which is a
+      straightforward way to add contrast without a second finish.
+  - question: Can these be posted directly to customers?
+    answer: >-
+      Inside a plain outer carton. A presentation box posted alone arrives with
+      scuffed corners and a courier label across the lid.
+  - question: What finishes work on kraft gift boxes?
+    answer: >-
+      Foil and deboss both read well against unbleached board and each is a single
+      pass. Interior print or a coloured lining often does more than either.
+  - question: How do I keep a range of sizes looking related?
+    answer: >-
+      Fix the board, print method and finish once and vary only the footprint. Sizes
+      added a year apart then still match.
+  - question: Do two-piece boxes stack well in a stockroom?
+    answer: >-
+      Reasonably, though a lid overhanging the base slightly makes the stack less
+      stable. Tell us if they are stored stacked and we allow for it in the fit.
+  - question: How much clearance should there be above the contents?
+    answer: >-
+      Enough that the lid never presses on them, including any tissue. A lid resting
+      on the contents is the most common reason a gift box looks packed rather than
+      presented.
 ---
 
 # Kraft Gift Boxes With Lids for Retail Products

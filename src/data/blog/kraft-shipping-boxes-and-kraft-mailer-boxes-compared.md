@@ -7,6 +7,57 @@ image: /images/blog/kraft-shipping-vs-mailer-boxes.webp
 imageAlt: Kraft shipping box and self-locking mailer box side by side
 imageWidth: 1280
 imageHeight: 720
+updated: '2026-08-11'
+faqs:
+  - question: Which format is cheaper per unit?
+    answer: >-
+      The regular slotted shipping box, almost always. It uses less board for the
+      same interior volume because a mailer's folded geometry doubles walls and
+      forms a hinged lid. The gap narrows at small sizes and widens as the box grows.
+  - question: Which one packs faster?
+    answer: >-
+      A mailer closes faster because it locks without tape, but it takes a practised
+      moment to fold. A shipping box squares up instantly and closes slower. Time
+      both with your own staff — a few seconds per parcel is invisible at ten orders
+      a day and decisive at five hundred.
+  - question: Do mailers protect as well as shipping boxes?
+    answer: >-
+      They protect differently. Doubled side walls resist edge impacts better than
+      single-wall boxes, but the hinged lid can flex open at the corners under
+      twisting loads. For heavy contents the shipping box wins, which is why freight
+      moves in RSCs rather than mailers.
+  - question: Can I use tape on a mailer box?
+    answer: >-
+      You can, and many operations add a peel-and-seal strip or a branded sticker
+      instead. Parcel tape across a printed mailer undoes most of the presentation
+      advantage you paid for.
+  - question: Which is better for dimensional weight?
+    answer: >-
+      Whichever is closer to your product. Format matters far less than fit — a
+      correctly sized shipping box beats an oversized mailer on every parcel, and
+      the reverse is equally true.
+  - question: Do I need both formats?
+    answer: >-
+      Many operations run both: mailers for retail orders the customer opens, plain
+      shipping boxes for wholesale and bulk. Splitting by order type is usually
+      cheaper than forcing one format to do both jobs.
+  - question: Can shipping boxes be printed?
+    answer: >-
+      Yes, usually flexo direct to the board. For business deliveries it rarely
+      returns its cost; for direct-to-consumer parcels it can.
+  - question: Which format suits returns better?
+    answer: >-
+      A mailer with a double adhesive strip, since it reseals without tape. Tell us
+      at quoting because the second strip is positioned at dieline stage.
+  - question: Do mailer boxes need void fill?
+    answer: >-
+      Less often than shipping boxes, because they are usually cut closer to the
+      product. Where fill is still needed the honest answer is a smaller box rather
+      than more filler.
+  - question: Which format stacks better on a pallet?
+    answer: >-
+      The shipping box. Its four square walls and doubled flap layers carry a column
+      load that a hinged mailer lid does not, which is why bulk freight moves in RSCs.
 ---
 
 # Kraft Shipping Boxes vs Mailer Boxes Compared

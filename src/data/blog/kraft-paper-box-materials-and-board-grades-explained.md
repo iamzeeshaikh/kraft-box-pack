@@ -7,6 +7,57 @@ image: /images/blog/kraft-paper-box-material-samples.webp
 imageAlt: Kraft paperboard and corrugated samples showing layers and tones
 imageWidth: 1280
 imageHeight: 720
+updated: '2026-08-11'
+faqs:
+  - question: What does board caliper actually measure?
+    answer: >-
+      Thickness, usually in points or microns. It is a useful shorthand but it does
+      not describe stiffness or strength on its own — two boards at the same caliper
+      can behave quite differently depending on how they are made.
+  - question: Is a thicker board always stronger?
+    answer: >-
+      No. For stacking, edge crush rating predicts performance far better than
+      thickness, and a thinner board with a higher rating will outperform a thicker
+      one with a lower one.
+  - question: What is the difference between SBS and kraft board?
+    answer: >-
+      SBS is bleached, so it is white through and prints colour accurately. Kraft is
+      unbleached, which gives it the brown colour and means every ink laid on it
+      sits over brown.
+  - question: Is recycled board weaker?
+    answer: >-
+      Slightly, at the same caliper. Recycled fibres are shorter, so the board is a
+      little less stiff and takes on moisture faster. Stepping up one caliper
+      generally restores performance while keeping the recycled claim.
+  - question: When do I need corrugated rather than folding carton board?
+    answer: >-
+      Once weight or handling severity climbs. Folding carton suits retail
+      presentation and light contents; corrugated adds real strength for very little
+      extra weight because of the fluted layer.
+  - question: Which flute should I choose?
+    answer: >-
+      E for print quality and light parcels, B for general purpose, C for stacking
+      strength, BC double wall for heavy or highly stacked work. Thinner is not
+      weaker in every direction.
+  - question: Does board choice affect print quality?
+    answer: >-
+      Considerably. Uncoated and kraft stocks absorb ink so colours dry back darker
+      and duller. Coated white board gives the widest colour range.
+  - question: How does humidity affect board?
+    answer: >-
+      Board absorbs moisture from the air until it equalises with its surroundings,
+      and stacking strength falls as it does. A case that tests correctly on the day
+      it is made can be measurably weaker after a month in a humid warehouse.
+  - question: What is GSM and how does it relate to caliper?
+    answer: >-
+      GSM measures weight per square metre; caliper measures thickness. They
+      correlate but are not interchangeable, since a bulky board can be thick at a
+      lower weight than a dense one.
+  - question: Can I mix board grades across one product range?
+    answer: >-
+      You can, but it is noticeable in the hand and on shelf. Holding one grade
+      across a range is usually worth more than the small saving from optimising each
+      pack individually.
 ---
 
 # Kraft Paper Box Materials and Board Grades Explained

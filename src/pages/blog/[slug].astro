@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqAccordion from '../../components/product/FaqAccordion.astro';
 import { BLOG_POSTS } from '../../lib/blog';
-import { blogPosting, breadcrumbs } from '../../lib/schema';
+import { blogPosting, breadcrumbs, faqPage } from '../../lib/schema';
 
 export function getStaticPaths() {
   return BLOG_POSTS.map((post) => ({ params: { slug: post.slug }, props: { post } }));
@@ -17,24 +18,38 @@ const crumbs = [
   { name: post.title, url: post.url },
 ];
 
-const published = new Date(post.date + 'T12:00:00Z').toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-  timeZone: 'UTC',
-});
+const fmt = (d: string) =>
+  new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+const published = fmt(post.date);
+/* Only shown where the article has actually been revised. A "last updated"
+   line on an unrevised post claims a freshness it has not earned. */
+const updated = post.updated ? fmt(post.updated) : null;
+/* Narrowed once here so the template does not have to guard it twice. */
+const faqs = post.faqs ?? [];
 ---
 <BaseLayout
   title={post.metaTitle}
   description={post.metaDescription}
   path={post.url}
   image={post.image}
-  schema={[blogPosting(post), breadcrumbs(post.url, crumbs)]}
+  schema={[
+    blogPosting(post),
+    breadcrumbs(post.url, crumbs),
+    ...(post.faqs?.length ? [faqPage(post.url, post.faqs)] : []),
+  ]}
 >
   <Breadcrumbs crumbs={crumbs} />
 
   <article class="post-wrap">
-    <p class="post-date">Published {published}</p>
+    <p class="post-date">
+      Published {published}
+      {updated && <> · Reviewed {updated}</>}
+    </p>
     <img
       class="post-hero"
       src={post.image}
@@ -48,6 +63,13 @@ const published = new Date(post.date + 'T12:00:00Z').toLocaleDateString('en-US',
     <div class="post-body">
       <Content />
     </div>
+
+    {faqs.length > 0 && (
+      <section class="post-faq" aria-labelledby="post-faq-heading">
+        <h2 id="post-faq-heading">Questions about this</h2>
+        <FaqAccordion faqs={faqs} />
+      </section>
+    )}
   </article>
 </BaseLayout>
 
@@ -63,4 +85,9 @@ const published = new Date(post.date + 'T12:00:00Z').toLocaleDateString('en-US',
   .post-body :global(ul), .post-body :global(ol) { margin: 0 0 14px; padding-left: 22px; }
   .post-body :global(li) { margin-bottom: 6px; line-height: 1.65; }
   .post-body :global(a) { color: #8a5a2b; text-decoration: underline; }
+  .post-body :global(table) { width: 100%; border-collapse: collapse; margin: 0 0 18px; font-size: .92rem; }
+  .post-body :global(th), .post-body :global(td) { padding: .6rem .7rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  .post-body :global(thead th) { background: var(--surface-alt); font-weight: 600; }
+  .post-faq { margin-top: 40px; }
+  .post-faq h2 { font-size: 1.3rem; margin: 0 0 14px; }
 </style>

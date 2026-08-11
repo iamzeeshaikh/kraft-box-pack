@@ -7,6 +7,56 @@ image: /images/blog/food-safe-kraft-bakery-takeout.webp
 imageAlt: Kraft bakery tray with pastries and a windowed takeout box on a counter
 imageWidth: 1280
 imageHeight: 720
+updated: '2026-08-11'
+faqs:
+  - question: What does food-contact compliant actually mean?
+    answer: >-
+      That the board and inks are approved for contact with food under the relevant
+      regulations. It is specified rather than assumed, and whether contact is direct
+      or through a liner changes which stocks are available.
+  - question: Is grease resistance the same as moisture resistance?
+    answer: >-
+      No, they are different treatments. Fried food needs the first, hot fill needs
+      the second, and anything hot and fried needs both. A box treated for one still
+      fails on the other.
+  - question: Are your food boxes PFAS-free?
+    answer: >-
+      We specify PFAS-free grease-resistant grades as standard. Several US states now
+      restrict PFAS in food packaging, so tell us where you sell and we specify
+      against the strictest of those states.
+  - question: Why does hot food make the box soggy?
+    answer: >-
+      Steam. It condenses on the lid and drips back onto the food, which is what
+      makes a delivered base soft. Ventilation holes let it escape and have a
+      disproportionate effect on how the food arrives.
+  - question: Why do frozen packs split at the seams?
+    answer: >-
+      Standard carton adhesive becomes brittle below freezing, so a seam that is
+      sound at room temperature cracks when handled cold. A cold-tolerant adhesive
+      prevents it and cannot be added afterwards.
+  - question: Can recycled board be used for food packaging?
+    answer: >-
+      For non-direct contact, yes. Where food touches the board the grade has to be
+      food-contact compliant, which narrows the recycled options — a liner is often
+      the way to keep a recycled outer.
+  - question: Do I need ventilation on every food box?
+    answer: >-
+      No. It helps anything hot or intended to stay crisp, and works against chilled
+      products where it dries them out. It follows the food rather than the format.
+  - question: Can food boxes be printed inside?
+    answer: >-
+      Yes, with food-contact compliant inks where contact is direct. Confirm
+      compliance before artwork rather than after.
+  - question: Does a grease-resistant coating affect recyclability?
+    answer: >-
+      It depends on the chemistry. Some grease barriers stay within the paper stream
+      and some do not, so if a recycling claim matters tell us and we specify against
+      it rather than against cost alone.
+  - question: Can the same box work for hot and chilled products?
+    answer: >-
+      It can, but it has to be specified for both — moisture tolerance for the hot
+      fill and a cold-tolerant adhesive for the chill. Specified for only one, it
+      will fail on the other.
 ---
 
 # Food Safe Kraft Packaging for Bakeries and Takeout

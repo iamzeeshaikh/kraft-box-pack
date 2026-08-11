@@ -7,6 +7,55 @@ image: /images/blog/kraft-box-with-window-bakery.webp
 imageAlt: Kraft retail box with a clear window showing baked goods inside
 imageWidth: 1280
 imageHeight: 720
+updated: '2026-08-11'
+faqs:
+  - question: How large can a window be before the box weakens?
+    answer: >-
+      Past roughly a third of the panel the board usually has to step up a grade to
+      stop the face flexing. Where the window falls matters too — one crossing a
+      crease weakens the fold rather than the face.
+  - question: Should I use film or a plain die-cut aperture?
+    answer: >-
+      Film protects from dust and handling and keeps the pack sealed; a plain
+      aperture keeps the box fully recyclable but leaves contents touchable. Food and
+      cosmetics usually need film, a candle or a toy often does not.
+  - question: Does a window stop the box being recyclable?
+    answer: >-
+      A PET film does, in most kerbside systems, because the pack is no longer
+      straight paper. A plain die-cut aperture keeps it in the paper stream.
+  - question: What is PLA film?
+    answer: >-
+      A compostable alternative to PET. It composts where industrial facilities
+      exist, which is not universal, so the claim needs qualifying rather than
+      stating flatly.
+  - question: Why is my printed frame not centred on the window?
+    answer: >-
+      The aperture and the print are separate operations and a small amount of
+      movement between them is normal. A little tolerance in the artwork hides it;
+      a tight printed frame shows it.
+  - question: Can a window be a custom shape?
+    answer: >-
+      Yes, cut on the same die as the box. Very intricate shapes weaken the panel
+      more than a simple one of the same area.
+  - question: Can I have windows on more than one panel?
+    answer: >-
+      Yes, though each removes stiffness. Two large windows on adjacent panels
+      usually means stepping the board up a grade.
+  - question: Is a window worth the cost?
+    answer: >-
+      It depends whether the product sells on appearance. For confectionery, toys
+      and cosmetics it usually earns its cost; for a product bought on specification
+      a printed panel does the same job for less.
+  - question: Does a window let light damage the product?
+    answer: >-
+      For light-sensitive contents such as some teas, oils and chocolate, yes. A
+      window trades protection for visibility, and for those products the trade is
+      not always worth making.
+  - question: Can a window be added to an existing box design?
+    answer: >-
+      It needs a new cutting die, so it is a new tooling cost rather than an artwork
+      change. The board grade may also need to step up to compensate for the lost
+      stiffness.
 ---
 
 # How Kraft Boxes With Windows Are Designed

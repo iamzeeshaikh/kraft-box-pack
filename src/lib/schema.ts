@@ -87,8 +87,13 @@ export function blogPosting(post: {
   url: string;
   image: string;
   date: string;
+  updated?: string;
 }) {
   const published = `${post.date}T12:00:00Z`;
+  /* dateModified only differs from datePublished where the article has
+     actually been revised, so an unrevised post does not claim freshness it
+     has not earned. */
+  const modified = post.updated ? `${post.updated}T12:00:00Z` : published;
   return {
     '@type': 'BlogPosting',
     '@id': `${abs(post.url)}#article`,
@@ -97,7 +102,7 @@ export function blogPosting(post: {
     url: abs(post.url),
     image: abs(post.image),
     datePublished: published,
-    dateModified: published,
+    dateModified: modified,
     inLanguage: 'en-US',
     author: { '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },

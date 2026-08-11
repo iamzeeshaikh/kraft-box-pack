@@ -13,6 +13,15 @@ export interface BlogPostModule {
     imageAlt: string;
     imageWidth: number;
     imageHeight: number;
+    /** Optional last-reviewed date, shown to readers and used for dateModified. */
+    updated?: string;
+    /**
+     * Questions specific to this article's subject. The brief requires a FAQ
+     * set on every page that warrants one, and blog questions have to follow
+     * the article rather than reuse the matching product page's — otherwise
+     * the two compete for the same query with the same answer.
+     */
+    faqs?: { question: string; answer: string }[];
   };
   Content: any;
 }
