@@ -88,6 +88,18 @@ All six were followed. Where a claim could not be evidenced it was flagged in
   that reprint runs start at the 100-unit minimum so a single lost lid is not
   something this route serves, and carries a structure table. 621 → 1,162 words.
   Thin pages: **7 → 6**.
+- **About Us rewritten**, 253 → 1,134 words. The imported copy was generic
+  sustainability prose that answered nothing a buyer asks before enquiring, and
+  it printed a live `[elementor-template id="2174"]` shortcode as visible text —
+  the export carried the shortcode without the plugin that resolves it. It now
+  covers how an order works, what the structures actually are, and a "what we do
+  not do" list: no single boxes, no stock sizes, no checkout, and the returns
+  exclusion on custom-printed work. Sustainability is stated with its limits —
+  laminate, window film or foil breaks the recyclability the plain board has.
+- **FAQs added to the four pages that had none** — About, Contact, Get a Quote
+  and the products index, ten each, with FAQPage schema. Pages under ten FAQs:
+  **4 → 0**. Two questions that collided with existing ones were rewritten, so
+  duplicated FAQ questions stayed at their previous floor rather than rising.
 - **Home page** gained Industries, Customization, Process, ten FAQs and a
   closing quote band. Hero copy replaced — it had led with an environmental
   slogan over a lead that ended mid-sentence.
@@ -119,6 +131,16 @@ Unchanged palette, tokens and type scale. Added within the existing language:
 - A CSS 3D kraft box — six transformed faces, no library, pauses off-screen,
   static under reduced motion.
 - Section padding reduced where it was resolving to its ceiling.
+- **Fixed a site-wide horizontal overflow on laptop widths.** The desktop menu
+  needs about 1,050px beside the 259px wordmark, but the burger handed over at
+  1040px — so from 1041px to roughly 1400px the navigation ran past the viewport
+  and **every page scrolled sideways**, including at 1280px, the commonest
+  laptop width there is. The responsive QA sampled 1024px and 1440px, the two
+  widths either side of the broken range, which is why it went unseen. The
+  burger now holds until 1366px where the menu genuinely fits, the nav spacing
+  and type were tightened slightly to give it headroom, and 1280 and 1366 were
+  added to the QA viewport list. Verified: no overflow at any of seventeen
+  widths from 360px to 1920px.
 
 ## Quote system
 

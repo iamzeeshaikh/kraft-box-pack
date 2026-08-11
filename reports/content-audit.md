@@ -32,10 +32,10 @@
 | Identical FAQ sets | 0 groups |
 | Identical heading sequences | 0 groups |
 | Identical internal-link sets | 1 groups |
-| Pages under 10 FAQs (where required) | 4 |
+| Pages under 10 FAQs (where required) | 0 |
 | FAQ visible/schema mismatch | 0 |
 | FAQs rendered but no schema | 0 |
-| Thin pages (<600 words) | 6 |
+| Thin pages (<600 words) | 5 |
 | Orphan pages | 0 |
 | Broken internal links | 0 |
 | Paragraphs with >1 internal link | 0 |
@@ -71,11 +71,11 @@ Share of a page's paragraphs appearing on no other page.
 | 162 | Price starts from $0.30 per piece for large volume orders. Final pricing depends on size, material, printing, … |
 | 16 | Send your dimensions, quantity and artwork and we will price it for you.… |
 | 2 | Send the existing box and we quote to match the structure and board rather than proposing an alternative you w… |
-| 2 | For a lighter wound construction with fitted ends, tube packaging is the lower-cost cylinder .… |
 | 2 | Yes, though an aperture in a curved wall reduces strength noticeably, so it suits display rather than shipping… |
+| 2 | For a lighter wound construction with fitted ends, tube packaging is the lower-cost cylinder .… |
 | 2 | It measures how much load a board edge carries before failing, which is what actually holds a stack up. It is … |
-| 2 | Because it opens in one movement and shuts audibly. Tape being fought open on camera is the most common thing … |
 | 2 | Yes, and on a snug lid it helps. Without one a well-fitted magnetic lid can be awkward to lift from a flat sur… |
+| 2 | Because it opens in one movement and shuts audibly. Tape being fought open on camera is the most common thing … |
 | 2 | Soft-touch with foil or blind deboss. The box is handled slowly at the moment of opening, so texture registers… |
 | 2 | It can, which is why a moisture-resistant outer is usually specified. Untreated board softens where condensati… |
 | 2 | Paper-based liners exist and are the more recyclable option, generally at some cost to hold time. It is a genu… |
@@ -91,22 +91,22 @@ Share of a page's paragraphs appearing on no other page.
 | 162 | Related kraft boxes |
 | 158 | Key specifications |
 | 158 | Also worth looking at |
-| 12 | Large Kraft Gift Boxes |
 | 12 | Kraft Paper Gift Boxes |
 | 12 | Kraft Round Boxes |
-| 12 | Kraft Giveaway Packaging Boxes |
+| 12 | Large Kraft Gift Boxes |
 | 12 | Kraft Gift Hamper Boxes |
+| 12 | Kraft Giveaway Packaging Boxes |
 | 12 | Kraft Heart Shaped Boxes |
-| 11 | Mini Kraft Boxes |
-| 11 | Kraft Food Boxes |
-| 11 | Small Kraft Boxes |
-| 11 | Kraft Shipping Boxes |
-| 11 | Kraft Gift Boxes With Lids |
 | 11 | Kraft Mailer Boxes |
-| 11 | Kraft Corrugated Boxes |
-| 11 | Kraft Drawer Boxes |
+| 11 | Kraft Shipping Boxes |
 | 11 | Kraft Cardboard Boxes |
+| 11 | Kraft Food Boxes |
+| 11 | Kraft Corrugated Boxes |
 | 11 | Kraft Shoe Boxes |
+| 11 | Mini Kraft Boxes |
+| 11 | Kraft Jewelry Boxes |
+| 11 | Kraft Gift Boxes With Lids |
+| 11 | Kraft Take Out Boxes |
 
 ## Most-repeated FAQ questions
 
@@ -130,23 +130,17 @@ Share of a page's paragraphs appearing on no other page.
 
 ## Pages under 10 FAQs
 
-| FAQs | route |
-|---|---|
-| 0 | /about-us/ |
-| 0 | /contact-us/ |
-| 0 | /get-a-quote/ |
-| 0 | /products/ |
+None.
 
 ## Thin pages
 
 | words | route |
 |---|---|
-| 104 | /get-a-quote/ |
 | 162 | /blog/ |
-| 169 | /contact-us/ |
-| 255 | /about-us/ |
 | 268 | /refund_returns/ |
+| 497 | /get-a-quote/ |
 | 559 | /privacy-policy/ |
+| 571 | /contact-us/ |
 
 ## Orphan pages
 
@@ -160,5 +154,5 @@ None.
 
 | pages | routes |
 |---|---|
-| 6 | /get-a-quote/, /about-us/, /privacy-policy/, /terms-conditions/, /refund_returns/, /contact-us/ |
+| 5 | /get-a-quote/, /privacy-policy/, /terms-conditions/, /refund_returns/, /contact-us/ |
 

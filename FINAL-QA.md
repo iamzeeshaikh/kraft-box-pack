@@ -7,7 +7,7 @@ inferred from the source. Reproduce with the commands listed against each item.
 
 | Check | Result | Command |
 |---|---|---|
-| Type check | **0 errors** across 86 files | `npx astro check --minimumSeverity error` |
+| Type check | **0 errors** across 87 files | `npx astro check --minimumSeverity error` |
 | Production build | **194 pages**, no warnings | `npm run build` |
 | JavaScript shipped | **4.2 KB total** across the whole site | `find dist/client/_astro -name "*.js"` |
 
@@ -26,7 +26,7 @@ inferred from the source. Reproduce with the commands listed against each item.
 | Identical FAQ sets | **0** |
 | Identical heading sequences | **0** |
 | Duplicated paragraph instances | 202 (from a floor of shared business facts) |
-| Thin pages under 600 words | 6 — all legal or index pages |
+| Thin pages under 600 words | 5 — all legal pages |
 
 `python3 scripts/content-audit.py`
 
@@ -58,6 +58,14 @@ inferred from the source. Reproduce with the commands listed against each item.
 quote, contact, about, thank-you, blog index, two categories, nine products,
 one article, three policy pages.
 
+**A gap in this coverage hid a site-wide bug and is now closed.** The
+responsive sweep sampled 1024px and 1440px, which sit either side of the range
+where the desktop navigation did not fit — it needs roughly 1,050px beside a
+259px wordmark, and the burger menu handed over at 1040px. Every page on the
+site therefore scrolled sideways from 1041px to about 1400px, including at
+1280px, the commonest laptop width there is. 1280 and 1366 are now in the
+viewport list, and the burger holds until the menu genuinely fits.
+
 **0 issues.** No horizontal overflow, exactly one footer and one H1 per page,
 no empty tall sections, no vertical gap above 180px, no heading breaking
 mid-word.
@@ -80,6 +88,8 @@ Checked on home, a product page, a category page and the quote page:
 | Visible inputs below 16px | **0** — iOS will not zoom on focus |
 | Reduced motion | Honoured; the 3D box stops and reveals resolve immediately |
 | Tap targets under 24px | **0** — measured against the visible label where a control is hidden behind one |
+| Horizontal overflow | **0** across seven widths from 360px to 1440px |
+| Pages with no FAQs | **0** — about, contact, quote and the products index gained ten each |
 | CSP violations while operating the page | **0** — tabs, gallery, accordion, mobile menu, form validation and the analytics layer all run under the strict policy |
 
 ## Images

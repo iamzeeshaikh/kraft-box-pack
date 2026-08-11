@@ -32,7 +32,9 @@ export function wireMenu(): void {
   });
 
   // A resize past the breakpoint leaves the panel open but the button hidden.
-  const wide = window.matchMedia('(min-width: 1041px)');
+  // Must stay in step with the `max-width: 1365px` query in SiteHeader.astro —
+  // if the two drift, the panel is left open at a width where it is unreachable.
+  const wide = window.matchMedia('(min-width: 1366px)');
   wide.addEventListener('change', (e) => {
     if (e.matches) set(false);
   });

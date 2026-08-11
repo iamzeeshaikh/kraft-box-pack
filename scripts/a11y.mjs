@@ -14,7 +14,14 @@ const PAGES = [
   '/product-category/kraft-food-packaging/', '/get-a-quote/', '/contact-us/',
   '/about-us/', '/privacy-policy/', '/404/',
 ];
-const VIEWPORTS = [[360, 780], [390, 844], [768, 1024], [1024, 768], [1440, 900]];
+/*
+ * 1280 and 1366 are here because they were missing. The desktop nav needs about
+ * 1,050px beside the wordmark, the burger handed over at 1040px, and every page
+ * on the site therefore scrolled sideways from 1041px to roughly 1400px. The
+ * old list sampled 1024 and 1440 — the two widths on either side of the broken
+ * range — so it never showed. Laptop widths are not optional here.
+ */
+const VIEWPORTS = [[360, 780], [390, 844], [768, 1024], [1024, 768], [1280, 800], [1366, 768], [1440, 900]];
 
 let pass = 0;
 const fail = [];
