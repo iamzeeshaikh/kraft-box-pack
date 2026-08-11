@@ -9,6 +9,7 @@ import { cosmeticLuxuryContent } from './cosmetic-luxury'
 import { coloredWrappingContent } from './colored-wrapping'
 import { giftSpecialtyContent } from './gift-specialty'
 import { packagingBoxesContent } from './packaging-boxes'
+import { foodContent } from './food'
 
 export type { ProductContent, ProductSection, ProductFaq } from './types'
 
@@ -30,6 +31,7 @@ const ALL: ProductContentMap = {
   ...coloredWrappingContent,
   ...giftSpecialtyContent,
   ...packagingBoxesContent,
+  ...foodContent,
 }
 
 export const contentFor = (slug: string): ProductContent | undefined => ALL[slug]
