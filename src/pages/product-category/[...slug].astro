@@ -5,6 +5,7 @@ import ProductGrid from '../../components/ProductGrid.astro';
 import QuoteBand from '../../components/QuoteBand.astro';
 import { categories, productsIn } from '../../data/content';
 import * as schema from '../../lib/schema';
+import { SEO_OVERRIDES } from '../../data/seo-overrides';
 
 export function getStaticPaths() {
   return categories.map((category) => ({
@@ -35,13 +36,18 @@ const DUPLICATE_OF: Record<string, string> = {
 };
 const canonical = DUPLICATE_OF[category.slug];
 
+/* Hand-written metadata for the categories that earn impressions; the
+   generated pattern remains the fallback for the rest. */
+const seo = SEO_OVERRIDES[category.url];
 const title =
+  seo?.title ||
   `${category.name} | Custom Wholesale ${category.name.includes('Boxes') ? 'Packaging' : 'Boxes'}`;
+const description = seo?.description || category.metaDescription;
 ---
 
 <BaseLayout
   title={title}
-  description={category.metaDescription}
+  description={description}
   path={category.url}
   canonical={canonical}
   schema={[...schema.categoryNode(category), schema.breadcrumbs(category.url, crumbs)]}

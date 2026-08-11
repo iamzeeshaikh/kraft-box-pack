@@ -14,6 +14,7 @@ import paperPackaging from '../assets/site/kraft-paper-packaging.jpg';
 import miniBoxes from '../assets/site/custom-mini-kraft-boxes.jpg';
 import blackKraft from '../assets/site/custom-black-kraft-packaging.jpg';
 import candyBoxes from '../assets/site/custom-kraft-candy-boxes.jpg';
+import { SEO_OVERRIDES } from '../data/seo-overrides';
 
 const home = pages.find((p) => p.slug === 'home');
 
@@ -31,10 +32,13 @@ const collage: { image: ImageMetadata; alt: string }[] = [
   { image: candyBoxes, alt: 'Custom kraft candy boxes' },
 ];
 
-const title = 'Kraft Box Pack | Custom Kraft Boxes & Packaging, Wholesale';
-const description =
-  'Eco-friendly Kraft boxes at KraftBoxPack. Durable, sustainable packaging solutions ' +
-  'that protect your products and care for the environment.';
+/* The home page carries 33,242 impressions at 0.55% CTR from position 28.4 —
+   the weakest CTR of any high-impression page on the site. The old description
+   led with an environmental slogan and named no product, no size capability
+   and no reason to click. See src/data/seo-overrides.ts. */
+const seo = SEO_OVERRIDES['/'];
+const title = seo.title;
+const description = seo.description;
 
 /**
  * The old home page listed all 158 products. It now shows the twenty most

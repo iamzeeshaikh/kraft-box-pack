@@ -1,0 +1,1208 @@
+{
+ "gsc_pages": 294,
+ "live_routes": 191,
+ "missing": [
+  {
+   "url": "https://kraftboxpack.com/product/kraft-diffuser-boxes/",
+   "clicks": 4,
+   "impr": 251,
+   "ctr": 0.0159,
+   "pos": 24.81,
+   "path": "/product/kraft-diffuser-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-corporate-gift-boxes/",
+   "clicks": 1,
+   "impr": 170,
+   "ctr": 0.0059,
+   "pos": 39.38,
+   "path": "/product/kraft-corporate-gift-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-clothing-packaging-boxes/",
+   "clicks": 1,
+   "impr": 93,
+   "ctr": 0.0108,
+   "pos": 11.26,
+   "path": "/product/kraft-clothing-packaging-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/Custom-Gift-Boxes/",
+   "clicks": 0,
+   "impr": 73,
+   "ctr": 0.0,
+   "pos": 65.9,
+   "path": "/product-category/Custom-Gift-Boxes/",
+   "kind": "already-redirected",
+   "why": "Redirect already present in vercel.json"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-diy-kit-boxes/",
+   "clicks": 3,
+   "impr": 59,
+   "ctr": 0.0508,
+   "pos": 7.12,
+   "path": "/product/kraft-diy-kit-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-cosmetic-serum-boxes/",
+   "clicks": 0,
+   "impr": 49,
+   "ctr": 0.0,
+   "pos": 13.76,
+   "path": "/product/kraft-cosmetic-serum-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/kraft-food-packaging/page/2/",
+   "clicks": 0,
+   "impr": 24,
+   "ctr": 0.0,
+   "pos": 53.62,
+   "path": "/product-category/kraft-food-packaging/page/2/",
+   "kind": "legacy-pagination",
+   "why": "WordPress archive pagination; the Astro category pages are not paginated"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Shoe-Boxes.jpg",
+   "clicks": 0,
+   "impr": 22,
+   "ctr": 0.0,
+   "pos": 13.41,
+   "path": "/wp-content/uploads/2024/10/Kraft-Shoe-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-menu-packaging-boxes/",
+   "clicks": 0,
+   "impr": 17,
+   "ctr": 0.0,
+   "pos": 12.12,
+   "path": "/product/kraft-menu-packaging-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/Kraft-Industrial-Packaging/",
+   "clicks": 0,
+   "impr": 15,
+   "ctr": 0.0,
+   "pos": 85.47,
+   "path": "/product-category/Kraft-Industrial-Packaging/",
+   "kind": "case-variant",
+   "why": "Uppercase variant of the live route /product-category/kraft-industrial-packaging/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Box-with-Window-Packaging.jpg",
+   "clicks": 0,
+   "impr": 14,
+   "ctr": 0.0,
+   "pos": 21.07,
+   "path": "/wp-content/uploads/2024/10/Kraft-Box-with-Window-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Black-Kraft-Boxes.jpg",
+   "clicks": 0,
+   "impr": 13,
+   "ctr": 0.0,
+   "pos": 12.23,
+   "path": "/wp-content/uploads/2024/10/Black-Kraft-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-pill-boxes/",
+   "clicks": 0,
+   "impr": 13,
+   "ctr": 0.0,
+   "pos": 5.0,
+   "path": "/product/kraft-pill-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Black-Kraft-Boxes.jpg",
+   "clicks": 0,
+   "impr": 12,
+   "ctr": 0.0,
+   "pos": 13.83,
+   "path": "/wp-content/uploads/2024/10/Custom-Black-Kraft-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/kraft-packaging-boxes/page/2/",
+   "clicks": 0,
+   "impr": 11,
+   "ctr": 0.0,
+   "pos": 68.82,
+   "path": "/product-category/kraft-packaging-boxes/page/2/",
+   "kind": "legacy-pagination",
+   "why": "WordPress archive pagination; the Astro category pages are not paginated"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Gift-Boxes-With-Lids.jpg",
+   "clicks": 0,
+   "impr": 10,
+   "ctr": 0.0,
+   "pos": 11.8,
+   "path": "/wp-content/uploads/2024/10/Kraft-Gift-Boxes-With-Lids.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/Kraft-Food-Packaging/",
+   "clicks": 0,
+   "impr": 9,
+   "ctr": 0.0,
+   "pos": 57.44,
+   "path": "/product-category/Kraft-Food-Packaging/",
+   "kind": "case-variant",
+   "why": "Uppercase variant of the live route /product-category/kraft-food-packaging/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Cake-Packaging.jpg",
+   "clicks": 0,
+   "impr": 7,
+   "ctr": 0.0,
+   "pos": 35.71,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Cake-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-counter-display-stands/",
+   "clicks": 3,
+   "impr": 7,
+   "ctr": 0.4286,
+   "pos": 2.14,
+   "path": "/product/kraft-counter-display-stands/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Black-Kraft-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 7,
+   "ctr": 0.0,
+   "pos": 14.29,
+   "path": "/wp-content/uploads/2024/10/Black-Kraft-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Round-Boxes.jpg",
+   "clicks": 0,
+   "impr": 7,
+   "ctr": 0.0,
+   "pos": 11.57,
+   "path": "/wp-content/uploads/2024/10/Kraft-Round-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Cookie-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 7,
+   "ctr": 0.0,
+   "pos": 18.14,
+   "path": "/wp-content/uploads/2024/10/Kraft-Cookie-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Black-Kraft-Packaging.jpg",
+   "clicks": 0,
+   "impr": 6,
+   "ctr": 0.0,
+   "pos": 12.67,
+   "path": "/wp-content/uploads/2024/10/Custom-Black-Kraft-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/Jewelry-&-Accessories-Boxes/",
+   "clicks": 0,
+   "impr": 5,
+   "ctr": 0.0,
+   "pos": 38.4,
+   "path": "/product-category/Jewelry-&-Accessories-Boxes/",
+   "kind": "lost-category",
+   "why": "Category archive that existed on WordPress and has no Astro equivalent"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Round-Packaging.jpg",
+   "clicks": 0,
+   "impr": 5,
+   "ctr": 0.0,
+   "pos": 21.6,
+   "path": "/wp-content/uploads/2024/10/Kraft-Round-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Box-with-Window.jpg",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 14.25,
+   "path": "/wp-content/uploads/2024/10/Kraft-Box-with-Window.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Shoe-Boxes.jpg",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 20.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Shoe-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Brown-Kraft-Boxes.jpg",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 21.0,
+   "path": "/wp-content/uploads/2024/10/Brown-Kraft-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Food-Boxes.jpg",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 17.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Food-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/kraft-craft-kit-boxes/",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 1.75,
+   "path": "/product/kraft-craft-kit-boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Round-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 13.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Round-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Bakery-Boxes.jpg",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 9.25,
+   "path": "/wp-content/uploads/2024/10/Kraft-Bakery-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/Kraft-T-Shirt-Boxes/",
+   "clicks": 0,
+   "impr": 4,
+   "ctr": 0.0,
+   "pos": 13.0,
+   "path": "/product/Kraft-T-Shirt-Boxes/",
+   "kind": "case-variant",
+   "why": "Uppercase variant of the live route /product/kraft-t-shirt-boxes/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/Custom-Kraft-Seafood-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 15.0,
+   "path": "/wp-content/uploads/2026/01/Custom-Kraft-Seafood-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Gift-with-Lids-Packaging.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 19.33,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Gift-with-Lids-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Cookie-Packaging.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 19.67,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Cookie-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/1.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 16.33,
+   "path": "/wp-content/uploads/2025/11/1.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Cookie-Boxes.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 22.67,
+   "path": "/wp-content/uploads/2024/10/Kraft-Cookie-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Mini-Kraft-Boxes-1024x1024.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 28.67,
+   "path": "/wp-content/uploads/2024/10/Custom-Mini-Kraft-Boxes-1024x1024.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Candle-Boxes.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 22.67,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Candle-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Round-Packaging.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 23.33,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Round-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Shipping-Boxes.jpg",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 11.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Shipping-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/Kraft-Toy-Packaging/",
+   "clicks": 0,
+   "impr": 3,
+   "ctr": 0.0,
+   "pos": 11.0,
+   "path": "/product-category/Kraft-Toy-Packaging/",
+   "kind": "case-variant",
+   "why": "Uppercase variant of the live route /product-category/kraft-toy-packaging/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Gift-Boxes-with-Lids.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 15.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Gift-Boxes-with-Lids.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Shoe-Packaging.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 32.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Shoe-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/2-4.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 37.5,
+   "path": "/wp-content/uploads/2025/11/2-4.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Food-Boxes.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 24.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Food-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Shoe-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 26.5,
+   "path": "/wp-content/uploads/2024/10/Kraft-Shoe-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/Kraft-Diffuser-Boxes/",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 4.0,
+   "path": "/product/Kraft-Diffuser-Boxes/",
+   "kind": "lost-product",
+   "why": "Product page that existed on WordPress and was not carried into the Astro build"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Cake-Boxes.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 78.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Cake-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Gift-with-Lids-Packaging.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 4.5,
+   "path": "/wp-content/uploads/2024/10/Kraft-Gift-with-Lids-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Boxes-With-Lid-1200x900.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 21.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Boxes-With-Lid-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/12/Custom-Kraft-Drawer-Gift-Boxes-300x300.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 25.5,
+   "path": "/wp-content/uploads/2025/12/Custom-Kraft-Drawer-Gift-Boxes-300x300.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Round-Boxes.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 15.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Round-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Storage-Boxes.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 94.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Storage-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Pizza-Boxes.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 26.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Pizza-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Corrugated-Boxes.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 17.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Corrugated-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Mini-Kraft-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 7.0,
+   "path": "/wp-content/uploads/2024/10/Mini-Kraft-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Box-with-Window-Packaging.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 11.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Box-with-Window-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Paper-Dispenser-Packaging.jpg",
+   "clicks": 0,
+   "impr": 2,
+   "ctr": 0.0,
+   "pos": 30.5,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Paper-Dispenser-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Small-Kraft-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 18.0,
+   "path": "/wp-content/uploads/2024/10/Small-Kraft-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Boxes-With-Lid.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 23.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Boxes-With-Lid.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Cookie-Boxes-1200x675.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 13.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Cookie-Boxes-1200x675.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/1-4-1200x675.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 31.0,
+   "path": "/wp-content/uploads/2025/11/1-4-1200x675.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Paper-Gift-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 55.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Paper-Gift-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Cupcake-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 13.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Cupcake-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/Kraft-Event-Favor-Box-600x600.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 17.0,
+   "path": "/wp-content/uploads/2026/01/Kraft-Event-Favor-Box-600x600.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Jewelry-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 39.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Jewelry-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/custom-kraft-sushi-boxes-300x300.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 4.0,
+   "path": "/wp-content/uploads/2026/01/custom-kraft-sushi-boxes-300x300.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Food-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 29.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Food-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Small-Kraft-Boxes-1200x675.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 6.0,
+   "path": "/wp-content/uploads/2024/10/Small-Kraft-Boxes-1200x675.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Paper-Gift-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 15.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Paper-Gift-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/Custom-Kraft-Giveaway-Packaging-Boxes-300x300.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 39.0,
+   "path": "/wp-content/uploads/2026/01/Custom-Kraft-Giveaway-Packaging-Boxes-300x300.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product-category/Kraft-Apparel-Boxes/",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 8.0,
+   "path": "/product-category/Kraft-Apparel-Boxes/",
+   "kind": "case-variant",
+   "why": "Uppercase variant of the live route /product-category/kraft-apparel-boxes/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Paper-Gift-1024x1024.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 57.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Paper-Gift-1024x1024.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/3-3.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 29.0,
+   "path": "/wp-content/uploads/2025/11/3-3.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/1-4.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 18.0,
+   "path": "/wp-content/uploads/2025/11/1-4.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Black-Kraft-Packaging-1024x1024.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 7.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Black-Kraft-Packaging-1024x1024.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Shoe-Boxes-1200x675.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 15.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Shoe-Boxes-1200x675.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Drawer-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 12.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Drawer-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Mailer-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 25.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Mailer-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/Kraft-Seafood-Packaging-Boxes-600x600.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 21.0,
+   "path": "/wp-content/uploads/2026/01/Kraft-Seafood-Packaging-Boxes-600x600.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Gable-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 1.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Gable-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/Kraft-Diffuser-Box.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 26.0,
+   "path": "/wp-content/uploads/2026/01/Kraft-Diffuser-Box.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Mini-Kraft-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 21.0,
+   "path": "/wp-content/uploads/2024/10/Mini-Kraft-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/3-4.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 13.0,
+   "path": "/wp-content/uploads/2025/11/3-4.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/12/Kraft-wax-melt-boxes-bulk.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 28.0,
+   "path": "/wp-content/uploads/2025/12/Kraft-wax-melt-boxes-bulk.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/4-8-600x600.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 6.0,
+   "path": "/wp-content/uploads/2025/11/4-8-600x600.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Cookie-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 6.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Cookie-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Pizza-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 1.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Pizza-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Gable-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 18.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Gable-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2026/01/Kraft-Triangle-Sandwich-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 7.0,
+   "path": "/wp-content/uploads/2026/01/Kraft-Triangle-Sandwich-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Drawer-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 10.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Drawer-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/product/Kraft-Candle-Sleeve-Boxes/",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 69.0,
+   "path": "/product/Kraft-Candle-Sleeve-Boxes/",
+   "kind": "case-variant",
+   "why": "Uppercase variant of the live route /product/kraft-candle-sleeve-boxes/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Take-Out-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 2.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Take-Out-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Candle-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 9.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Candle-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Drawer-Boxes-1200x900.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 24.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Drawer-Boxes-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Mini-Kraft-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 25.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Mini-Kraft-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Candle-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 16.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Candle-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Large-Kraft-Gift-Boxes-300x300.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 20.0,
+   "path": "/wp-content/uploads/2024/10/Large-Kraft-Gift-Boxes-300x300.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Favor-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 29.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Favor-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/2-3-1200x900.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 8.0,
+   "path": "/wp-content/uploads/2025/11/2-3-1200x900.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Corrugated-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 19.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Corrugated-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/2-2.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 17.0,
+   "path": "/wp-content/uploads/2025/11/2-2.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Jewelry-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 30.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Jewelry-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Black-Kraft-Boxes-1200x675.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 3.0,
+   "path": "/wp-content/uploads/2024/10/Black-Kraft-Boxes-1200x675.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/3-8.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 11.0,
+   "path": "/wp-content/uploads/2025/11/3-8.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Paper-Dispenser-Packaging.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 45.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Paper-Dispenser-Packaging.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Paper-Dispenser-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 18.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Paper-Dispenser-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Round-Boxes-1200x675.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 14.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Round-Boxes-1200x675.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/4-8.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 22.0,
+   "path": "/wp-content/uploads/2025/11/4-8.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Candy-Boxes.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 12.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Candy-Boxes.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2025/11/1-3.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 19.0,
+   "path": "/wp-content/uploads/2025/11/1-3.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Kraft-Boxes-With-Lid.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 22.0,
+   "path": "/wp-content/uploads/2024/10/Kraft-Boxes-With-Lid.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  },
+  {
+   "url": "https://kraftboxpack.com/wp-content/uploads/2024/10/Custom-Kraft-Box-with-Window.jpg",
+   "clicks": 0,
+   "impr": 1,
+   "ctr": 0.0,
+   "pos": 3.0,
+   "path": "/wp-content/uploads/2024/10/Custom-Kraft-Box-with-Window.jpg/",
+   "kind": "legacy-image",
+   "why": "WordPress image URL indexed by Google Images; the file now ships hashed under /_astro/"
+  }
+ ],
+ "live_not_in_gsc": [
+  "/410/",
+  "/blog/",
+  "/blog/food-safe-kraft-packaging-for-bakeries-and-takeout/",
+  "/blog/how-kraft-boxes-with-windows-are-designed/",
+  "/blog/kraft-gift-boxes-with-lids-for-retail-products/",
+  "/blog/kraft-paper-box-materials-and-board-grades-explained/",
+  "/blog/kraft-shipping-boxes-and-kraft-mailer-boxes-compared/",
+  "/get-a-quote/",
+  "/product-category/kraft-gift-specialty-boxes/custom-gift-boxes/",
+  "/product-category/kraft-luxury-packaging/",
+  "/products/",
+  "/thank-you/"
+ ],
+ "summary": [
+  {
+   "kind": "legacy-image",
+   "urls": 95,
+   "impressions": 246,
+   "clicks": 0
+  },
+  {
+   "kind": "lost-product",
+   "urls": 10,
+   "impressions": 665,
+   "clicks": 12
+  },
+  {
+   "kind": "case-variant",
+   "urls": 6,
+   "impressions": 33,
+   "clicks": 0
+  },
+  {
+   "kind": "legacy-pagination",
+   "urls": 2,
+   "impressions": 35,
+   "clicks": 0
+  },
+  {
+   "kind": "already-redirected",
+   "urls": 1,
+   "impressions": 73,
+   "clicks": 0
+  },
+  {
+   "kind": "lost-category",
+   "urls": 1,
+   "impressions": 5,
+   "clicks": 0
+  }
+ ]
+}

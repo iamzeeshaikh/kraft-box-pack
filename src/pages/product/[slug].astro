@@ -10,6 +10,7 @@ import TrustBadges from '../../components/product/TrustBadges.astro';
 import { products, relatedTo } from '../../data/content';
 import { resolveAll } from '../../lib/images';
 import * as schema from '../../lib/schema';
+import { SEO_OVERRIDES } from '../../data/seo-overrides';
 import { FEATURES } from '../../data/site';
 
 export function getStaticPaths() {
@@ -32,8 +33,13 @@ const crumbs = [
 
 const imageUrls = resolveAll(product.images).map((i) => i.image.src);
 
-const title = product.seoTitle || `${product.name} | Custom Wholesale Packaging`;
+/* Hand-written metadata wins over the imported WordPress values wherever a
+   page earns impressions — see src/data/seo-overrides.ts for the measurements
+   behind each one. */
+const seo = SEO_OVERRIDES[product.url];
+const title = seo?.title || product.seoTitle || `${product.name} | Custom Wholesale Packaging`;
 const description =
+  seo?.description ||
   product.seoDescription ||
   product.plainShort.slice(0, 155) ||
   `Custom ${product.name.toLowerCase()} at wholesale prices from Kraft Box Pack.`;

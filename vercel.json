@@ -71,6 +71,66 @@
       "source": "/shop/",
       "destination": "/products/",
       "statusCode": 301
+    },
+    {
+      "source": "/product/kraft-clothing-packaging-boxes/",
+      "destination": "/product/kraft-apparel-packaging-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/kraft-pill-boxes/",
+      "destination": "/product/kraft-medicine-packaging-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/kraft-menu-packaging-boxes/",
+      "destination": "/product/kraft-brochure-packaging-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/kraft-counter-display-stands/",
+      "destination": "/product/kraft-display-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/kraft-craft-kit-boxes/",
+      "destination": "/product/kraft-art-supply-packaging/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/Kraft-T-Shirt-Boxes/",
+      "destination": "/product/kraft-t-shirt-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Kraft-Food-Packaging/",
+      "destination": "/product-category/kraft-food-packaging/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Kraft-Industrial-Packaging/",
+      "destination": "/product-category/kraft-industrial-packaging/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Kraft-Toy-Packaging/",
+      "destination": "/product-category/kraft-toy-packaging/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/Jewelry-&-Accessories-Boxes/",
+      "destination": "/product-category/jewelry-accessories-boxes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/kraft-food-packaging/page/2/",
+      "destination": "/product-category/kraft-food-packaging/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/kraft-packaging-boxes/page/2/",
+      "destination": "/product-category/kraft-packaging-boxes/",
+      "statusCode": 301
     }
   ],
   "headers": [
