@@ -42,7 +42,7 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID
 {GA4_ID && <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />}
 
 <script>
-  const metaContent = (name) =>
+  const metaContent = (name: string) =>
     document.querySelector(`meta[name="kbp:${name}"]`)?.getAttribute('content') || undefined
 
   const pageType = metaContent('page-type') || 'other'
@@ -54,16 +54,20 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID
   window.dataLayer = window.dataLayer || []
 
   if (GA4_ID) {
+    /* Google's documented snippet pushes the `arguments` object itself, and
+       gtag.js reads it back in that shape. Kept verbatim rather than rewritten
+       to rest parameters — this path only runs once a measurement ID exists, so
+       it has never been exercised here, and it is not the place to improvise. */
     const gtag = function () {
       window.dataLayer.push(arguments)
-    }
+    } as (...args: unknown[]) => void
     window.gtag = gtag
     gtag('js', new Date())
     /* Page views are sent manually below so the page type travels with them. */
     gtag('config', GA4_ID, { send_page_view: false })
   }
 
-  function track(event, detail) {
+  function track(event: string, detail?: Record<string, unknown>) {
     const payload = Object.assign({ event: event }, detail || {})
     window.dataLayer.push(payload)
     if (typeof window.gtag === 'function') {
