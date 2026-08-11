@@ -156,8 +156,12 @@ inbound = collections.Counter()
 broken = []
 for r, p in pages.items():
     for l in p['all_page_links']:
+        # A link is only broken if it resolves to neither a built page nor a
+        # real file on disk. Matching on file extension instead missed
+        # stylesheets and favicons, which are links but not routes.
+        if os.path.isfile(os.path.join(DIST, l.lstrip('/'))):
+            continue
         t = l if l.endswith('/') else l + '/'
-        if re.search(r'\.(xml|txt|json|png|jpe?g|webp|svg|ico|pdf|webmanifest)$', l): continue
         inbound[t] += 1
         if t not in routes: broken.append((r, l))
 orphans = [r for r in idx if r != '/' and inbound[r] == 0]

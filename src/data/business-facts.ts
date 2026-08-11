@@ -76,17 +76,24 @@ export const SERVICES = {
 } as const
 
 /**
- * Claims that appear on the site but are NOT evidenced anywhere in the project
- * files. Listed so they are visible rather than quietly relied upon, and
- * carried into BUSINESS-INFO-NEEDED.md for the business to confirm.
+ * Claims the business has confirmed it stands behind, where the supporting
+ * paperwork is not held in the project files.
  *
- * FSC is retained at the business's explicit instruction. The certificate
- * number and issuing body are still worth recording so the claim can be
- * substantiated if a buyer or Merchant Center review asks.
+ * These are kept on the site at the business's explicit instruction. They are
+ * recorded here only so the evidence can be produced quickly if a buyer, a
+ * Merchant Center review or an advertising standards query asks for it —
+ * not because their accuracy is in doubt.
+ */
+export const CONFIRMED_BY_BUSINESS = [
+  'FSC certification — retained on 36 products. Certificate number, issuing body and expiry worth filing.',
+  'Food-safe / food-contact compliance — retained across 68 products. Grade documentation worth filing.',
+  'Free shipping — retained. Any threshold or territory limit worth stating on the shipping page.',
+] as const
+
+/**
+ * Claims that appear on the site and have no supporting detail anywhere,
+ * including from the business. Carried into BUSINESS-INFO-NEEDED.md.
  */
 export const NEEDS_CONFIRMATION = [
-  'FSC certification — certificate number, issuing body and expiry not held in project files',
-  'Food-safe / food-contact compliance — referenced on 68 products, no documentation held',
-  'Free shipping — published on the feature strip; thresholds and territory limits not stated',
-  'Round the clock availability — published, but no staffed hours are documented',
+  'Round the clock availability — published on the feature strip, but no staffed hours are documented',
 ] as const

@@ -3,9 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ProductGrid from '../../components/ProductGrid.astro';
 import QuoteBand from '../../components/QuoteBand.astro';
+import FaqAccordion from '../../components/product/FaqAccordion.astro';
 import { categories, productsIn } from '../../data/content';
 import * as schema from '../../lib/schema';
 import { SEO_OVERRIDES } from '../../data/seo-overrides';
+import { CATEGORY_CONTENT } from '../../data/category-content';
 
 export function getStaticPaths() {
   return categories.map((category) => ({
@@ -27,14 +29,16 @@ const crumbs = [
 
 /**
  * WordPress published two categories both named "Kraft Cosmetic Boxes" — one
- * top-level, one nested under Kraft Packaging Boxes with a misspelt slug. Both
- * URLs are live and linked to, so both are kept; the misspelt one points its
- * canonical at the correctly-spelled category so the pair is not competing.
+ * top-level with 2 products, one nested under Kraft Packaging Boxes with the
+ * misspelt slug "karft" and 9 products. Neither had ever earned a click, and
+ * the correctly-spelled URL already ranked far better (position 15.6 against
+ * 43.1) on a fifth of the products.
+ *
+ * They are now merged: the nine products moved to the correct category, the
+ * misspelt route is no longer built, and a 301 sends its URL to the merged
+ * page. Every category self-canonicalises, so the cross-canonical this
+ * template used to carry is gone.
  */
-const DUPLICATE_OF: Record<string, string> = {
-  'karft-cosmetic-boxes': '/product-category/kraft-cosmetic-boxes/',
-};
-const canonical = DUPLICATE_OF[category.slug];
 
 /* Hand-written metadata for the categories that earn impressions; the
    generated pattern remains the fallback for the rest. */
@@ -43,20 +47,32 @@ const title =
   seo?.title ||
   `${category.name} | Custom Wholesale ${category.name.includes('Boxes') ? 'Packaging' : 'Boxes'}`;
 const description = seo?.description || category.metaDescription;
+
+/* Written content for this category. Every category imported with an empty
+   description, so the page fell back to one generated sentence and all
+   seventeen read alike. */
+const content = CATEGORY_CONTENT[category.slug];
+
+const pageSchema = [
+  ...schema.categoryNode(category),
+  schema.breadcrumbs(category.url, crumbs),
+  ...(content?.faqs?.length ? [schema.faqPage(category.url, content.faqs)] : []),
+];
 ---
 
 <BaseLayout
   title={title}
   description={description}
   path={category.url}
-  canonical={canonical}
-  schema={[...schema.categoryNode(category), schema.breadcrumbs(category.url, crumbs)]}
+  schema={pageSchema}
 >
   <Breadcrumbs crumbs={crumbs} />
 
   <div class="wrap cat">
     <h1>{category.name}</h1>
-    {category.description ? (
+    {content ? (
+      <div class="cat__intro prose">{content.intro.map((p) => <p>{p}</p>)}</div>
+    ) : category.description ? (
       <div class="prose cat__intro" set:html={category.description} />
     ) : (
       <p class="cat__intro">
@@ -83,6 +99,60 @@ const description = seo?.description || category.metaDescription;
       <ProductGrid products={items} />
     </div>
   </section>
+
+  {content && (
+    <section class="section section--alt" aria-labelledby="cat-guide">
+      <div class="wrap cat__guide">
+        <h2 id="cat-guide" class="visually-hidden">
+          Choosing {category.name.toLowerCase()}
+        </h2>
+        {content.sections.map((s) => (
+          <div class="cat__block prose">
+            <h2>{s.h2}</h2>
+            {s.body.map((p) => <p>{p}</p>)}
+            {s.list && <ul>{s.list.map((li) => <li>{li}</li>)}</ul>}
+            {s.table && (
+              <div class="table-scroll">
+                <table>
+                  <caption>{s.table.caption}</caption>
+                  <thead>
+                    <tr>{s.table.head.map((h) => <th scope="col">{h}</th>)}</tr>
+                  </thead>
+                  <tbody>
+                    {s.table.rows.map((r) => (
+                      <tr>
+                        {r.map((cell, i) =>
+                          i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>,
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        ))}
+        {/* One contextual link out of the page, in its own paragraph so the
+            one-link-per-paragraph rule holds structurally. */}
+        {content.link && (
+          <p class="cat__link prose">
+            {content.link.lead}
+            <a href={content.link.href}>{content.link.anchor}</a>
+            {content.link.tail}
+          </p>
+        )}
+      </div>
+    </section>
+  )}
+
+  {content?.faqs?.length > 0 && (
+    <section class="section" aria-labelledby="cat-faq">
+      <div class="wrap cat__faq">
+        <h2 id="cat-faq">{category.name} questions</h2>
+        <FaqAccordion faqs={content.faqs} />
+      </div>
+    </section>
+  )}
 
   <QuoteBand
     heading={`Need a quote for ${category.name.toLowerCase()}?`}
