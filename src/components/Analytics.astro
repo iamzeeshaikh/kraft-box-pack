@@ -28,28 +28,40 @@ const { pageType = 'other', itemName } = Astro.props
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID
 ---
 
-{
-  GA4_ID && (
-    <>
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />
-      <script is:inline define:vars={{ GA4_ID }}>
-        window.dataLayer = window.dataLayer || []
-        function gtag() {
-          window.dataLayer.push(arguments)
-        }
-        window.gtag = gtag
-        gtag('js', new Date())
-        // Page views are sent manually below so the page type travels with them.
-        gtag('config', GA4_ID, { send_page_view: false })
-      </script>
-    </>
-  )
-}
+{/*
+  The per-page values travel through the DOM rather than through `define:vars`.
+  `define:vars` forces `is:inline`, and Astro emits no CSP hash for an inline
+  script — so under this site's strict `script-src` the whole event layer was
+  blocked on every page, silently, while looking correct in the source. A
+  bundled script is served from `/_astro/` and satisfies `'self'`.
+*/}
+<meta name="kbp:page-type" content={pageType} />
+{itemName && <meta name="kbp:item-name" content={itemName} />}
+{GA4_ID && <meta name="kbp:ga4-id" content={GA4_ID} />}
 
-<script is:inline define:vars={{ pageType, itemName }}>
+{GA4_ID && <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />}
+
+<script>
+  const metaContent = (name) =>
+    document.querySelector(`meta[name="kbp:${name}"]`)?.getAttribute('content') || undefined
+
+  const pageType = metaContent('page-type') || 'other'
+  const itemName = metaContent('item-name')
+  const GA4_ID = metaContent('ga4-id')
+
   /* The queue exists whether or not a tag is configured, so events are never
      lost to the absence of an account and can be inspected today. */
   window.dataLayer = window.dataLayer || []
+
+  if (GA4_ID) {
+    const gtag = function () {
+      window.dataLayer.push(arguments)
+    }
+    window.gtag = gtag
+    gtag('js', new Date())
+    /* Page views are sent manually below so the page type travels with them. */
+    gtag('config', GA4_ID, { send_page_view: false })
+  }
 
   function track(event, detail) {
     const payload = Object.assign({ event: event }, detail || {})

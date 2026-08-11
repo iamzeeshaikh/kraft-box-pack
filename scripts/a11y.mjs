@@ -133,6 +133,17 @@ for (const path of PAGES) {
       if (s.visibility === 'hidden') continue;
       // WCAG 2.2 exempts links inside a sentence.
       if (el.tagName === 'A' && el.closest('p, li, dd, td')) continue;
+      /* A control deliberately shrunk to nothing behind a styled label — the
+         file input under "Attach artwork" — is not the tap target; its label
+         is, and clicking the label activates it. Measure the largest label
+         instead, and only fall through if that is small too. */
+      if (el.labels?.length) {
+        const biggest = [...el.labels].reduce((a, l) => {
+          const lr = l.getBoundingClientRect();
+          return Math.min(lr.width, lr.height) > Math.min(a.width, a.height) ? lr : a;
+        }, el.getBoundingClientRect());
+        if (biggest.width >= 24 && biggest.height >= 24) continue;
+      }
       if (r.height < 24 || r.width < 24) {
         small.push(`${el.tagName}.${el.className}`.slice(0, 50) + ` ${Math.round(r.width)}x${Math.round(r.height)}`);
       }

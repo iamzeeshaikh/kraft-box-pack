@@ -2,6 +2,19 @@
 import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel';
 
+/**
+ * Google's tag is only permitted when a measurement ID is actually configured.
+ * Widening `script-src` for a tag that never loads would weaken the policy for
+ * nothing; leaving it out permanently would mean setting `PUBLIC_GA4_ID` gets
+ * the tag blocked instead, which is the failure this file already warns about
+ * below. So the origins follow the env var.
+ */
+const GA4 = process.env.PUBLIC_GA4_ID
+const GA_SCRIPT = GA4 ? ['https://www.googletagmanager.com'] : []
+const GA_CONNECT = GA4
+  ? ' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com'
+  : ''
+
 export default defineConfig({
   site: 'https://kraftboxpack.com',
   output: 'static',
@@ -39,7 +52,7 @@ export default defineConfig({
         "default-src 'self'",
         "img-src 'self' data: https://chat.zeeops.dev",
         "font-src 'self' data:",
-        "connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev https://cloudflareinsights.com",
+        `connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev https://cloudflareinsights.com${GA_CONNECT}`,
         "frame-src https://chat.zeeops.dev",
         "form-action 'self'",
         "base-uri 'self'",
@@ -53,6 +66,7 @@ export default defineConfig({
           "'self'",
           'https://chat.zeeops.dev',
           'https://static.cloudflareinsights.com',
+          ...GA_SCRIPT,
         ],
       },
       styleDirective: { resources: ["'self'", "'unsafe-inline'"] },

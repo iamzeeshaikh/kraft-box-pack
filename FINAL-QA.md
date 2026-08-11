@@ -7,9 +7,9 @@ inferred from the source. Reproduce with the commands listed against each item.
 
 | Check | Result | Command |
 |---|---|---|
-| Type check | **0 errors** across 84 files | `npx astro check --minimumSeverity error` |
-| Production build | **190 pages**, no warnings | `npm run build` |
-| JavaScript shipped | **4.1 KB total** across the whole site | `find dist/client/_astro -name "*.js"` |
+| Type check | **0 errors** across 85 files | `npx astro check --minimumSeverity error` |
+| Production build | **194 pages**, no warnings | `npm run build` |
+| JavaScript shipped | **4.2 KB total** across the whole site | `find dist/client/_astro -name "*.js"` |
 
 ## Content
 
@@ -20,12 +20,12 @@ inferred from the source. Reproduce with the commands listed against each item.
 | Duplicate H1s | **0** |
 | Pages with more than one H1 | **0** |
 | Pages with more than one footer | **0** |
-| Product pages above 20% body similarity | **0 pairs** of 158 |
+| Product pages above 20% body similarity | **0 pairs** of 162 |
 | Category pages above 20% body similarity | **0 pairs** of 16 |
 | Blog pages above 20% body similarity | **0 pairs** of 5 |
 | Identical FAQ sets | **0** |
 | Identical heading sequences | **0** |
-| Duplicated paragraph instances | 198 (from a floor of shared business facts) |
+| Duplicated paragraph instances | 202 (from a floor of shared business facts) |
 | Thin pages under 600 words | 7 — all legal or index pages |
 
 `python3 scripts/content-audit.py`
@@ -39,7 +39,7 @@ inferred from the source. Reproduce with the commands listed against each item.
 | Paragraphs with more than one internal link | **0** |
 | Generic anchors ("click here", "read more") | **0** |
 | Preserved links from the imported copy | **309 of 309 intact** |
-| Redirects | 27, **0 chains**, none to the homepage |
+| Redirects | 28, **0 chains**, none to the homepage |
 
 ## Schema
 
@@ -76,21 +76,23 @@ Checked on home, a product page, a category page and the quote page:
 | Inputs without a label | **0** |
 | Links without discernible text | **0** |
 | Buttons without an accessible name | **0** |
-| Images without `alt` | **0** of 4,791 |
+| Images without `alt` | **0** of 4,921 |
 | Visible inputs below 16px | **0** — iOS will not zoom on focus |
 | Reduced motion | Honoured; the 3D box stops and reveals resolve immediately |
+| Tap targets under 24px | **0** — measured against the visible label where a control is hidden behind one |
+| CSP violations while operating the page | **0** — tabs, gallery, accordion, mobile menu, form validation and the analytics layer all run under the strict policy |
 
 ## Images
 
 | Check | Result |
 |---|---|
-| Total `<img>` elements | 4,791 |
+| Total `<img>` elements | 4,921 |
 | Missing `width`/`height` | **0** — no layout shift from images |
 | Missing `alt` | **0** |
 | Above-the-fold image lazy-loaded | **0** |
 | Products with no image | **0** |
 | Products with only one image | **0** |
-| Images shared between products | 11 — listed in `IMAGE-GAPS.md` |
+| Images shared between products | 12 — listed in `IMAGE-GAPS.md` |
 
 ## Security
 
@@ -104,6 +106,7 @@ Checked on home, a product page, a category page and the quote page:
 | Honeypot | Present, off-canvas and `aria-hidden` |
 | Duplicate submission | Token-guarded, 10-minute window |
 | Headers | HSTS, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, `Cross-Origin-Opener-Policy`, CSP `frame-ancestors 'none'` |
+| Page CSP | Hash-based `script-src`; no `'unsafe-inline'`. Google's tag origins are added only when `PUBLIC_GA4_ID` is set at build time. |
 
 ## Not verifiable from the repository
 
@@ -113,7 +116,7 @@ claimed:
 - Actual form submission end to end — SMTP credentials are local-only and
   `api/quote.ts` only runs on Vercel. **The form has never been tested in
   production.**
-- Core Web Vitals as field data. The build is favourable — 4.1 KB of JS, every
+- Core Web Vitals as field data. The build is favourable — 4.2 KB of JS, every
   image dimensioned, LCP never lazy — but real LCP, INP and CLS need a live
   origin.
 - Merchant Center feed status and landing-page approval.

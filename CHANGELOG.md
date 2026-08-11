@@ -48,9 +48,30 @@ All six were followed. Where a claim could not be evidenced it was flagged in
 
 ## Content
 
-- **All 158 product pages hand-written.** Intro, two or three sections chosen
+- **All 162 product pages hand-written.** Intro, two or three sections chosen
   for that product, one contextual outbound link and ten product-specific FAQs.
   Product body similarity above 20%: **1 pair → 0**.
+- **The four recreated products have galleries.** None had photography of its
+  own, so each borrows the closest genuine kraft format already in the media
+  library. Alt text describes what the photograph shows rather than claiming to
+  be the product, and no borrowed shot carries printed branding that contradicts
+  its page — beard-oil cartons were the closest structural match for the serum
+  page and were rejected because the box reads `BEARD`. Products with no image:
+  **4 → 0**. Merchant feed: **158 → 162 items**.
+- **The analytics layer was blocked by the site's own CSP on every page.** It
+  used `define:vars`, which forces `is:inline`, and Astro emits no CSP hash for
+  an inline script — so `dataLayer` was never created and not one of the twelve
+  events ever fired, in production or locally, while the source read correctly.
+  The values now travel through `<meta name="kbp:page-type">` tags into a
+  bundled script. Verified by reading `window.dataLayer` on eight pages.
+- **Google's tag origins were missing from the CSP**, so setting `PUBLIC_GA4_ID`
+  would have got the tag blocked too. They are now added by
+  `astro.config.mjs` when the variable is set, and left out when it is not.
+- **The 3D box was rendering at the wrong size.** It carried
+  `style="--box: 180px"`, an inline style the CSP refuses, so it silently fell
+  back to 190px. Size is now a variant class. Measured: 360×342, which is the
+  180px the component asks for.
+- **CSP violations across the site: 5 → 0.**
 - **All 16 category pages written.** They had imported with empty descriptions,
   so the template fell back to one generated sentence and all of them read
   alike. Category similarity: **136 pairs → 0**.
@@ -59,8 +80,9 @@ All six were followed. Where a claim could not be evidenced it was flagged in
   slogan over a lead that ended mid-sentence.
 - **Blog posts** gained ten FAQs each, written from the article rather than
   reused from the matching product page, plus an optional reviewed date.
-- **Lead time normalised.** Sixteen different figures across 158 products
-  became one: 519 occurrences of "8-10 business days", nothing else.
+- **Lead time normalised.** Sixteen different figures across the imported 158
+  products became one. The build now contains 411 occurrences of "8-10 business
+  days" and no other turnaround figure anywhere.
 - **Search-query fragments removed** — "kraft bakery boxes near me", "kraft box
   with window amazon alternatives" — now zero.
 

@@ -22,10 +22,17 @@ Set one environment variable and redeploy:
 PUBLIC_GA4_ID=G-XXXXXXXXXX
 ```
 
-That is the only change needed. `src/components/Analytics.astro` loads the
-gtag script, configures the property with `send_page_view: false` (page views
-are sent manually so the page type travels with them) and every event below
-starts reaching GA4.
+That is the only change needed, but it must be set **before the build**, not
+just at runtime: the site sends a hash-based Content-Security-Policy, and
+`astro.config.mjs` adds `googletagmanager.com` and `google-analytics.com` to it
+only when the variable is present. Setting it in Vercel and redeploying does
+this correctly. Setting it without rebuilding would leave Google's tag blocked
+by the CSP.
+
+With that done, `src/components/Analytics.astro` loads the gtag script,
+configures the property with `send_page_view: false` (page views are sent
+manually so the page type travels with them) and every event below starts
+reaching GA4.
 
 If Tag Manager is preferred instead, point the container at `dataLayer` — the
 event names and parameters below are already being pushed there.
@@ -59,6 +66,15 @@ two differ every time a send fails.
 **No personally identifiable data is sent.** No event carries a name, email,
 phone number, address or anything typed into the quote form. `cta_click` sends
 the link text, which is authored copy, never user input.
+
+**The script must stay bundled, never `is:inline`.** The page type and item name
+reach the script through `<meta name="kbp:page-type">` tags rather than through
+Astro's `define:vars`, because `define:vars` forces `is:inline` and Astro emits
+no CSP hash for an inline script. When this was written with `define:vars`, the
+strict `script-src` blocked the entire event layer on every page — `dataLayer`
+was never created and no event fired — while the source looked correct and the
+site behaved normally otherwise. `scripts/a11y.mjs` fails the build's QA if any
+CSP violation reappears, which is what caught it.
 
 **Events fire once.** Forms carry a `data-wired` flag so re-running the wiring
 cannot attach a second listener, and click tracking uses a single delegated

@@ -19,14 +19,19 @@
  */
 
 interface Props {
-  /** Overall size in pixels; the faces are derived from it. */
-  size?: number
+  /**
+   * Overall size. A named variant rather than a number because the value has to
+   * reach CSS through a class: this site sends a hash-based CSP, and a `style`
+   * attribute carrying `--box: 180px` is an inline style the browser refuses.
+   * The box then fell back to the default size instead of the requested one.
+   */
+  size?: 'md' | 'sm'
 }
 
-const { size = 190 } = Astro.props
+const { size = 'md' } = Astro.props
 ---
 
-<div class="scene" style={`--box: ${size}px`} aria-hidden="true">
+<div class:list={['scene', size === 'sm' && 'scene--sm']} aria-hidden="true">
   <div class="scene__fallback"></div>
   <div class="box" data-box>
     <div class="face face--front"></div>
@@ -43,10 +48,10 @@ const { size = 190 } = Astro.props
 
 <style>
   .scene {
-    /* Declared here as well as inline. A custom property that fails to resolve
-       makes every calc() using it invalid, which collapsed the whole scene to
-       zero height — the section rendered as an empty column. With a default on
-       the element the inline value overrides it and a missing one is harmless. */
+    /* A custom property that fails to resolve makes every calc() using it
+       invalid, which collapsed the whole scene to zero height — the section
+       rendered as an empty column. Every use below therefore keeps a literal
+       fallback as well, so a missing value is harmless. */
     --box: 190px;
     /* The perspective origin sits above centre so the open top reads as the
        top of the box rather than as a flat lid. */
@@ -58,6 +63,8 @@ const { size = 190 } = Astro.props
     place-items: center;
     margin-inline: auto;
   }
+
+  .scene--sm { --box: 180px; }
 
   /* Shown only where preserve-3d is unavailable, so the space is never empty. */
   .scene__fallback {
