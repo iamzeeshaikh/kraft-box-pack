@@ -12,7 +12,7 @@ impressions rank in the top five for narrow terms.
 | Priority commercial | 34 | 2,000+ impressions or 15+ clicks. Hand-written metadata, content rewritten first. |
 | Standard product | 38 | 500–2,000 impressions. Content rewritten. |
 | Supporting niche | 86 | Under 500 impressions. Content rewritten; kept for long-tail terms and link equity. |
-| Recreated | 4 | Dropped by the migration, still ranking, rebuilt as full pages. **No photography of their own — galleries borrow the closest genuine kraft format from the media library, so they are in the Merchant feed.** |
+| Recreated | 4 | Dropped by the migration, still ranking, rebuilt as full pages. **No photography of their own — galleries borrow the closest genuine kraft format from the media library. Held out of the Merchant feed for now on the client's instruction.** |
 | Merge candidate | 0 | None. No two products serve the same intent closely enough. |
 | Noindex candidate | 0 | None. Every page is unique content with a commercial purpose. |
 | Redirect candidate | 0 | None among live products. Five *lost* URLs were redirected — see MIGRATION-RECONCILIATION.md. |

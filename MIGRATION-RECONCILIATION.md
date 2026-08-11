@@ -1,6 +1,6 @@
 # Migration reconciliation
 
-Search Console reports **294 landing pages**. The build produces **190 routes**.
+Search Console reports **294 landing pages**. The build produces **194 routes**.
 This accounts for every URL in the gap — none of it was guessed, all of it is
 classified from the Search Console export and the build output.
 
@@ -12,7 +12,7 @@ twelve months to 11 August 2026. Reproduce with `python3 scripts/reconcile-gsc.p
 | Classification | URLs | Impressions | Clicks | Action |
 |---|---|---|---|---|
 | legacy-image | 95 | 246 | 0 | Left to 404 — see note below |
-| lost-product | 10 | 665 | 12 | 5 redirected, 4 held for a decision, 1 case variant redirected |
+| lost-product | 10 | 665 | 12 | 5 redirected, 4 recreated as full pages, 1 case variant redirected |
 | case-variant | 6 | 33 | 0 | 301 to the lowercase URL |
 | legacy-pagination | 2 | 35 | 0 | 301 to the category |
 | already-redirected | 1 | 73 | 0 | Redirect already present, destination corrected |
@@ -102,7 +102,8 @@ They are built as full pages with hand-written content and ten FAQs each. None
 had photography of its own, so each gallery borrows the closest genuine kraft
 format already in the media library, with alt text describing what the
 photograph actually shows rather than claiming to be the product. That puts all
-four in the Merchant feed: the catalogue is 162 products and the feed carries
-162 items. Purpose-shot photography is still worth commissioning — see
-`IMAGE-GAPS.md`.
+four in a state where they *could* enter the Merchant feed. They are held out
+of it for now on the client's instruction: the catalogue is 162 products and
+the feed carries 158 items. Purpose-shot photography is still worth
+commissioning — see `IMAGE-GAPS.md`.
 

@@ -64,9 +64,12 @@ a business decision, not a technical one.
 
 The four products recreated after the migration dropped them had **no
 photography of their own**. Their galleries now borrow the closest genuine kraft
-formats already in the media library, which puts them **in the Merchant feed**
-(162 items) rather than excluded from it — a feed item without an image is
-disapproved, and Merchant listings are 44% of this site's organic clicks.
+formats already in the media library, so nothing is technically blocking them
+from the Merchant feed any more. They are nonetheless **held out of it on the
+client's instruction** (2026-08-11) — see `HELD_BACK` in
+`src/pages/google-merchant-feed.xml.ts`. The feed stays at the 158 items
+Merchant Center already has, which matters because a disapproved item is worse
+than an absent one and Merchant listings are 44% of this site's organic clicks.
 
 Two rules were applied when choosing the borrowed shots, and both matter if
 these galleries are ever edited:

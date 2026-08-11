@@ -24,6 +24,24 @@ import { BRAND_NAME } from '../data/site';
 
 const OFFER_ID = (postId: string) => `gla_${postId}`;
 
+/**
+ * Products deliberately held out of the feed, on the client's instruction
+ * (2026-08-11): the feed stays at the 158 items Merchant Center already has.
+ *
+ * These four are the products recreated after the migration dropped them. They
+ * now have galleries, but the photography is borrowed from the closest genuine
+ * kraft format in the media library rather than shot for them — see
+ * IMAGE-GAPS.md. Their pages build and are indexable either way.
+ *
+ * To put them in the feed, empty this list. Nothing else needs to change.
+ */
+const HELD_BACK = new Set([
+  'kraft-diffuser-boxes',
+  'kraft-corporate-gift-boxes',
+  'kraft-diy-kit-boxes',
+  'kraft-cosmetic-serum-boxes',
+]);
+
 const esc = (s: string) =>
   s
     .replace(/&/g, '&amp;')
@@ -35,14 +53,12 @@ export const GET: APIRoute = () => {
   /*
    * A feed item with no image is disapproved by Merchant Center, and Merchant
    * listings are 44% of this site's organic clicks — so a product without
-   * photography is left out of the feed entirely rather than sent as an item
-   * that will fail review. Its page still builds and is still indexable.
-   *
-   * Currently that is the four products recreated after the migration dropped
-   * them. See IMAGE-GAPS.md.
+   * photography is left out entirely rather than sent as an item that will fail
+   * review. Every product currently has images, so this filter passes them all;
+   * it stays as the guard for anything added later without photography.
    */
   const items = products
-    .filter((p) => resolveAll(p.images).length > 0)
+    .filter((p) => resolveAll(p.images).length > 0 && !HELD_BACK.has(p.slug))
     .map((p) => {
     const images = resolveAll(p.images).map((i) => absolute(i.image.src));
     const price = Number.parseFloat(p.price);
