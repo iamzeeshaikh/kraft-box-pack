@@ -3,6 +3,7 @@ import preserved from './preserved-links.json'
 import { jewelleryContent } from './jewellery'
 import { displayToyContent } from './display-toy'
 import { pharmaContent } from './pharma'
+import { electronicsApparelContent } from './electronics-apparel'
 
 export type { ProductContent, ProductSection, ProductFaq } from './types'
 
@@ -18,6 +19,7 @@ const ALL: ProductContentMap = {
   ...jewelleryContent,
   ...displayToyContent,
   ...pharmaContent,
+  ...electronicsApparelContent,
 }
 
 export const contentFor = (slug: string): ProductContent | undefined => ALL[slug]
