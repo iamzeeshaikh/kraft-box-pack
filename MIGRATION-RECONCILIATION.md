@@ -98,8 +98,11 @@ not a jar of cream, a corporate gift programme is not a hamper, and a project
 kit is not an art supply set. Redirecting them would have thrown away 529
 impressions and four ranking positions.
 
-They are built as full pages with hand-written content and ten FAQs each. They
-carry **no photography**, so they are excluded from the Merchant feed until it
-exists — see `IMAGE-GAPS.md`. The catalogue is now 162 products, of which 158
-are in the feed.
+They are built as full pages with hand-written content and ten FAQs each. None
+had photography of its own, so each gallery borrows the closest genuine kraft
+format already in the media library, with alt text describing what the
+photograph actually shows rather than claiming to be the product. That puts all
+four in the Merchant feed: the catalogue is 162 products and the feed carries
+162 items. Purpose-shot photography is still worth commissioning — see
+`IMAGE-GAPS.md`.
 

@@ -49,7 +49,7 @@ untouched.
 These cannot be checked from the repository:
 
 - [ ] Every feed landing page returns 200 in Merchant Center's own fetch
-- [ ] Feed item count matches the catalogue (158 products)
+- [ ] Feed item count matches the catalogue (162 products, 162 feed items)
 - [ ] No items in "Disapproved" or "Limited" after the next crawl
 - [ ] Mobile landing pages render for the Merchant crawler specifically
 - [ ] Price in the feed matches the price shown on the page (both $0.30)
