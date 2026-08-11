@@ -1,7 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqAccordion from '../components/product/FaqAccordion.astro';
 import * as schema from '../lib/schema';
+import type { Faq } from '../data/content';
+import type { PageContent } from '../data/page-content';
 
 interface Props {
   title: string;
@@ -10,9 +13,14 @@ interface Props {
   heading: string;
   html?: string;
   noindex?: boolean;
+  /** Hand-written replacement for the imported markup. Wins over `html`. */
+  content?: PageContent;
+  /** FAQs for a page whose prose comes from elsewhere. */
+  faqs?: Faq[];
 }
 
-const { title, description, path, heading, html, noindex = false } = Astro.props;
+const { title, description, path, heading, html, noindex = false, content } = Astro.props;
+const faqs = content?.faqs ?? Astro.props.faqs ?? [];
 // /about-us/ is an AboutPage rather than a generic WebPage.
 const pageType = path === '/about-us/' ? 'AboutPage' : 'WebPage';
 const crumbs = [{ name: 'Home', url: '/' }, { name: heading, url: path }];
@@ -22,15 +30,46 @@ const crumbs = [{ name: 'Home', url: '/' }, { name: heading, url: path }];
   description={description}
   path={path}
   noindex={noindex}
-  schema={[schema.webPage(path, title, description, pageType), schema.breadcrumbs(path, crumbs)]}
+  schema={[
+    schema.webPage(path, title, description, pageType),
+    schema.breadcrumbs(path, crumbs),
+    ...(faqs.length ? [schema.faqPage(path, faqs)] : []),
+  ]}
 >
   <Breadcrumbs crumbs={crumbs} />
   <article class="section">
     <div class="wrap page">
       <h1>{heading}</h1>
-      {html ? <div class="prose" set:html={html} /> : <div class="prose"><slot /></div>}
+      {content ? (
+        /* Body strings may carry a single inline <a>. They are authored in
+           page-content.ts, never user input, and the content audit fails on
+           more than one link in a paragraph. */
+        <div class="prose">
+          {content.intro.map((p) => <p set:html={p} />)}
+          {content.sections.map((s) => (
+            <>
+              <h2>{s.h2}</h2>
+              {s.body.map((p) => <p set:html={p} />)}
+              {s.list && <ul>{s.list.map((li) => <li set:html={li} />)}</ul>}
+            </>
+          ))}
+        </div>
+      ) : html ? (
+        <div class="prose" set:html={html} />
+      ) : (
+        <div class="prose"><slot /></div>
+      )}
     </div>
   </article>
+
+  {faqs.length > 0 && (
+    <section class="section section--alt" aria-labelledby="page-faq">
+      <div class="wrap page">
+        <h2 id="page-faq">Frequently asked questions</h2>
+        <FaqAccordion faqs={faqs} />
+      </div>
+    </section>
+  )}
 </BaseLayout>
 
 <style>

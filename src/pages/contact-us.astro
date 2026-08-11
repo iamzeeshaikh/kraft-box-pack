@@ -6,6 +6,8 @@ import Icon from '../components/Icon.astro';
 import { CONTACT, SOCIAL } from '../data/site';
 import { pages } from '../data/content';
 import * as schema from '../lib/schema';
+import FaqAccordion from '../components/product/FaqAccordion.astro';
+import { CONTACT_FAQS } from '../data/page-content';
 
 const page = pages.find((p) => p.slug === 'contact-us');
 const path = '/contact-us/';
@@ -19,7 +21,11 @@ const description =
   title={title}
   description={description}
   path={path}
-  schema={[schema.webPage(path, title, description, 'ContactPage'), schema.breadcrumbs(path, crumbs)]}
+  schema={[
+    schema.webPage(path, title, description, 'ContactPage'),
+    schema.breadcrumbs(path, crumbs),
+    schema.faqPage(path, CONTACT_FAQS),
+  ]}
 >
   <Breadcrumbs crumbs={crumbs} />
   <div class="wrap contact section">
@@ -61,6 +67,12 @@ const description =
       />
     </div>
   </div>
+  <section class="section section--alt" aria-labelledby="contact-faq">
+    <div class="wrap">
+      <h2 id="contact-faq">Getting in touch — common questions</h2>
+      <FaqAccordion faqs={CONTACT_FAQS} />
+    </div>
+  </section>
 </BaseLayout>
 
 <style>

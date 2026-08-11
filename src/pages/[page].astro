@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { pages } from '../data/content';
+import { ABOUT } from '../data/page-content';
 
 const META: Record<string, { title: string; description: string }> = {
   'about-us': {
@@ -43,6 +44,17 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const meta = META[page.slug];
+
+/*
+ * About is the one page here that is not a policy, and its imported copy said
+ * nothing a buyer needs before enquiring — it also printed a live
+ * `[elementor-template id="2174"]` shortcode as visible text, because the
+ * export carried the shortcode without the plugin that resolves it. It is
+ * replaced with written content; the policy pages keep their imported markup,
+ * which is deliberate, since they are the authority the rest of the site
+ * restates.
+ */
+const content = page.slug === 'about-us' ? ABOUT : undefined;
 ---
 <PageLayout
   title={page.seoTitle || meta?.title || `${page.title} | Kraft Box Pack`}
@@ -50,4 +62,5 @@ const meta = META[page.slug];
   path={page.url}
   heading={page.title}
   html={page.html}
+  content={content}
 />

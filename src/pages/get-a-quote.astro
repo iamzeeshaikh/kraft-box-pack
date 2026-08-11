@@ -5,6 +5,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 import Icon from '../components/Icon.astro';
 import { FEATURES } from '../data/site';
 import * as schema from '../lib/schema';
+import FaqAccordion from '../components/product/FaqAccordion.astro';
+import { QUOTE_FAQS } from '../data/page-content';
 
 const path = '/get-a-quote/';
 const crumbs = [{ name: 'Home', url: '/' }, { name: 'Get a Quote', url: path }];
@@ -24,7 +26,11 @@ const steps = [
   title={title}
   description={description}
   path={path}
-  schema={[schema.webPage(path, title, description), schema.breadcrumbs(path, crumbs)]}
+  schema={[
+    schema.webPage(path, title, description),
+    schema.breadcrumbs(path, crumbs),
+    schema.faqPage(path, QUOTE_FAQS),
+  ]}
 >
   <Breadcrumbs crumbs={crumbs} />
   <div class="wrap quote section">
@@ -50,6 +56,12 @@ const steps = [
       <QuoteForm id="quote-page" heading="Request your quote" />
     </div>
   </div>
+  <section class="section section--alt" aria-labelledby="quote-faq">
+    <div class="wrap">
+      <h2 id="quote-faq">Before you send it — common questions</h2>
+      <FaqAccordion faqs={QUOTE_FAQS} />
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
