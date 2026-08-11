@@ -1,6 +1,8 @@
 import type { ProductContent, ProductContentMap } from './types'
 import preserved from './preserved-links.json'
 import { jewelleryContent } from './jewellery'
+import { displayToyContent } from './display-toy'
+import { pharmaContent } from './pharma'
 
 export type { ProductContent, ProductSection, ProductFaq } from './types'
 
@@ -14,6 +16,8 @@ export type { ProductContent, ProductSection, ProductFaq } from './types'
  */
 const ALL: ProductContentMap = {
   ...jewelleryContent,
+  ...displayToyContent,
+  ...pharmaContent,
 }
 
 export const contentFor = (slug: string): ProductContent | undefined => ALL[slug]
