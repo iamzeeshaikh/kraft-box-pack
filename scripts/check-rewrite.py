@@ -10,7 +10,9 @@ not things you notice by reading one page at a time:
             list of 309 at the foot of the page.
   subject   a page must name its own subject in its own headings. That is the
             signal that caught kraft-cookie-boxes reading as a bakery page.
-  length    a "rewrite" that halves the page is a cut, not a rewrite.
+  length    a "rewrite" that halves the page is a cut, not a rewrite. The
+            client set a floor of 800 words and a ceiling of 1,000; the
+            imported pages ran around 520, which is where "generic" starts.
   overlap   two rewrites drifting onto the same paragraphs recreates the
             duplication the cookie page had.
 
@@ -55,6 +57,9 @@ def headings(html):
 # duplication between two pages that share nothing but their footer promises.
 MIN_PARA_WORDS = 12
 
+# The length the client set for a rewritten page.
+MIN_WORDS, MAX_WORDS = 800, 1000
+
 
 def paragraphs(html):
     out = set()
@@ -93,6 +98,8 @@ def main(slugs):
         wn, wo = len(text(new).split()), len(text(old).split())
         if wo and wn < wo * 0.9:
             say(f'shorter than the original ({wo} -> {wn} words)')
+        if not (MIN_WORDS <= wn <= MAX_WORDS):
+            say(f'{wn} words (want {MIN_WORDS}-{MAX_WORDS})')
 
         own = {w for w in slug.split('-') if w not in GENERIC}
         heads = ' '.join(headings(new)).lower()
