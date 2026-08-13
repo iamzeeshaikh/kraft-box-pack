@@ -28,6 +28,18 @@ from collections import Counter
 ORIGIN = 'e07f771'  # the migration commit — the copy as WordPress had it
 
 
+def redirects():
+    """Where a legacy URL now points.
+
+    The import linked to `/product-category/kraft-packaging-boxes/karft-cosmetic-boxes/`,
+    a category since merged away and 301'd. A rewrite that uses the surviving
+    URL has not lost the link — it has followed it — so the check resolves
+    redirects before comparing.
+    """
+    cfg = json.load(open('vercel.json'))
+    return {r['source']: r['destination'] for r in cfg.get('redirects', [])}
+
+
 def load(ref=None):
     if ref:
         raw = subprocess.check_output(['git', 'show', f'{ref}:src/data/products.json'])
@@ -76,6 +88,7 @@ GENERIC = {'kraft', 'box', 'boxes', 'packaging', 'custom', 'wholesale', 'paper',
 
 def main(slugs):
     now, was = load(), load(ORIGIN)
+    moved = redirects()
     problems = []
 
     # Every other product's paragraphs, for the overlap check.
@@ -97,8 +110,13 @@ def main(slugs):
             # reader is already on.
             if href.rstrip('/') == n['url'].rstrip('/'):
                 continue
-            if ln[href] < count:
-                say(f'lost link {href} ({lo[href]} -> {ln[href]})')
+            if ln[href] >= count:
+                continue
+            # Following a 301 to the surviving page is not losing the link.
+            dest = moved.get(href)
+            if dest and ln[dest]:
+                continue
+            say(f'lost link {href} ({lo[href]} -> {ln[href]})')
 
         wn, wo = len(text(new).split()), len(text(old).split())
         if not (MIN_WORDS <= wn <= MAX_WORDS):
