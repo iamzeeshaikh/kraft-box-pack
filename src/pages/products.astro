@@ -5,6 +5,7 @@ import ProductGrid from '../components/ProductGrid.astro';
 import QuoteBand from '../components/QuoteBand.astro';
 import { products, categories, pages } from '../data/content';
 import * as schema from '../lib/schema';
+import { SEO_OVERRIDES } from '../data/seo-overrides';
 import FaqAccordion from '../components/product/FaqAccordion.astro';
 import { PRODUCTS_FAQS } from '../data/page-content';
 
@@ -14,10 +15,11 @@ const crumbs = [
   { name: 'Products', url: '/products/' },
 ];
 
-const title = 'All Custom Kraft Boxes | Wholesale Packaging | Kraft Box Pack';
-const description =
-  `Browse all ${products.length} custom kraft box styles across ${categories.length} ranges — ` +
-  'food, retail, gift, cosmetic, pharma and industrial packaging, made to your size.';
+/* From the override layer, like every other indexed page. The hard-coded title
+   here ran to 61 characters and truncated in the result. */
+const seo = SEO_OVERRIDES['/products/'];
+const title = seo.title;
+const description = seo.description;
 ---
 <BaseLayout
   title={title}

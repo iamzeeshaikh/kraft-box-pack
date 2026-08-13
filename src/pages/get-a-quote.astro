@@ -7,13 +7,16 @@ import { FEATURES } from '../data/site';
 import * as schema from '../lib/schema';
 import FaqAccordion from '../components/product/FaqAccordion.astro';
 import { QUOTE_FAQS } from '../data/page-content';
+import { SEO_OVERRIDES } from '../data/seo-overrides';
 
 const path = '/get-a-quote/';
 const crumbs = [{ name: 'Home', url: '/' }, { name: 'Get a Quote', url: path }];
-const title = 'Get a Free Quote | Custom Kraft Boxes | Kraft Box Pack';
-const description =
-  'Request a free quote for custom kraft packaging. Send your size, quantity and artwork ' +
-  'and we reply with wholesale pricing within one business day.';
+/* Metadata comes from the override layer like every other indexed page. It
+   used to be hard-coded here, which is why the hand-written title and
+   description for this route sat in seo-overrides.ts doing nothing. */
+const seo = SEO_OVERRIDES[path];
+const title = seo.title;
+const description = seo.description;
 
 const steps = [
   { title: 'Send your requirements', body: 'Box style, dimensions, quantity and any artwork you already have.' },
