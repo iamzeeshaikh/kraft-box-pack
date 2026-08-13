@@ -96,10 +96,14 @@ def main(slugs):
                 say(f'lost link {href} ({lo[href]} -> {ln[href]})')
 
         wn, wo = len(text(new).split()), len(text(old).split())
-        if wo and wn < wo * 0.9:
-            say(f'shorter than the original ({wo} -> {wn} words)')
         if not (MIN_WORDS <= wn <= MAX_WORDS):
             say(f'{wn} words (want {MIN_WORDS}-{MAX_WORDS})')
+        # Only guard against shrinkage where the original was already inside or
+        # below the target. Several imported pages ran past 1,000 words on a
+        # repeating "Why X matters" / "Key X benefits" loop, and cutting those
+        # back into range is the point of the rewrite, not a regression.
+        elif wo and wo <= MAX_WORDS and wn < wo * 0.9:
+            say(f'shorter than the original ({wo} -> {wn} words)')
 
         own = {w for w in slug.split('-') if w not in GENERIC}
         heads = ' '.join(headings(new)).lower()
