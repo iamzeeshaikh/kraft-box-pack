@@ -74,9 +74,9 @@ Share of a page's paragraphs appearing on no other page.
 | 2 | For a lighter wound construction with fitted ends, tube packaging is the lower-cost cylinder .… |
 | 2 | Yes, though an aperture in a curved wall reduces strength noticeably, so it suits display rather than shipping… |
 | 2 | It measures how much load a board edge carries before failing, which is what actually holds a stack up. It is … |
+| 2 | Yes, and on a snug lid it helps. Without one a well-fitted magnetic lid can be awkward to lift from a flat sur… |
 | 2 | Because it opens in one movement and shuts audibly. Tape being fought open on camera is the most common thing … |
 | 2 | Soft-touch with foil or blind deboss. The box is handled slowly at the moment of opening, so texture registers… |
-| 2 | Yes, and on a snug lid it helps. Without one a well-fitted magnetic lid can be awkward to lift from a flat sur… |
 | 2 | Paper-based liners exist and are the more recyclable option, generally at some cost to hold time. It is a genu… |
 | 2 | It can, which is why a moisture-resistant outer is usually specified. Untreated board softens where condensati… |
 | 2 | Sized so contents cannot move, cutting void fill and damage.… |
@@ -91,23 +91,23 @@ Share of a page's paragraphs appearing on no other page.
 | 162 | Related kraft boxes |
 | 162 | Product details |
 | 158 | Key specifications |
-| 35 | What to send with your enquiry |
+| 39 | What to send with your enquiry |
 | 13 | Large Kraft Gift Boxes |
+| 12 | Kraft Corrugated Boxes |
 | 12 | Kraft Round Boxes |
 | 12 | Kraft Paper Gift Boxes |
-| 12 | Kraft Corrugated Boxes |
-| 12 | Kraft Giveaway Packaging Boxes |
 | 12 | Kraft Gift Hamper Boxes |
 | 12 | Kraft Heart Shaped Boxes |
-| 11 | Small Kraft Boxes |
+| 12 | Kraft Giveaway Packaging Boxes |
 | 11 | Kraft Drawer Boxes |
-| 11 | Kraft Food Boxes |
-| 11 | Kraft Shoe Boxes |
 | 11 | Kraft Cardboard Boxes |
-| 11 | Mini Kraft Boxes |
-| 11 | Kraft Shipping Boxes |
-| 11 | Kraft Jewelry Boxes |
+| 11 | Kraft Shoe Boxes |
+| 11 | Kraft Gift Boxes With Lids |
 | 11 | Kraft Take Out Boxes |
+| 11 | Small Kraft Boxes |
+| 11 | Mini Kraft Boxes |
+| 11 | Kraft Mailer Boxes |
+| 11 | Kraft Shipping Boxes |
 
 ## Most-repeated FAQ questions
 
@@ -124,8 +124,8 @@ Share of a page's paragraphs appearing on no other page.
 | 12 | What finishes suit them? |
 | 11 | Do they ship flat? |
 | 10 | Can these be printed? |
-| 9 | Do I need an insert? |
 | 9 | Rigid or folding? |
+| 9 | Do I need an insert? |
 | 7 | Are recycled boards suitable? |
 | 6 | Do they stack? |
 
