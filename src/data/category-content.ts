@@ -106,6 +106,38 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'Whichever is chosen, the disposal wording printed on the pack has to describe the film that was actually bought. This is the most common place a well-intentioned environmental claim stops being true, because the box and the window are frequently specified by different people at different times.',
         ],
       },
+      {
+        h2: 'Ovenable and microwavable are separate specifications',
+        body: [
+          'A board that is perfectly stable at minus eighteen can fail badly at two hundred, and the two requirements are bought separately. If a pack goes from a freezer into an oven, the board, the coating and the adhesive all have to be rated for it, and the temperature and time have to be printed on the carton.',
+          'Microwave is a different case again — no browning, but steam builds inside a closed pack and has to be released. Neither is something a finish adds later, so both have to be declared before the material is ordered rather than assumed from the artwork.',
+        ],
+      },
+      {
+        h2: 'Portion size and the volume that settles',
+        body: [
+          'Light foods compact in transit, so a carton filled to the top on the line arrives looking two thirds full. Declared weight satisfies the regulation and does nothing about the impression, which is what generates the complaint.',
+          'The workable answer is to size against the settled volume rather than the packed one. On formats where the box defines the portion outright — popcorn, scoops, loose confectionery — that dimension is a pricing decision as much as a packaging one, because changing it changes both the perceived value and the cost of goods on every unit sold.',
+        ],
+      },
+      {
+        h2: 'Barrier options, and what each one costs you',
+        body: [
+          'Every barrier buys resistance and gives something up, usually recyclability or cost. Choosing one means deciding which of those matters more for the line.',
+        ],
+        table: {
+          caption: 'Barrier against what it trades away',
+          head: ['Barrier', 'Resists', 'Trade'],
+          rows: [
+            ['Uncoated kraft', 'Nothing', 'None — stays in the paper stream'],
+            ['Grease-resistant coating', 'Fat and oil', 'Small cost, usually still repulpable'],
+            ['Water-based dispersion', 'Moisture and grease', 'Higher cost, repulpable'],
+            ['PE lamination', 'Moisture, grease, liquid', 'Leaves the paper stream'],
+            ['PLA lining', 'Moisture and liquid', 'Industrial composting only'],
+            ['Wax', 'Water, well and cheaply', 'Not recyclable in most streams'],
+          ],
+        },
+      },
     ],
     link: {
       lead: 'If your run is mostly cartons for baked goods rather than mixed food formats, ',
@@ -194,6 +226,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'It matters most on rigid and shaped builds, which arrive assembled and cannot be flattened. Working the range out as a family at the start costs nothing; retrofitting it afterwards means new tooling for every size in it.',
         ],
       },
+      {
+        h2: 'What to settle before the die is cut',
+        body: [
+          'Most of the expensive changes on a gift box are changes to the tooling, which means they are cheap while the box is a drawing and costly once it is a die. These are the answers worth having first.',
+        ],
+        list: [
+          'The heaviest thing that will ever go in it, since the base is specified from that rather than from the footprint.',
+          'Whether the range will run to more than one size, because nesting has to be designed in and cannot be retrofitted.',
+          'Whether it is posted or handed over — a posted box needs an outer, and that changes what the presentation box has to survive.',
+          'Where the ribbon is anchored, if there is one, because slots are die-cut and cannot be added later.',
+          'Whether the interior is printed, since inside-print is the cheapest upgrade available and the easiest to forget.',
+        ],
+      },
+      {
+        h2: 'Windows on a gift box',
+        body: [
+          'A window resolves the tension between wanting to show the product and wanting to wrap it, and it costs more than the film. It removes a panel of printable surface, adds a second material that complicates any recyclability claim, and turns the box into something that has to be kept clean on a shelf.',
+          'It earns its place where the contents are the decoration — confectionery, a decorated bake, a colored product. Where the contents are plain or where the reveal is the point, a window spends money removing the moment the box was bought for.',
+        ],
+      },
+      {
+        h2: 'Ribbon, and why it needs anchoring',
+        body: [
+          'A ribbon simply tied around a box slides towards the nearest edge, ends up off-center and works loose in a bag. It looks correct on the packing bench and rarely arrives that way.',
+          'Two die-cut slots per face pass the ribbon through the board and fix its position permanently, which also lets a customer re-tie it in the same place. It adds nothing to the material cost. The other consideration is width: a narrow ribbon pulled tight bears on two edges and dents a light caliper within a day, so ribbon width and board weight are chosen together.',
+        ],
+      },
     ],
     link: {
       lead: 'For the two-piece lidded format specifically, ',
@@ -271,6 +330,27 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'Board also creeps. A case that comfortably holds its stated load on the day it is packed holds measurably less after several weeks carrying it, which is why long storage has to be specified with that allowance built in rather than against a catalog figure.',
         ],
       },
+      {
+        h2: 'Tape, or a closure that does not need it',
+        body: [
+          'A taped carton is cheaper to buy and slower to pack, and it puts a consumable and a dispenser at every bench. A self-locking mailer or a crash-lock costs more per box and removes both, along with the variability of how well somebody tapes.',
+          'For anything posted, the closure is also part of the customer experience — a parcel opened with a knife risks the contents, and a tear strip removes that. Where a return is likely, a second adhesive strip lets the same box go back without being rebuilt with tape and string.',
+        ],
+      },
+      {
+        h2: 'Sizing to the product rather than to a stock size',
+        body: [
+          'Rounding up to the nearest stock box is the most common hidden cost in this range. Carriers charge on dimensional weight, so an oversized box is paid for on every order rather than once, and the void it creates then has to be filled with something that also costs money.',
+          'A box cut to the product removes both. It is worth measuring the assembled product with any accessory or leaflet in place, because the dimension that pushes a parcel into the next band is usually something small that was not in the original measurement.',
+        ],
+      },
+      {
+        h2: 'What changes when a box is posted rather than handed over',
+        body: [
+          'A box given across a counter is protected by the shop and the customer. The same box in a carrier network is dropped, stacked, sorted by machine and delivered to a doorstep, which is a different specification even though the product has not changed.',
+          'In practice that means a heavier caliper or a corrugated construction, a closure that holds without tape, a flat area for a label that does not land across the branding, and a finished thickness checked against the carrier bands before the die is cut.',
+        ],
+      },
     ],
     link: {
       lead: 'If the run is specifically for e-commerce dispatch, ',
@@ -342,6 +422,38 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         body: [
           'Occasion ranges change more often than the boxes they use. The tooling and the print plates sit on the outer, so a single printed box with two or three interchangeable inserts covers a whole range at a fraction of the cost of separate boxes, and a new combination needs only a new insert.',
           'It also allows a seasonal variation to be ordered late. The outer is committed months ahead on the long lead time it needs, while the tray, the card or the tissue inside it can be decided close to the season, when what is actually going in the box is known.',
+        ],
+      },
+      {
+        h2: 'What the occasion asks of the box',
+        body: [
+          'Occasion packaging is specified by the event rather than by the product, and the events want quite different things. The quantity, who assembles it and whether the artwork can be reused are the three answers that change the cost most.',
+        ],
+        table: {
+          caption: 'Occasion against what the box has to do',
+          head: ['Occasion', 'Quantity', 'What decides the spec'],
+          rows: [
+            ['Weddings and events', 'Hundreds', 'Assembly time, since hosts build them'],
+            ['Corporate sends', 'Dozens to hundreds', 'Posted, so closure and outer'],
+            ['Seasonal retail', 'Thousands', 'Dated artwork, so overs are waste'],
+            ['Hampers', 'Tens', 'Span and base, because they are heavy'],
+            ['Subscription gifting', 'Monthly', 'Repeatability and postage band'],
+            ['One-off luxury', 'Very few', 'Hand finishing, no tooling amortization'],
+          ],
+        },
+      },
+      {
+        h2: 'Personalization is realistic at these volumes',
+        body: [
+          'Occasion runs are dozens or hundreds rather than tens of thousands, which makes things possible that a retail line could never justify — a printed name, a dated card, a variable insert, a hand-tied ribbon.',
+          'It also means the tooling cost sits on very few units, so the sensible structure is a simple, well-made box with the money spent on what goes inside it. An elaborate construction paid for across fifty boxes is expensive per unit and rarely the thing the recipient notices.',
+        ],
+      },
+      {
+        h2: 'Assembled by people who do not do this for a living',
+        body: [
+          'Occasion boxes are usually made up by the host, a volunteer or an office team, the night before, without a bench or a jig. That is the real cost in this range, and it is decided entirely by the closure — a crash-lock base opens into a finished box in one motion, a tuck base needs attention on every unit.',
+          'Across two hundred boxes that difference is the evening. It is worth paying a little more per box for a construction that goes together quickly, because the alternative is boxes assembled badly late in the session and a job that took twice as long as planned.',
         ],
       },
     ],
@@ -427,6 +539,38 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'That second job is worth more than it sounds. A routine has a sequence, the customer does not know it yet, and the box is the only place it gets explained. Laying the tray out in order of use, and numbering the steps on the tray itself, turns a collection of products into an instruction.',
         ],
       },
+      {
+        h2: 'Overwrap, and what it signals',
+        body: [
+          'Cosmetics is one of the few categories where customers read a sealed overwrap as proof the product is genuine and untouched, and notice its absence. It also protects the carton finish through repeated handling in a shop, which matters on a matte laminate that marks easily.',
+          'Where a brand wants to avoid plastic film, the replacement has to do the same signaling job rather than simply be left off — a paper band with a tamper-evident seal, or a sealed tuck. Removing the overwrap and putting nothing in its place reads as a pack that has already been opened.',
+        ],
+      },
+      {
+        h2: 'Miniatures and sampling sizes',
+        body: [
+          'Sample and travel formats are not the full size scaled down. The container comes from a stock range rather than being made for the brand, the ingredient list stays exactly as long while the surface shrinks, and the unit economics change completely because the pack can cost more than the product in it.',
+          'The usual resolution is a shared carton across several samples with the variant identified by a small applied label, so one print run covers the range and only the identification changes. It is worth structuring that way from the first order rather than discovering the per-variant cost at the reorder.',
+        ],
+      },
+      {
+        h2: 'Fitting the carton to the container',
+        body: [
+          'Almost everything in this range is a carton around a container that already exists, so the fit is dictated by a component nobody here designed. What that container is decides the interior more than the product does.',
+        ],
+        table: {
+          caption: 'Container against what the carton has to do',
+          head: ['Container', 'Interior', 'Watch for'],
+          rows: [
+            ['Glass dropper bottle', 'Fitted insert', 'Heaviest for its size, breaks rather than deforms'],
+            ['Pump bottle', 'Snug fit', 'Size to the pump, not the bottle'],
+            ['Jar', 'Snug fit', 'Wide and stable, easy case'],
+            ['Tube', 'Loose fit', 'Deforms, so the carton must not'],
+            ['Compact or palette', 'Foam seat', 'Fails on impact, not on pressure'],
+            ['Mixed set', 'Divided tray', 'Glass must never meet glass'],
+          ],
+        },
+      },
     ],
     link: {
       lead: 'If the run is skincare cartons rather than mixed beauty formats, ',
@@ -505,6 +649,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           ],
         },
       },
+      {
+        h2: 'Where the money actually shows',
+        body: [
+          'Premium packaging budgets get spent in places customers never register. These are the ones they do, roughly in order of what they notice first.',
+        ],
+        list: [
+          'The opening action — a lid that resists slightly and releases evenly is most of what reads as expensive.',
+          'The interior on first sight, because a lined or printed inside changes the moment a lid comes off more than any exterior finish.',
+          'Weight in the hand, which registers before anything is read and is why rigid board feels considered.',
+          'Fit — a product sitting exactly in its seat reads as made for it; a few millimeters of movement reads as generic.',
+          'Edges and corners, which is where a wrap either looks finished or looks applied.',
+        ],
+      },
+      {
+        h2: 'Hand assembly sets the quantity economics',
+        body: [
+          'Rigid and shaped builds involve far more manual work than a folding carton, and that changes the shape of the price in both directions. Small quantities are achievable without the tooling a folding carton would demand, so a few hundred units is realistic.',
+          'Large quantities do not get dramatically cheaper per unit, because the labor does not disappear at volume the way a machine run does. A rigid box is often the right answer at five hundred and the wrong one at a hundred thousand, which is the opposite of how most packaging scales.',
+        ],
+      },
+      {
+        h2: 'Storing boxes that arrive made up',
+        body: [
+          'Assembled boxes take several times the space of flat blanks and cannot be nested unless the range was drawn to nest. That is a real warehousing cost and it is usually discovered after the first delivery rather than before it.',
+          'Damp is the specific risk. A wrap and its greyboard take up moisture at different rates, so a pallet against an outside wall over a winter starts to lift at the corners and bubble across the panels, and on a shoulder or magnetic build the fit that the box was bought for moves with it.',
+        ],
+      },
     ],
     link: {
       lead: 'For the magnetic closure format in particular, ',
@@ -575,6 +746,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         body: [
           'Colored and recycled kraft stocks are made from a changing mix of recovered fiber, so the shade moves slightly from batch to batch. On a fully printed carton nobody sees it. On a plain colored box, where the board is the design, two production runs sitting side by side on a shelf will not match.',
           'There are three honest ways to handle it — accept the variation as part of the material, print a solid area that carries the brand regardless of the base, or buy a mill-controlled grade with a tighter shade tolerance and pay for it. What does not work is expecting an uncontrolled stock to match a reference from six months earlier.',
+        ],
+      },
+      {
+        h2: 'Where color goes wrong on kraft',
+        body: [
+          'Most of the disappointments in this range come from the same handful of assumptions, all of which are cheap to correct at artwork stage and expensive to correct after a proof.',
+        ],
+        list: [
+          'Expecting a screen color to survive — process inks are transparent, so everything laid on brown comes back warmer and darker.',
+          'Using pale tints, which have the least ink to carry them and disappear into the board almost completely.',
+          'Printing white as an ink rather than as a base, when white on brown reads gray unless it is laid down twice.',
+          'Assuming a surface-colored stock looks colored at the edges — every cut and crease shows the core.',
+          'Matching a reorder to a sample from last season, when recovered fiber content moves the shade between batches.',
+        ],
+      },
+      {
+        h2: 'Foil and embossing suit this stock',
+        body: [
+          'Where ink struggles on a colored or brown base, foil does not. It sits on top of the board rather than relying on it to reflect light, so a metallic or a solid block reads cleanly on kraft, black or any dyed stock, and often costs less than adding an extra print pass with an underbase beneath it.',
+          'Blind embossing works on the same principle from the other direction — no ink at all, just the board catching light at a raised edge. On a plain colored box, where the surface is the design, both are usually a better spend than trying to make a printed color behave.',
+        ],
+      },
+      {
+        h2: 'Coatings shift the color again',
+        body: [
+          'A finish is not neutral. A gloss varnish deepens and saturates whatever is under it, a matte lays it back and lightens it slightly, and a soft-touch mutes it further while making fingerprints more visible on a dark stock.',
+          'That means the coating has to be decided alongside the color rather than after it, and any proof has to carry the intended finish. A proof approved uncoated and produced with a gloss varnish is a different box from the one that was signed off, and on this range the difference is visible immediately.',
         ],
       },
     ],
@@ -656,6 +854,37 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'A returnable case also carries a requirement the single-trip version never has — it must survive being knocked down and re-erected repeatedly, which is a different stress from carrying a load, and it needs a label area that can be changed rather than printed once.',
         ],
       },
+      {
+        h2: 'What the board grades actually tell you',
+        body: [
+          'Industrial specifications are quoted in numbers that describe different things, and the wrong one gets used more often than not. Bursting strength answers a question about puncture; edge crush answers the question about stacking, which is what almost every industrial pack is really being asked.',
+        ],
+        table: {
+          caption: 'Which number answers which question',
+          head: ['Measure', 'Describes', 'Use it when'],
+          rows: [
+            ['Edge crush', 'Resistance to stacking load', 'Anything palletized or warehoused'],
+            ['Bursting strength', 'Resistance to puncture', 'Sharp or dense contents'],
+            ['Flute profile', 'Cushioning against stiffness', 'Choosing between protection and rigidity'],
+            ['Wall count', 'Overall structure', 'Setting the load range'],
+            ['Basis weight', 'Material per area', 'Comparing like for like on cost'],
+          ],
+        },
+      },
+      {
+        h2: 'Test before the run, not after it',
+        body: [
+          'Nothing in this range can be judged reliably from a drawing. A stack test on a loaded sample, held for longer than a day, answers questions that a specification sheet cannot — how the corners behave, whether the base bulges, what the pallet looks like after a week.',
+          'It is inexpensive relative to a failed shipment, and it is the step most often skipped because the catalog figure looks reassuring. The catalog figure describes a sheet in a laboratory at a controlled humidity, not a loaded case in an unheated warehouse in February.',
+        ],
+      },
+      {
+        h2: 'Cost per unit shipped, not cost per box',
+        body: [
+          'A cheaper case that fits the pallet worse is more expensive in practice. The figure that matters is what it costs to move one product, which folds in how many cases fit a layer, how many layers a stack takes, and how many arrive undamaged.',
+          'Working it out that way frequently justifies a heavier board, because a case that allows another layer on the pallet or removes a damage rate pays for the upgrade several times over. Comparing unit prices on their own hides all of it.',
+        ],
+      },
     ],
     link: {
       lead: 'Where the requirement is straightforward transit rather than storage, ',
@@ -732,6 +961,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
             ['Hanging pack', 'Along a row of pegs', 'Thickness, which sets the facings'],
           ],
         },
+      },
+      {
+        h2: 'What a retailer grades a display on',
+        body: [
+          'Retail-ready packaging is the one format whose buyer scores it against a published checklist, and a unit that fails any of these gets refused or gets the supplier a conversation about it. It is worth designing against the list directly rather than discovering it at a range review.',
+        ],
+        list: [
+          'Easy to identify — readable from a trolley in a back room, not just on a shelf.',
+          'Easy to open — one movement, no knife, and no debris left on the floor.',
+          'Easy to shelf — it goes into the fixture without adjustment or trimming.',
+          'Easy to shop — a customer can see and take a unit without moving anything else.',
+          'Easy to dispose of — it collapses flat and goes into the store\'s existing paper stream.',
+        ],
+      },
+      {
+        h2: 'Choosing a board for a unit that has to stand up',
+        body: [
+          'A display carries two loads that pull differently. In transit it is a case being stacked on a pallet, which is a compression question. On the shop floor it is a structure holding itself upright while being leant on and reached into, which is a rigidity question.',
+          'Those are not the same board. A grade chosen only for the pallet often flexes in the aisle, and one chosen only for the aisle costs too much to ship. Where a unit is shipped loaded, corner posts or a removable shipping cap usually resolve it more cheaply than upgrading the whole structure.',
+        ],
+      },
+      {
+        h2: 'Campaigns end on a date',
+        body: [
+          'Display work runs to a fixed window, and a unit that arrives after the promotion starts is a total loss rather than a late delivery. The schedule runs backwards from the day stock has to be on a shop floor, through distribution, the pack-out, the print and the proof.',
+          'Where artwork carries a date or an offer, every surplus unit is waste the moment the window closes. Keeping the structure generic and putting the campaign detail on a header card or an applied panel means the leftovers carry into the next promotion, which over a year is usually a larger saving than anything negotiated on the unit price.',
+        ],
       },
     ],
     link: {
@@ -810,6 +1066,34 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           ],
         },
       },
+      {
+        h2: 'What has to be on the carton',
+        body: [
+          'This range is laid out from the required copy inward, because none of it is negotiable in size or position and all of it competes for the same faces. Blocking it out first is what stops the design being rebuilt around it later.',
+        ],
+        list: [
+          'Product name and strength, at a size the guidance sets rather than one the layout prefers.',
+          'A full ingredient or nutrition declaration, which on a small carton can take an entire face.',
+          'Batch and expiry, in an uncoated area the packing line can print onto.',
+          'Braille, where the market requires it, positioned so it does not deform essential text.',
+          'A responsible person or manufacturer address, plus any conformity mark.',
+          'Storage and dosing instructions, which are the copy a patient actually needs to read.',
+        ],
+      },
+      {
+        h2: 'Cartons that run on an automatic line',
+        body: [
+          'These are erected at speed by machine, and a carton that is a fraction out of square jams the line rather than simply looking imperfect. Squareness tolerance matters more here than on almost any other format, which is a reason to be specific about board and creasing rather than accepting whatever runs.',
+          'Glue seams, flap dimensions and the direction of the board grain all feed into whether a carton opens cleanly at speed. If the line is known at quoting stage, the carton can be drawn to it; if it is not, the first packing trial is where the problem appears.',
+        ],
+      },
+      {
+        h2: 'Light, and what the board has to block',
+        body: [
+          'Where a product is light-sensitive, the carton is often the only light barrier in the pack — a clear glass bottle or a translucent blister does nothing on its own. That makes board opacity a functional property rather than an incidental one.',
+          'It is worth confirming rather than assuming, particularly on lighter calipers and on any stock with a high recycled content, and worth stating alongside the storage instruction printed on the pack so the two agree.',
+        ],
+      },
     ],
     link: {
       lead: 'For supplement and vitamin work specifically, ',
@@ -882,6 +1166,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'The constraint is depth. A shared outer works only if every interior lives within one internal depth, so the deepest piece in the range — usually a bangle or a cuff — has to be identified before the outer is tooled rather than discovered six months later.',
         ],
       },
+      {
+        h2: 'What we need before quoting a range',
+        body: [
+          'Almost every quote in this range stalls on the same missing measurements. These are the ones that change the answer, and the last is the one most often left out.',
+        ],
+        list: [
+          'The narrowest and widest band, if rings are in the range — one slot width will not hold both.',
+          'The longest drop, since a single deep box makes every stud look lost inside it.',
+          'Whether there are rigid bangles as well as chains, because those need opposite interiors.',
+          'The deepest piece overall, which sets the internal depth a shared outer has to allow.',
+          'Whether pieces are plated, which decides the lining before anything about the exterior.',
+        ],
+      },
+      {
+        h2: 'Why this range avoids windows',
+        body: [
+          'Windows are common across most retail packaging and rare here, for a reason worth stating. Jewelry is sold on light — a stone or a polished surface has to catch it — and a film panel dulls exactly that. It also puts a scratchable surface between the customer and the piece.',
+          'The convention instead is a box that is opened rather than looked into, with the presentation happening at the moment the lid lifts. Where a piece does have to be visible before purchase, the usual answer is a mounted card in an open display rather than a window in a closed box.',
+        ],
+      },
+      {
+        h2: 'A market stall and a counter are different jobs',
+        body: [
+          'Sold face to face at a market or a fair, a box is picked up, opened, closed and put back many times a day, and by the end of a weekend a light board shows it at the corners. That handling is far heavier than anything a boxed piece sees in a shop.',
+          'Behind a counter the box is handled once at the point of sale and the interior does the work. Where a maker sells both ways, it is usually worth specifying for the stall — a heavier caliper and a firmer closure survive both, while a box specified for the counter looks tired after three markets.',
+        ],
+      },
     ],
     link: {
       lead: 'For ring boxes specifically, where slot width is the deciding measurement, ',
@@ -941,6 +1252,44 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         body: [
           'Wool, cotton, linen and silk are natural fibers, and sealed airtight for a season they take on a stale smell and can yellow. A paperboard box with a paper wrap breathes; the same garment sealed into a polybag inside that box does not.',
           'Where stock is held between production and sale, this is a quality decision rather than an environmental one, although it happens to serve both. It is also the easiest plastic to remove from an apparel range, because nothing about the product needs it.',
+        ],
+      },
+      {
+        h2: 'Fold bulk by garment',
+        body: [
+          'Apparel packaging is sized from folded bulk rather than from garment size, and the two do not track each other. A heavy knit in a small size is bulkier than a shirt in a large one, which is why a box specified from a size chart usually turns out wrong.',
+        ],
+        table: {
+          caption: 'What each garment does to the box',
+          head: ['Garment', 'Folded bulk', 'What it drives'],
+          rows: [
+            ['T-shirts and tops', 'Low, consistent', 'Shallow box, predictable fill'],
+            ['Shirts', 'Low', 'Creasing matters more than depth'],
+            ['Knitwear', 'High, springs back', 'Sets the depth for the whole range'],
+            ['Trousers and denim', 'High and dense', 'Weight, so the base construction'],
+            ['Outerwear', 'Very high', 'Usually needs its own box size'],
+            ['Socks and small goods', 'Very low', 'Postage band, not protection'],
+          ],
+        },
+      },
+      {
+        h2: 'Where the plastic usually hides',
+        body: [
+          'Apparel brands moving to paper packaging often find the plastic has simply moved inward rather than gone. These are the places it is normally still sitting, in roughly the order they get missed.',
+        ],
+        list: [
+          'The polybag around the garment, which is usually the largest single piece and the easiest to replace with a paper wrap.',
+          'Tape on the outer, where a paper tape does the same job.',
+          'The returns strip, if it is a plastic adhesive on a paper box.',
+          'Size and care labels applied to the pack rather than sewn into the garment.',
+          'Window film, on any pack that shows the product.',
+        ],
+      },
+      {
+        h2: 'Volume costs more than weight here',
+        body: [
+          'Clothing is light and bulky, so parcels are almost always charged on dimensional weight rather than actual weight. That means an oversized box costs money on every single order, not only on the small ones, and the saving from getting it right compounds across a season.',
+          'It is worth checking a made-up box against the carrier\'s dimensional rules before committing, because apparel sits close to those thresholds and a centimeter either way moves an entire range into a different band.',
         ],
       },
     ],
@@ -1016,6 +1365,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'It matters most for exactly the items people send this way — certificates, artwork, signed prints — where the damage is not repairable and the item is usually irreplaceable. It is the cheapest part of the specification and the one most often left out.',
         ],
       },
+      {
+        h2: 'Decisions to make before a flat pack is cut',
+        body: [
+          'Flat formats have fewer variables than boxes and each one matters more, because there is no structure to absorb a wrong answer. These are the ones that change the pack.',
+        ],
+        list: [
+          'Whether it must arrive flat, which rules a tube out and sets the whole specification.',
+          'The longest dimension, since stiffness falls away sharply as a flat panel grows.',
+          'Flute direction, because corrugated is far stiffer across its flutes than along them.',
+          'Whether it is left outdoors on delivery, which decides moisture resistance.',
+          'How the recipient opens it, since a mailer that needs a knife is one where the contents get cut.',
+        ],
+      },
+      {
+        h2: 'Opening it without damaging the contents',
+        body: [
+          'A mailer sealed so well that it needs a blade is a mailer whose contents get scored at the very last step, after everything else has gone right. It is a genuine and common way to lose a print or a certificate.',
+          'A tear strip or a clearly indicated opening edge removes it for almost nothing. On anything irreplaceable it is worth more than an upgrade to the board, because the board was never the thing that was going to fail.',
+        ],
+      },
+      {
+        h2: 'Postal bands and the awkward shape',
+        body: [
+          'Flat mailers sit badly across carrier categories — too rigid to be a large letter, too thin to be a parcel — and the thresholds are usually thickness and dimensions rather than weight. A mailer a couple of millimeters over a limit changes the price of every item sent.',
+          'Measuring the sealed pack against your carrier\'s bands before committing to a size is the cheapest saving available on this range, and it is worth doing with the backing board and any stiffener already in place rather than on the empty mailer.',
+        ],
+      },
     ],
     link: {
       lead: 'For posted flat items in particular, ',
@@ -1081,6 +1457,38 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
           'On a shelf among competitors — a flat front panel, because the pack is seen face-on and in a row.',
           'Posted individually — a finished thickness measured against the carrier\'s letter dimensions, since a few millimeters moves every order into a higher band.',
           'Given by hand — no display requirement at all, so the money moves to the interior and the opening.',
+        ],
+      },
+      {
+        h2: 'What each item needs from its interior',
+        body: [
+          'These products are small, dense and awkwardly shaped, and each one fails in its own way if it is allowed to move. The interior is doing more work per unit cost here than anywhere else in the catalog.',
+        ],
+        table: {
+          caption: 'Product against interior and its risk',
+          head: ['Item', 'Interior', 'What goes wrong loose'],
+          rows: [
+            ['Pens', 'Channel seat with a clip relief', 'The clip catches and scores the barrel'],
+            ['Pencils', 'Slotted tray', 'Cores fracture invisibly along the length'],
+            ['Keychains', 'Clip card or board seat', 'The ring scratches the fob'],
+            ['Badges and pins', 'Backing card', 'The post pierces the pack, the clutch is lost'],
+            ['Notebooks', 'Band or sleeve', 'Corners crush, covers curl'],
+            ['Mixed desk sets', 'Divided tray', 'The heaviest item marks the flattest'],
+          ],
+        },
+      },
+      {
+        h2: 'Depth is what sets the postage',
+        body: [
+          'Nearly everything in this range is sold online and posted singly, and at these weights the carrier charges on dimensions rather than on weight. The finished thickness of the pack is what decides the band, and the extra depth almost always comes from the insert rather than the product.',
+          'On items with margins this thin, a few millimeters can be worth more than the box itself. Measuring the assembled pack against the letter dimensions before the seat is designed is the step that pays for itself fastest here.',
+        ],
+      },
+      {
+        h2: 'Where anti-static actually matters',
+        body: [
+          'Anti-static and conductive materials get requested across this whole range and are genuinely needed in very little of it. A pen, a notebook, a keychain or an enamel pin has nothing to damage.',
+          'It becomes a real requirement for bare boards, exposed connectors and loose components — things that are electronics rather than accessories. Where it is needed, it has to be specified as a material property of the liner rather than assumed from a color, since the familiar pink or black tint is a convention rather than a guarantee.',
         ],
       },
     ],
@@ -1157,6 +1565,34 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         body: [
           'This category has traditionally relied on wire ties, plastic clips and blister windows to hold products in place, and a great many ranges are now committed to removing them. Card cradles, paper twist ties and die-cut tabs do the same job, take a little longer to design and slightly longer to pack.',
           'Where a brand makes a plastic-free claim, this is where it is actually tested. A paper carton with a plastic window and four wire ties inside is not a plastic-free pack however it is described, and in this category — where the buyer is a cautious adult reading the box closely — that is noticed.',
+        ],
+      },
+      {
+        h2: 'What a retailer checks before listing',
+        body: [
+          'Toy and baby packs are rejected at the buying stage more often than at the till, and almost always for the same reasons. Every item here is cheaper to get right at layout than to correct after a print run.',
+        ],
+        list: [
+          'An age grading, in the prescribed form rather than as marketing copy.',
+          'A small-parts warning where the contents require it, with the exact wording the standard sets.',
+          'A conformity mark for each market the product is sold into.',
+          'A batch or model identifier that supports a recall.',
+          'A responsible business name and address inside the market of sale.',
+          'Warning text on any plastic bag inside the pack, which is bought separately and routinely forgotten.',
+        ],
+      },
+      {
+        h2: 'Age grading changes the pack, not just the label',
+        body: [
+          'An age mark is not only a printed figure. Below three years the small-parts rules bite, which affects what may be loose inside, how components are fixed and whether a window film is acceptable at all.',
+          'That means the age range has to be settled before the interior is designed rather than added to a finished pack. A cradle that would be fine for a six-year-old can be non-compliant for a toddler, and discovering that after tooling is an expensive way to learn it.',
+        ],
+      },
+      {
+        h2: 'Windows against the plastic-free claim',
+        body: [
+          'This category wants both things at once — a buyer who needs to see the toy, and a brand position that removes plastic. A film window serves the first and undoes the second, and in this category buyers do check.',
+          'The workable answers are a die-cut aperture with no film where the contents cannot fall out, a cellulose-based film that keeps a compostable claim intact, or a printed photograph good enough to replace the window entirely. Which one fits depends on the toy, and it is a decision worth taking deliberately rather than defaulting to a film because the format usually has one.',
         ],
       },
     ],
@@ -1242,6 +1678,33 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         body: [
           'Wrapping and tissue stocks are absorbent in a way board is not, so ink sinks in and spreads slightly at the edges. Fine detail and small type lose their definition, and a solid area of heavy coverage can cockle the sheet as it dries.',
           'What works is the opposite of what works on a carton — bold marks, generous line weights, a repeating pattern rather than one precise logo, and one or two colors rather than a photographic build. Designs that assume a coated surface are the ones that come back disappointing.',
+        ],
+      },
+      {
+        h2: 'Food-contact papers are a separate specification',
+        body: [
+          'Papers in this range are used for wrapping food as often as for wrapping gifts, and the two are not interchangeable. Direct food contact needs a stock and an ink made for it, and greaseproof and standard kraft behave completely differently against fat.',
+          'It has to be stated rather than assumed, because the same visual product can be produced either way. A decorative kraft used to wrap a sandwich is the wrong stock even though it looks identical to the right one on a roll.',
+        ],
+      },
+      {
+        h2: 'Storing paper so it stays usable',
+        body: [
+          'Paper takes up moisture from the air far faster than board, and damp stock is visibly different to work with — it tears at the edge, will not hold a crease, and prints badly on any later run. A roll stored against an outside wall or on a cold floor will show it within a season.',
+          'Keeping stock flat, off the floor and away from a sink or a fryer is most of it. Rolls want to be stored on end or supported along their length, because a roll left resting on one point flattens there and never runs true again.',
+        ],
+      },
+      {
+        h2: 'What to send when asking for a quote',
+        body: [
+          'Paper quotes stall on different questions from box quotes, because there is no structure to describe. These are the answers that let a price be given straight away.',
+        ],
+        list: [
+          'The format — roll, sheet, ream or a dispenser pack, since the same paper is priced differently in each.',
+          'The width or sheet size, and for rolls the core diameter, which decides whether it fits an existing dispenser.',
+          'The basis weight, or what the paper has to do if you would rather we chose it.',
+          'Whether anything it touches is food, which changes the stock and the inks available.',
+          'The number of print colors, remembering that this surface suits bold marks rather than fine detail.',
         ],
       },
     ],
