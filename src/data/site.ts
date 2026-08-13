@@ -42,8 +42,14 @@ export const SOCIAL = [
 ] as const;
 
 /**
- * Primary navigation, matching the old header exactly: Home followed by the
- * four category links WordPress had in the menu.
+ * Primary navigation: Home followed by the four category links WordPress had
+ * in the menu.
+ *
+ * Blog was here too and is not any more. The row is right-aligned to the
+ * header container, so the last item sits 16px from the edge at every width —
+ * with Blog present that read as clipped rather than as the end of the menu.
+ * It stays in FOOTER_COMPANY below, so the blog is still linked site-wide and
+ * its five posts do not become orphans.
  */
 export const NAV = [
   { label: 'Home', href: '/' },
@@ -51,7 +57,6 @@ export const NAV = [
   { label: 'Kraft Gift & Specialty Boxes', href: '/product-category/kraft-gift-specialty-boxes/' },
   { label: 'Kraft Packaging Boxes', href: '/product-category/kraft-packaging-boxes/' },
   { label: 'Kraft Wrapping & Accessories', href: '/product-category/kraft-wrapping-accessories/' },
-  { label: 'Blog', href: '/blog/' },
 ] as const;
 
 export const FOOTER_COMPANY = [
