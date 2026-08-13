@@ -27,7 +27,7 @@
 | Missing schema | 0 |
 | **Distinct duplicated paragraphs** | 15 |
 | **Duplicated paragraph instances** | 204 |
-| Distinct duplicated headings | 193 |
+| Distinct duplicated headings | 191 |
 | Duplicated FAQ questions | 172 |
 | Identical FAQ sets | 0 groups |
 | Identical heading sequences | 0 groups |
@@ -91,22 +91,22 @@ Share of a page's paragraphs appearing on no other page.
 | 162 | Product details |
 | 162 | Related kraft boxes |
 | 158 | Key specifications |
-| 23 | What to send with your enquiry |
+| 27 | What to send with your enquiry |
 | 13 | Large Kraft Gift Boxes |
-| 12 | Kraft Corrugated Boxes |
 | 12 | Kraft Round Boxes |
-| 12 | Mini Kraft Boxes |
 | 12 | Kraft Paper Gift Boxes |
+| 12 | Mini Kraft Boxes |
+| 12 | Kraft Corrugated Boxes |
 | 12 | Kraft Giveaway Packaging Boxes |
 | 12 | Kraft Gift Hamper Boxes |
 | 12 | Kraft Heart Shaped Boxes |
-| 11 | Kraft Jewelry Boxes |
-| 11 | Kraft Take Out Boxes |
-| 11 | Small Kraft Boxes |
-| 11 | Kraft Cardboard Boxes |
-| 11 | Kraft Shoe Boxes |
-| 11 | Kraft Shipping Boxes |
 | 11 | Kraft Drawer Boxes |
+| 11 | Kraft Cardboard Boxes |
+| 11 | Kraft Shipping Boxes |
+| 11 | Kraft Jewelry Boxes |
+| 11 | Kraft Mailer Boxes |
+| 11 | Kraft Shoe Boxes |
+| 11 | Kraft Take Out Boxes |
 | 11 | Kraft Food Boxes |
 
 ## Most-repeated FAQ questions
@@ -124,8 +124,8 @@ Share of a page's paragraphs appearing on no other page.
 | 12 | What finishes suit them? |
 | 11 | Do they ship flat? |
 | 10 | Can these be printed? |
-| 9 | Rigid or folding? |
 | 9 | Do I need an insert? |
+| 9 | Rigid or folding? |
 | 7 | Are recycled boards suitable? |
 | 6 | Do they stack? |
 
