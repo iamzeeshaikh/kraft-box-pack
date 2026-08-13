@@ -1,9 +1,11 @@
 # Resume here
 
-Session ended 11 August 2026 on context limits. Everything below is committed
-on `main`, working tree clean, **nothing pushed and nothing deployed**.
+Session ended 13 August 2026. Everything below is committed on `main`,
+working tree clean, **nothing pushed and nothing deployed**.
 
-Last commit: `b8c666c` — Restore the imported product copy instead of replacing it.
+The product-copy rewrite is **complete** — all 158 products, verified by
+`python3 scripts/rewrite-progress.py`, which derives "done" from git rather
+than from this note.
 
 ## Where the work stands
 
@@ -25,8 +27,7 @@ output.
 
 ## Where the rewrite stands
 
-All 50 top pages are rewritten, and the remaining 108 are in progress. Check
-progress at any time with:
+Finished — 158 of 158, 164,231 impressions. Confirm at any time with:
 
 ```
 python3 scripts/rewrite-progress.py
@@ -34,22 +35,31 @@ python3 scripts/rewrite-progress.py
 
 It derives what is done from git rather than from a note — a product counts as
 rewritten when its description differs from commit `581e3a0`, the last commit
-before the rewrite began — so it cannot drift out of date.
+before the rewrite began — so it cannot drift out of date. It now reports
+`nothing left.`
 
-### How a rewrite is done
+Every page is 800-1000 words, keeps every internal link the import carried,
+names its own subject in its own headings, and shares no twelve-word paragraph
+with any other product. `scripts/check-rewrite.py` enforces all four and passes
+on all 158.
+
+### How a rewrite was done, if more products are ever added
 
 1. `python3 scripts/rewrite-progress.py` for the next products by impressions.
 2. Read the current copy for its **internal links and headings** — every link
    has to survive.
 3. Write the new HTML, keeping the imported structure (h2/h3, ordered list,
    spec table, closing "Choose ..." paragraph).
-4. `python3 scratchpad/setmany.py <file>` writes a dict of slug → HTML.
-5. `python3 scratchpad/insert.py <file>` appends extra sections before the
-   closing paragraph, where the page lands under 800 words. It always does —
-   budget for one extension pass per page.
-6. `python3 scripts/check-rewrite.py <slugs>` must pass.
-7. Rebuild, then `python3 scripts/content-audit.py` — watch **multi-link
+4. `python3 scratchpad/setmany.py <file>` writes a dict of slug → HTML. It
+   refuses payloads with unbalanced tags — an unclosed `<li>` renders as a
+   nested list rather than an error, so nothing downstream catches it.
+5. `python3 scripts/check-rewrite.py <slugs>` must pass. Writing ~900 words up
+   front avoids the extension pass the earlier sessions needed.
+6. Rebuild, then `python3 scripts/content-audit.py` — watch **multi-link
    paragraphs**, which new copy trips easily.
+
+The `scratchpad/` helpers are gitignored and do not survive a session; they are
+quick to rewrite from this description.
 
 ### What check-rewrite.py guards
 
@@ -74,6 +84,9 @@ two internal links in one paragraph.
   the median product from 1,356 words to 141 and pulled 467 contextual links
   out of their sentences.
 - Do not change the design — improve within it.
+- **US spelling.** The site is `country: 'US'` with USD pricing and American
+  product names. An earlier pass drifted into British spelling across the whole
+  site and was reverted in `ea8bdfb`; do not reintroduce it.
 
 ## Deferred by the client
 
