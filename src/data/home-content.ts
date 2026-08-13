@@ -8,7 +8,7 @@
  *
  * The sections below fill that gap. Every claim traces to
  * src/data/business-facts.ts or to the product data; nothing is invented, and
- * the vague environmental slogan the hero used to lead with is gone in favour
+ * the vague environmental slogan the hero used to lead with is gone in favor
  * of what the company actually sells.
  */
 
@@ -50,10 +50,10 @@ export const INDUSTRIES: Industry[] = [
     anchor: 'kraft mailer boxes',
   },
   {
-    name: 'Jewellery and accessories',
+    name: 'Jewelry and accessories',
     note: 'Almost nothing here is heavy and almost everything moves. Retention matters more than strength.',
     href: '/product-category/jewelry-accessories-boxes/',
-    anchor: 'kraft jewellery boxes',
+    anchor: 'kraft jewelry boxes',
   },
   {
     name: 'Apparel and soft goods',
@@ -71,7 +71,7 @@ export interface SpecGroup {
 
 /**
  * What can actually be specified. Drawn from the options the product
- * specification tables already list across the catalogue.
+ * specification tables already list across the catalog.
  */
 export const SPEC_GROUPS: SpecGroup[] = [
   {
@@ -165,7 +165,7 @@ export const HOME_FAQS: HomeFaq[] = [
   },
   {
     question: 'Can I see a sample before ordering?',
-    answer: '<p>Yes. A plain structural sample answers whether the product fits and the box closes properly; a printed prototype answers colour and finish. They answer different questions, so tell us which one you need.</p>',
+    answer: '<p>Yes. A plain structural sample answers whether the product fits and the box closes properly; a printed prototype answers color and finish. They answer different questions, so tell us which one you need.</p>',
   },
   {
     question: 'Do you ship nationwide?',

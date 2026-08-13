@@ -32,8 +32,8 @@ export interface PageContent {
 
 export const ABOUT: PageContent = {
   intro: [
-    'Kraft Box Pack makes custom kraft packaging to order. There is no stock range and no catalogue of fixed sizes — every box is cut on a fresh dieline to the dimensions of the product going inside it, printed with your artwork, and produced in a run sized to your order.',
-    'The material is the reason most buyers arrive here. Kraft board is made from unbleached pulp, which is what gives it the brown colour and the strength, and it is recyclable in the ordinary paper stream. It takes print well enough for retail shelf work while still reading as natural rather than manufactured, which is why it suits <a href="/product-category/kraft-food-packaging/">food and bakery packaging</a>, cosmetics, gifting and subscription boxes in roughly equal measure.',
+    'Kraft Box Pack makes custom kraft packaging to order. There is no stock range and no catalog of fixed sizes — every box is cut on a fresh dieline to the dimensions of the product going inside it, printed with your artwork, and produced in a run sized to your order.',
+    'The material is the reason most buyers arrive here. Kraft board is made from unbleached pulp, which is what gives it the brown color and the strength, and it is recyclable in the ordinary paper stream. It takes print well enough for retail shelf work while still reading as natural rather than manufactured, which is why it suits <a href="/product-category/kraft-food-packaging/">food and bakery packaging</a>, cosmetics, gifting and subscription boxes in roughly equal measure.',
   ],
   sections: [
     {
@@ -47,7 +47,7 @@ export const ABOUT: PageContent = {
     {
       h2: 'What we make',
       body: [
-        'The catalogue runs from food and bakery packaging through cosmetics, jewellery, apparel, electronics and pharmaceutical cartons, to display, gift and industrial formats. The structures repeat far more than the categories suggest — a tuck end, a lid and base, a mailer, a sleeve and a rigid box cover most of what any of these industries needs, and the difference between them is board weight, finish and print.',
+        'The catalog runs from food and bakery packaging through cosmetics, jewelry, apparel, electronics and pharmaceutical cartons, to display, gift and industrial formats. The structures repeat far more than the categories suggest — a tuck end, a lid and base, a mailer, a sleeve and a rigid box cover most of what any of these industries needs, and the difference between them is board weight, finish and print.',
         'That is worth knowing when you are choosing, because a format used in a different industry is often the right answer for yours — <a href="/products/">the full product range</a> is worth reading across rather than down.',
       ],
     },
@@ -60,7 +60,7 @@ export const ABOUT: PageContent = {
         `We do not sell single boxes. Production starts at ${ORDERING.minimumLabel}, so replacing one damaged carton is not something this route can serve.`,
         'We do not hold stock sizes. Everything is cut to your dimensions, which is an advantage on fit and a disadvantage if you needed twenty boxes tomorrow.',
         'There is no checkout on this site. Pricing depends on size, quantity, material and print, so orders are placed against a quote rather than a cart.',
-        `${RETURNS.customExclusion} Since the whole catalogue is custom-printed, that exclusion covers most of what we make, and <a href="/refund_returns/">the refund and returns policy</a> sets it out in full.`,
+        `${RETURNS.customExclusion} Since the whole catalog is custom-printed, that exclusion covers most of what we make, and <a href="/refund_returns/">the refund and returns policy</a> sets it out in full.`,
       ],
     },
     {
@@ -105,9 +105,9 @@ export const ABOUT: PageContent = {
         'For a retail carton it is the wrong question — that box is usually protected by an outer. Where the kraft box itself is the shipper, the specification moves to corrugated in E, B or C flute, which is a different board rather than a heavier version of the same one.',
     },
     {
-      question: 'Can kraft boxes be printed in full colour?',
+      question: 'Can kraft boxes be printed in full color?',
       answer:
-        'Yes, though the brown substrate shifts every colour laid on it, so a CMYK build looks warmer on kraft than on white board. Where a colour has to be exact, a white underbase or a PMS ink solves it, and both are quoted at specification stage.',
+        'Yes, though the brown substrate shifts every color laid on it, so a CMYK build looks warmer on kraft than on white board. Where a color has to be exact, a white underbase or a PMS ink solves it, and both are quoted at specification stage.',
     },
     {
       question: 'Do you ship internationally?',
@@ -122,7 +122,7 @@ export const ABOUT: PageContent = {
 
 export const PRODUCTS_FAQS: Faq[] = [
   {
-    question: 'How is this catalogue organised?',
+    question: 'How is this catalog organized?',
     answer:
       'By industry first — food, cosmetics, gifting, apparel and so on — because that is how most buyers arrive. The underlying structures repeat across those groups, so it is worth opening a category outside your own industry if the format looks closer to what you need.',
   },
@@ -154,15 +154,15 @@ export const PRODUCTS_FAQS: Faq[] = [
   {
     question: 'Are inserts available?',
     answer:
-      'Yes, in board, foam or moulded pulp depending on the product. On anything with several loose components the insert is worth more to the unboxing than the outer box is, because pieces moving in one cavity read as an incomplete product.',
+      'Yes, in board, foam or molded pulp depending on the product. On anything with several loose components the insert is worth more to the unboxing than the outer box is, because pieces moving in one cavity read as an incomplete product.',
   },
   {
     question: 'Can I order samples before committing to a run?',
     answer:
-      'Ask when you request the quote. A plain unprinted sample confirms the structure and fit; a printed sample confirms the colour, and the two are produced differently, so say which question you are trying to answer.',
+      'Ask when you request the quote. A plain unprinted sample confirms the structure and fit; a printed sample confirms the color, and the two are produced differently, so say which question you are trying to answer.',
   },
   {
-    question: 'Is the price per box the same across the catalogue?',
+    question: 'Is the price per box the same across the catalog?',
     answer: `No — it moves with size, quantity, material and print on every product. ${ORDERING.priceDisclosure}`,
   },
   {

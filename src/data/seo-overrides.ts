@@ -4,7 +4,7 @@
  *
  * Why this exists as an override layer rather than an edit to products.json:
  * that file is generated from the WordPress export, so anything written into
- * it is lost the next time the catalogue is regenerated. Keeping the SEO copy
+ * it is lost the next time the catalog is regenerated. Keeping the SEO copy
  * separate also makes the intent auditable — every entry here is a deliberate
  * decision about a page with measured impressions, not a bulk template.
  *
@@ -132,7 +132,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-heart-shaped-boxes/': {
     title: 'Kraft Heart Shaped Boxes Wholesale | Kraft Box Pack',
     description:
-      'Heart shaped kraft boxes for gifting and favours, cut on a custom die in your size. Rigid or folding builds, wholesale priced.',
+      'Heart shaped kraft boxes for gifting and favors, cut on a custom die in your size. Rigid or folding builds, wholesale priced.',
   },
   '/product/kraft-drawer-gift-boxes/': {
     title: 'Kraft Drawer Gift Boxes Wholesale | Kraft Box Pack',
@@ -229,7 +229,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product-category/colored-kraft-boxes/': {
     title: 'Custom Colored Kraft Boxes Wholesale | Kraft Box Pack',
     description:
-      'Kraft boxes in black, white and dyed board, with underprint options so colour and branding both hold. Wholesale pricing.',
+      'Kraft boxes in black, white and dyed board, with underprint options so color and branding both hold. Wholesale pricing.',
   },
   '/product/kraft-lid-base-rigid-boxes/': {
     title: 'Kraft Lid and Base Rigid Boxes Wholesale | Kraft Box Pack',
@@ -274,7 +274,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/mini-kraft-boxes/': {
     title: 'Custom Mini Kraft Boxes Wholesale | Kraft Box Pack',
     description:
-      'Small kraft boxes cut to your dimensions for samples, favours and single items. Custom print and finish, wholesale quotes.',
+      'Small kraft boxes cut to your dimensions for samples, favors and single items. Custom print and finish, wholesale quotes.',
   },
   '/product/kraft-square-gift-boxes/': {
     title: 'Kraft Square Gift Boxes Wholesale | Kraft Box Pack',
@@ -369,7 +369,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-favor-boxes/': {
     title: 'Custom Kraft Favor Boxes Wholesale | Kraft Box Pack',
     description:
-      'Small kraft favour boxes for weddings and events, flat-packed and quick to assemble by hand. Custom print and ribbon work.',
+      'Small kraft favor boxes for weddings and events, flat-packed and quick to assemble by hand. Custom print and ribbon work.',
   },
   '/product/kraft-pillow-gift-boxes/': {
     title: 'Custom Kraft Pillow Gift Boxes Wholesale | Kraft Box Pack',
@@ -414,7 +414,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-egg-cartons/': {
     title: 'Custom Kraft Egg Cartons Wholesale | Kraft Box Pack',
     description:
-      'Moulded and folded kraft egg cartons with cushioned cells and a secure closure. Custom counts, print and wholesale runs.',
+      'Molded and folded kraft egg cartons with cushioned cells and a secure closure. Custom counts, print and wholesale runs.',
   },
   '/product/kraft-influencer-boxes/': {
     title: 'Custom Kraft Influencer Boxes Wholesale | Kraft Box Pack',
@@ -484,7 +484,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-ribbon-closure-boxes/': {
     title: 'Kraft Ribbon Closure Boxes Wholesale | Kraft Box Pack',
     description:
-      'Kraft boxes with a ribbon tie or pull, in lid and base or drawer builds. Custom sizes, ribbon colours and print options.',
+      'Kraft boxes with a ribbon tie or pull, in lid and base or drawer builds. Custom sizes, ribbon colors and print options.',
   },
   '/product/kraft-board-game-packaging-boxes/': {
     title: 'Kraft Board Game Packaging Boxes | Kraft Box Pack Wholesale',
@@ -589,7 +589,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-jewelry-insert-boxes/': {
     title: 'Kraft Jewelry Insert Boxes Wholesale | Kraft Box Pack',
     description:
-      'Kraft jewellery boxes with foam, board or velvet inserts cut to the piece. Custom sizes, printing and finishing options.',
+      'Kraft jewelry boxes with foam, board or velvet inserts cut to the piece. Custom sizes, printing and finishing options.',
   },
   '/product/kraft-donut-packaging-boxes/': {
     title: 'Kraft Donut Packaging Boxes Wholesale | Kraft Box Pack',
@@ -664,7 +664,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-minimalist-boxes/': {
     title: 'Custom Kraft Minimalist Boxes Wholesale | Kraft Box Pack',
     description:
-      'Plain kraft boxes with one or two colours on uncoated board, cut to your dimensions. Custom sizes, printing and volumes.',
+      'Plain kraft boxes with one or two colors on uncoated board, cut to your dimensions. Custom sizes, printing and volumes.',
   },
   '/product/kraft-underwear-packaging-boxes/': {
     title: 'Kraft Underwear Packaging Boxes | Kraft Box Pack Wholesale',
@@ -804,7 +804,7 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   '/product/kraft-candy-favor-boxes/': {
     title: 'Custom Kraft Candy Favor Boxes Wholesale | Kraft Box Pack',
     description:
-      'Small kraft candy favour boxes with a food-safe liner, flat-packed ready for events. Custom sizes, printing and volumes.',
+      'Small kraft candy favor boxes with a food-safe liner, flat-packed ready for events. Custom sizes, printing and volumes.',
   },
   '/product/kraft-sock-packaging-boxes/': {
     title: 'Custom Kraft Sock Packaging Boxes | Kraft Box Pack Wholesale',

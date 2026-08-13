@@ -8,7 +8,7 @@ import type { ProductContentMap } from './types'
  * kraft-corporate-gift-boxes at 39.4 — with 529 impressions between them and
  * nothing to land on. Redirecting them would have thrown that away, because
  * none has an equivalent page: a reed diffuser is not a candle, a serum bottle
- * is not a jar of cream, and a corporate gift programme is not a hamper.
+ * is not a jar of cream, and a corporate gift program is not a hamper.
  *
  * They carry no photography. That is recorded in IMAGE-GAPS.md and they are
  * excluded from the Merchant feed until it exists, rather than borrowing
@@ -52,7 +52,7 @@ export const recreatedContent: ProductContentMap = {
       {
         h2: 'A tall narrow front panel',
         body: [
-          'The visible face on a shelf is a vertical strip roughly twice as tall as it is wide. Designs laid out as though the panel were square lose their centre, and the brand belongs near the top where it reads above the units in front.',
+          'The visible face on a shelf is a vertical strip roughly twice as tall as it is wide. Designs laid out as though the panel were square lose their center, and the brand belongs near the top where it reads above the units in front.',
         ],
       },
     ],
@@ -70,7 +70,7 @@ export const recreatedContent: ProductContentMap = {
       { question: 'What board weight suits a diffuser box?', answer: '<p>Around 18pt SBS with an internal partition. The bottle is glass and the carton is tall, so it needs to feel substantial rather than light.</p>' },
       { question: 'Can the box be rigid?', answer: '<p>Yes, and at a gift price point it is worth it. Diffusers are heavily gifted, and a rigid box holds the tall proportion better than a folding carton.</p>' },
       { question: 'Where should the branding go?', answer: '<p>Near the top of the front panel. The visible face is a tall narrow strip and the top is what reads above the units in front on a shelf.</p>' },
-      { question: 'Is a window worth including?', answer: '<p>It can show the oil colour, which some brands sell on. On a narrow panel it costs real stiffness, so the board usually steps up a grade.</p>' },
+      { question: 'Is a window worth including?', answer: '<p>It can show the oil color, which some brands sell on. On a narrow panel it costs real stiffness, so the board usually steps up a grade.</p>' },
       { question: 'Can one carton cover several bottle sizes?', answer: '<p>Only where the reed length is the same. Since reeds set the height, two bottle sizes with identical reeds can often share a dieline.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and they suit the natural positioning most home fragrance brands take. An inner barrier can be specified separately if oil contact is a risk.</p>' },
     ],
@@ -97,7 +97,7 @@ export const recreatedContent: ProductContentMap = {
       {
         h2: 'One outer, several bundles',
         body: [
-          'Most programmes run more than one set — a client version, a staff version, a seasonal one. One outer size with interchangeable fitments keeps a single print run on the expensive component and changes only the die-cut insert.',
+          'Most programs run more than one set — a client version, a staff version, a seasonal one. One outer size with interchangeable fitments keeps a single print run on the expensive component and changes only the die-cut insert.',
         ],
       },
       {
@@ -118,12 +118,12 @@ export const recreatedContent: ProductContentMap = {
       { question: 'Why does my gift set look untidy when opened?', answer: '<p>Mixed content heights. Shorter items sink below the lid line and shift in transit, so packing the shallow recesses up until every top sits level is what fixes it.</p>' },
       { question: 'Can one box cover several set variants?', answer: '<p>Yes — one outer size with interchangeable fitments. You keep a single print run on the outer, which is the expensive part, and change only the die-cut insert.</p>' },
       { question: 'Should these ship inside an outer carton?', answer: '<p>Yes. These are couriered to individuals, and a presentation box posted alone arrives with scuffed corners and a label across the lid.</p>' },
-      { question: 'What quantities are practical?', answer: '<p>From the standard minimum upward. Below roughly five hundred, digital print with no plate cost usually prices better than litho, which suits most corporate programmes.</p>' },
-      { question: 'Can we personalise individual boxes?', answer: '<p>Yes, on digital print. Recipient names, regions or dates cost almost nothing per unit at these quantities.</p>' },
+      { question: 'What quantities are practical?', answer: '<p>From the standard minimum upward. Below roughly five hundred, digital print with no plate cost usually prices better than litho, which suits most corporate programs.</p>' },
+      { question: 'Can we personalize individual boxes?', answer: '<p>Yes, on digital print. Recipient names, regions or dates cost almost nothing per unit at these quantities.</p>' },
       { question: 'Rigid or folding construction?', answer: '<p>Rigid where the box is opened in a meeting or kept. Folding with a good fitment where it is opened once at a desk — the fitment matters more than the construction.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents. Send the actual items, or their dimensions and weights, rather than a target box size — corporate sets are almost always heavier than the footprint suggests.</p>' },
-      { question: 'How far ahead should we order?', answer: '<p>Work backwards from the send date through delivery, production and proofing. Corporate programmes are usually tied to a fixed date and proofing is where the time goes.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes for both the outer and the fitment, including moulded pulp where the contents are irregular. For a corporate gift it is often worth stating on the card.</p>' },
+      { question: 'How far ahead should we order?', answer: '<p>Work backwards from the send date through delivery, production and proofing. Corporate programs are usually tied to a fixed date and proofing is where the time goes.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes for both the outer and the fitment, including molded pulp where the contents are irregular. For a corporate gift it is often worth stating on the card.</p>' },
     ],
   },
 
@@ -155,7 +155,7 @@ export const recreatedContent: ProductContentMap = {
             'Instructions — at the top, seen before anything is unpacked',
             'Small fixings and fasteners — closed recess or a bag, never an open cavity',
             'Tools — a fixed seat, since they are the heaviest items and move most',
-            'Materials — sized so a part-used kit still looks organised',
+            'Materials — sized so a part-used kit still looks organized',
           ],
         },
       },
@@ -177,12 +177,12 @@ export const recreatedContent: ProductContentMap = {
       { question: 'Where should the instructions go?', answer: '<p>At the top — a slot in the lid or the top position in the fitment. It is the one component that has to be seen before anything else is touched.</p>' },
       { question: 'How do I stop small parts getting lost?', answer: '<p>A closed recess or a separate bag rather than an open cavity. Anything small enough to slip under a fitment will, and a kit missing one fixing cannot be completed.</p>' },
       { question: 'Does the box need to survive being kept?', answer: '<p>Yes. A kit is worked through over hours or days with the box open on a table, so the fitment is a working tray rather than transit packaging and the base has to hold shape half empty.</p>' },
-      { question: 'What insert material should I use?', answer: '<p>Board for regular shapes, moulded pulp for irregular components, foam where a tool or a fragile part needs cushioning. All three can be cut to hold items at a level height.</p>' },
+      { question: 'What insert material should I use?', answer: '<p>Board for regular shapes, molded pulp for irregular components, foam where a tool or a fragile part needs cushioning. All three can be cut to hold items at a level height.</p>' },
       { question: 'Can one box cover several kit variants?', answer: '<p>Yes, with one outer and interchangeable fitments. That is worth designing in from the start because kit contents change more often than the box does.</p>' },
       { question: 'Should the box show the finished project?', answer: '<p>Usually, since that is what is being bought. A photograph of the completed piece does more for the sale than showing the components.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your components and the layout you want. Send the actual contents — kits are almost always deeper than a list of parts suggests.</p>' },
       { question: 'Can these ship direct to customers?', answer: '<p>Yes, in an E flute construction or inside a plain outer. A kit shipped alone in a folding carton arrives with crushed corners.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes for the outer and the fitment, and moulded pulp keeps the whole pack in one material stream.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes for the outer and the fitment, and molded pulp keeps the whole pack in one material stream.</p>' },
     ],
   },
 
@@ -200,7 +200,7 @@ export const recreatedContent: ProductContentMap = {
       {
         h2: 'Serum wicks into unlined board',
         body: [
-          'A dropper cap that has loosened in transit leaks, and serum oils travel into uncoated fibres and show as a translucent mark on the outside within days. On a premium skincare carton that reads as a defective product.',
+          'A dropper cap that has loosened in transit leaks, and serum oils travel into uncoated fibers and show as a translucent mark on the outside within days. On a premium skincare carton that reads as a defective product.',
           'A coated inner face contains it. It costs very little against a visibly marked run that a retailer will refuse.',
         ],
       },
@@ -225,7 +225,7 @@ export const recreatedContent: ProductContentMap = {
     },
     faqs: [
       { question: 'What height should I give you for a serum bottle?', answer: '<p>The bottle with the dropper fully seated, not the bottle alone. Supplier sheets quote the container and the dropper assembly typically adds around half an inch — that gap is the usual reason a carton will not close.</p>' },
-      { question: 'Will a leak damage the carton?', answer: '<p>On unlined board, yes. Serum oils wick into the fibres and show as a translucent mark on the outside within days, which on premium skincare reads as a defective product. A coated inner face contains it.</p>' },
+      { question: 'Will a leak damage the carton?', answer: '<p>On unlined board, yes. Serum oils wick into the fibers and show as a translucent mark on the outside within days, which on premium skincare reads as a defective product. A coated inner face contains it.</p>' },
       { question: 'Why do dropper caps loosen in transit?', answer: '<p>Because a tall bottle held only at the base pivots inside the carton, and that movement is leverage on the cap. A collar gripping the bottle at the shoulder stops it.</p>' },
       { question: 'What size are serum cartons?', answer: '<p>Commonly around 1.5 x 1.5 x 4.5 in for a 30 ml bottle, measured with the dropper seated. Send the bottle rather than the volume, since bottle shapes vary considerably at the same capacity.</p>' },
       { question: 'How much panel space do the ingredients need?', answer: '<p>More than most brands allow for. Serums carry active percentages, ingredient lists and usage copy, so the panel is laid out first at legible size and the design works around what is left.</p>' },

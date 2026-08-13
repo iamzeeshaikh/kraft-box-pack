@@ -1,7 +1,7 @@
 import type { ProductContentMap } from './types'
 
 /**
- * Jewellery and accessories.
+ * Jewelry and accessories.
  *
  * Five products, and the shared problem is retention rather than strength.
  * Nothing here is heavy; everything here moves. What separates the five is
@@ -45,9 +45,9 @@ export const jewelleryContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'If you are specifying a jewellery range rather than a single box, ',
+      lead: 'If you are specifying a jewelry range rather than a single box, ',
       href: '/product-category/jewelry-accessories-boxes/',
-      anchor: 'the jewellery packaging range covers the other piece types',
+      anchor: 'the jewelry packaging range covers the other piece types',
       tail: ' and how their interiors differ.',
     },
     faqs: [
@@ -56,11 +56,11 @@ export const jewelleryContent: ProductContentMap = {
       { question: 'Can you make a box for a ring and band set?', answer: '<p>Yes, with a double-slot pillow so both sit upright side by side. The two slots can be cut to different widths if the band and the engagement ring differ.</p>' },
       { question: 'Does the lid stay open on its own?', answer: '<p>On a rigid hinged construction, yes, and it is worth paying for. The box is held open one-handed while someone else looks into it, so a lid that springs shut is the thing people remember.</p>' },
       { question: 'Should I choose rigid or a folding carton?', answer: '<p>Rigid for anything opened in front of a customer. A folding carton works for volume gifting or for shipping stock between locations, but the hinge and the way the lid holds are part of the impression on a ring box.</p>' },
-      { question: 'What interior colours are available?', answer: '<p>A deep matt interior makes a bright metal ring read clearly against it. Light interiors lose the piece, particularly in silver and white gold. The lining is specified separately from the outer wrap.</p>' },
+      { question: 'What interior colors are available?', answer: '<p>A deep matt interior makes a bright metal ring read clearly against it. Light interiors lose the piece, particularly in silver and white gold. The lining is specified separately from the outer wrap.</p>' },
       { question: 'Can I print a logo on a box this small?', answer: '<p>Yes, though the printable area is small enough that one mark and one line of type is usually all that reads. A blind deboss or a foil block often works better than print at this size.</p>' },
       { question: 'Will the slot mark the band?', answer: '<p>Not if it is cut to the right width. Marking happens when a slot is too tight for the band and the ring is forced in, which is the same measurement problem from the other direction.</p>' },
       { question: 'Are these suitable for posting to a customer?', answer: '<p>Inside a plain outer carton, yes. A presentation box posted on its own arrives with scuffed corners and a courier label across the artwork, which undoes the reason for buying it.</p>' },
-      { question: 'Can you match a box I already use?', answer: '<p>Send the physical box rather than a photograph. The wrap stock, interior colour and hinge action are what make a ring box feel the way it does, and none of them photograph accurately.</p>' },
+      { question: 'Can you match a box I already use?', answer: '<p>Send the physical box rather than a photograph. The wrap stock, interior color and hinge action are what make a ring box feel the way it does, and none of them photograph accurately.</p>' },
     ],
   },
 
@@ -84,7 +84,7 @@ export const jewelleryContent: ProductContentMap = {
       {
         h2: 'Working within a very small panel',
         body: [
-          'At around 2 × 2 × 1 in there is not much to print on. One mark and one short line is usually everything that reads at this size. Fine detail and pale tints disappear on kraft board, so a solid logo or a deboss holds up where a full-colour design does not.',
+          'At around 2 × 2 × 1 in there is not much to print on. One mark and one short line is usually everything that reads at this size. Fine detail and pale tints disappear on kraft board, so a solid logo or a deboss holds up where a full-color design does not.',
         ],
         list: {
           title: 'Fittings and the pad each needs',
@@ -109,8 +109,8 @@ export const jewelleryContent: ProductContentMap = {
       { question: 'Can the same box hold studs and hook earrings?', answer: '<p>The outer can, the pad cannot. Studs need pierced holes at a fixed spacing; hooks need a slot to hang through. We keep one outer size and specify two pad types.</p>' },
       { question: 'How much can I print on a box this small?', answer: '<p>Less than most designs assume. One mark and one line of type is usually all that reads. A deboss or a small foil block tends to work better than printed detail at this scale.</p>' },
       { question: 'Do you supply the pad separately?', answer: '<p>Yes. If you already have an outer box you are happy with, we can produce the pierced pad alone, cut to the internal dimensions rather than the external ones.</p>' },
-      { question: 'What interior colour works best?', answer: '<p>A dark matt interior for silver and light metals, a lighter one for oxidised or dark finishes. The point is contrast — an earring the same tone as its pad disappears when the box opens.</p>' },
-      { question: 'Are window boxes an option?', answer: '<p>They are, though on a panel this small a window removes a lot of the stiffness. The board usually steps up a grade to compensate, and the pad has to be positioned so the pair is centred in the aperture.</p>' },
+      { question: 'What interior color works best?', answer: '<p>A dark matt interior for silver and light metals, a lighter one for oxidised or dark finishes. The point is contrast — an earring the same tone as its pad disappears when the box opens.</p>' },
+      { question: 'Are window boxes an option?', answer: '<p>They are, though on a panel this small a window removes a lot of the stiffness. The board usually steps up a grade to compensate, and the pad has to be positioned so the pair is centered in the aperture.</p>' },
       { question: 'Can these be hung on a retail peg?', answer: '<p>Yes, with a reinforced hang tab. The failure point is the board around the hole rather than the panel, so that area is strengthened rather than the whole box.</p>' },
       { question: 'Is a rigid box worth it for earrings?', answer: '<p>At a gifting price point, often yes. For volume retail a folding carton with a good pad does the retention job just as well, and the pad is what matters most here.</p>' },
       { question: 'Can I order several pad configurations in one run?', answer: '<p>Yes, and it is usually cheaper than separate runs because the outer print setup is shared. Only the die for the pad changes between configurations.</p>' },
@@ -163,7 +163,7 @@ export const jewelleryContent: ProductContentMap = {
 
   'kraft-watch-packaging-boxes': {
     intro:
-      'Watch boxes are specified from the wrong measurement more often than any other jewellery format. The trade compares watches by face diameter; the box is decided by case thickness.',
+      'Watch boxes are specified from the wrong measurement more often than any other jewelry format. The trade compares watches by face diameter; the box is decided by case thickness.',
     sections: [
       {
         h2: 'Depth is the live number',
@@ -182,7 +182,7 @@ export const jewelleryContent: ProductContentMap = {
       {
         h2: 'Boxes that get kept',
         body: [
-          'Watch boxes are reused as storage more often than any other jewellery pack, which means the hinge and the closure are judged over years rather than in one moment. A firm cushion that holds its shape under a heavy watch matters more than a soft one that compresses.',
+          'Watch boxes are reused as storage more often than any other jewelry pack, which means the hinge and the closure are judged over years rather than in one moment. A firm cushion that holds its shape under a heavy watch matters more than a soft one that compresses.',
         ],
         table: {
           caption: 'What to send us',
@@ -197,9 +197,9 @@ export const jewelleryContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'For a mixed jewellery range sharing one visual system, ',
+      lead: 'For a mixed jewelry range sharing one visual system, ',
       href: '/product-category/jewelry-accessories-boxes/',
-      anchor: 'the jewellery packaging range',
+      anchor: 'the jewelry packaging range',
       tail: ' sets out how the interiors differ by piece.',
     },
     faqs: [
@@ -208,7 +208,7 @@ export const jewelleryContent: ProductContentMap = {
       { question: 'What size are watch boxes?', answer: '<p>Around 4.5 in square on the footprint for most watches, with the depth varying considerably — that is the dimension that changes between a dress watch and a diver.</p>' },
       { question: 'Do metal bracelets need a different box?', answer: '<p>They need more depth. A metal bracelet does not compress around a bolster the way leather does, so the cushion sits higher and the lid has to clear it.</p>' },
       { question: 'Should the cushion be soft or firm?', answer: '<p>Firm. A soft cushion compresses under a heavy watch and lets the case sit lower than intended, which brings the crystal closer to the lid.</p>' },
-      { question: 'Will the box survive being kept and reused?', answer: '<p>A rigid construction will. These are kept as storage more often than any other jewellery box, so the hinge is judged over years rather than in one moment.</p>' },
+      { question: 'Will the box survive being kept and reused?', answer: '<p>A rigid construction will. These are kept as storage more often than any other jewelry box, so the hinge is judged over years rather than in one moment.</p>' },
       { question: 'Can you make a box for two watches?', answer: '<p>Yes, with two bolsters side by side. The footprint roughly doubles but the depth stays the same, since depth follows the thicker of the two cases.</p>' },
       { question: 'What finishes suit a watch box?', answer: '<p>Soft-touch lamination with a foil or blind-debossed mark. The pack is handled slowly at the point of gifting, so texture registers more than print gloss does.</p>' },
       { question: 'Is a pillow insert the same as a bolster?', answer: '<p>Broadly, yes — both give the strap something to curve around. The distinction that matters is whether it holds its shape under the weight of your actual watch.</p>' },
@@ -230,8 +230,8 @@ export const jewelleryContent: ProductContentMap = {
       {
         h2: 'Choosing the material',
         body: [
-          'Board is the cheapest and suits regular shapes and light pieces. Foam grips better and absorbs shock, which matters for anything with a stone or a fine chain. Moulded pulp sits between them and is the more recyclable of the cushioning options.',
-          'For jewellery specifically, the deciding question is whether the insert has to grip the piece or merely seat it. Gripping needs foam or a slit; seating needs only a recess.',
+          'Board is the cheapest and suits regular shapes and light pieces. Foam grips better and absorbs shock, which matters for anything with a stone or a fine chain. Molded pulp sits between them and is the more recyclable of the cushioning options.',
+          'For jewelry specifically, the deciding question is whether the insert has to grip the piece or merely seat it. Gripping needs foam or a slit; seating needs only a recess.',
         ],
         table: {
           caption: 'Insert material by requirement',
@@ -240,7 +240,7 @@ export const jewelleryContent: ProductContentMap = {
             ['Die-cut board', 'Regular shapes, light pieces', 'Cheapest, least grip'],
             ['Slit foam', 'Posts, hooks, thin chains', 'Grips the fitting directly'],
             ['Foam with recess', 'Stones, pendants, watches', 'Absorbs shock, higher cost'],
-            ['Moulded pulp', 'Sets and mixed contents', 'Recyclable, less fine detail'],
+            ['Molded pulp', 'Sets and mixed contents', 'Recyclable, less fine detail'],
           ],
         },
       },
@@ -254,16 +254,16 @@ export const jewelleryContent: ProductContentMap = {
     link: {
       lead: 'If you need the outer box made at the same time, ',
       href: '/product/kraft-jewelry-boxes/',
-      anchor: 'jewellery boxes can be specified with the fitment together',
+      anchor: 'jewelry boxes can be specified with the fitment together',
       tail: ', which usually costs less than ordering them separately.',
     },
     faqs: [
       { question: 'Do you need the inside or the outside dimensions of my box?', answer: '<p>Inside. Most box specifications are quoted externally, and board thickness means the internal space is smaller. Send internal measurements or, better, a physical box.</p>' },
       { question: 'Can you supply inserts without the outer box?', answer: '<p>Yes. If you already buy a box you are happy with, we cut the fitment to its internal dimensions and you keep your existing supplier for the outer.</p>' },
-      { question: 'Which insert material should I choose?', answer: '<p>Board is cheapest and suits light, regular shapes. Foam grips fittings and absorbs shock, which matters for stones and fine chains. Moulded pulp sits between them and is the more recyclable cushioning option.</p>' },
+      { question: 'Which insert material should I choose?', answer: '<p>Board is cheapest and suits light, regular shapes. Foam grips fittings and absorbs shock, which matters for stones and fine chains. Molded pulp sits between them and is the more recyclable cushioning option.</p>' },
       { question: 'How do I stop a set looking untidy when it opens?', answer: '<p>Pack the shallow recesses up so every piece sits at the same level. Mixed heights are what make an assortment look thrown together, even when nothing has shifted.</p>' },
       { question: 'Can one insert hold several different pieces?', answer: '<p>Yes, with a compartment cut to each. The constraint is that every cavity has to be reachable — a recess too tight to get a finger into makes the piece hard to remove.</p>' },
-      { question: 'Are inserts available in colours?', answer: '<p>Foam and board can both be supplied in a range of tones, or covered with a lining paper. Contrast with the metal is what matters more than the specific colour.</p>' },
+      { question: 'Are inserts available in colors?', answer: '<p>Foam and board can both be supplied in a range of tones, or covered with a lining paper. Contrast with the metal is what matters more than the specific color.</p>' },
       { question: 'Will the insert stay in place inside the box?', answer: '<p>A friction fit holds it in most cases. For anything shipped loose we can specify a glued fitment so the insert cannot lift out with the piece.</p>' },
       { question: 'Can inserts be made for existing stock boxes?', answer: '<p>Yes, and it is a common way to upgrade packaging without changing supplier. Send one of the boxes and we cut to it.</p>' },
       { question: 'Do you make inserts for retail display trays?', answer: '<p>Yes, including multi-position trays for counter cases. Those are usually specified against the tray footprint the retailer requires.</p>' },

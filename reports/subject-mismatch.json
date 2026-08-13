@@ -1,1 +1,60 @@
-[]
+[
+  {
+    "slug": "kraft-event-favor-boxes",
+    "own": "event",
+    "own_terms": [
+      "event",
+      "favor"
+    ],
+    "own_n": 1,
+    "rival": "closure",
+    "rival_n": 2,
+    "impr": 572,
+    "clicks": 3,
+    "ctr": 0.0052,
+    "pos": 18.6
+  },
+  {
+    "slug": "kraft-bulk-shipping-crates",
+    "own": "shipping",
+    "own_terms": [
+      "crat",
+      "shipping"
+    ],
+    "own_n": 1,
+    "rival": "industrial",
+    "rival_n": 2,
+    "impr": 256,
+    "clicks": 3,
+    "ctr": 0.011699999999999999,
+    "pos": 12.77
+  },
+  {
+    "slug": "kraft-earring-packaging-boxes",
+    "own": "earring",
+    "own_terms": [
+      "earring"
+    ],
+    "own_n": 2,
+    "rival": "card",
+    "rival_n": 3,
+    "impr": 66,
+    "clicks": 2,
+    "ctr": 0.030299999999999997,
+    "pos": 26.65
+  },
+  {
+    "slug": "kraft-badge-packaging-boxes",
+    "own": "badge",
+    "own_terms": [
+      "badge"
+    ],
+    "own_n": 2,
+    "rival": "card",
+    "rival_n": 3,
+    "impr": 49,
+    "clicks": 0,
+    "ctr": 0.0,
+    "pos": 9.02
+  }
+]

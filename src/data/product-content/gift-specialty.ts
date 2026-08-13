@@ -11,13 +11,13 @@ import type { ProductContentMap } from './types'
 export const giftSpecialtyContent: ProductContentMap = {
   'kraft-gift-boxes-with-lids': {
     intro:
-      'A two-piece gift box is a base and a lift-off lid. The fit between them is what the whole format is judged on, and it is decided in fractions of a millimetre.',
+      'A two-piece gift box is a base and a lift-off lid. The fit between them is what the whole format is judged on, and it is decided in fractions of a millimeter.',
     sections: [
       {
         h2: 'The lid either works or it does not',
         body: [
           'Too loose and it slides off in a bag. Too tight and lifting it drags the base up with it, which is worse because it happens in front of the recipient. The band between those two is narrow and it cannot be judged from a drawing.',
-          'This is one of the clearest cases in the catalogue for a physical sample before committing a run.',
+          'This is one of the clearest cases in the catalog for a physical sample before committing a run.',
         ],
       },
       {
@@ -44,18 +44,18 @@ export const giftSpecialtyContent: ProductContentMap = {
       { question: 'How deep should the lid be?', answer: '<p>An appearance decision rather than a structural one. A shallow lid shows more of the printed base; a deep lid covers most of the box and reads as more substantial.</p>' },
       { question: 'Do I need an insert?', answer: '<p>If the contents can move, yes. The lid comes off and the contents are seen in that instant, so anything that has shifted in transit is the first thing registered.</p>' },
       { question: 'Rigid or folding?', answer: '<p>Rigid holds its fit better over repeated opening and feels heavier. Folding ships flat and costs considerably less. The deciding question is whether the box gets kept.</p>' },
-      { question: 'Can the lid and base be different colours?', answer: '<p>Yes, and it is a straightforward way to add contrast without a second finish, since they are separate components that can run on different stocks.</p>' },
+      { question: 'Can the lid and base be different colors?', answer: '<p>Yes, and it is a straightforward way to add contrast without a second finish, since they are separate components that can run on different stocks.</p>' },
       { question: 'Can a window go in the lid?', answer: '<p>Yes, at the cost of stiffness in the panel that has to hold its shape when lifted. The board usually steps up a grade to compensate.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents rather than picked from a stock list. Send what goes in, including anything like tissue or a card that adds height.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Folding versions do. Rigid two-piece boxes ship assembled and nested where the design allows, which still takes more freight volume.</p>' },
-      { question: 'Which finishes suit this format?', answer: '<p>Foil and deboss both read well on kraft and each is a single pass. Interior print or a coloured lining often does more than either.</p>' },
+      { question: 'Which finishes suit this format?', answer: '<p>Foil and deboss both read well on kraft and each is a single pass. Interior print or a colored lining often does more than either.</p>' },
       { question: 'Can these be posted directly?', answer: '<p>Inside a plain outer. A presentation box posted alone arrives with scuffed corners and a courier label across the lid.</p>' },
     ],
   },
 
   'kraft-paper-gift-boxes': {
     intro:
-      'The general kraft gift carton — a folding box for retail gifting, favours and hampers where the pack has to look deliberate without rigid-box cost.',
+      'The general kraft gift carton — a folding box for retail gifting, favors and hampers where the pack has to look deliberate without rigid-box cost.',
     sections: [
       {
         h2: 'A folding carton can still present well',
@@ -66,13 +66,13 @@ export const giftSpecialtyContent: ProductContentMap = {
       {
         h2: 'The kraft look is the point',
         body: [
-          'Unbleached board with one or two colours has become a deliberate aesthetic rather than a budget compromise. Adding full-colour coverage and a laminate works against the reason for choosing kraft, and costs more doing it.',
+          'Unbleached board with one or two colors has become a deliberate aesthetic rather than a budget compromise. Adding full-color coverage and a laminate works against the reason for choosing kraft, and costs more doing it.',
         ],
       },
       {
         h2: 'Closures that suit the occasion',
         body: [
-          'A tuck end is the default. A ribbon pull reads as more considered but is hand-finished, so it adds labour per unit at volume. A magnetic closure is the premium option and pushes the format toward rigid economics.',
+          'A tuck end is the default. A ribbon pull reads as more considered but is hand-finished, so it adds labor per unit at volume. A magnetic closure is the premium option and pushes the format toward rigid economics.',
         ],
       },
     ],
@@ -85,13 +85,13 @@ export const giftSpecialtyContent: ProductContentMap = {
     faqs: [
       { question: 'Do I need a rigid box for gifting?', answer: '<p>Not usually. A folding carton with a clean die-cut, a good board and one restrained finish reads far better than a cheap rigid box, at a fraction of the cost and freight. Rigid earns its place where the box is kept.</p>' },
       { question: 'Should I add a laminate?', answer: '<p>On kraft it usually works against the look you chose the stock for, and it removes the pack from the paper recycling stream. An aqueous varnish gives protection without either cost.</p>' },
-      { question: 'What closure should I choose?', answer: '<p>Tuck end as the default. A ribbon pull reads as more considered but is hand-finished and adds labour at volume; a magnetic closure pushes the cost toward rigid.</p>' },
+      { question: 'What closure should I choose?', answer: '<p>Tuck end as the default. A ribbon pull reads as more considered but is hand-finished and adds labor at volume; a magnetic closure pushes the cost toward rigid.</p>' },
       { question: 'Can I get a window?', answer: '<p>Yes, filmed or as a plain aperture. A plain aperture keeps the box fully recyclable, which suits the kraft positioning.</p>' },
       { question: 'What sizes are available?', answer: '<p>Cut to your contents. Send what goes in rather than a box size, including tissue or cards that add height.</p>' },
-      { question: 'How many colours should I print?', answer: '<p>One or two on kraft. Pale tints and fine detail disappear on the brown substrate, so solid marks and high contrast hold up better than a full-colour design.</p>' },
+      { question: 'How many colors should I print?', answer: '<p>One or two on kraft. Pale tints and fine detail disappear on the brown substrate, so solid marks and high contrast hold up better than a full-color design.</p>' },
       { question: 'Are these strong enough for shipping?', answer: '<p>For light contents inside an outer carton, yes. Posted alone a folding gift box arrives with crushed corners.</p>' },
       { question: 'Can one design cover several sizes?', answer: '<p>Yes, and sharing board, print and finish across two or three sizes is what makes a range look like a family.</p>' },
-      { question: 'Should the interior be printed?', answer: '<p>On a gift box the lid is open for the whole moment that matters, so interior print or a coloured lining often does more than the outside.</p>' },
+      { question: 'Should the interior be printed?', answer: '<p>On a gift box the lid is open for the whole moment that matters, so interior print or a colored lining often does more than the outside.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes across the range, and they suit the positioning. Keeping the pack unlaminated preserves the recycling claim.</p>' },
     ],
   },
@@ -182,14 +182,14 @@ export const giftSpecialtyContent: ProductContentMap = {
     faqs: [
       { question: 'How large can the window be?', answer: '<p>Past roughly a third of the panel the board usually steps up a grade to stop the face flexing. Where the window falls matters too — one crossing a crease weakens the fold rather than the face.</p>' },
       { question: 'Should I use film or a plain aperture?', answer: '<p>Film protects from dust and handling and keeps the pack sealed; a plain aperture keeps the box fully recyclable but leaves contents touchable. Food and cosmetics usually need film, a candle or a toy often does not.</p>' },
-      { question: 'Does the film affect recyclability?', answer: '<p>Yes. A PET film means the pack is no longer straight paper and most kerbside systems want it separated first. If a clean claim matters more than protection, a plain aperture is the option.</p>' },
-      { question: 'Why is my printed frame not centred on the window?', answer: '<p>The aperture and the print are separate operations and a small amount of movement between them is normal. A little tolerance in the artwork hides it; a tight frame shows it.</p>' },
+      { question: 'Does the film affect recyclability?', answer: '<p>Yes. A PET film means the pack is no longer straight paper and most curbside systems want it separated first. If a clean claim matters more than protection, a plain aperture is the option.</p>' },
+      { question: 'Why is my printed frame not centered on the window?', answer: '<p>The aperture and the print are separate operations and a small amount of movement between them is normal. A little tolerance in the artwork hides it; a tight frame shows it.</p>' },
       { question: 'Can the window be a custom shape?', answer: '<p>Yes, cut on the same die as the box. Very intricate shapes weaken the panel more than a simple one of the same area.</p>' },
       { question: 'Is PLA film a genuine alternative?', answer: '<p>It is compostable where industrial facilities exist, which is not universal. It is a defensible choice but the claim needs qualifying rather than stating flatly.</p>' },
       { question: 'Can I have windows on more than one panel?', answer: '<p>Yes, though each one removes stiffness. Two large windows on adjacent panels usually means stepping the board up.</p>' },
       { question: 'What board weight do you recommend?', answer: '<p>It follows the aperture size as much as the contents weight. Send the window size you want and we specify against it.</p>' },
       { question: 'Do window boxes ship flat?', answer: '<p>Yes, filmed or not, glued along one seam like any folding carton.</p>' },
-      { question: 'Are recycled boards suitable?', answer: '<p>Yes, with a caliper step-up. The stiffness loss from recycled fibre and from the aperture compound, so it is worth allowing for both.</p>' },
+      { question: 'Are recycled boards suitable?', answer: '<p>Yes, with a caliper step-up. The stiffness loss from recycled fiber and from the aperture compound, so it is worth allowing for both.</p>' },
     ],
   },
 
@@ -229,9 +229,9 @@ export const giftSpecialtyContent: ProductContentMap = {
       { question: 'What measurement matters most?', answer: '<p>Diameter. Candle vessels vary far more in diameter than height across a range, so a carton sized to one jar rarely fits the next.</p>' },
       { question: 'When should I move to rigid?', answer: '<p>Above roughly ten ounces the format usually wants rigid or a fitted collar rather than a plain tuck end, both for feel and for stability.</p>' },
       { question: 'Can one carton cover a range of vessels?', answer: '<p>Rarely, because of the diameter variation. Two or three dielines sharing board and print usually cover a range and keep it looking consistent.</p>' },
-      { question: 'Is a window worth including?', answer: '<p>It shows wax colour, which some brands sell on. It costs stiffness on a panel already carrying a heavy vessel, so the board may step up.</p>' },
+      { question: 'Is a window worth including?', answer: '<p>It shows wax color, which some brands sell on. It costs stiffness on a panel already carrying a heavy vessel, so the board may step up.</p>' },
       { question: 'Should the carton hold the jar off the base?', answer: '<p>A fitted collar holding the vessel at the shoulder stops it moving and takes load off the base seam. On heavier candles it is worth specifying.</p>' },
-      { question: 'What finishes suit candle packaging?', answer: '<p>Foil and deboss on kraft. The category positions on natural and considered, which full-colour coverage tends to work against.</p>' },
+      { question: 'What finishes suit candle packaging?', answer: '<p>Foil and deboss on kraft. The category positions on natural and considered, which full-color coverage tends to work against.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Folding cartons do. Rigid candle boxes ship assembled, which matters on freight because the format is bulky for its weight.</p>' },
       { question: 'Are safety warnings required on the box?', answer: '<p>Candle safety copy is generally expected. Plan the panel around it rather than fitting it in afterwards.</p>' },
     ],
@@ -273,7 +273,7 @@ export const giftSpecialtyContent: ProductContentMap = {
       { question: 'Are these food-contact compliant?', answer: '<p>We specify food-contact compliant boards and inks where the pack touches confectionery directly. Tell us the contact type and the stock list narrows accordingly.</p>' },
       { question: 'Can I have a window?', answer: '<p>Yes, and it suits confectionery well since the product is attractive. Film keeps the sweets protected from handling in store.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents and the arrangement you want, including any partition. Send a filled sample if you have one.</p>' },
-      { question: 'Do you supply partitions and trays?', answer: '<p>Yes, in board or moulded pulp. They are usually specified with the box because they set the internal dimensions.</p>' },
+      { question: 'Do you supply partitions and trays?', answer: '<p>Yes, in board or molded pulp. They are usually specified with the box because they set the internal dimensions.</p>' },
       { question: 'How should the box close for gifting?', answer: '<p>A lift-off lid or a ribbon pull for presentation, a tuck end for volume retail. Confectionery is heavily gifted, so the closure is worth deciding deliberately.</p>' },
       { question: 'Will humidity affect the pack?', answer: '<p>Board absorbs moisture and softens, and hard sweets can stick. Where humidity is a known issue a moisture-resistant treatment is worth specifying.</p>' },
       { question: 'Are recycled boards suitable?', answer: '<p>For non-direct contact, yes. Where the sweets touch the board the grade has to be food-contact compliant, which narrows the recycled options.</p>' },
@@ -337,7 +337,7 @@ export const giftSpecialtyContent: ProductContentMap = {
       {
         h2: 'Best for flat or soft contents',
         body: [
-          'The format suits scarves, jewellery, confectionery and small soft goods. Anything rigid and rectangular fights the curve and either will not fit or forces the ends open.',
+          'The format suits scarves, jewelry, confectionery and small soft goods. Anything rigid and rectangular fights the curve and either will not fit or forces the ends open.',
         ],
       },
       {
@@ -348,14 +348,14 @@ export const giftSpecialtyContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'For small favours where a conventional carton suits better, ',
+      lead: 'For small favors where a conventional carton suits better, ',
       href: '/product/kraft-favor-boxes/',
-      anchor: 'favour boxes hold their shape when filled',
+      anchor: 'favor boxes hold their shape when filled',
       tail: '.',
     },
     faqs: [
       { question: 'How much does a pillow box hold?', answer: '<p>Less than the external dimensions suggest, because the curved ends take up internal volume. A product sized to the flat measurement will not go in.</p>' },
-      { question: 'What contents suit this format?', answer: '<p>Flat or soft items — scarves, jewellery, confectionery, small soft goods. Anything rigid and rectangular fights the curve.</p>' },
+      { question: 'What contents suit this format?', answer: '<p>Flat or soft items — scarves, jewelry, confectionery, small soft goods. Anything rigid and rectangular fights the curve.</p>' },
       { question: 'Why do the ends gape?', answer: '<p>Overfilling. The box loses its curve and the ends spring open, which is the format failing rather than the board. The answer is a larger box, not a heavier one.</p>' },
       { question: 'Do they ship flat?', answer: '<p>Yes, and they fold from a single blank, which makes them one of the cheapest presentation formats available.</p>' },
       { question: 'Can I add a window?', answer: '<p>Yes, usually on the flat face. The curved ends do not take an aperture well.</p>' },
@@ -369,12 +369,12 @@ export const giftSpecialtyContent: ProductContentMap = {
 
   'kraft-jewelry-boxes': {
     intro:
-      'The general jewellery box — an outer format specified as a family so that pieces bought months apart still arrive in packaging that matches.',
+      'The general jewelry box — an outer format specified as a family so that pieces bought months apart still arrive in packaging that matches.',
     sections: [
       {
         h2: 'Specify a range, not a box',
         body: [
-          'Jewellery boxes ordered one at a time as each product launches almost never match, because each order gets optimised for its own budget on the day. Fixing the wrap stock, the interior colour and the closure once and varying only the footprint is what makes a collection read as one brand.',
+          'Jewelry boxes ordered one at a time as each product launches almost never match, because each order gets optimized for its own budget on the day. Fixing the wrap stock, the interior color and the closure once and varying only the footprint is what makes a collection read as one brand.',
         ],
       },
       {
@@ -393,17 +393,17 @@ export const giftSpecialtyContent: ProductContentMap = {
     link: {
       lead: 'For the fitment on its own, cut to a box you already buy, ',
       href: '/product/kraft-jewelry-insert-boxes/',
-      anchor: 'jewellery inserts are supplied separately',
+      anchor: 'jewelry inserts are supplied separately',
       tail: '.',
     },
     faqs: [
-      { question: 'Should I order jewellery boxes one at a time?', answer: '<p>Specify them as a family even if you order in stages. Fixing the wrap stock, interior colour and closure once means sizes added a year apart still match; boxes ordered separately drift.</p>' },
+      { question: 'Should I order jewelry boxes one at a time?', answer: '<p>Specify them as a family even if you order in stages. Fixing the wrap stock, interior color and closure once means sizes added a year apart still match; boxes ordered separately drift.</p>' },
       { question: 'Can one box hold different piece types?', answer: '<p>One outer can; one interior cannot. A ring needs a slotted pillow, a chain two fixing points, earrings a pierced pad. Keep one outer and change the fitment.</p>' },
       { question: 'What do customers actually judge?', answer: '<p>The hinge, whether the lid stays open, and the interior lining. Those register in the moment the box is opened; the outer print registers far less.</p>' },
       { question: 'Rigid or folding?', answer: '<p>Rigid for anything opened in front of a customer. Folding suits volume gifting and stock movement where the box is not part of the presentation.</p>' },
-      { question: 'What interior colour works best?', answer: '<p>Whatever contrasts with the metal. A deep matt interior makes bright silver and white gold read clearly; a light interior loses the piece.</p>' },
+      { question: 'What interior color works best?', answer: '<p>Whatever contrasts with the metal. A deep matt interior makes bright silver and white gold read clearly; a light interior loses the piece.</p>' },
       { question: 'Can you supply boxes without inserts?', answer: '<p>Yes, and inserts without boxes. Many brands buy one and not the other, so we quote them separately or together.</p>' },
-      { question: 'Are these suitable for posting?', answer: '<p>Inside a plain outer. A jewellery box posted alone arrives with scuffed corners and a label across the lid.</p>' },
+      { question: 'Are these suitable for posting?', answer: '<p>Inside a plain outer. A jewelry box posted alone arrives with scuffed corners and a label across the lid.</p>' },
       { question: 'Can I add a logo?', answer: '<p>Yes, and on a small box a foil block or blind deboss usually reads better than print. The printable area is limited.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to the piece and its fitment. Send the piece or its dimensions including any chain or clasp.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes for both the core and the wrap on rigid constructions, and for folding cartons throughout.</p>' },
@@ -437,7 +437,7 @@ export const giftSpecialtyContent: ProductContentMap = {
     link: {
       lead: 'For shorter pieces where the pendant rather than the chain is the focus, ',
       href: '/product/kraft-jewelry-boxes/',
-      anchor: 'general jewellery boxes cover the compact formats',
+      anchor: 'general jewelry boxes cover the compact formats',
       tail: '.',
     },
     faqs: [
@@ -446,7 +446,7 @@ export const giftSpecialtyContent: ProductContentMap = {
       { question: 'Does the pendant need its own recess?', answer: '<p>Yes. Left loose it swings against the chain and the box and marks both, particularly on plated finishes.</p>' },
       { question: 'Will a flat pad work?', answer: '<p>No. A flat pad gives the chain nothing to grip, so it slides regardless of how snug the box is. The pad has to be slotted.</p>' },
       { question: 'Can one box fit different chain lengths?', answer: '<p>Within a range, yes, if the slots are positioned for the shortest and the longest can loop slightly. Beyond that a second size is needed.</p>' },
-      { question: 'What interior colour suits a chain?', answer: '<p>A deep matt tone, so a bright chain reads clearly against it. Light interiors lose fine chains entirely.</p>' },
+      { question: 'What interior color suits a chain?', answer: '<p>A deep matt tone, so a bright chain reads clearly against it. Light interiors lose fine chains entirely.</p>' },
       { question: 'Should it be rigid?', answer: '<p>For retail and gifting, yes. A long shallow lid on folding board flexes when lifted, which is noticeable on this proportion.</p>' },
       { question: 'Can I have a window?', answer: '<p>Yes, though on a long narrow lid an aperture removes a lot of stiffness across the span, so the board usually steps up.</p>' },
       { question: 'Are these suitable for posting?', answer: '<p>Inside a plain outer. Posted alone the long lid arrives creased or crushed at the corners.</p>' },
@@ -505,7 +505,7 @@ export const giftSpecialtyContent: ProductContentMap = {
       {
         h2: 'Tolerances tighten as size drops',
         body: [
-          'A millimetre of variation is invisible on a large carton and significant on a small one. Gluing and folding tolerances stay roughly constant regardless of box size, so proportionally they matter far more here.',
+          'A millimeter of variation is invisible on a large carton and significant on a small one. Gluing and folding tolerances stay roughly constant regardless of box size, so proportionally they matter far more here.',
           'That makes a structural sample before print more valuable on small formats than on any other size.',
         ],
       },
@@ -530,26 +530,26 @@ export const giftSpecialtyContent: ProductContentMap = {
     },
     faqs: [
       { question: 'How small can you make a box?', answer: '<p>The limit is what the cutting die and gluing line can hold rather than a policy. Below a certain point hand assembly becomes necessary and the unit cost changes character.</p>' },
-      { question: 'Why does a sample matter more on small boxes?', answer: '<p>Because gluing and folding tolerances stay roughly constant regardless of box size, so proportionally they matter far more. A millimetre invisible on a large carton is significant here.</p>' },
+      { question: 'Why does a sample matter more on small boxes?', answer: '<p>Because gluing and folding tolerances stay roughly constant regardless of box size, so proportionally they matter far more. A millimeter invisible on a large carton is significant here.</p>' },
       { question: 'How much can I print?', answer: '<p>A mark and very little else. Fine detail and pale tints disappear on kraft at this scale, so a solid logo or a deboss holds up where a full design does not.</p>' },
       { question: 'What board weight suits a small box?', answer: '<p>Light board is adequate for the contents but can feel flimsy. The specification often follows perceived quality rather than load.</p>' },
       { question: 'Can small boxes have windows?', answer: '<p>Yes, though the aperture takes a large proportion of a small panel, so the board usually steps up a grade.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Yes, glued along one seam like any folding carton, which keeps freight low relative to the quantity.</p>' },
       { question: 'Are they suitable for retail pegs?', answer: '<p>Yes, with a reinforced hang tab. On a small panel the reinforcement matters more because there is less board around the hole.</p>' },
       { question: 'Can I order several small sizes together?', answer: '<p>Yes, and sharing board and print across sizes keeps the setup cost down while giving a consistent look.</p>' },
-      { question: 'What are these usually used for?', answer: '<p>Jewellery, favours, samples, cosmetics and small hardware — anywhere the product is small enough that a standard carton would ship mostly air.</p>' },
+      { question: 'What are these usually used for?', answer: '<p>Jewelry, favors, samples, cosmetics and small hardware — anywhere the product is small enough that a standard carton would ship mostly air.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes across the range.</p>' },
     ],
   },
 
   'mini-kraft-boxes': {
     intro:
-      'Mini boxes are the smallest practical folding format, used for favours, samples and single small items where anything larger would ship mostly air.',
+      'Mini boxes are the smallest practical folding format, used for favors, samples and single small items where anything larger would ship mostly air.',
     sections: [
       {
         h2: 'Hand assembly territory',
         body: [
-          'Below a certain size a box cannot be machine-glued reliably and is hand-assembled instead. That changes the cost structure — labour becomes a larger share than material, and quantity discounts flatten out sooner than on a standard carton.',
+          'Below a certain size a box cannot be machine-glued reliably and is hand-assembled instead. That changes the cost structure — labor becomes a larger share than material, and quantity discounts flatten out sooner than on a standard carton.',
         ],
       },
       {
@@ -561,7 +561,7 @@ export const giftSpecialtyContent: ProductContentMap = {
       {
         h2: 'Where they earn their place',
         body: [
-          'Favours, samples, jewellery and small confectionery. Used for anything larger they look undersized, and the low material cost is offset by the assembly labour.',
+          'Favors, samples, jewelry and small confectionery. Used for anything larger they look undersized, and the low material cost is offset by the assembly labor.',
         ],
       },
     ],
@@ -572,10 +572,10 @@ export const giftSpecialtyContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'How small can these go?', answer: '<p>To the point where machine gluing stops being reliable, after which they are hand-assembled. That changes the cost structure — labour becomes a larger share than material.</p>' },
+      { question: 'How small can these go?', answer: '<p>To the point where machine gluing stops being reliable, after which they are hand-assembled. That changes the cost structure — labor becomes a larger share than material.</p>' },
       { question: 'Why is the internal space smaller than I expected?', answer: '<p>Board thickness is a meaningful proportion of a very small box. Send the product rather than a target box size and we build outward from it.</p>' },
-      { question: 'Do quantity discounts still apply?', answer: '<p>They flatten out sooner than on a standard carton, because hand assembly is a per-unit labour cost rather than a setup cost.</p>' },
-      { question: 'What are mini boxes used for?', answer: '<p>Favours, samples, jewellery and small confectionery — anywhere a standard carton would ship mostly air.</p>' },
+      { question: 'Do quantity discounts still apply?', answer: '<p>They flatten out sooner than on a standard carton, because hand assembly is a per-unit labor cost rather than a setup cost.</p>' },
+      { question: 'What are mini boxes used for?', answer: '<p>Favors, samples, jewelry and small confectionery — anywhere a standard carton would ship mostly air.</p>' },
       { question: 'Can they be printed?', answer: '<p>Yes, though at this size one mark is realistically the whole design. Deboss and foil often read better than print.</p>' },
       { question: 'Is a window possible?', answer: '<p>Technically yes, though the aperture takes a very large share of the panel and weakens it considerably. It is rarely worth it at this scale.</p>' },
       { question: 'Do they arrive assembled?', answer: '<p>Usually flat, with assembly on your side. Where we hand-assemble them they ship made up, which affects freight volume.</p>' },

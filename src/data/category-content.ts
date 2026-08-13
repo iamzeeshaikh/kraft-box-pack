@@ -63,12 +63,12 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
             ['Bakery, pastry, donuts', 'Kraft with grease barrier', 'Grease-resistant coating'],
             ['Hot fill, noodles, takeaway meals', 'Heavier caliper kraft', 'Grease and moisture barrier'],
             ['Chilled and frozen', 'Moisture-resistant board', 'Cold-tolerant adhesive'],
-            ['Produce and fruit', 'Corrugated or moulded', 'Ventilation where needed'],
+            ['Produce and fruit', 'Corrugated or molded', 'Ventilation where needed'],
           ],
         },
       },
       {
-        h2: 'Adhesive behaviour in cold storage',
+        h2: 'Adhesive behavior in cold storage',
         body: [
           'Standard carton glue becomes brittle below freezing. A seam that holds at room temperature can crack when a case is handled straight out of a chiller, and the failure shows up as split cartons at the far end of the chain rather than at production. If any part of the run is stored cold, say so at quoting — a cold-tolerant adhesive costs very little and cannot be added afterwards.',
         ],
@@ -104,23 +104,23 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-gift-specialty-boxes': {
     intro: [
       'A gift box is judged in the few seconds it is opened, and almost all of that impression comes from two things — whether the lid lifts cleanly and whether the contents are still sitting where they were packed. Neither is decided by the printing.',
-      'This range runs from small favour boxes up to large rigid lidded builds, plus the shapes that only exist for presentation: round, pillow, window-fronted. What varies most across it is construction, so that is where the choosing happens.',
+      'This range runs from small favor boxes up to large rigid lidded builds, plus the shapes that only exist for presentation: round, pillow, window-fronted. What varies most across it is construction, so that is where the choosing happens.',
     ],
     sections: [
       {
         h2: 'Rigid or folding, and what the difference costs',
         body: [
           'Folding cartons arrive flat and glued along one seam, so they cost less to ship and pop open on a packing line. Rigid boxes are hand-assembled around a greyboard core and arrive made up, which is why they feel substantially heavier and why their freight cost is higher.',
-          'The honest test is whether the box is kept. A pack that goes straight in the recycling after opening rarely justifies rigid construction; one that a customer stores jewellery or keepsakes in usually does.',
+          'The honest test is whether the box is kept. A pack that goes straight in the recycling after opening rarely justifies rigid construction; one that a customer stores jewelry or keepsakes in usually does.',
         ],
         table: {
           caption: 'Construction by use',
           head: ['Build', 'Ships', 'Suits'],
           rows: [
-            ['Folding carton', 'Flat, glued one seam', 'Retail gifting, favours, volume runs'],
+            ['Folding carton', 'Flat, glued one seam', 'Retail gifting, favors, volume runs'],
             ['Rigid lid and base', 'Assembled', 'Premium gifting, boxes that get kept'],
             ['Drawer and sleeve', 'Assembled', 'Presentation where the reveal matters'],
-            ['Pillow and round', 'Flat or assembled', 'Small items, favours, novelty shapes'],
+            ['Pillow and round', 'Flat or assembled', 'Small items, favors, novelty shapes'],
           ],
         },
       },
@@ -150,10 +150,10 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'Do you produce boxes in shapes other than square?', answer: 'Round, pillow, hexagonal, heart and pyramid builds are all available. Each needs its own cutting die, so the tooling cost sits with the first order and carries forward to reorders.' },
       { question: 'Can I have a window in a gift box?', answer: 'Yes, filmed or as a plain aperture. Every square inch of window removes stiffness from that panel, so a large window on a lidded box usually means stepping the board up a grade.' },
       { question: 'What closures are available?', answer: 'Magnetic closures, ribbon pulls, tuck locks and simple lift-off lids. Magnetic closures read as the most premium and open in one movement, which matters when the opening is being filmed or photographed.' },
-      { question: 'How small can a favour box go?', answer: 'Small formats are limited by what the cutting die and the gluing line can hold rather than by policy. Tolerances tighten as size drops, so a structural sample before print is worth the step.' },
+      { question: 'How small can a favor box go?', answer: 'Small formats are limited by what the cutting die and the gluing line can hold rather than by policy. Tolerances tighten as size drops, so a structural sample before print is worth the step.' },
       { question: 'Can one design work across several box sizes?', answer: 'Yes, and specifying them as a family is better than ordering them one at a time. Fixing the board, print method and finish once means sizes added later still match.' },
       { question: 'Do you foil or emboss kraft board?', answer: 'Both work on kraft, and they read well against an unbleached surface. Each is a separate pass on the finishing line, so they are quoted individually rather than bundled.' },
-      { question: 'Is the interior printed as well?', answer: 'It can be. On a gift box the interior is visible for the whole moment that matters, so an interior print or a coloured lining often does more than an upgrade to the outside.' },
+      { question: 'Is the interior printed as well?', answer: 'It can be. On a gift box the interior is visible for the whole moment that matters, so an interior print or a colored lining often does more than an upgrade to the outside.' },
     ],
   },
 
@@ -210,14 +210,14 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   /* ------------------------------------------------------------------ */
   'custom-gift-boxes': {
     intro: [
-      'These are the gifting formats built around an occasion rather than a product category — hampers, favours, flowers, invitations, influencer sends. What they share is that someone other than the buyer opens them.',
+      'These are the gifting formats built around an occasion rather than a product category — hampers, favors, flowers, invitations, influencer sends. What they share is that someone other than the buyer opens them.',
       'That changes the priorities. The pack has to arrive arranged as it was packed, open without a struggle, and look deliberate rather than assembled from whatever was to hand.',
     ],
     sections: [
       {
         h2: 'Packing a set so it arrives arranged',
         body: [
-          'Mixed-height contents are what make a hamper or a favour set look untidy on opening. Shorter items sink below the lid line and shift, and the recipient sees a jumble rather than an arrangement. A compartmented insert cut to each item, with the shallow recesses packed up so every top sits level, is the whole fix.',
+          'Mixed-height contents are what make a hamper or a favor set look untidy on opening. Shorter items sink below the lid line and shift, and the recipient sees a jumble rather than an arrangement. A compartmented insert cut to each item, with the shallow recesses packed up so every top sits level, is the whole fix.',
         ],
       },
       {
@@ -280,7 +280,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         ],
         list: [
           'Soft-touch lamination — changes the feel of the whole carton',
-          'Deboss — reads under retail lighting without adding a colour pass',
+          'Deboss — reads under retail lighting without adding a color pass',
           'Foil — strongest on small marks against uncoated kraft',
           'Spot UV — needs contrast with a matt ground to be visible at all',
         ],
@@ -295,12 +295,12 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
     faqs: [
       { question: 'How do I measure a bottle for its carton?', answer: 'At the widest point, including the cap or pump, and with any label already applied. Measurements taken from a supplier drawing miss flex and label thickness, and both decide whether the carton closes cleanly.' },
       { question: 'How much room do ingredient lists need?', answer: 'More than most brands allow for. Ingredient copy and warnings compete directly with the design, and adding them after layout usually forces a reflow. We block the area on the dieline before design time is committed.' },
-      { question: 'Will a leak damage the carton?', answer: 'On an unlined board, yes — oils and serums wick into the fibres and show on the outside. A coated inner face contains a minor leak and is inexpensive insurance on anything liquid.' },
+      { question: 'Will a leak damage the carton?', answer: 'On an unlined board, yes — oils and serums wick into the fibers and show on the outside. A coated inner face contains a minor leak and is inexpensive insurance on anything liquid.' },
       { question: 'Can you produce cartons for a whole product range?', answer: 'Yes, and specifying them as a family is better than one at a time. Fixing the board, wrap and finish once means products launched a year apart still look related on a shelf.' },
-      { question: 'Which finish suits kraft board?', answer: 'Deboss and foil both read well against an unbleached surface. Pale tints and fine detail tend to disappear, because the brown substrate pulls every colour down.' },
-      { question: 'Do you print white on kraft?', answer: 'Yes, with an opaque white underbase so colours printed over it stay accurate. It adds a press pass, and it is the only way to hold colour on a dark or unbleached surface.' },
+      { question: 'Which finish suits kraft board?', answer: 'Deboss and foil both read well against an unbleached surface. Pale tints and fine detail tend to disappear, because the brown substrate pulls every color down.' },
+      { question: 'Do you print white on kraft?', answer: 'Yes, with an opaque white underbase so colors printed over it stay accurate. It adds a press pass, and it is the only way to hold color on a dark or unbleached surface.' },
       { question: 'Are these cartons suitable for a tall narrow bottle?', answer: 'Yes, though a tall carton with a bottom-heavy container tips easily on a shelf. Widening the base slightly or using a shelf tray solves a problem that sizing exactly to the bottle creates.' },
-      { question: 'Can I get a sample before committing?', answer: 'A plain structural sample answers fit and a printed prototype answers colour and finish. For finish-led beauty work the printed one is usually worth it, because soft-touch and foil do not read accurately on screen.' },
+      { question: 'Can I get a sample before committing?', answer: 'A plain structural sample answers fit and a printed prototype answers color and finish. For finish-led beauty work the printed one is usually worth it, because soft-touch and foil do not read accurately on screen.' },
       { question: 'Do you supply inserts for sets and kits?', answer: 'Yes, in board or foam. A kit with mixed container heights needs the recesses packed up so every lid sits level, otherwise the set looks disarranged when it is opened.' },
       { question: 'What board weight suits a cosmetic carton?', answer: 'It follows the weight and height of the container. A light tube needs far less than a glass jar, and a tall carton on light board feels flimsy even when it is structurally fine.' },
     ],
@@ -348,7 +348,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'Are tubes an alternative to a rigid box?', answer: 'For cylindrical products, often yes, and they use less material. Specify paperboard ends rather than metal if recyclability matters, since metal ends cannot be separated by a customer.' },
       { question: 'Which finishes suit a rigid kraft box?', answer: 'Deboss, foil and soft-touch all work. Texture tends to matter more than gloss here, because these boxes are handled slowly rather than glanced at on a shelf.' },
       { question: 'Can a rigid box carry real weight?', answer: 'Yes, provided the fitment transfers the load into the walls rather than letting it rest on the base. That is a structural decision made at specification, not a finishing one.' },
-      { question: 'Is there a minimum order for shaped boxes?', answer: 'The same minimum applies as elsewhere in the catalogue. The tooling cost is what makes very short runs of an unusual shape expensive per unit, not the minimum itself.' },
+      { question: 'Is there a minimum order for shaped boxes?', answer: 'The same minimum applies as elsewhere in the catalog. The tooling cost is what makes very short runs of an unusual shape expensive per unit, not the minimum itself.' },
       { question: 'How long do these take compared with a folding carton?', answer: 'Hand assembly puts rigid builds at the longer end of the standard production window, and applied finishes each add a pass. We confirm a firm date in writing with the quote.' },
     ],
   },
@@ -356,41 +356,41 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   /* ------------------------------------------------------------------ */
   'colored-kraft-boxes': {
     intro: [
-      'Kraft board is unbleached, so every colour printed on it sits over brown. That single fact decides most of what happens on these pages — which colours hold, which go muddy, and where a white underprint becomes necessary.',
-      'This range covers the coloured and dyed stocks, black and brown board, and the lidded and minimalist builds that use them.',
+      'Kraft board is unbleached, so every color printed on it sits over brown. That single fact decides most of what happens on these pages — which colors hold, which go muddy, and where a white underprint becomes necessary.',
+      'This range covers the colored and dyed stocks, black and brown board, and the lidded and minimalist builds that use them.',
     ],
     sections: [
       {
-        h2: 'What kraft does to printed colour',
+        h2: 'What kraft does to printed color',
         body: [
-          'The substrate subtracts from every ink laid over it. Pale tints and fine detail largely disappear; solid marks and heavy line weights hold. Designs approved on a white screen and a white proof routinely come back looking dull, which is a material behaviour rather than a print fault.',
-          'There are two honest answers. Design for the stock with one or two high-contrast colours, or specify a white underbase, which restores the colours at the cost of an extra press pass.',
+          'The substrate subtracts from every ink laid over it. Pale tints and fine detail largely disappear; solid marks and heavy line weights hold. Designs approved on a white screen and a white proof routinely come back looking dull, which is a material behavior rather than a print fault.',
+          'There are two honest answers. Design for the stock with one or two high-contrast colors, or specify a white underbase, which restores the colors at the cost of an extra press pass.',
         ],
       },
       {
         h2: 'Printing on black board',
         body: [
-          'Black kraft has the same problem magnified — nothing prints legibly on it without an opaque white underbase behind the colour, or a foil, which sits on top of the surface rather than soaking into it. Budget for one of the two at specification rather than discovering it at proof.',
+          'Black kraft has the same problem magnified — nothing prints legibly on it without an opaque white underbase behind the color, or a foil, which sits on top of the surface rather than soaking into it. Budget for one of the two at specification rather than discovering it at proof.',
         ],
       },
     ],
     link: {
-      lead: 'The behaviour is most pronounced on dark stock, and ',
+      lead: 'The behavior is most pronounced on dark stock, and ',
       href: '/product/black-kraft-boxes/',
       anchor: 'the black kraft box page covers underprint and foil options',
       tail: ' for that case.',
     },
     faqs: [
-      { question: 'Why do my colours look wrong on kraft board?', answer: 'The brown substrate shows through the ink and pulls every colour down. A white underprint restores them at the cost of an extra pass, or the design can be built for kraft using one or two high-contrast colours.' },
-      { question: 'Can you print white on kraft?', answer: 'Yes, and on darker stocks it is effectively required. An opaque white underbase goes down first so the colours above it stay accurate.' },
-      { question: 'Is coloured kraft dyed all the way through?', answer: 'On dyed stocks, yes, so a cut edge shows the same colour as the face. Surface-coloured board shows brown at the cut, which is visible on every edge of a finished box.' },
-      { question: 'Will a printed sample look like my screen proof?', answer: 'Not exactly, and on uncoated kraft the gap is wide enough to matter. We recommend approving a printed sample on the actual board rather than a digital proof for anything colour-critical.' },
-      { question: 'Does coloured board cost more than plain kraft?', answer: 'Dyed stocks carry a premium over standard brown kraft, and black is usually the most expensive. Whether it beats printing a colour onto plain kraft depends on the coverage your design needs.' },
+      { question: 'Why do my colors look wrong on kraft board?', answer: 'The brown substrate shows through the ink and pulls every color down. A white underprint restores them at the cost of an extra pass, or the design can be built for kraft using one or two high-contrast colors.' },
+      { question: 'Can you print white on kraft?', answer: 'Yes, and on darker stocks it is effectively required. An opaque white underbase goes down first so the colors above it stay accurate.' },
+      { question: 'Is colored kraft dyed all the way through?', answer: 'On dyed stocks, yes, so a cut edge shows the same color as the face. Surface-colored board shows brown at the cut, which is visible on every edge of a finished box.' },
+      { question: 'Will a printed sample look like my screen proof?', answer: 'Not exactly, and on uncoated kraft the gap is wide enough to matter. We recommend approving a printed sample on the actual board rather than a digital proof for anything color-critical.' },
+      { question: 'Does colored board cost more than plain kraft?', answer: 'Dyed stocks carry a premium over standard brown kraft, and black is usually the most expensive. Whether it beats printing a color onto plain kraft depends on the coverage your design needs.' },
       { question: 'Which finishes work best on dark board?', answer: 'Foil and deboss, because both work with the surface rather than trying to print over it. Spot UV needs contrast with a matt ground to register at all.' },
-      { question: 'Can I get the same colour across reorders?', answer: 'On offset and flexo we hold the ink formulation, which gives a tight match run to run. Digital has a wider tolerance, so for repeat colour consistency we would quote the plate-based route.' },
-      { question: 'Is dyed kraft still recyclable?', answer: 'The board is, in the same stream as plain kraft. What changes recyclability is a plastic lamination on top, not the dye in the fibre.' },
-      { question: 'Do you supply plain coloured board without printing?', answer: 'Yes. On a strong stock a plain box with a single foil or debossed mark often reads better than full coverage, and it costs less.' },
-      { question: 'What board weights are available in colour?', answer: 'The usual range, though the very heaviest calipers are limited in some dyed stocks. If you need both a specific colour and a heavy caliper, tell us early so we can confirm availability before quoting.' },
+      { question: 'Can I get the same color across reorders?', answer: 'On offset and flexo we hold the ink formulation, which gives a tight match run to run. Digital has a wider tolerance, so for repeat color consistency we would quote the plate-based route.' },
+      { question: 'Is dyed kraft still recyclable?', answer: 'The board is, in the same stream as plain kraft. What changes recyclability is a plastic lamination on top, not the dye in the fiber.' },
+      { question: 'Do you supply plain colored board without printing?', answer: 'Yes. On a strong stock a plain box with a single foil or debossed mark often reads better than full coverage, and it costs less.' },
+      { question: 'What board weights are available in color?', answer: 'The usual range, though the very heaviest calipers are limited in some dyed stocks. If you need both a specific color and a heavy caliper, tell us early so we can confirm availability before quoting.' },
     ],
   },
 
@@ -436,10 +436,10 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'How do I know which board grade I need?', answer: 'From the stacking height and the weight sitting above the bottom unit, not from the weight of the contents alone. Send those two figures and we specify against them rather than against an average.' },
       { question: 'What is edge crush and why does it matter?', answer: 'It measures how much load a board edge carries before it fails, which is what actually holds a stack up. It is a better guide for palletised work than board thickness.' },
       { question: 'Do these boxes hold up in a damp warehouse?', answer: 'Untreated board softens as it takes on moisture, and its stacking strength drops with it. A moisture-resistant treatment addresses that, and it has to be specified at the start.' },
-      { question: 'Can you supply compostable industrial packaging?', answer: 'Compostable stocks are available, though certified compostability, recycled content and kerbside recyclability are three different claims. Tell us which one you intend to print.' },
+      { question: 'Can you supply compostable industrial packaging?', answer: 'Compostable stocks are available, though certified compostability, recycled content and curbside recyclability are three different claims. Tell us which one you intend to print.' },
       { question: 'Are insulated boxes available for cold chain?', answer: 'Yes, with liners appropriate to the hold time you need. The hold duration matters more than the ambient temperature, so send the journey length rather than a temperature alone.' },
       { question: 'What about chemical or hazardous contents?', answer: 'Requirements differ by substance and by transport mode, and marking is usually mandatory. Send the specific requirement your operation works to rather than a general description.' },
-      { question: 'Can you print on heavy corrugated?', answer: 'Yes, usually flexo direct to the board. For an outer case handled by staff rather than customers, one or two colours normally does everything that is needed.' },
+      { question: 'Can you print on heavy corrugated?', answer: 'Yes, usually flexo direct to the board. For an outer case handled by staff rather than customers, one or two colors normally does everything that is needed.' },
       { question: 'Do you supply pallet-ready case sizes?', answer: 'Yes, and it is worth designing inward from the pallet pattern. A case sized without reference to the pallet wastes space on every layer, which costs on every shipment.' },
       { question: 'How should the base be constructed for heavy contents?', answer: 'With a full-overlap or tray base rather than a single glued seam. On a heavy item the load path runs straight down, and the base is the panel that has to hold it.' },
       { question: 'Can I order plain cases without any print?', answer: 'Yes, and for internal transit it is usually the sensible choice. Print adds cost without doing any selling on a case the customer never sees.' },
@@ -502,7 +502,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       {
         h2: 'The leaflet is a dimension',
         body: [
-          'A folded patient leaflet commonly adds several millimetres of depth that the blister or bottle dimensions do not account for. A carton sized from the medicine alone runs tight, jams on an automatic cartoner and has to be re-tooled after the board has been bought. Send the folded leaflet with the product sample.',
+          'A folded patient leaflet commonly adds several millimeters of depth that the blister or bottle dimensions do not account for. A carton sized from the medicine alone runs tight, jams on an automatic cartoner and has to be re-tooled after the board has been bought. Send the folded leaflet with the product sample.',
         ],
       },
       {
@@ -525,7 +525,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       tail: '.',
     },
     faqs: [
-      { question: 'Why does my carton jam on the packing line?', answer: 'Most often the leaflet. A folded patient leaflet adds several millimetres of depth, and a carton sized from the blister alone runs tight and jams at speed. Send the leaflet with the sample.' },
+      { question: 'Why does my carton jam on the packing line?', answer: 'Most often the leaflet. A folded patient leaflet adds several millimeters of depth, and a carton sized from the blister alone runs tight and jams at speed. Send the leaflet with the sample.' },
       { question: 'How much space does a Supplement Facts panel need?', answer: 'More than most brands allow for. It has a prescribed layout with minimum type sizes that scale with surface area, and it usually takes most of one panel.' },
       { question: 'What tamper-evident options are available?', answer: 'Tear strips, tuck locks with a frangible tab and applied security seals. Each gives a different level of evidence, so tell us which standard you are working to.' },
       { question: 'Can you supply versioned proofs with sign-off records?', answer: 'Where a quality system requires it, yes — dated proofs against a revision number with the approval record retained. Ask at quoting so the documentation is built alongside the job.' },
@@ -565,7 +565,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       {
         h2: 'Specifying a range rather than a box',
         body: [
-          'Boxes ordered one at a time as each product launches almost never match. Fixing the wrap stock, the interior colour and the closure once and varying only the footprint is what makes a collection read as one brand when a customer buys twice.',
+          'Boxes ordered one at a time as each product launches almost never match. Fixing the wrap stock, the interior color and the closure once and varying only the footprint is what makes a collection read as one brand when a customer buys twice.',
         ],
       },
     ],
@@ -581,11 +581,11 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'Will one ring box fit my whole range?', answer: 'The outer box will; the pillow slot will not. Tell us your narrowest and widest band and we normally specify two slot widths behind one identical exterior.' },
       { question: 'Can the same box hold a bracelet and a bangle?', answer: 'The outer can, the insert cannot. A bangle needs a compact square and a chain bracelet needs a long slotted pad, so we keep one outer size and specify two fitments.' },
       { question: 'What stops a watch strap creasing?', answer: 'A bolster the strap wraps around, so it curves rather than folding. Packing a strap flat against a board pad is what sets a permanent crease into leather and silicone.' },
-      { question: 'Does the interior colour matter?', answer: 'More than the outer print, because the lid is open for the whole moment that matters. A deep matt interior makes a bright metal piece read clearly against it.' },
-      { question: 'Can I add a logo to a small jewellery box?', answer: 'Yes, though the printable area is small. One mark and one line of type is usually all that reads at this size, and a deboss or foil often works better than print.' },
+      { question: 'Does the interior color matter?', answer: 'More than the outer print, because the lid is open for the whole moment that matters. A deep matt interior makes a bright metal piece read clearly against it.' },
+      { question: 'Can I add a logo to a small jewelry box?', answer: 'Yes, though the printable area is small. One mark and one line of type is usually all that reads at this size, and a deboss or foil often works better than print.' },
       { question: 'Are inserts available separately?', answer: 'Yes. If you already buy an outer box you are happy with, we can produce the fitment alone, sized to the internal dimensions rather than the external ones.' },
       { question: 'Should the box be rigid or folding?', answer: 'Rigid for anything opened in front of a customer, because the hinge and the way the lid holds open are part of the impression. Folding suits volume gifting where the box is not kept.' },
-      { question: 'Can you match an existing box I already use?', answer: 'Send the physical box rather than a photograph. Wrap stock, interior colour and closure are what make a jewellery box feel the way it does, and none of them photograph accurately.' },
+      { question: 'Can you match an existing box I already use?', answer: 'Send the physical box rather than a photograph. Wrap stock, interior color and closure are what make a jewelry box feel the way it does, and none of them photograph accurately.' },
     ],
   },
 
@@ -620,12 +620,12 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'What dimensions should I send for a shirt box?', answer: 'The garment folded as it will actually be packed, then measured as a stack. Laid-flat measurements and supplier dimensions both produce a box that is the wrong depth.' },
       { question: 'Do apparel boxes need any protection inside?', answer: 'Rarely for the garment itself. Tissue is presentational rather than protective, and where a box is oversized the answer is a smaller box rather than more filler.' },
       { question: 'Can I use one box across several garment types?', answer: 'Usually two or three depths cover a whole range, sharing one footprint and one print. That keeps the shelf and unboxing look consistent without shipping air.' },
-      { question: 'Is a window worth it on apparel packaging?', answer: 'It helps where colour is the deciding factor at retail. It costs stiffness in that panel, and on a large lidded box that often means stepping the board up a grade.' },
+      { question: 'Is a window worth it on apparel packaging?', answer: 'It helps where color is the deciding factor at retail. It costs stiffness in that panel, and on a large lidded box that often means stepping the board up a grade.' },
       { question: 'What closure suits a garment box?', answer: 'A lift-off lid for presentation, a tuck lock for retail volume, a magnetic closure where the box is opened in front of someone. The choice follows where it is opened.' },
       { question: 'Do these boxes stack in a stockroom?', answer: 'Yes, though stacking strength depends on the board rather than the contents, since garments provide no support. Send the stack height if boxes are stored full.' },
       { question: 'Can you print the inside of the lid?', answer: 'Yes, and on direct-to-consumer apparel it is usually worth it. The inside of the lid is what the customer sees first when the box is opened.' },
       { question: 'How do I package accessories like belts or socks?', answer: 'Those suit smaller formats — sleeves, pillow boxes or narrow cartons — cut to the coiled or folded shape rather than to a rectangle around it.' },
-      { question: 'Are recycled stocks available for apparel packaging?', answer: 'Yes, across most of the boards in this range. Recycled fibres are slightly less stiff at the same caliper, so we usually step up one grade to keep large panels feeling firm.' },
+      { question: 'Are recycled stocks available for apparel packaging?', answer: 'Yes, across most of the boards in this range. Recycled fibers are slightly less stiff at the same caliper, so we usually step up one grade to keep large panels feeling firm.' },
     ],
   },
 
@@ -663,7 +663,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'Do you supply disc and media packaging?', answer: 'Yes, in sleeve and carton formats. The disc has to be held so it cannot move across its face, since surface contact is what causes the damage.' },
       { question: 'What board weight suits a certificate box?', answer: 'Enough that a large lid does not flex when it is lifted, which is more than the weight of the contents suggests. Panel span drives the choice, not the load.' },
       { question: 'Can artwork be printed on the inside?', answer: 'Yes. On presentation formats the interior is in view for the whole time the box is open, which is often longer than for a retail pack.' },
-      { question: 'Are recycled boards available here?', answer: 'Yes, though recycled fibre is slightly less stiff at the same caliper. On large flat panels that difference is noticeable, so we usually step up a grade.' },
+      { question: 'Are recycled boards available here?', answer: 'Yes, though recycled fiber is slightly less stiff at the same caliper. On large flat panels that difference is noticeable, so we usually step up a grade.' },
       { question: 'How should art supplies with mixed contents be packed?', answer: 'With a compartmented insert. Mixed items loose in one cavity shift, and the set looks incomplete on opening even when everything is present.' },
       { question: 'Do you make packaging for oversized artwork?', answer: 'Yes, including tube formats for rolled work. Rolling avoids the crease risk entirely, though it is not suitable for anything already mounted or framed.' },
     ],
@@ -685,7 +685,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       {
         h2: 'Cost per unit at low price points',
         body: [
-          'Each additional press pass is material to margin when the product sells for a few dollars. Two colours on uncoated kraft usually does more for these formats than four colours with a finish, and a multipack carton frequently makes commercial sense where a single-unit carton does not.',
+          'Each additional press pass is material to margin when the product sells for a few dollars. Two colors on uncoated kraft usually does more for these formats than four colors with a finish, and a multipack carton frequently makes commercial sense where a single-unit carton does not.',
         ],
       },
     ],
@@ -765,7 +765,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       { question: 'Can inserts hold loose game pieces?', answer: 'Yes, and on anything with many small pieces they are worth more than the outer box. Pieces loose in one cavity make a game look incomplete on opening.' },
       { question: 'What board suits baby product packaging?', answer: 'A clean, well-finished stock, since the category is judged on perceived hygiene as much as on strength. Uncoated kraft reads well where a natural positioning is intended.' },
       { question: 'Do you print inside toy boxes?', answer: 'It can be worthwhile where the box is part of the play or storage after purchase, which is common with games and building sets.' },
-      { question: 'How do I keep packaging cost down on a low-priced toy?', answer: 'Fewer press passes and a simpler structure. Two colours on kraft with a good die-cut usually does more than four colours with a finish at this price point.' },
+      { question: 'How do I keep packaging cost down on a low-priced toy?', answer: 'Fewer press passes and a simpler structure. Two colors on kraft with a good die-cut usually does more than four colors with a finish at this price point.' },
       { question: 'Can one box size cover several products?', answer: 'Often two or three sizes cover a range while sharing one board and print system, which keeps the shelf presence consistent without shipping empty space.' },
       { question: 'Are recycled and recyclable options available?', answer: 'Yes across this range. A plain die-cut window aperture rather than a filmed one keeps the pack in the paper stream if that claim matters to you.' },
       { question: 'What box should a board game ship in?', answer: 'A separate corrugated mailer sized to the game, not the printed lid and base. Posting the retail box on its own puts crush damage on the edges the customer sees first, and a plain outer costs far less than reprinting the pack.' },
@@ -787,7 +787,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
         ],
         table: {
           caption: 'Weight by use',
-          head: ['Use', 'Weight band', 'Behaviour'],
+          head: ['Use', 'Weight band', 'Behavior'],
           rows: [
             ['Gift wrapping and tissue work', 'Light', 'Creases cleanly, tears easily'],
             ['Void fill and interleaving', 'Light to medium', 'Crumples without springing back'],
@@ -799,7 +799,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
       {
         h2: 'Printing on uncoated stock',
         body: [
-          'Uncoated kraft absorbs ink, so colours dry back flatter and darker than the proof suggests, and heavy solid coverage can cockle the sheet. Designs built for the substrate — line work, single colours, generous negative space — hold up far better than full-bleed photography.',
+          'Uncoated kraft absorbs ink, so colors dry back flatter and darker than the proof suggests, and heavy solid coverage can cockle the sheet. Designs built for the substrate — line work, single colors, generous negative space — hold up far better than full-bleed photography.',
         ],
       },
     ],
@@ -812,8 +812,8 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
     faqs: [
       { question: 'What paper weight should I order?', answer: 'It follows the job. Light kraft creases cleanly for wrapping; heavier weights hold a fold and carry load for bags and sleeves. Tell us the use and we will specify the band.' },
       { question: 'Can I get kraft paper in custom widths?', answer: 'Yes, in sheets and on rolls cut to the width you need. Ordering to your dispenser or table width avoids trimming waste on every use.' },
-      { question: 'Why do printed colours look flat on kraft paper?', answer: 'Uncoated stock absorbs ink, so colours dry back darker and duller than on coated board. Designing for the substrate holds up better than trying to correct for it.' },
-      { question: 'Is coloured kraft paper available?', answer: 'Yes, in dyed stocks where the colour runs through the fibre so a cut edge matches the face. Surface-coloured papers show brown at the cut.' },
+      { question: 'Why do printed colors look flat on kraft paper?', answer: 'Uncoated stock absorbs ink, so colors dry back darker and duller than on coated board. Designing for the substrate holds up better than trying to correct for it.' },
+      { question: 'Is colored kraft paper available?', answer: 'Yes, in dyed stocks where the color runs through the fiber so a cut edge matches the face. Surface-colored papers show brown at the cut.' },
       { question: 'Can wrapping paper be printed with a repeat pattern?', answer: 'Yes. The repeat is set against the sheet or roll width so the pattern runs continuously rather than breaking at each sheet edge.' },
       { question: 'Is kraft paper suitable for food wrapping?', answer: 'With a food-contact compliant grade and, for greasy items, a grease-resistant treatment. Plain kraft will strike through with oily food.' },
       { question: 'What dispenser sizes do you supply?', answer: 'Dispenser boxes are cut to the roll or sheet stack they hold, with a tear-away front. Send the roll diameter and width rather than a box size.' },

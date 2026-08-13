@@ -40,7 +40,7 @@ export const ORDERING = {
  *
  * Note the exclusion: custom-printed boxes are not returnable unless
  * defective. Any page that mentions returns has to carry that qualification,
- * because the whole catalogue is custom-printed.
+ * because the whole catalog is custom-printed.
  */
 export const RETURNS = {
   requestWindowDays: 10,

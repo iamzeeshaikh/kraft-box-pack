@@ -51,7 +51,7 @@ export const artIndustrialContent: ProductContentMap = {
       { question: 'Can the mailer be printed?', answer: '<p>Yes, though for business post plain kraft is usually the sensible choice. Print adds cost without a selling function on a document delivery.</p>' },
       { question: 'Do you supply a range of standard sizes?', answer: '<p>Everything is cut to your dimensions rather than picked from stock sizes. Send the document size and we build the dieline around it with the clearance allowance.</p>' },
       { question: 'Will these fit through a letterbox?', answer: '<p>Only in the thinner formats. If letterbox compatibility matters, tell us the maximum depth your postal service allows and we design to it.</p>' },
-      { question: 'Are recycled options available?', answer: '<p>Yes, with a caliper step-up. Recycled fibre is slightly less stiff, and stiffness is the whole specification on this format.</p>' },
+      { question: 'Are recycled options available?', answer: '<p>Yes, with a caliper step-up. Recycled fiber is slightly less stiff, and stiffness is the whole specification on this format.</p>' },
     ],
   },
 
@@ -75,7 +75,7 @@ export const artIndustrialContent: ProductContentMap = {
       {
         h2: 'Presentation finishes that suit the occasion',
         body: [
-          'These are handed over rather than shipped to a shelf, usually in a formal setting. A blind deboss or a foil block reads at the moment of handover in a way that printed colour does not, and both work well against kraft.',
+          'These are handed over rather than shipped to a shelf, usually in a formal setting. A blind deboss or a foil block reads at the moment of handover in a way that printed color does not, and both work well against kraft.',
         ],
       },
     ],
@@ -88,7 +88,7 @@ export const artIndustrialContent: ProductContentMap = {
     faqs: [
       { question: 'Why does the lid bow when I lift it?', answer: '<p>Certificate boxes are wide and shallow, which is the worst proportion for lid rigidity. The fix is board caliper — the weight follows panel span rather than the weight of a sheet of paper.</p>' },
       { question: 'How do I stop the certificate sliding inside?', answer: '<p>Corner retainers or a shallow recess. A document loose in a shallow box catches its corners under the lid, which is the damage the box exists to prevent.</p>' },
-      { question: 'What finishes suit a certificate box?', answer: '<p>Blind deboss or foil. Both read at the moment of handover in a way printed colour does not, and both work well against kraft board.</p>' },
+      { question: 'What finishes suit a certificate box?', answer: '<p>Blind deboss or foil. Both read at the moment of handover in a way printed color does not, and both work well against kraft board.</p>' },
       { question: 'Can the box hold more than one document?', answer: '<p>Yes, with an interleaving sheet so they do not rub. Two certificates loose together mark each other over time.</p>' },
       { question: 'Should it be rigid or a folding carton?', answer: '<p>Rigid. This format is judged in a formal handover, and a folding carton lid does not hold the impression a rigid one does.</p>' },
       { question: 'Can you include a ribbon pull?', answer: '<p>Yes, and on a snug shallow box it is genuinely useful — without one the document is difficult to lift out without bending it.</p>' },
@@ -107,7 +107,7 @@ export const artIndustrialContent: ProductContentMap = {
         h2: 'Corner protection does the work',
         body: [
           'A frame transmits any impact straight to its corners, and the glass breaks from there. Cushioning the corners specifically is far more effective than padding the whole pack, and it uses less material.',
-          'Moulded pulp or foam corner blocks are the usual answer. Loose fill around a frame does very little because the frame still reaches the box corners.',
+          'Molded pulp or foam corner blocks are the usual answer. Loose fill around a frame does very little because the frame still reaches the box corners.',
         ],
       },
       {
@@ -119,7 +119,7 @@ export const artIndustrialContent: ProductContentMap = {
       {
         h2: 'Depth for the frame profile',
         body: [
-          'Frame depth varies far more than frame face size — a slim modern frame and a deep traditional moulding differ by an inch or more. Measure the profile depth, including any stand or hanging fitment on the back.',
+          'Frame depth varies far more than frame face size — a slim modern frame and a deep traditional molding differ by an inch or more. Measure the profile depth, including any stand or hanging fitment on the back.',
         ],
       },
     ],
@@ -139,13 +139,13 @@ export const artIndustrialContent: ProductContentMap = {
       { question: 'Are these suitable for courier shipping?', answer: '<p>Yes, with corner protection and a correctly sized pack. Framed items are among the most damaged categories in parcel networks, so the specification matters.</p>' },
       { question: 'Can the pack be printed?', answer: '<p>It can, though for a protective outer plain kraft is usually the right choice. Print on a transit pack rarely returns its cost.</p>' },
       { question: 'Do you supply inserts for frames sold at retail?', answer: '<p>Yes, and a retail pack has different priorities — it has to present the frame as well as protect it, which usually means a window or an open-fronted format.</p>' },
-      { question: 'Are recycled and moulded pulp options available?', answer: '<p>Yes. Moulded pulp corner blocks are the more recyclable cushioning option and perform comparably to foam for this application.</p>' },
+      { question: 'Are recycled and molded pulp options available?', answer: '<p>Yes. Molded pulp corner blocks are the more recyclable cushioning option and perform comparably to foam for this application.</p>' },
     ],
   },
 
   'kraft-brochure-packaging-boxes': {
     intro:
-      'Brochure packaging holds a quantity of printed matter, and printed matter is heavier per volume than almost anything else the catalogue covers.',
+      'Brochure packaging holds a quantity of printed matter, and printed matter is heavier per volume than almost anything else the catalog covers.',
     sections: [
       {
         h2: 'Paper is heavy',
@@ -299,7 +299,7 @@ export const artIndustrialContent: ProductContentMap = {
       {
         h2: 'Showing the range',
         body: [
-          'Colour range is what sells an art set, and a customer cannot judge it from a description. A window over the colours, or a printed representation of the actual shades, is doing the selling rather than decorating the pack.',
+          'Color range is what sells an art set, and a customer cannot judge it from a description. A window over the colors, or a printed representation of the actual shades, is doing the selling rather than decorating the pack.',
         ],
       },
       {
@@ -317,14 +317,14 @@ export const artIndustrialContent: ProductContentMap = {
     },
     faqs: [
       { question: 'Do I need a compartmented insert?', answer: '<p>For mixed contents, yes. Loose items shift so the set looks incomplete, and hard items damage soft ones — a metal ferrule against a pastel is a predictable loss.</p>' },
-      { question: 'Should the pack show the colours?', answer: '<p>Yes. Colour range is what sells an art set and a customer cannot judge it from a description, so a window or an accurate printed representation is doing the selling.</p>' },
+      { question: 'Should the pack show the colors?', answer: '<p>Yes. Color range is what sells an art set and a customer cannot judge it from a description, so a window or an accurate printed representation is doing the selling.</p>' },
       { question: 'Will the box survive being kept as storage?', answer: '<p>With a positive closure and a properly graded base, yes. Art materials live in their box for years, which is a harder duty than most packaging faces.</p>' },
       { question: 'What board is used?', answer: '<p>Folding carton for light sets, E flute or rigid for heavier ones. The deciding factor is usually the weight of the filled set rather than the box size.</p>' },
-      { question: 'Can you produce inserts for irregular items?', answer: '<p>Yes, in die-cut board, foam or moulded pulp. Moulded pulp handles irregular shapes where a board cavity would be complicated to cut.</p>' },
-      { question: 'How do I stop the set looking half empty when used?', answer: '<p>A fitted insert keeps remaining items in position rather than letting them slide into the space. That is what makes a part-used set still look organised.</p>' },
+      { question: 'Can you produce inserts for irregular items?', answer: '<p>Yes, in die-cut board, foam or molded pulp. Molded pulp handles irregular shapes where a board cavity would be complicated to cut.</p>' },
+      { question: 'How do I stop the set looking half empty when used?', answer: '<p>A fitted insert keeps remaining items in position rather than letting them slide into the space. That is what makes a part-used set still look organized.</p>' },
       { question: 'Are these suitable for retail display?', answer: '<p>Yes, and the front panel is what does the work. A set shown flat on a shelf is judged on the top face rather than the front.</p>' },
       { question: 'Can you match a range of set sizes?', answer: '<p>Yes, sharing one board and print system so a 12, 24 and 36 set look like one family. Only the dieline and the insert change.</p>' },
-      { question: 'Do you print inside the lid?', answer: '<p>It is worth it here, since the lid is open whenever the set is in use. Colour references or usage notes printed inside get read.</p>' },
+      { question: 'Do you print inside the lid?', answer: '<p>It is worth it here, since the lid is open whenever the set is in use. Color references or usage notes printed inside get read.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes across the range, and they suit the category. We step up a caliper where the box will be reused as storage.</p>' },
     ],
   },
@@ -403,7 +403,7 @@ export const artIndustrialContent: ProductContentMap = {
         ],
       },
       {
-        h2: 'Labelling for retrieval',
+        h2: 'Labeling for retrieval',
         body: [
           'The whole point of a storage box is finding what is in it later. A designated label area on the short end — the face visible when boxes are shelved — is worth more than print anywhere else on the box.',
         ],
@@ -425,7 +425,7 @@ export const artIndustrialContent: ProductContentMap = {
       { question: 'Can you add handles?', answer: '<p>Yes, die-cut. The board around a die-cut handle needs reinforcing on a filled heavy box, since that is where the load concentrates.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Yes, flat and erected on site, which keeps freight cost proportionate to the board rather than to the volume.</p>' },
       { question: 'Can you produce a range of sizes that stack together?', answer: '<p>Yes, and designing them on a common footprint means mixed sizes still stack squarely rather than in an unstable tower.</p>' },
-      { question: 'Are recycled boards suitable?', answer: '<p>Yes, with a grade step-up. Recycled fibre is slightly less stiff and creeps a little more under constant load, so we allow for both.</p>' },
+      { question: 'Are recycled boards suitable?', answer: '<p>Yes, with a grade step-up. Recycled fiber is slightly less stiff and creeps a little more under constant load, so we allow for both.</p>' },
     ],
   },
 
@@ -461,13 +461,13 @@ export const artIndustrialContent: ProductContentMap = {
     },
     faqs: [
       { question: 'Why does a small parts box fail?', answer: '<p>Because metal is heavy for its volume and the board was graded by box size rather than filled weight. Send the filled weight — it is almost always higher than a size-based estimate.</p>' },
-      { question: 'Will oil from the parts damage the box?', answer: '<p>On untreated board, yes. Residual machining oil soaks in and weakens the fibres. A coated inner face handles it inexpensively.</p>' },
+      { question: 'Will oil from the parts damage the box?', answer: '<p>On untreated board, yes. Residual machining oil soaks in and weakens the fibers. A coated inner face handles it inexpensively.</p>' },
       { question: 'How do I stop sharp edges cutting through?', answer: '<p>A fitted divider or a heavier liner between the parts and the wall. Sharp edges cut liners first and the box afterwards.</p>' },
       { question: 'Where should part numbers be printed?', answer: '<p>In a consistent position across every box size, so goods-in reads the same face every time rather than searching five panels.</p>' },
       { question: 'What board is used?', answer: '<p>Double-wall for anything heavy, with the base given particular attention because dense contents load it directly.</p>' },
       { question: 'Can you supply boxes with dividers?', answer: '<p>Yes, and for mixed parts they prevent both damage and miscounting. Dividers also stiffen the box under a top load.</p>' },
       { question: 'Are these suitable for long-term stores?', answer: '<p>With a moisture-resistant treatment, yes. Board in an unheated store weakens over time, and heavy contents make that consequential.</p>' },
-      { question: 'Do you produce boxes to a customer part specification?', answer: '<p>Yes. Send the specification, including any labelling or barcode requirements your system needs, and we design inward from it.</p>' },
+      { question: 'Do you produce boxes to a customer part specification?', answer: '<p>Yes. Send the specification, including any labeling or barcode requirements your system needs, and we design inward from it.</p>' },
       { question: 'Can these be reused?', answer: '<p>Within limits. Corrugated loses strength each time it is handled, so a box specified for a single trip should not be relied on for a second under the same load.</p>' },
       { question: 'Are plain unprinted boxes available?', answer: '<p>Yes, and for internal transit they are usually the sensible choice. Print adds cost with no selling function.</p>' },
     ],
@@ -568,7 +568,7 @@ export const artIndustrialContent: ProductContentMap = {
       {
         h2: 'Three claims, not one',
         body: [
-          'Recycled content describes what the board is made from. Kerbside recyclability describes what a household can do with it. Certified compostability describes how it breaks down under specific conditions, usually industrial rather than home composting.',
+          'Recycled content describes what the board is made from. Curbside recyclability describes what a household can do with it. Certified compostability describes how it breaks down under specific conditions, usually industrial rather than home composting.',
           'They are not interchangeable, and a pack can satisfy one while failing another. Tell us which claim you intend to print and we specify to it rather than to a general intention.',
         ],
         table: {
@@ -576,7 +576,7 @@ export const artIndustrialContent: ProductContentMap = {
           head: ['Claim', 'Describes', 'Watch out for'],
           rows: [
             ['Recycled content', 'What the board is made from', 'Percentage should be stated, not implied'],
-            ['Kerbside recyclable', 'What a household can do with it', 'Any plastic laminate breaks it'],
+            ['Curbside recyclable', 'What a household can do with it', 'Any plastic laminate breaks it'],
             ['Home compostable', 'Breakdown in a garden heap', 'Much stricter than industrial'],
             ['Industrially compostable', 'Breakdown in a managed facility', 'Facilities are not universally available'],
           ],
@@ -592,7 +592,7 @@ export const artIndustrialContent: ProductContentMap = {
       {
         h2: 'Right-sizing beats material choice',
         body: [
-          'The largest environmental saving in most packaging programmes is not the substrate, it is the size. A box cut to the product ships more units per pallet and cuts dimensional weight on every parcel, and it does that without any trade against performance.',
+          'The largest environmental saving in most packaging programs is not the substrate, it is the size. A box cut to the product ships more units per pallet and cuts dimensional weight on every parcel, and it does that without any trade against performance.',
         ],
       },
     ],
@@ -609,28 +609,28 @@ export const artIndustrialContent: ProductContentMap = {
       { question: 'Is home compostable the same as industrially compostable?', answer: '<p>No, and home is much stricter. Industrial compostability also assumes access to a managed facility, which is not universal, so the claim needs qualifying.</p>' },
       { question: 'What is the biggest environmental saving available?', answer: '<p>Usually right-sizing rather than the substrate. A box cut to the product ships more per pallet and cuts dimensional weight on every parcel, with no trade against performance.</p>' },
       { question: 'Can you state the recycled content percentage?', answer: '<p>We can state the recycled content of the board and supply the mill documentation behind it. A stated percentage is far more defensible than an unqualified claim.</p>' },
-      { question: 'Is recycled board weaker?', answer: '<p>Slightly, at the same caliper — recycled fibres are shorter, so the board is a little less stiff and takes on moisture faster. Stepping up one caliper generally restores performance while keeping the claim.</p>' },
+      { question: 'Is recycled board weaker?', answer: '<p>Slightly, at the same caliper — recycled fibers are shorter, so the board is a little less stiff and takes on moisture faster. Stepping up one caliper generally restores performance while keeping the claim.</p>' },
       { question: 'Which inks are used?', answer: '<p>Soy and vegetable-based inks are available and suit uncoated kraft well. Tell us if ink choice forms part of your published claim.</p>' },
-      { question: 'Can a window box still be recyclable?', answer: '<p>With a plain die-cut aperture and no film, yes. A filmed window means the pack is no longer straight paper and most kerbside systems want the film separated first.</p>' },
+      { question: 'Can a window box still be recyclable?', answer: '<p>With a plain die-cut aperture and no film, yes. A filmed window means the pack is no longer straight paper and most curbside systems want the film separated first.</p>' },
       { question: 'How do I avoid overstating a claim?', answer: '<p>Claim the component rather than the pack. "Recyclable carton" is accurate and defensible where "recyclable packaging" around a laminated component is not.</p>' },
     ],
   },
 
   'kraft-recycled-kraft-boxes': {
     intro:
-      'Recycled kraft is the default rather than the exception across most of this catalogue. What is worth understanding is where it behaves differently from virgin board.',
+      'Recycled kraft is the default rather than the exception across most of this catalog. What is worth understanding is where it behaves differently from virgin board.',
     sections: [
       {
-        h2: 'Shorter fibres, slightly less stiffness',
+        h2: 'Shorter fibers, slightly less stiffness',
         body: [
-          'Recycled fibres have been through the process before and are shorter, which makes the board marginally less stiff at the same caliper and slightly quicker to take on moisture. Neither is a problem — both are predictable, and stepping up one caliper restores the performance while keeping the claim intact.',
+          'Recycled fibers have been through the process before and are shorter, which makes the board marginally less stiff at the same caliper and slightly quicker to take on moisture. Neither is a problem — both are predictable, and stepping up one caliper restores the performance while keeping the claim intact.',
           'Where it shows most is on large flat panels: a big lid on recycled board at the same weight flexes a little more than the virgin equivalent.',
         ],
       },
       {
-        h2: 'Print behaviour on recycled stock',
+        h2: 'Print behavior on recycled stock',
         body: [
-          'Recycled kraft is less uniform than bleached board, and that variation shows in flat areas of solid colour. Designs built for it — line work, solid marks, generous space — hold up far better than large even tints.',
+          'Recycled kraft is less uniform than bleached board, and that variation shows in flat areas of solid color. Designs built for it — line work, solid marks, generous space — hold up far better than large even tints.',
         ],
       },
       {
@@ -647,16 +647,16 @@ export const artIndustrialContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'Is recycled board weaker than virgin board?', answer: '<p>Slightly, at the same caliper. Recycled fibres are shorter so the board is a little less stiff and takes on moisture a little faster. Stepping up one caliper restores performance while keeping the claim.</p>' },
+      { question: 'Is recycled board weaker than virgin board?', answer: '<p>Slightly, at the same caliper. Recycled fibers are shorter so the board is a little less stiff and takes on moisture a little faster. Stepping up one caliper restores performance while keeping the claim.</p>' },
       { question: 'Where does the difference show most?', answer: '<p>On large flat panels. A big lid on recycled board at the same weight flexes a little more than the virgin equivalent, which is noticeable in the hand.</p>' },
-      { question: 'Does recycled board print differently?', answer: '<p>It is less uniform than bleached board and that variation shows in flat areas of solid colour. Line work and solid marks hold up far better than large even tints.</p>' },
+      { question: 'Does recycled board print differently?', answer: '<p>It is less uniform than bleached board and that variation shows in flat areas of solid color. Line work and solid marks hold up far better than large even tints.</p>' },
       { question: 'Does recycled content mean the pack is recyclable?', answer: '<p>No — those are separate claims. Recycled content describes what the board is made from; recyclability depends on what is applied to it afterwards.</p>' },
       { question: 'Can you state the percentage?', answer: '<p>Yes, and we can supply the mill documentation behind it. A stated percentage is far more defensible than an unqualified claim.</p>' },
       { question: 'Is recycled board food-safe?', answer: '<p>It depends on the grade and whether contact is direct. Tell us the application and we specify a compliant stock rather than assuming.</p>' },
       { question: 'Does it cost more than virgin board?', answer: '<p>Not usually, and often less. The cost difference is small either way compared with the effect of box size on freight.</p>' },
       { question: 'Can recycled board take lamination?', answer: '<p>Yes, but a plastic laminate takes the pack out of the paper stream, which usually defeats the reason for choosing recycled stock. An aqueous varnish is the alternative.</p>' },
-      { question: 'Is the colour consistent between runs?', answer: '<p>There is more batch variation than with bleached board. Where colour consistency matters across runs, tell us and we will hold stock from a single batch where possible.</p>' },
-      { question: 'Can I use recycled board across a whole range?', answer: '<p>Yes, and it is worth doing for consistency. A range mixing recycled and virgin stocks is noticeable in both colour and hand.</p>' },
+      { question: 'Is the color consistent between runs?', answer: '<p>There is more batch variation than with bleached board. Where color consistency matters across runs, tell us and we will hold stock from a single batch where possible.</p>' },
+      { question: 'Can I use recycled board across a whole range?', answer: '<p>Yes, and it is worth doing for consistency. A range mixing recycled and virgin stocks is noticeable in both color and hand.</p>' },
     ],
   },
 }

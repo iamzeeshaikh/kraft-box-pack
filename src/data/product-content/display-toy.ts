@@ -64,7 +64,7 @@ export const displayToyContent: ProductContentMap = {
         h2: 'Getting the perforation right',
         body: [
           'Too weak and the case opens in transit, so a pallet arrives with stock loose. Too strong and staff tear it badly, leaving a ragged unit facing customers for the rest of the day. There is a narrow band between those two and it is decided at dieline stage, not afterwards.',
-          'This is the clearest case in the whole catalogue for approving a physical sample before committing to a run. A perforation cannot be judged from a drawing.',
+          'This is the clearest case in the whole catalog for approving a physical sample before committing to a run. A perforation cannot be judged from a drawing.',
         ],
       },
       {
@@ -107,7 +107,7 @@ export const displayToyContent: ProductContentMap = {
       { question: 'Will the case survive a full pallet stack?', answer: '<p>With the right grade, yes. The failure mode to design against is corner crush at the bottom of the pallet, which is about edge crush rating rather than board thickness.</p>' },
       { question: 'Can the perforation be tested before production?', answer: '<p>Yes, and it should be. A structural sample lets you open one the way store staff will, which is the only reliable test of whether the strength is right.</p>' },
       { question: 'Do you supply these in multiple case counts?', answer: '<p>Yes. Different counts need different dielines but can share the board, print system and perforation specification, which keeps the setup cost down across the range.</p>' },
-      { question: 'How is the case labelled for the warehouse?', answer: '<p>Product code, unit count and an orientation mark on the outer panels. Tell us if your distributor requires a specific label position and we will leave the area clear.</p>' },
+      { question: 'How is the case labeled for the warehouse?', answer: '<p>Product code, unit count and an orientation mark on the outer panels. Tell us if your distributor requires a specific label position and we will leave the area clear.</p>' },
     ],
   },
 
@@ -132,7 +132,7 @@ export const displayToyContent: ProductContentMap = {
       {
         h2: 'Facing width on a crowded peg',
         body: [
-          'On a peg wall a pack is seen edge-on until a shopper is close. The top third of the front panel, above the products in front of it, is what does the identifying — so the brand belongs there rather than centred.',
+          'On a peg wall a pack is seen edge-on until a shopper is close. The top third of the front panel, above the products in front of it, is what does the identifying — so the brand belongs there rather than centered.',
         ],
       },
     ],
@@ -239,17 +239,17 @@ export const displayToyContent: ProductContentMap = {
       { question: 'Where should the age grading go?', answer: '<p>On the front, near the product identification. It is the second thing a buyer looks for, so putting it on a back panel works against the sale as well as against compliance.</p>' },
       { question: 'Will the box survive being reused for storage?', answer: '<p>With a locking tuck or a lift-off lid, yes. A plain tuck flap tears after a handful of openings, and at that point the box is thrown away.</p>' },
       { question: 'Can you produce packaging for irregular shapes?', answer: '<p>Yes, with a fitted insert holding the toy in position. An irregular item loose in a rectangular box shifts and makes the pack look half empty.</p>' },
-      { question: 'How do I keep the cost down on a low-priced toy?', answer: '<p>Fewer press passes and a simpler structure. Two colours on kraft with a well-made die-cut usually does more at this price point than four colours with a finish.</p>' },
+      { question: 'How do I keep the cost down on a low-priced toy?', answer: '<p>Fewer press passes and a simpler structure. Two colors on kraft with a well-made die-cut usually does more at this price point than four colors with a finish.</p>' },
       { question: 'Is a window film required, or can the aperture be open?', answer: '<p>Either. An open die-cut aperture keeps the pack in the paper recycling stream; a PET film protects the toy from handling and dust. The choice usually follows whether the product can be touched in store.</p>' },
       { question: 'Can one box size cover several products?', answer: '<p>Often two or three sizes cover a range while sharing one board and print system, which keeps a consistent shelf presence without shipping empty space.</p>' },
       { question: 'Do you print the inside of toy boxes?', answer: '<p>It is worth it where the box is part of the play or the storage afterwards, which is common with building sets and playsets.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes across this range. Recycled fibre is slightly less stiff at the same caliper, so on a large window panel we usually step up a grade.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes across this range. Recycled fiber is slightly less stiff at the same caliper, so on a large window panel we usually step up a grade.</p>' },
     ],
   },
 
   'kraft-board-game-packaging-boxes': {
     intro:
-      'A game box is opened and closed hundreds of times over years, which is a harder mechanical life than almost any other pack in the catalogue. The lid is a wear component.',
+      'A game box is opened and closed hundreds of times over years, which is a harder mechanical life than almost any other pack in the catalog. The lid is a wear component.',
     sections: [
       {
         h2: 'The lid is what wears out',
@@ -297,7 +297,7 @@ export const displayToyContent: ProductContentMap = {
       { question: 'Can you produce small print runs for a first edition?', answer: '<p>Yes. Short runs suit digital print with no plate cost, which suits a first edition where the artwork may still change before a reprint.</p>' },
       { question: 'Should the rulebook be a separate item?', answer: '<p>Usually, and it needs a flat position in the insert. A rulebook folded against the lid creases and is the first component to look worn.</p>' },
       { question: 'Are these boxes suitable for shipping direct to customers?', answer: '<p>Inside an outer carton, yes. A game box shipped on its own arrives with crushed corners, and the corners are the most visible part on a shelf.</p>' },
-      { question: 'Can the insert be recyclable rather than plastic?', answer: '<p>Yes, in die-cut board or moulded pulp. Board handles cards and tiles well; moulded pulp suits irregular pieces where a board cavity would be complicated.</p>' },
+      { question: 'Can the insert be recyclable rather than plastic?', answer: '<p>Yes, in die-cut board or molded pulp. Board handles cards and tiles well; molded pulp suits irregular pieces where a board cavity would be complicated.</p>' },
     ],
   },
 
@@ -383,9 +383,9 @@ export const displayToyContent: ProductContentMap = {
       { question: 'Should the pack be easy to open one-handed?', answer: '<p>Yes, and it is worth designing for. A large share of this product is opened by someone holding a baby, and a closure needing two hands and a fingernail is a real irritation.</p>' },
       { question: 'Are food-contact grades needed?', answer: '<p>For feeding products and anything a child may mouth, tell us and we specify appropriate boards and inks. Whether contact is direct or through an inner wrap changes the stock options.</p>' },
       { question: 'Can you produce packs for gift sets?', answer: '<p>Yes, with a compartmented insert so mixed items sit level. Baby gift sets are frequently bought as presents, so the opening moment matters more than for everyday stock.</p>' },
-      { question: 'Is a window a good idea?', answer: '<p>Often, since buyers want to see the fabric or the item itself. On soft goods a window shows texture and colour that a photograph flattens.</p>' },
+      { question: 'Is a window a good idea?', answer: '<p>Often, since buyers want to see the fabric or the item itself. On soft goods a window shows texture and color that a photograph flattens.</p>' },
       { question: 'What finishes suit this category?', answer: '<p>Matt or soft-touch, both of which resist visible handling marks. High gloss shows every fingerprint, which works against the impression the pack needs to give.</p>' },
-      { question: 'Can we use recycled board?', answer: '<p>Yes, and it suits the positioning of most brands in this category. We would usually step up one caliper, since recycled fibre is slightly less stiff at the same weight.</p>' },
+      { question: 'Can we use recycled board?', answer: '<p>Yes, and it suits the positioning of most brands in this category. We would usually step up one caliper, since recycled fiber is slightly less stiff at the same weight.</p>' },
       { question: 'Do you supply matching packs across a product line?', answer: '<p>Yes. Fixing the board, print method and finish once and varying only the dieline is what makes products launched months apart look like one range.</p>' },
     ],
   },

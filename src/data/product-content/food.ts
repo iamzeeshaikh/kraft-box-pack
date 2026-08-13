@@ -17,7 +17,7 @@ export const foodContent: ProductContentMap = {
       {
         h2: 'Bloom is the failure customers see',
         body: [
-          'When chocolate warms and re-solidifies, fat or sugar migrates to the surface and leaves a pale grey film. The chocolate is safe and tastes the same, but it looks spoiled, and customers reject it.',
+          'When chocolate warms and re-solidifies, fat or sugar migrates to the surface and leaves a pale gray film. The chocolate is safe and tastes the same, but it looks spoiled, and customers reject it.',
           'Packaging cannot prevent bloom on its own — that is a temperature question through the whole chain — but a pack that insulates slightly and is not left in a shop window helps. What packaging can do is avoid making it worse by trapping warmth.',
         ],
       },
@@ -35,7 +35,7 @@ export const foodContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'For mixed confectionery rather than moulded chocolate specifically, ',
+      lead: 'For mixed confectionery rather than molded chocolate specifically, ',
       href: '/product/kraft-candy-boxes/',
       anchor: 'candy boxes cover the wider range',
       tail: '.',
@@ -47,7 +47,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Are these food-contact compliant?', answer: '<p>Where chocolate touches the board directly we specify compliant boards and inks. Tell us whether contact is direct or through a liner or foil.</p>' },
       { question: 'Should the box have a window?', answer: '<p>It suits decorated or filled chocolates where appearance sells. Bear in mind a window also lets light and warmth in, which works against the product.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your piece count and tray layout. Send the tray if you have one, since it sets the internal dimensions.</p>' },
-      { question: 'Do you supply the tray as well?', answer: '<p>Yes, in board or moulded pulp, specified with the box so the two fit without adjustment.</p>' },
+      { question: 'Do you supply the tray as well?', answer: '<p>Yes, in board or molded pulp, specified with the box so the two fit without adjustment.</p>' },
       { question: 'What finishes suit chocolate packaging?', answer: '<p>Foil and deboss on kraft read well and suit the gifting positioning. Heavy lamination adds cost and removes the pack from the paper stream.</p>' },
       { question: 'Are these suitable for posting?', answer: '<p>With an insert and an outer carton, yes, though temperature during transit is the larger risk. Summer shipping usually needs an insulated outer.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>For non-direct contact, yes, and using a liner for the contact face is what lets you keep a recycled outer.</p>' },
@@ -93,7 +93,7 @@ export const foodContent: ProductContentMap = {
       { question: 'What sizes do you produce?', answer: '<p>Cut to your bag or fill size. Send a filled bag rather than a flat one, since filled dimensions differ noticeably.</p>' },
       { question: 'Can the carton be recyclable?', answer: '<p>The carton can. The barrier bag inside usually cannot, so the claim should be made about the carton specifically rather than the pack as a whole.</p>' },
       { question: 'Do you supply resealable options?', answer: '<p>Zips and tin ties are both available on bags. For a carton the reseal is usually a tuck lock, which is less airtight.</p>' },
-      { question: 'What finishes suit coffee packaging?', answer: '<p>Uncoated kraft with one or two colours suits the speciality positioning. Matt lamination is common where a moisture barrier on the carton is also wanted.</p>' },
+      { question: 'What finishes suit coffee packaging?', answer: '<p>Uncoated kraft with one or two colors suits the speciality positioning. Matt lamination is common where a moisture barrier on the carton is also wanted.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes for the carton. The inner barrier is specified separately and is where the recyclability question actually sits.</p>' },
     ],
   },
@@ -103,16 +103,16 @@ export const foodContent: ProductContentMap = {
       'Tea absorbs aroma from whatever is around it, which makes packaging as much about keeping smells out as keeping freshness in.',
     sections: [
       {
-        h2: 'Tea takes on surrounding odours',
+        h2: 'Tea takes on surrounding odors',
         body: [
           'Leaf tea is highly absorbent and will pick up the smell of ink, adhesive or a neighbouring product on a shelf. That is why an inner barrier matters even where the carton itself seems adequate.',
-          'Low-odour inks and adhesives are worth specifying where tea sits in direct contact, and it is a request that has to be made rather than assumed.',
+          'Low-odor inks and adhesives are worth specifying where tea sits in direct contact, and it is a request that has to be made rather than assumed.',
         ],
       },
       {
         h2: 'Bags, loose leaf and sachets',
         body: [
-          'Each needs a different internal arrangement. Loose leaf needs a sealed inner; individually wrapped sachets need only a carton; unwrapped bags sit between the two and are the most vulnerable to odour transfer.',
+          'Each needs a different internal arrangement. Loose leaf needs a sealed inner; individually wrapped sachets need only a carton; unwrapped bags sit between the two and are the most vulnerable to odor transfer.',
         ],
       },
       {
@@ -123,22 +123,22 @@ export const foodContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'For coffee, where off-gassing rather than odour absorption is the constraint, ',
+      lead: 'For coffee, where off-gassing rather than odor absorption is the constraint, ',
       href: '/product/kraft-coffee-packaging-boxes/',
       anchor: 'coffee packaging covers valves and barriers',
       tail: '.',
     },
     faqs: [
-      { question: 'Why does my tea taste of the packaging?', answer: '<p>Leaf tea is highly absorbent and picks up odours from ink, adhesive or a neighbouring product. Low-odour inks and adhesives are worth specifying where contact is direct.</p>' },
-      { question: 'Do I need an inner barrier?', answer: '<p>For loose leaf, yes. Individually wrapped sachets need only a carton; unwrapped bags sit between the two and are the most vulnerable to odour transfer.</p>' },
+      { question: 'Why does my tea taste of the packaging?', answer: '<p>Leaf tea is highly absorbent and picks up odors from ink, adhesive or a neighbouring product. Low-odor inks and adhesives are worth specifying where contact is direct.</p>' },
+      { question: 'Do I need an inner barrier?', answer: '<p>For loose leaf, yes. Individually wrapped sachets need only a carton; unwrapped bags sit between the two and are the most vulnerable to odor transfer.</p>' },
       { question: 'Are these food-contact compliant?', answer: '<p>Where tea touches the board directly we specify compliant boards and inks. Tell us whether contact is direct or through an inner.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your count and bag or sachet dimensions. Send a filled sample, since loose tea settles and changes the fill height.</p>' },
       { question: 'Can the carton be resealable?', answer: '<p>A tuck lock helps but is not airtight. For loose leaf a resealable inner is the more effective answer.</p>' },
-      { question: 'What finishes suit tea packaging?', answer: '<p>Uncoated kraft with restrained print suits the speciality positioning, and it avoids the ink volume that contributes to odour transfer.</p>' },
+      { question: 'What finishes suit tea packaging?', answer: '<p>Uncoated kraft with restrained print suits the speciality positioning, and it avoids the ink volume that contributes to odor transfer.</p>' },
       { question: 'Can I have a window?', answer: '<p>Yes, and it suits whole-leaf teas where appearance matters. It also lets light in, which degrades some teas over time.</p>' },
       { question: 'Do you supply cartons for sample sets?', answer: '<p>Yes, with a compartment per variety so aromas do not mix between compartments.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes, though recycled stock can carry more residual odour than virgin board, which matters more here than in most categories. We would recommend a sample first.</p>' },
-      { question: 'Can these ship internationally?', answer: '<p>Yes, and a moisture barrier becomes more important on longer journeys, since tea takes on humidity as readily as odour.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes, though recycled stock can carry more residual odor than virgin board, which matters more here than in most categories. We would recommend a sample first.</p>' },
+      { question: 'Can these ship internationally?', answer: '<p>Yes, and a moisture barrier becomes more important on longer journeys, since tea takes on humidity as readily as odor.</p>' },
     ],
   },
 
@@ -180,7 +180,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Are these food-contact compliant?', answer: '<p>Yes, with compliant boards and inks where contact is direct, which it almost always is on this product.</p>' },
       { question: 'Can they be carried by hand?', answer: '<p>Yes, and larger counts benefit from a handle with reinforcement around the aperture.</p>' },
       { question: 'Do these stack for delivery?', answer: '<p>With a flat lid, yes. Stacking with a soft product inside means the lid has to carry the box above without touching the donuts.</p>' },
-      { question: 'Can they be printed?', answer: '<p>Yes, with food-safe inks. One or two colours on kraft suits the category and keeps the cost per box down.</p>' },
+      { question: 'Can they be printed?', answer: '<p>Yes, with food-safe inks. One or two colors on kraft suits the category and keeps the cost per box down.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>For non-direct contact, yes. Where donuts sit on the board a compliant grade with a barrier is needed.</p>' },
     ],
   },
@@ -198,7 +198,7 @@ export const foodContent: ProductContentMap = {
       {
         h2: 'A cup keeps it upright',
         body: [
-          'Without a fitted cup a muffin tips onto its side, and a tipped muffin loses its dome shape against the wall. The insert both holds it upright and separates it from its neighbours.',
+          'Without a fitted cup a muffin tips onto its side, and a tipped muffin loses its dome shape against the wall. The insert both holds it upright and separates it from its neighbors.',
         ],
       },
       {
@@ -216,7 +216,7 @@ export const foodContent: ProductContentMap = {
     },
     faqs: [
       { question: 'Why are my muffin tops flattened?', answer: '<p>The box was sized to the base rather than over the dome. A muffin is measured at the base but its dome is the tallest point, so clearance has to be measured over it as baked.</p>' },
-      { question: 'Do I need a fitted insert?', answer: '<p>Yes. Without a cup a muffin tips onto its side and loses its dome shape against the wall, and the insert also separates it from its neighbours.</p>' },
+      { question: 'Do I need a fitted insert?', answer: '<p>Yes. Without a cup a muffin tips onto its side and loses its dome shape against the wall, and the insert also separates it from its neighbors.</p>' },
       { question: 'Should the box be vented?', answer: '<p>If muffins are boxed warm, yes. Trapped steam softens the crust, which matters for a product sold partly on texture.</p>' },
       { question: 'What counts do you produce?', answer: '<p>Commonly 2, 4, 6 and 12, each with its own insert. The counts can share one board and print system.</p>' },
       { question: 'Is a window useful?', answer: '<p>Yes for retail, where the muffin sells itself. It costs stiffness on the lid, which is the panel that must clear the dome.</p>' },
@@ -235,7 +235,7 @@ export const foodContent: ProductContentMap = {
       {
         h2: 'They crack if they can move',
         body: [
-          'A macaron shell cracks under very little force, and sliding against a neighbour is enough. A fitted insert holding each one individually is not optional on this product — it is the reason the packaging exists.',
+          'A macaron shell cracks under very little force, and sliding against a neighbor is enough. A fitted insert holding each one individually is not optional on this product — it is the reason the packaging exists.',
         ],
       },
       {
@@ -247,7 +247,7 @@ export const foodContent: ProductContentMap = {
       {
         h2: 'Bought as a gift, opened in front of people',
         body: [
-          'Almost all macaron sales are gifting or occasion-led, so the box is opened in company. Colour range is a large part of the appeal, which is why a window or an accurate printed representation matters more here than on most confectionery.',
+          'Almost all macaron sales are gifting or occasion-led, so the box is opened in company. Color range is a large part of the appeal, which is why a window or an accurate printed representation matters more here than on most confectionery.',
         ],
       },
     ],
@@ -258,15 +258,15 @@ export const foodContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'Why do macarons crack in the box?', answer: '<p>The shell cracks under very little force, and sliding against a neighbour is enough. A fitted insert holding each one individually is the reason this packaging exists.</p>' },
+      { question: 'Why do macarons crack in the box?', answer: '<p>The shell cracks under very little force, and sliding against a neighbor is enough. A fitted insert holding each one individually is the reason this packaging exists.</p>' },
       { question: 'Does the box affect texture?', answer: '<p>Indirectly. The crisp shell softens as it takes on moisture, so a pack that seals reasonably well holds the texture noticeably longer.</p>' },
       { question: 'How many can one box hold?', answer: '<p>Commonly 6, 12 or 24 with an insert position each. Send the count you sell and we cut the insert to it.</p>' },
-      { question: 'Should the box have a window?', answer: '<p>Usually, because colour range is a large part of the appeal. Where a window is impractical, accurate printed colour does the same job.</p>' },
+      { question: 'Should the box have a window?', answer: '<p>Usually, because color range is a large part of the appeal. Where a window is impractical, accurate printed color does the same job.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your macaron diameter and the insert layout. Macaron sizes vary between bakers, so send an actual one.</p>' },
       { question: 'Are these food-contact compliant?', answer: '<p>Yes, with compliant boards and inks. Macarons usually sit directly in the insert, so the insert material matters as much as the box.</p>' },
       { question: 'Can these be posted?', answer: '<p>With a fitted insert and a protective outer, yes, though it is a fragile product and some breakage rate should be expected.</p>' },
-      { question: 'What finishes suit them?', answer: '<p>Restrained — foil or deboss on kraft. The macarons provide the colour, and a busy box competes with them.</p>' },
-      { question: 'Can inserts hold different flavours separately?', answer: '<p>Yes, and it is worth doing so flavours do not transfer. Individual positions also stop colours marking each other.</p>' },
+      { question: 'What finishes suit them?', answer: '<p>Restrained — foil or deboss on kraft. The macarons provide the color, and a busy box competes with them.</p>' },
+      { question: 'Can inserts hold different flavors separately?', answer: '<p>Yes, and it is worth doing so flavors do not transfer. Individual positions also stop colors marking each other.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>For the outer, yes. The insert in direct contact needs a compliant grade.</p>' },
     ],
   },
@@ -484,7 +484,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Are these food-contact compliant?', answer: '<p>Yes, with compliant boards and coatings, and PFAS-free grease-resistant grades as standard.</p>' },
       { question: 'Do they stack?', answer: '<p>Yes with a flat top fold. Full boxes stacked in a delivery bag need the fold to carry the weight above without opening.</p>' },
       { question: 'Can they have a wire handle?', answer: '<p>Yes, though a metal handle affects microwaveability and recyclability. A handle-free version avoids both issues.</p>' },
-      { question: 'Can they be printed?', answer: '<p>Yes, with food-safe inks. One or two colours on kraft is the usual specification at the volumes this format runs.</p>' },
+      { question: 'Can they be printed?', answer: '<p>Yes, with food-safe inks. One or two colors on kraft is the usual specification at the volumes this format runs.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>For non-contact areas, yes. The contact face needs a compliant coated grade.</p>' },
     ],
   },
@@ -658,7 +658,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Are these microwaveable from frozen?', answer: '<p>Only with a suitable coating and construction. Tell us if reheating in the pack is expected because it narrows the options considerably.</p>' },
       { question: 'Can these be printed?', answer: '<p>Yes, with inks specified for the temperature range. Retail frozen packs carry full print; transit cases need far less.</p>' },
       { question: 'Do you supply liners?', answer: '<p>Yes, where direct contact or moisture containment requires one. The liner is specified with the carton.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes for non-contact areas, with the caveat that recycled fibre takes on moisture slightly faster, which matters more in this application.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes for non-contact areas, with the caveat that recycled fiber takes on moisture slightly faster, which matters more in this application.</p>' },
     ],
   },
 
@@ -670,7 +670,7 @@ export const foodContent: ProductContentMap = {
         h2: 'Suspension, not cushioning',
         body: [
           'An egg held rigidly against a hard surface breaks on impact. An egg suspended between formed pockets, touching only at points, survives a drop that would break it in a snug rigid box.',
-          'That is why moulded pulp works so well here — the geometry holds each egg at a few points and absorbs the rest.',
+          'That is why molded pulp works so well here — the geometry holds each egg at a few points and absorbs the rest.',
         ],
       },
       {
@@ -682,7 +682,7 @@ export const foodContent: ProductContentMap = {
       {
         h2: 'Absorbency is a feature',
         body: [
-          'If an egg does break, moulded pulp absorbs it rather than letting it run through the whole carton. A plastic or coated carton spreads the mess across every egg in the pack.',
+          'If an egg does break, molded pulp absorbs it rather than letting it run through the whole carton. A plastic or coated carton spreads the mess across every egg in the pack.',
         ],
       },
     ],
@@ -695,10 +695,10 @@ export const foodContent: ProductContentMap = {
     faqs: [
       { question: 'How does an egg carton actually protect the egg?', answer: '<p>By suspending it rather than surrounding it. An egg held rigidly against a hard surface breaks on impact; one suspended between formed pockets, touching at a few points, survives the same drop.</p>' },
       { question: 'Does egg size matter?', answer: '<p>Yes. A carton formed for medium eggs bruises large ones at the lid, so where mixed grades are packed the carton has to be formed for the largest.</p>' },
-      { question: 'What happens if an egg breaks in the carton?', answer: '<p>Moulded pulp absorbs it rather than letting it run. A coated or plastic carton spreads it across every egg in the pack.</p>' },
+      { question: 'What happens if an egg breaks in the carton?', answer: '<p>Molded pulp absorbs it rather than letting it run. A coated or plastic carton spreads it across every egg in the pack.</p>' },
       { question: 'What counts do you produce?', answer: '<p>Commonly 6, 10, 12 and 30-cell trays. Tell us the count and the egg grade you pack.</p>' },
-      { question: 'Can these be printed?', answer: '<p>Yes, though moulded pulp takes print differently from board — coverage is limited and fine detail does not hold. A label is often the better route for detailed information.</p>' },
-      { question: 'Are these recyclable?', answer: '<p>Moulded pulp is, and it is usually made from recycled paper to begin with, which is part of why it dominates the category.</p>' },
+      { question: 'Can these be printed?', answer: '<p>Yes, though molded pulp takes print differently from board — coverage is limited and fine detail does not hold. A label is often the better route for detailed information.</p>' },
+      { question: 'Are these recyclable?', answer: '<p>Molded pulp is, and it is usually made from recycled paper to begin with, which is part of why it dominates the category.</p>' },
       { question: 'Do they stack?', answer: '<p>Yes, and the formed geometry nests, which is efficient in transit. Send the stack height for pallet work.</p>' },
       { question: 'Can I have a window?', answer: '<p>Some formats allow one, though it works against the absorbency and protection the closed format gives. A printed representation is usually the better compromise.</p>' },
       { question: 'Are board cartons an alternative to pulp?', answer: '<p>They exist and print better, but they protect less well because they cushion rather than suspend. For eggs specifically, pulp is usually the right answer.</p>' },
@@ -739,7 +739,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Why does fruit spoil faster in a sealed box?', answer: '<p>Fruit releases moisture continuously and a sealed box traps it against the skin, which is where rot starts. Ventilation is the main thing the packaging does.</p>' },
       { question: 'How do I stop bruising?', answer: '<p>Reduce the load rather than strengthen the walls. Most bruising is the weight of fruit above in the stack, so cell trays, layer pads or a shallower box help more.</p>' },
       { question: 'How much ventilation is needed?', answer: '<p>It varies by fruit. Tell us the produce and how long it is stored and we specify the vent pattern against that rather than a default.</p>' },
-      { question: 'Do you supply cell trays?', answer: '<p>Yes, in board or moulded pulp, specified with the box because they set the internal dimensions and the layer count.</p>' },
+      { question: 'Do you supply cell trays?', answer: '<p>Yes, in board or molded pulp, specified with the box because they set the internal dimensions and the layer count.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your pack weight or count, and ideally to your pallet pattern so no space is wasted on each layer.</p>' },
       { question: 'Do these stack when full?', answer: '<p>Yes, and the grade follows the stack rather than the weight of one box. Send the stack height, because the bottom box carries the column.</p>' },
       { question: 'Are moisture-resistant grades needed?', answer: '<p>In cold storage, yes. Board absorbs humidity and loses stacking strength, which matters when boxes stand for weeks.</p>' },
@@ -829,7 +829,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Can the carton have a window?', answer: '<p>It can, though the bars are individually wrapped so a window shows film rather than product. A printed image usually works better.</p>' },
       { question: 'Are these food-contact compliant?', answer: '<p>The carton is not usually in direct contact because of the wrappers. Tell us if any bar is unwrapped, since that changes the requirement.</p>' },
       { question: 'Do these stack on shelf?', answer: '<p>Yes, and a flat top stacks better than a tuck that stands proud. Tell us if they are merchandised stacked.</p>' },
-      { question: 'Can I run several flavours on one dieline?', answer: '<p>Yes, differentiated by panel colour. That is far cheaper than a structural variant per flavour and reads faster on shelf.</p>' },
+      { question: 'Can I run several flavors on one dieline?', answer: '<p>Yes, differentiated by panel color. That is far cheaper than a structural variant per flavor and reads faster on shelf.</p>' },
       { question: 'What board weight is used?', answer: '<p>Light to moderate — there is no real load. The specification follows print quality and shelf presence rather than strength.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes. Since the carton is not the barrier, recycled stock is straightforward here.</p>' },
     ],
@@ -874,7 +874,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Can I have a window?', answer: '<p>Yes, and it suits snacks with visual appeal. It also lets light in, which affects some products over shelf life.</p>' },
       { question: 'How much space does nutrition information need?', answer: '<p>More than most designs allow. It has prescribed minimum sizes, so it is blocked into the dieline before artwork begins.</p>' },
       { question: 'Do these stack on shelf?', answer: '<p>Yes with a flat top. Send the merchandising arrangement so we specify the board against it.</p>' },
-      { question: 'Can flavours share one dieline?', answer: '<p>Yes, differentiated by panel colour, which is cheaper and reads faster on shelf than a structural variant.</p>' },
+      { question: 'Can flavors share one dieline?', answer: '<p>Yes, differentiated by panel color, which is cheaper and reads faster on shelf than a structural variant.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes where the carton is not the direct contact surface. With an inner bag, recycled stock is straightforward.</p>' },
     ],
   },
@@ -914,7 +914,7 @@ export const foodContent: ProductContentMap = {
       { question: 'Tub or carton?', answer: '<p>An open tub suits immediate consumption at a cinema or event; a closed carton suits retail and takeaway. The choice follows where the popcorn is eaten.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your serving volumes. Send the volume rather than dimensions, since popcorn is sold by fill rather than by weight.</p>' },
       { question: 'Are these food-contact compliant?', answer: '<p>Yes, with compliant boards and inks. Popcorn is direct contact throughout.</p>' },
-      { question: 'Can they be printed?', answer: '<p>Yes, and the large panel area suits it. One or two colours on kraft keeps the cost per unit sensible at event volumes.</p>' },
+      { question: 'Can they be printed?', answer: '<p>Yes, and the large panel area suits it. One or two colors on kraft keeps the cost per unit sensible at event volumes.</p>' },
       { question: 'Do they stack for storage?', answer: '<p>Nested empty, yes, which is efficient. Filled they do not stack, which is worth allowing for at a service counter.</p>' },
       { question: 'Are these suitable for pre-packed retail?', answer: '<p>With a closed carton and an inner bag, yes. Loose popcorn in a carton alone goes stale quickly.</p>' },
       { question: 'Can these be produced for events?', answer: '<p>Yes, and short runs suit digital print, which makes event-specific branding affordable.</p>' },
@@ -1003,7 +1003,7 @@ export const foodContent: ProductContentMap = {
       { question: 'How many bottles per carrier?', answer: '<p>Commonly 2, 4 or 6. Send the filled weight rather than the count, since weight decides the specification.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your bottle diameter and height including the cap. Send the actual bottle if you can.</p>' },
       { question: 'Do you supply dividers?', answer: '<p>Yes, and for glass they are worth having. They also stop the carrier collapsing inward when partly emptied.</p>' },
-      { question: 'Can these be printed?', answer: '<p>Yes, and a carrier carried home is effective advertising. One or two colours on kraft suits the category.</p>' },
+      { question: 'Can these be printed?', answer: '<p>Yes, and a carrier carried home is effective advertising. One or two colors on kraft suits the category.</p>' },
       { question: 'Do they ship flat?', answer: '<p>Yes, and erect on your line, keeping freight proportionate to the board.</p>' },
       { question: 'Are these suitable for doorstep delivery?', answer: '<p>With a moisture-resistant grade, yes, though a carrier left outside in rain will eventually soften whatever the treatment.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, with a caliper step-up given the load and moisture exposure.</p>' },

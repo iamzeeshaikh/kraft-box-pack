@@ -135,7 +135,7 @@ export const giftContent: ProductContentMap = {
       { question: 'Do these need a liner?', answer: '<p>If a water wrap is included, yes. Any moisture reaching the board softens the base, which is where the whole weight sits.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your bouquet sizes. Send the wrap diameter at the base and the finished height.</p>' },
       { question: 'Can these carry by hand?', answer: '<p>Yes, and a handle helps on taller boxes. The board around a die-cut handle is reinforced because a filled bouquet box is heavier than it looks.</p>' },
-      { question: 'Can they be printed?', answer: '<p>Yes, and the tall outer panels give good area. Restrained print suits the category, since the flowers provide the colour.</p>' },
+      { question: 'Can they be printed?', answer: '<p>Yes, and the tall outer panels give good area. Restrained print suits the category, since the flowers provide the color.</p>' },
       { question: 'Do they ship flat?', answer: '<p>Folding versions do. Rigid bouquet boxes ship assembled and are bulky, which is a real freight consideration.</p>' },
       { question: 'Are these suitable for courier delivery?', answer: '<p>Only inside a substantial outer and with the bunch secured. Bouquets are difficult courier items regardless of packaging.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, with a caliper step-up given the height and the tipping load.</p>' },
@@ -175,13 +175,13 @@ export const giftContent: ProductContentMap = {
       { question: 'Why does my hamper look untidy when opened?', answer: '<p>Mixed content heights. Shorter items sink below the lid line and shift, so packing the shallow recesses up until every top sits level is what fixes it.</p>' },
       { question: 'Why does the base give way?', answer: '<p>A hamper of bottles and jars is far heavier than the footprint suggests, and the base carries all of it. Specify by filled weight rather than box size.</p>' },
       { question: 'Can one box cover several hamper variants?', answer: '<p>Yes — one outer with two or three interchangeable fitments. You keep a single print run on the outer, which is the expensive part.</p>' },
-      { question: 'What insert material should I use?', answer: '<p>Board for regular shapes, moulded pulp for irregular ones, foam where items are fragile. All three can be cut to hold each item at a levelled height.</p>' },
+      { question: 'What insert material should I use?', answer: '<p>Board for regular shapes, molded pulp for irregular ones, foam where items are fragile. All three can be cut to hold each item at a levelled height.</p>' },
       { question: 'Do you supply handles?', answer: '<p>Yes, and on a filled hamper they are necessary. The board around the handle is reinforced because the load concentrates there.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents and layout. Send the actual items, or their dimensions and weights, rather than a target box size.</p>' },
       { question: 'Should the box be rigid?', answer: '<p>For premium hampers, usually. For volume gifting a heavy folding carton with a good fitment does the job at considerably less cost.</p>' },
       { question: 'Can these be posted?', answer: '<p>With an outer carton, yes. A hamper posted alone arrives with crushed corners, and the weight makes that more likely rather than less.</p>' },
       { question: 'Should I order spares for a season?', answer: '<p>Yes. Hampers are bought for a single season with no second run behind them, and overage inside the original run costs a fraction of a short reprint.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes, with a grade step-up given the load. Moulded pulp fitments keep the whole pack recyclable.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes, with a grade step-up given the load. Molded pulp fitments keep the whole pack recyclable.</p>' },
     ],
   },
 
@@ -198,7 +198,7 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'Something to pull',
         body: [
-          'Without a ribbon pull, a thumb notch or a tab, the tray has to be shaken out. A ribbon reads as most considered but is hand-finished and adds labour per unit at volume.',
+          'Without a ribbon pull, a thumb notch or a tab, the tray has to be shaken out. A ribbon reads as most considered but is hand-finished and adds labor per unit at volume.',
         ],
       },
       {
@@ -217,10 +217,10 @@ export const giftContent: ProductContentMap = {
     faqs: [
       { question: 'Why does the tray stick or fall out?', answer: '<p>The tolerance between too tight and too loose is narrow, and it cannot be judged from a drawing. A physical sample before the run is worth the step on this format.</p>' },
       { question: 'How does the customer open it?', answer: '<p>With a ribbon pull, a thumb notch or a tab. Without one the tray has to be shaken out, which undercuts the reason for choosing the format.</p>' },
-      { question: 'Is a ribbon practical at volume?', answer: '<p>It is hand-finished, so it adds labour per unit. For a few hundred that is fine; at tens of thousands a die-cut notch is more sensible.</p>' },
+      { question: 'Is a ribbon practical at volume?', answer: '<p>It is hand-finished, so it adds labor per unit. For a few hundred that is fine; at tens of thousands a die-cut notch is more sensible.</p>' },
       { question: 'Do the contents need an insert?', answer: '<p>Yes, more than on a lift-off box. A drawer reveals contents progressively, so anything that has shifted shows first.</p>' },
       { question: 'Rigid or folding?', answer: '<p>Rigid holds the slide tolerance far better over repeated opening. Folding ships flat and costs a fraction, at the cost of a slide that loosens.</p>' },
-      { question: 'Can the sleeve and tray differ in colour?', answer: '<p>Yes, and it is a straightforward way to add contrast since they are separate components.</p>' },
+      { question: 'Can the sleeve and tray differ in color?', answer: '<p>Yes, and it is a straightforward way to add contrast since they are separate components.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents including the insert, which sets the internal depth.</p>' },
       { question: 'Can I have a window in the sleeve?', answer: '<p>Yes, though it weakens the sleeve that holds the tray square, so the board usually steps up.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Folding versions do; rigid ships assembled and takes noticeably more freight volume.</p>' },
@@ -230,7 +230,7 @@ export const giftContent: ProductContentMap = {
 
   'kraft-lid-base-rigid-boxes': {
     intro:
-      'The classic rigid two-piece — a wrapped base and a separate lid. It is the most substantial-feeling construction in the catalogue.',
+      'The classic rigid two-piece — a wrapped base and a separate lid. It is the most substantial-feeling construction in the catalog.',
     sections: [
       {
         h2: 'Hand-assembled, and that is the cost',
@@ -267,7 +267,7 @@ export const giftContent: ProductContentMap = {
       { question: 'Which finishes suit them?', answer: '<p>Deboss, foil and soft-touch. Texture matters more than gloss because these boxes are handled slowly.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents and fitment. Send what goes in rather than a target box size.</p>' },
       { question: 'What is the turnaround?', answer: '<p>Longer than a folding carton, since hand assembly and each applied finish add time. We confirm a firm date with the quote.</p>' },
-      { question: 'Can the lid and base be different colours?', answer: '<p>Yes, and it is common. They are separate components wrapped in separate sheets.</p>' },
+      { question: 'Can the lid and base be different colors?', answer: '<p>Yes, and it is common. They are separate components wrapped in separate sheets.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes for both core and wrap. A plastic laminate on the wrap would take the pack out of the paper stream.</p>' },
     ],
   },
@@ -285,7 +285,7 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'The lid cannot get lost',
         body: [
-          'That is the practical advantage over a two-piece box. For anything the customer opens repeatedly — jewellery, watches, keepsakes — an attached lid is a genuine improvement rather than a style choice.',
+          'That is the practical advantage over a two-piece box. For anything the customer opens repeatedly — jewelry, watches, keepsakes — an attached lid is a genuine improvement rather than a style choice.',
         ],
       },
       {
@@ -304,7 +304,7 @@ export const giftContent: ProductContentMap = {
     faqs: [
       { question: 'How long does the hinge last?', answer: '<p>It depends on the hinge construction, which is a specification rather than an assembly detail. On a box that gets reopened regularly it is the component that decides the life of the box.</p>' },
       { question: 'What holds a flip-top closed?', answer: '<p>Usually a magnetic catch, since gravity does not. A friction fit works but loosens with use.</p>' },
-      { question: 'Why choose this over a lift-off lid?', answer: '<p>The lid cannot get lost, which matters for anything the customer opens repeatedly — jewellery, watches, keepsakes.</p>' },
+      { question: 'Why choose this over a lift-off lid?', answer: '<p>The lid cannot get lost, which matters for anything the customer opens repeatedly — jewelry, watches, keepsakes.</p>' },
       { question: 'Do these ship flat?', answer: '<p>No, rigid flip-tops ship assembled. That is a freight consideration at volume.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents and fitment. Send what goes in, including any insert.</p>' },
       { question: 'Can the interior be printed?', answer: '<p>Yes, and on a flip-top the inside of the lid is in view whenever the box is open, which makes it worth using.</p>' },
@@ -334,7 +334,7 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'The shoulder can be a contrast',
         body: [
-          'Because it is a separate component, the shoulder can be wrapped in a different colour or material from the base and lid. That visible band is one of the format\'s few decorative opportunities and it costs nothing extra beyond the stock.',
+          'Because it is a separate component, the shoulder can be wrapped in a different color or material from the base and lid. That visible band is one of the format\'s few decorative opportunities and it costs nothing extra beyond the stock.',
         ],
       },
     ],
@@ -347,7 +347,7 @@ export const giftContent: ProductContentMap = {
     faqs: [
       { question: 'What is a shoulder box?', answer: '<p>A rigid box with an inner tray sitting proud of the base, so the lid closes onto a ledge rather than over the outside. It gives a clean visible line and a controlled closing action.</p>' },
       { question: 'Why does it cost more?', answer: '<p>Three components have to align rather than two, which means tighter tolerances and an extra assembly operation.</p>' },
-      { question: 'Can the shoulder be a different colour?', answer: '<p>Yes, and it is one of the format\'s few decorative opportunities. It costs nothing beyond the stock since the shoulder is a separate component.</p>' },
+      { question: 'Can the shoulder be a different color?', answer: '<p>Yes, and it is one of the format\'s few decorative opportunities. It costs nothing beyond the stock since the shoulder is a separate component.</p>' },
       { question: 'Should I order a sample?', answer: '<p>On this construction particularly. Three-part alignment is not judgeable from a drawing.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents and fitment. Send what goes in rather than a target size.</p>' },
       { question: 'Do these ship flat?', answer: '<p>No, they ship assembled like all rigid constructions.</p>' },
@@ -366,7 +366,7 @@ export const giftContent: ProductContentMap = {
         h2: 'Hand-finishing is a per-unit cost',
         body: [
           'A ribbon is attached by hand, so its cost scales with quantity rather than being absorbed in a setup. For a few hundred boxes that is usually acceptable; at tens of thousands it changes the economics substantially.',
-          'Where volume is high, a die-cut tuck or a magnetic closure gives a similar impression at a fraction of the labour.',
+          'Where volume is high, a die-cut tuck or a magnetic closure gives a similar impression at a fraction of the labor.',
         ],
       },
       {
@@ -392,8 +392,8 @@ export const giftContent: ProductContentMap = {
       { question: 'Is a ribbon closure practical at volume?', answer: '<p>It is hand-finished, so the cost scales per unit rather than being absorbed in a setup. For a few hundred boxes it is fine; at tens of thousands it changes the economics substantially.</p>' },
       { question: 'Which ribbon type should I choose?', answer: '<p>Satin frays at cut ends unless heat-sealed. Grosgrain holds its edge and reads as more substantial. Cotton tape suits a natural kraft positioning.</p>' },
       { question: 'Why does the ribbon tear free?', answer: '<p>It pulls at the anchor holes every time it is used. Reinforcement at those points is what stops it after a few openings.</p>' },
-      { question: 'Is there a cheaper alternative that looks similar?', answer: '<p>A magnetic closure or a well-made die-cut tuck gives a comparable impression without the per-unit labour.</p>' },
-      { question: 'Can you supply the ribbon in a brand colour?', answer: '<p>Yes, subject to availability in the ribbon type you want. Custom colours may carry a minimum of their own.</p>' },
+      { question: 'Is there a cheaper alternative that looks similar?', answer: '<p>A magnetic closure or a well-made die-cut tuck gives a comparable impression without the per-unit labor.</p>' },
+      { question: 'Can you supply the ribbon in a brand color?', answer: '<p>Yes, subject to availability in the ribbon type you want. Custom colors may carry a minimum of their own.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents. The ribbon length follows the box dimensions plus enough for the bow or pull.</p>' },
       { question: 'Does the ribbon affect recyclability?', answer: '<p>Yes — it is not paper, so it should be removed before recycling. Worth noting if you make a recycling claim on the pack.</p>' },
       { question: 'Can the box also have a tuck closure?', answer: '<p>Yes, and it is a sensible belt-and-braces approach where the box ships. The ribbon then reads as decorative rather than structural.</p>' },
@@ -594,20 +594,20 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'Cheapest way to present something small',
         body: [
-          'One blank, one fold, no glue on some constructions. For favours, jewellery, vouchers and small soft goods it does a presentation job at a fraction of a carton\'s cost.',
+          'One blank, one fold, no glue on some constructions. For favors, jewelry, vouchers and small soft goods it does a presentation job at a fraction of a carton\'s cost.',
         ],
       },
     ],
     link: {
       lead: 'For small gifts needing a rigid structure instead, ',
       href: '/product/kraft-favor-boxes/',
-      anchor: 'favour boxes hold their shape when filled',
+      anchor: 'favor boxes hold their shape when filled',
       tail: '.',
     },
     faqs: [
       { question: 'How much does a pillow box hold?', answer: '<p>Less than the external dimensions suggest, because the curved ends take internal volume. A product sized to the flat measurement will not go in.</p>' },
       { question: 'Why do the ends gape?', answer: '<p>Overfilling. The box loses its curve and the ends spring open, which is the format failing rather than the board. A larger box is the answer, not a heavier one.</p>' },
-      { question: 'What contents suit this?', answer: '<p>Flat or soft items — jewellery, vouchers, scarves, confectionery. Rigid rectangular products fight the curve.</p>' },
+      { question: 'What contents suit this?', answer: '<p>Flat or soft items — jewelry, vouchers, scarves, confectionery. Rigid rectangular products fight the curve.</p>' },
       { question: 'Is this cheaper than a carton?', answer: '<p>Considerably. One blank, one fold and minimal material make it the cheapest presentation format available.</p>' },
       { question: 'Can I add a window?', answer: '<p>Yes, on the flat face. The curved ends do not take an aperture well.</p>' },
       { question: 'What board weight is used?', answer: '<p>Light to moderate. Too heavy and the curve will not form cleanly, which is the reverse of the usual rule.</p>' },
@@ -637,7 +637,7 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'Small format, small budget',
         body: [
-          'These are given away with a purchase or sold at a low margin. One or two colours on kraft with a die-cut slot does the job; anything more rarely returns its cost.',
+          'These are given away with a purchase or sold at a low margin. One or two colors on kraft with a die-cut slot does the job; anything more rarely returns its cost.',
         ],
       },
     ],
@@ -651,11 +651,11 @@ export const giftContent: ProductContentMap = {
       { question: 'Should the card be visible?', answer: '<p>Yes, or at least obvious. A card hidden in a plain unmarked box gives no clue what it is — a window, a die-cut slot or a printed panel all solve it.</p>' },
       { question: 'How do I stop the card falling out?', answer: '<p>A slit or corner slot holding it in position. It also presents the card face-on, which is better presentation than a loose card lying flat.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your card dimensions. Standard card sizes vary slightly between issuers, so send an actual card.</p>' },
-      { question: 'How much should I spend on this?', answer: '<p>Not much. These are given away with a purchase or sold at low margin, so one or two colours on kraft with a die-cut slot is usually right.</p>' },
+      { question: 'How much should I spend on this?', answer: '<p>Not much. These are given away with a purchase or sold at low margin, so one or two colors on kraft with a die-cut slot is usually right.</p>' },
       { question: 'Can these hold a card and a note?', answer: '<p>Yes, with a second slot or a pocket. Tell us the note size, since it adds depth the card alone does not.</p>' },
       { question: 'Do they ship flat?', answer: '<p>Yes, which keeps freight negligible at the quantities these run.</p>' },
-      { question: 'Can these be personalised?', answer: '<p>Yes on digital print, which makes names or occasions affordable at small quantities.</p>' },
-      { question: 'What finishes suit them?', answer: '<p>A single foil block reads well against kraft and is one pass. Full-colour rarely justifies itself at this size and price.</p>' },
+      { question: 'Can these be personalized?', answer: '<p>Yes on digital print, which makes names or occasions affordable at small quantities.</p>' },
+      { question: 'What finishes suit them?', answer: '<p>A single foil block reads well against kraft and is one pass. Full-color rarely justifies itself at this size and price.</p>' },
       { question: 'Can these hang for retail display?', answer: '<p>Yes with a reinforced tab, and gift cards are frequently merchandised on pegs.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes across the range.</p>' },
     ],
@@ -698,7 +698,7 @@ export const giftContent: ProductContentMap = {
       { question: 'Rigid or folding?', answer: '<p>Rigid for high-end wedding stationery where the box is part of the gift. Folding is adequate where the box is opened once.</p>' },
       { question: 'Can you accommodate wax seals and ribbon?', answer: '<p>Yes, and both add depth. A wax seal in particular needs clearance so the lid does not press on it.</p>' },
       { question: 'What finishes suit them?', answer: '<p>Foil and blind deboss on kraft, which matches the stationery conventions of the category.</p>' },
-      { question: 'Can these be produced in small quantities?', answer: '<p>Yes, and short runs suit digital print, which makes personalised names and dates affordable.</p>' },
+      { question: 'Can these be produced in small quantities?', answer: '<p>Yes, and short runs suit digital print, which makes personalized names and dates affordable.</p>' },
       { question: 'Do you supply the insert as well?', answer: '<p>Yes, in board, holding the cards in position and away from the corners.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and uncoated kraft suits the natural stationery aesthetic these are usually chosen for.</p>' },
     ],
@@ -750,7 +750,7 @@ export const giftContent: ProductContentMap = {
 
   'kraft-candy-favor-boxes': {
     intro:
-      'A candy favour box is a small carton filled with confectionery for an event, produced in a fixed quantity for a single day.',
+      'A candy favor box is a small carton filled with confectionery for an event, produced in a fixed quantity for a single day.',
     sections: [
       {
         h2: 'Assembly time is the hidden cost',
@@ -767,24 +767,24 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'No second run',
         body: [
-          'Favours are made for one event. Overage produced inside the original run costs a fraction of a short reprint, and running out on the day cannot be fixed.',
+          'Favors are made for one event. Overage produced inside the original run costs a fraction of a short reprint, and running out on the day cannot be fixed.',
         ],
       },
     ],
     link: {
-      lead: 'For non-food favours in the same occasion range, ',
+      lead: 'For non-food favors in the same occasion range, ',
       href: '/product/kraft-event-favor-boxes/',
-      anchor: 'event favour boxes cover the general formats',
+      anchor: 'event favor boxes cover the general formats',
       tail: '.',
     },
     faqs: [
       { question: 'How quickly do these assemble?', answer: '<p>It depends entirely on the structure. A box erecting in one movement saves hours over one needing three folds, which matters when someone is filling two hundred by hand the night before.</p>' },
       { question: 'Are these food-safe?', answer: '<p>Where sweets sit directly against the board, yes, with a compliant grade. Wrapped confectionery changes the requirement, so tell us which applies.</p>' },
-      { question: 'Should I order spares?', answer: '<p>Yes. Favours are made for one event with no second run, and overage inside the original run costs a fraction of a reprint.</p>' },
-      { question: 'Can I have names or dates printed?', answer: '<p>Yes. Short runs suit digital print with no plate cost, which makes personalisation affordable at favour quantities.</p>' },
-      { question: 'What sizes do you produce?', answer: '<p>Cut to your fill. Send the sweets and how full you want the box to look, since a half-empty favour reads as mean.</p>' },
+      { question: 'Should I order spares?', answer: '<p>Yes. Favors are made for one event with no second run, and overage inside the original run costs a fraction of a reprint.</p>' },
+      { question: 'Can I have names or dates printed?', answer: '<p>Yes. Short runs suit digital print with no plate cost, which makes personalisation affordable at favor quantities.</p>' },
+      { question: 'What sizes do you produce?', answer: '<p>Cut to your fill. Send the sweets and how full you want the box to look, since a half-empty favor reads as mean.</p>' },
       { question: 'Can I have a window?', answer: '<p>Yes, and it suits confectionery. A plain die-cut aperture keeps the box fully recyclable.</p>' },
-      { question: 'Are ribbons available?', answer: '<p>Yes, though hand-finished, which adds labour. At favour quantities that is usually acceptable.</p>' },
+      { question: 'Are ribbons available?', answer: '<p>Yes, though hand-finished, which adds labor. At favor quantities that is usually acceptable.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Yes, which keeps them affordable. Assembly is on your side, so structure choice matters.</p>' },
       { question: 'What board weight is used?', answer: '<p>Light. There is no load, so the specification follows print and how cleanly the box folds.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Where contact is not direct, yes. Direct contact with sweets needs a compliant grade.</p>' },
@@ -793,7 +793,7 @@ export const giftContent: ProductContentMap = {
 
   'kraft-event-favor-boxes': {
     intro:
-      'An event favour box holds a small keepsake or gift given to guests. It is produced once, in quantity, for a fixed date.',
+      'An event favor box holds a small keepsake or gift given to guests. It is produced once, in quantity, for a fixed date.',
     sections: [
       {
         h2: 'The deadline is the constraint',
@@ -815,20 +815,20 @@ export const giftContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'For confectionery favours specifically, ',
+      lead: 'For confectionery favors specifically, ',
       href: '/product/kraft-candy-favor-boxes/',
-      anchor: 'candy favour boxes cover food contact',
+      anchor: 'candy favor boxes cover food contact',
       tail: '.',
     },
     faqs: [
       { question: 'How far ahead should I order?', answer: '<p>Work backwards from the event through delivery, production and proofing. Proofing is where most time is lost, and there is no flexibility on an event date.</p>' },
-      { question: 'Can I have names or dates printed?', answer: '<p>Yes. At favour quantities digital print has no plate cost, so personalisation is genuinely affordable rather than a premium.</p>' },
+      { question: 'Can I have names or dates printed?', answer: '<p>Yes. At favor quantities digital print has no plate cost, so personalisation is genuinely affordable rather than a premium.</p>' },
       { question: 'How easy are these to assemble?', answer: '<p>That is worth deciding deliberately. These are assembled by the host rather than a packing line, and a structure that folds intuitively beats a clever one.</p>' },
       { question: 'Should I order spares?', answer: '<p>Yes, always. There is no second run, and running out on the day cannot be fixed.</p>' },
-      { question: 'What sizes do you produce?', answer: '<p>Cut to your favour. Send the item and how full you want the box to look.</p>' },
-      { question: 'Can I have a window?', answer: '<p>Yes, and it works where the favour itself is attractive. A plain aperture keeps the box recyclable.</p>' },
-      { question: 'Are ribbons or tags available?', answer: '<p>Yes, both, though hand-finished elements add labour per unit.</p>' },
-      { question: 'Do these ship flat?', answer: '<p>Yes, which keeps freight and cost down at favour quantities.</p>' },
+      { question: 'What sizes do you produce?', answer: '<p>Cut to your favor. Send the item and how full you want the box to look.</p>' },
+      { question: 'Can I have a window?', answer: '<p>Yes, and it works where the favor itself is attractive. A plain aperture keeps the box recyclable.</p>' },
+      { question: 'Are ribbons or tags available?', answer: '<p>Yes, both, though hand-finished elements add labor per unit.</p>' },
+      { question: 'Do these ship flat?', answer: '<p>Yes, which keeps freight and cost down at favor quantities.</p>' },
       { question: 'What is the minimum quantity?', answer: '<p>The standard minimum applies, which suits most events. Digital print is almost always the right route at these numbers.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and uncoated kraft suits the craft and wedding positioning these are usually bought for.</p>' },
     ],
@@ -896,14 +896,14 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'Restraint reads better to press',
         body: [
-          'A press kit that shouts reads as advertising, and advertising is what an editor is filtering out. A restrained exterior with a well-organised interior lands better than a loud one.',
+          'A press kit that shouts reads as advertising, and advertising is what an editor is filtering out. A restrained exterior with a well-organized interior lands better than a loud one.',
         ],
       },
     ],
     link: {
       lead: 'For sends that are filmed rather than read, ',
       href: '/product/kraft-influencer-boxes/',
-      anchor: 'influencer boxes prioritise the opening',
+      anchor: 'influencer boxes prioritize the opening',
       tail: '.',
     },
     faqs: [
@@ -911,7 +911,7 @@ export const giftContent: ProductContentMap = {
       { question: 'Where should the documents sit?', answer: '<p>In a slot in the lid, separate from the product well, so they stay flat and the story is seen first rather than found underneath.</p>' },
       { question: 'Should the box be eye-catching?', answer: '<p>Restrained works better. A press kit that shouts reads as advertising, which is what an editor is filtering out.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your documents and product together. Send both, since the document usually governs.</p>' },
-      { question: 'Do I need an insert?', answer: '<p>Yes, for the product. A press box arriving with contents loose reads as careless, which colours how the story is received.</p>' },
+      { question: 'Do I need an insert?', answer: '<p>Yes, for the product. A press box arriving with contents loose reads as careless, which colors how the story is received.</p>' },
       { question: 'Can these be produced in small runs?', answer: '<p>Yes. Press lists are usually short, which suits digital print with no plate cost.</p>' },
       { question: 'Should these ship inside an outer?', answer: '<p>Yes, for the same reason as influencer boxes. A courier label across a press kit undermines it.</p>' },
       { question: 'What finishes suit them?', answer: '<p>Matt or uncoated with a single deboss or foil. Gloss reads as promotional in this context.</p>' },
@@ -959,7 +959,7 @@ export const giftContent: ProductContentMap = {
       { question: 'Can we print inside the lid?', answer: '<p>Yes, and it is worth it. The lid interior is in view for the whole time the kit is open on a desk.</p>' },
       { question: 'Can the box hold samples of different sizes?', answer: '<p>Yes, with recesses cut per item and shallow ones packed up so every top sits level.</p>' },
       { question: 'Should these ship inside an outer?', answer: '<p>Yes if posted. A presentation box arriving scuffed with a label across it works against the purpose.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes for both outer and fitment, including moulded pulp where shapes are irregular.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes for both outer and fitment, including molded pulp where shapes are irregular.</p>' },
     ],
   },
 
@@ -995,7 +995,7 @@ export const giftContent: ProductContentMap = {
     },
     faqs: [
       { question: 'Why is my short run so expensive per unit?', answer: '<p>Plate and make-ready costs land entirely on a short run. Below roughly five hundred units digital print, which has no plate cost, is usually a fraction of the litho equivalent.</p>' },
-      { question: 'Can I personalise individual boxes?', answer: '<p>Yes, and variable data costs almost nothing on a digital press. Names, regions, dates or codes are all straightforward at campaign quantities.</p>' },
+      { question: 'Can I personalize individual boxes?', answer: '<p>Yes, and variable data costs almost nothing on a digital press. Names, regions, dates or codes are all straightforward at campaign quantities.</p>' },
       { question: 'What is the minimum quantity?', answer: '<p>The standard minimum applies, which suits most campaigns. We will show the digital and litho prices side by side so the crossover is visible.</p>' },
       { question: 'How far ahead should I order?', answer: '<p>Work backwards from the send date through delivery, production and proofing. Proofing is where campaigns most often lose time.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your campaign contents. Send what goes in rather than a box size.</p>' },
@@ -1014,7 +1014,7 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'The box cannot cost more than the gift',
         body: [
-          'Giveaways are produced in quantity and given away, so the packaging budget is genuinely tight. One or two colours on plain kraft with a simple die-cut does the job, and each additional press pass is visible in the total.',
+          'Giveaways are produced in quantity and given away, so the packaging budget is genuinely tight. One or two colors on plain kraft with a simple die-cut does the job, and each additional press pass is visible in the total.',
         ],
       },
       {
@@ -1037,11 +1037,11 @@ export const giftContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'How do I keep the cost down?', answer: '<p>One or two colours on plain kraft with a simple die-cut. Each additional press pass is visible in the total when the box is given away in quantity.</p>' },
+      { question: 'How do I keep the cost down?', answer: '<p>One or two colors on plain kraft with a simple die-cut. Each additional press pass is visible in the total when the box is given away in quantity.</p>' },
       { question: 'Do these need transit protection?', answer: '<p>Usually not, since most giveaways are handed over directly. That removes a whole set of requirements and allows a lighter specification.</p>' },
-      { question: 'What makes a cheap box still look good?', answer: '<p>Die-cut quality and board choice more than print coverage. A clean fold on a good stock reads better than four colours on a poor one.</p>' },
+      { question: 'What makes a cheap box still look good?', answer: '<p>Die-cut quality and board choice more than print coverage. A clean fold on a good stock reads better than four colors on a poor one.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your giveaway item. Send the item rather than a target size.</p>' },
-      { question: 'Can these be personalised for an event?', answer: '<p>Yes, on digital print at short-run quantities, which suits conference and event work.</p>' },
+      { question: 'Can these be personalized for an event?', answer: '<p>Yes, on digital print at short-run quantities, which suits conference and event work.</p>' },
       { question: 'Do they ship flat?', answer: '<p>Yes, and assembly at the venue is common. A structure that folds in one movement matters when volunteers are assembling them.</p>' },
       { question: 'Can I have a window?', answer: '<p>Yes, and it helps where the giveaway itself is attractive. A plain aperture keeps the cost and the recyclability.</p>' },
       { question: 'What board weight is used?', answer: '<p>Light. There is no load and no transit, so the board follows appearance and folding rather than strength.</p>' },

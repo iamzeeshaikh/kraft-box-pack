@@ -21,14 +21,14 @@ faqs:
       cosmetics usually need film, a candle or a toy often does not.
   - question: Does a window stop the box being recyclable?
     answer: >-
-      A PET film does, in most kerbside systems, because the pack is no longer
+      A PET film does, in most curbside systems, because the pack is no longer
       straight paper. A plain die-cut aperture keeps it in the paper stream.
   - question: What is PLA film?
     answer: >-
       A compostable alternative to PET. It composts where industrial facilities
       exist, which is not universal, so the claim needs qualifying rather than
       stating flatly.
-  - question: Why is my printed frame not centred on the window?
+  - question: Why is my printed frame not centered on the window?
     answer: >-
       The aperture and the print are separate operations and a small amount of
       movement between them is normal. A little tolerance in the artwork hides it;

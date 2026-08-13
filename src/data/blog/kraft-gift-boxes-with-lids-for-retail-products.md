@@ -29,7 +29,7 @@ faqs:
       If the contents can move, yes. The lid comes off and the contents are seen in
       that instant, so anything that has shifted in transit is the first thing
       registered.
-  - question: Can the lid and base be different colours?
+  - question: Can the lid and base be different colors?
     answer: >-
       Yes. They are separate components that can run on different stocks, which is a
       straightforward way to add contrast without a second finish.
@@ -40,7 +40,7 @@ faqs:
   - question: What finishes work on kraft gift boxes?
     answer: >-
       Foil and deboss both read well against unbleached board and each is a single
-      pass. Interior print or a coloured lining often does more than either.
+      pass. Interior print or a colored lining often does more than either.
   - question: How do I keep a range of sizes looking related?
     answer: >-
       Fix the board, print method and finish once and vary only the footprint. Sizes

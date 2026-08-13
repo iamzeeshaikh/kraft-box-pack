@@ -21,7 +21,7 @@ export type { ProductContent, ProductSection, ProductFaq } from './types'
  * Coverage is partial while these are being written. A product without an
  * entry falls back to its imported WordPress copy, which is correct but
  * templated — so `contentCoverage` is the honest measure of how much of the
- * catalogue has been rewritten.
+ * catalog has been rewritten.
  */
 const ALL: ProductContentMap = {
   ...jewelleryContent,

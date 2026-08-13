@@ -58,14 +58,14 @@ export const cosmeticLuxuryContent: ProductContentMap = {
     faqs: [
       { question: 'How do I measure a jar or bottle for its carton?', answer: '<p>At the widest point, including the cap, pump or dropper as fitted, and with any label already applied. On a jar the widest point is often the shoulder rather than the base.</p>' },
       { question: 'How much room do ingredient lists need?', answer: '<p>More than most brands allow for. Ingredient copy and warnings compete directly with the design, and adding them after layout forces a reflow, so we block the area on the dieline first.</p>' },
-      { question: 'Will a serum leak damage the carton?', answer: '<p>On unlined board, yes — oils wick into the fibres and show as a translucent mark on the outside within days. A coated inner face contains it inexpensively.</p>' },
+      { question: 'Will a serum leak damage the carton?', answer: '<p>On unlined board, yes — oils wick into the fibers and show as a translucent mark on the outside within days. A coated inner face contains it inexpensively.</p>' },
       { question: 'What board weight suits a skincare carton?', answer: '<p>It follows the container weight and the carton height. A glass jar needs more than a light tube, and a tall carton on light board feels flimsy even when it is structurally fine.</p>' },
       { question: 'Can one carton cover several products in a range?', answer: '<p>Where container sizes are close, yes. Fixing the board, print and finish once and varying only the dieline is what keeps a range looking related.</p>' },
       { question: 'Which finishes suit skincare packaging?', answer: '<p>Soft-touch lamination and deboss, both of which read from across a counter. Small foil details often do not survive the distance between shelf and eye.</p>' },
-      { question: 'Do you print white on kraft for this category?', answer: '<p>Yes, with an opaque underbase so colours stay accurate. On an unbleached stock it is usually the only way to keep ingredient copy legible.</p>' },
+      { question: 'Do you print white on kraft for this category?', answer: '<p>Yes, with an opaque underbase so colors stay accurate. On an unbleached stock it is usually the only way to keep ingredient copy legible.</p>' },
       { question: 'Can you supply cartons with inserts for sets?', answer: '<p>Yes. On a kit with mixed container heights the recesses are packed up so every lid sits level, otherwise the set looks disarranged when opened.</p>' },
       { question: 'Are recycled boards suitable?', answer: '<p>Yes, with a caliper step-up so a tall carton keeps its stiffness. Bear in mind that a plastic laminate would take the pack out of the paper stream.</p>' },
-      { question: 'Should I approve a digital proof or a printed sample?', answer: '<p>A printed sample for anything finish-led. Soft-touch and foil do not read accurately on screen, and on kraft the substrate shifts every colour.</p>' },
+      { question: 'Should I approve a digital proof or a printed sample?', answer: '<p>A printed sample for anything finish-led. Soft-touch and foil do not read accurately on screen, and on kraft the substrate shifts every color.</p>' },
     ],
   },
 
@@ -132,7 +132,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       {
         h2: 'Keeping the press passes down',
         body: [
-          'Two or three colours on uncoated kraft is usually the right specification here. Each additional pass is material to the margin at this price, and a fourth colour is rarely visible enough on a panel this small to justify itself.',
+          'Two or three colors on uncoated kraft is usually the right specification here. Each additional pass is material to the margin at this price, and a fourth color is rarely visible enough on a panel this small to justify itself.',
         ],
       },
     ],
@@ -145,13 +145,13 @@ export const cosmeticLuxuryContent: ProductContentMap = {
     faqs: [
       { question: 'Is a carton worth it for a single lip balm?', answer: '<p>Often not at this price point. A multipack carton for three or six, or a printed sleeve around the tube, usually works better commercially — we will price both against your margin.</p>' },
       { question: 'What size are these cartons?', answer: '<p>Around 0.8 × 0.8 × 2.8 in for a standard twist tube. Small enough that die and gluing tolerances matter proportionally more than on a larger carton.</p>' },
-      { question: 'How many colours should I print?', answer: '<p>Two or three on uncoated kraft is usually right. Each additional pass is material to the margin at this price, and a fourth colour is rarely visible enough on this panel to justify itself.</p>' },
+      { question: 'How many colors should I print?', answer: '<p>Two or three on uncoated kraft is usually right. Each additional pass is material to the margin at this price, and a fourth color is rarely visible enough on this panel to justify itself.</p>' },
       { question: 'Should I order a sample first?', answer: '<p>For a format this small, yes. Tolerances tighten as size drops and a structural sample confirms the tube seats and the carton closes properly.</p>' },
       { question: 'Can you produce multipack cartons?', answer: '<p>Yes, and they are frequently the better answer. A three or six pack spreads the packaging cost and suits how the product is actually bought.</p>' },
       { question: 'Do these hang on a retail peg?', answer: '<p>They can, with a reinforced hang tab. The board around the hole is strengthened rather than the whole panel, since that is where packs tear.</p>' },
       { question: 'What board weight is used?', answer: '<p>12pt to 14pt is adequate for the weight. This is genuinely a light product and heavier board adds cost without benefit.</p>' },
-      { question: 'Is a window useful?', answer: '<p>Rarely. The tube is not the purchase decision — the flavour or the brand is — and a window on a panel this small costs stiffness for little return.</p>' },
-      { question: 'Can flavours be differentiated cheaply?', answer: '<p>Yes, by panel colour on one shared dieline. That is far cheaper than a structural variant per flavour and reads faster on a shelf.</p>' },
+      { question: 'Is a window useful?', answer: '<p>Rarely. The tube is not the purchase decision — the flavor or the brand is — and a window on a panel this small costs stiffness for little return.</p>' },
+      { question: 'Can flavors be differentiated cheaply?', answer: '<p>Yes, by panel color on one shared dieline. That is far cheaper than a structural variant per flavor and reads faster on a shelf.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and uncoated recycled kraft suits the natural positioning most brands in this category use.</p>' },
     ],
   },
@@ -176,7 +176,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       {
         h2: 'Wand length is the dimension people miss',
         body: [
-          'The tube specification usually describes the container, not the closed assembly with the wand inside. The wand handle sits proud of the tube, and that difference is what makes a carton half a centimetre too short.',
+          'The tube specification usually describes the container, not the closed assembly with the wand inside. The wand handle sits proud of the tube, and that difference is what makes a carton half a centimeter too short.',
         ],
       },
     ],
@@ -192,7 +192,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       { question: 'Why is my carton slightly too short?', answer: '<p>Almost always the wand. The tube spec describes the container, not the closed assembly, and the wand handle sits proud of the tube.</p>' },
       { question: 'Where should the branding go?', answer: '<p>At the top of the front panel. The visible area is a vertical strip and the top is what reads in a row of units on a display.</p>' },
       { question: 'What board weight suits mascara?', answer: '<p>Around 14pt SBS with a coated inner face. The weight is modest; the lining is the part that matters.</p>' },
-      { question: 'Can one carton cover several formulas?', answer: '<p>Yes, where tube dimensions match. Differentiate by panel colour on one dieline rather than by structure.</p>' },
+      { question: 'Can one carton cover several formulas?', answer: '<p>Yes, where tube dimensions match. Differentiate by panel color on one dieline rather than by structure.</p>' },
       { question: 'Which finishes work at this size?', answer: '<p>A single foil detail or a deboss. A narrow panel does not have room for layered finishing, and multiple passes rarely read at this scale.</p>' },
       { question: 'Are these suitable for gift sets?', answer: '<p>Yes, with a fitted insert so tubes do not roll against each other. Loose tubes in a set mark each other at the cap.</p>' },
       { question: 'Do you print inside the carton?', answer: '<p>Rarely worth it here — the carton is opened once and discarded. The coated inner face is the interior specification that matters.</p>' },
@@ -308,7 +308,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       {
         h2: 'A category bought on the pack',
         body: [
-          'Grooming products compete on presentation more than formulation at the shelf, and kraft with a single foil or deboss suits the positioning most brands in this category take. Restraint reads better here than full-colour coverage.',
+          'Grooming products compete on presentation more than formulation at the shelf, and kraft with a single foil or deboss suits the positioning most brands in this category take. Restraint reads better here than full-color coverage.',
         ],
       },
     ],
@@ -320,12 +320,12 @@ export const cosmeticLuxuryContent: ProductContentMap = {
     },
     faqs: [
       { question: 'What height should I give you for a dropper bottle?', answer: '<p>The bottle with the dropper fully seated, not the bottle alone. Supplier sheets quote the bottle and the dropper assembly typically adds around half an inch — that gap is the usual reason a carton will not close.</p>' },
-      { question: 'Will an oil leak damage the carton?', answer: '<p>On unlined board, yes. Oil wicks into the fibres and shows on the outside. A coated inner face contains a minor leak inexpensively.</p>' },
-      { question: 'What finishes suit this category?', answer: '<p>Kraft with a single foil or deboss. Grooming brands generally position on restraint, and full-colour coverage works against that.</p>' },
+      { question: 'Will an oil leak damage the carton?', answer: '<p>On unlined board, yes. Oil wicks into the fibers and shows on the outside. A coated inner face contains a minor leak inexpensively.</p>' },
+      { question: 'What finishes suit this category?', answer: '<p>Kraft with a single foil or deboss. Grooming brands generally position on restraint, and full-color coverage works against that.</p>' },
       { question: 'What board weight is used?', answer: '<p>Around 18pt SBS. The bottle is small but glass, so the carton needs to feel substantial rather than light.</p>' },
       { question: 'Should the bottle be held with a collar?', answer: '<p>For a tall narrow bottle, yes. Held only at the base it pivots inside the carton and puts leverage on the dropper cap.</p>' },
       { question: 'Can you produce gift sets?', answer: '<p>Yes, with a compartment per item. Beard care sets usually mix a bottle, a balm and a comb, which are three different heights needing levelling.</p>' },
-      { question: 'Is a window useful?', answer: '<p>Occasionally, to show oil colour. It costs stiffness on a narrow panel, so it is worth weighing against a printed description.</p>' },
+      { question: 'Is a window useful?', answer: '<p>Occasionally, to show oil color. It costs stiffness on a narrow panel, so it is worth weighing against a printed description.</p>' },
       { question: 'Can one carton cover several bottle sizes?', answer: '<p>Only where heights are close. A 30 ml and a 50 ml bottle usually need separate dielines, though they can share board and print.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and they suit the category positioning well. The inner coating for leak containment is specified separately from the recycled claim.</p>' },
       { question: 'Do you supply matching labels?', answer: '<p>We can quote labels alongside the carton so the two are specified together and the artwork is prepared once.</p>' },
@@ -334,7 +334,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
 
   'kraft-soap-sleeve-boxes': {
     intro:
-      'A soap sleeve is a printed band that wraps a bar, leaving the soap partly visible and partly protected. It is the cheapest branded packaging in the catalogue and it has one specific failure.',
+      'A soap sleeve is a printed band that wraps a bar, leaving the soap partly visible and partly protected. It is the cheapest branded packaging in the catalog and it has one specific failure.',
     sections: [
       {
         h2: 'Oils migrate into the board',
@@ -352,7 +352,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       {
         h2: 'How much soap to leave visible',
         body: [
-          'A wide sleeve gives more print area and hides the bar; a narrow one shows the soap and gives less room for copy. Handmade soap sells partly on appearance, so the balance usually favours showing more than a first design instinct suggests.',
+          'A wide sleeve gives more print area and hides the bar; a narrow one shows the soap and gives less room for copy. Handmade soap sells partly on appearance, so the balance usually favors showing more than a first design instinct suggests.',
         ],
       },
     ],
@@ -365,7 +365,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
     faqs: [
       { question: 'Why is there an oily mark on my soap sleeves?', answer: '<p>Essential oils migrating out of the bar into uncoated board, usually two to six weeks after packing. A greaseproof inner wrap solves it and keeps the sleeve recyclable; a barrier coating on the outside would fix the stain and cost the claim.</p>' },
       { question: 'What measurements do you need for a sleeve?', answer: '<p>The circumference of the bar as the sleeve will sit, plus 1 to 1.5 in of overlap for the glue joint. Flat width and length is the usual error and produces a sleeve that meets exactly and cannot be joined.</p>' },
-      { question: 'How wide should the sleeve be?', answer: '<p>Wider gives more print area and hides more of the bar. Handmade soap sells partly on appearance, so the balance usually favours showing more soap than a first design instinct suggests.</p>' },
+      { question: 'How wide should the sleeve be?', answer: '<p>Wider gives more print area and hides more of the bar. Handmade soap sells partly on appearance, so the balance usually favors showing more soap than a first design instinct suggests.</p>' },
       { question: 'What board weight is used?', answer: '<p>150 to 250 gsm. Too light and it tears at the corners of the bar; too heavy and it will not fold cleanly around them.</p>' },
       { question: 'Can sleeves be used on irregular hand-cut bars?', answer: '<p>Yes, with a little tolerance built in. Send the largest and smallest bars from a typical batch so the sleeve fits the range rather than one example.</p>' },
       { question: 'Is a sleeve cheaper than a box?', answer: '<p>Considerably. A sleeve uses a fraction of the material and needs no structural die, which is why it dominates handmade soap packaging.</p>' },
@@ -393,9 +393,9 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
       {
-        h2: 'Showing colour and scent',
+        h2: 'Showing color and scent',
         body: [
-          'Buyers choose on scent name and colour, and colour is visible where scent is not. A window shows the wax directly; without one, accurate colour reproduction on the panel is doing that job and is worth getting right.',
+          'Buyers choose on scent name and color, and color is visible where scent is not. A window shows the wax directly; without one, accurate color reproduction on the panel is doing that job and is worth getting right.',
         ],
       },
     ],
@@ -408,11 +408,11 @@ export const cosmeticLuxuryContent: ProductContentMap = {
     faqs: [
       { question: 'How do I stop melts fusing together?', answer: '<p>Hold the segments apart. Wax softens in warmth and deforms against whatever it touches, so a pack that lets segments press together delivers a single fused block.</p>' },
       { question: 'Will fragrance oils stain the carton?', answer: '<p>Over weeks in storage, yes, on uncoated board. A coated inner face or a sealed clamshell inside the carton keeps it clean.</p>' },
-      { question: 'Should the pack have a window?', answer: '<p>It helps, because buyers choose partly on colour and colour is visible where scent is not. Without one, accurate colour reproduction on the panel does that job.</p>' },
+      { question: 'Should the pack have a window?', answer: '<p>It helps, because buyers choose partly on color and color is visible where scent is not. Without one, accurate color reproduction on the panel does that job.</p>' },
       { question: 'What board weight is used?', answer: '<p>Light to moderate — the product is not heavy. The specification is driven by the oil barrier and the print rather than by load.</p>' },
       { question: 'Can you produce cartons around a clamshell?', answer: '<p>Yes, and that is the most common construction. The clamshell contains the wax and the carton carries the branding and the fragrance information.</p>' },
       { question: 'How should scent names be presented?', answer: '<p>Prominently and legibly — it is the primary purchase decision. On a range, keeping the name in the same position across every variant helps shoppers compare.</p>' },
-      { question: 'Can one carton cover a whole fragrance range?', answer: '<p>Yes, with the variant differentiated by panel colour on a shared dieline. That is far cheaper than a structural variant per scent.</p>' },
+      { question: 'Can one carton cover a whole fragrance range?', answer: '<p>Yes, with the variant differentiated by panel color on a shared dieline. That is far cheaper than a structural variant per scent.</p>' },
       { question: 'Are these suitable for gift sets?', answer: '<p>Yes, with a compartment per fragrance so scents do not transfer between segments in the same cavity.</p>' },
       { question: 'What finishes suit the category?', answer: '<p>Matt or uncoated. Wax melts sit in a homely, natural positioning that gloss tends to work against.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes. The oil barrier is a separate specification from the recycled content, so both claims can hold together.</p>' },
@@ -455,7 +455,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       { question: 'What board weight is used?', answer: '<p>150 to 250 gsm. Light enough to wrap cleanly, heavy enough not to tear at the joint.</p>' },
       { question: 'Can sleeves fit tins as well as jars?', answer: '<p>Yes. A tin is usually straight-sided, which makes the circumference simpler than a tapered glass jar.</p>' },
       { question: 'How is the sleeve fixed?', answer: '<p>Usually a glued overlap. A sticker closure is an alternative where the sleeve needs to be removable without tearing.</p>' },
-      { question: 'How much of the candle should the sleeve cover?', answer: '<p>Enough for the copy, and no more. Buyers want to see wax colour and the vessel, so a sleeve that covers most of the jar works against the product.</p>' },
+      { question: 'How much of the candle should the sleeve cover?', answer: '<p>Enough for the copy, and no more. Buyers want to see wax color and the vessel, so a sleeve that covers most of the jar works against the product.</p>' },
       { question: 'Can you produce very short runs?', answer: '<p>Yes, and this format suits them. Digital print with no plate cost makes a hundred-unit seasonal variant genuinely affordable.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and an uncoated recycled stock suits the category. Without lamination the sleeve stays fully recyclable.</p>' },
       { question: 'Can the sleeve carry safety information?', answer: '<p>Yes, and candle safety copy is usually expected. It is worth planning the panel around it rather than fitting it in afterwards.</p>' },
@@ -495,13 +495,13 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       { question: 'How do I stop a kit looking untidy when it opens?', answer: '<p>Pack the shallow recesses up so every item sits at the same level. Mixed heights are what make an assortment look thrown together, even when nothing has moved.</p>' },
       { question: 'Why can I not get items out of the insert?', answer: '<p>Because the cavity was cut exactly to the item. Each recess needs a finger relief, which only shows up when someone actually unpacks the set.</p>' },
       { question: 'Can one box cover several kit variants?', answer: '<p>Yes — one outer size with two or three interchangeable fitments. You keep a single print run on the outer, which is the expensive part.</p>' },
-      { question: 'What insert material should I use?', answer: '<p>Board for regular shapes, foam where items are fragile or irregular, moulded pulp where recyclability matters and the shapes are awkward.</p>' },
+      { question: 'What insert material should I use?', answer: '<p>Board for regular shapes, foam where items are fragile or irregular, molded pulp where recyclability matters and the shapes are awkward.</p>' },
       { question: 'Should the box be rigid?', answer: '<p>For gifting kits, usually. The set is judged on the opening, and rigid holds its shape and its hinge in a way a folding carton does not.</p>' },
       { question: 'How do I stop items rattling?', answer: '<p>A snug cavity per item. Rattling reads as a cheap or incomplete set before the recipient has looked at the contents.</p>' },
       { question: 'Can we print inside the lid?', answer: '<p>Yes, and on a kit it is often the better place to spend. The lid interior is in view for the whole time the box is open.</p>' },
       { question: 'Are these suitable for seasonal gift sets?', answer: '<p>Yes, and overage inside the original run is worth ordering. Seasonal sets have no second run behind them.</p>' },
       { question: 'What board weight is used?', answer: '<p>It follows the filled weight and the lid span. A wide kit lid needs more caliper than the contents weight alone suggests.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes, including wrapped rigid constructions and moulded pulp fitments, so the whole set can hold a recycled claim.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes, including wrapped rigid constructions and molded pulp fitments, so the whole set can hold a recycled claim.</p>' },
     ],
   },
 
@@ -545,8 +545,8 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       { question: 'Is rigid worth it for my product?', answer: '<p>The honest test is whether the box gets kept. A pack recycled straight after opening rarely justifies it; one a customer stores things in usually does.</p>' },
       { question: 'Which finishes suit rigid kraft?', answer: '<p>Deboss, foil and soft-touch all work. Texture matters more than gloss here because these boxes are handled slowly rather than glanced at.</p>' },
       { question: 'What is the turnaround compared with a folding carton?', answer: '<p>Longer. Hand assembly puts rigid at the longer end of the standard production window, and each applied finish adds a pass.</p>' },
-      { question: 'Can you produce rigid boxes with inserts?', answer: '<p>Yes, in board, foam or moulded pulp. On a rigid box the fitment is usually where the perceived quality is won or lost.</p>' },
-      { question: 'Is there a minimum order?', answer: '<p>The same minimum as the rest of the catalogue. What makes very short rigid runs expensive per unit is the hand assembly rather than the minimum.</p>' },
+      { question: 'Can you produce rigid boxes with inserts?', answer: '<p>Yes, in board, foam or molded pulp. On a rigid box the fitment is usually where the perceived quality is won or lost.</p>' },
+      { question: 'Is there a minimum order?', answer: '<p>The same minimum as the rest of the catalog. What makes very short rigid runs expensive per unit is the hand assembly rather than the minimum.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes for both the core and the wrap. Note that a plastic laminate on the wrap would take the pack out of the paper stream.</p>' },
     ],
   },
@@ -590,7 +590,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       { question: 'Do these ship flat?', answer: '<p>Collapsible versions do, at some cost to the feel. Standard rigid magnetic boxes ship assembled, which is a real freight consideration on volume.</p>' },
       { question: 'Which finishes suit this format?', answer: '<p>Soft-touch with foil or blind deboss. The box is handled slowly at the moment of opening, so texture registers more than print gloss.</p>' },
       { question: 'Can you produce these with a ribbon pull?', answer: '<p>Yes, and on a snug lid it helps. Without one a well-fitted magnetic lid can be awkward to lift from a flat surface.</p>' },
-      { question: 'What sizes are practical?', answer: '<p>From small jewellery sizes up to large presentation formats. Beyond a certain lid span the magnet count rises to keep the closure even.</p>' },
+      { question: 'What sizes are practical?', answer: '<p>From small jewelry sizes up to large presentation formats. Beyond a certain lid span the magnet count rises to keep the closure even.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes for the core and the wrap. The magnets themselves are not recyclable with the board, which is worth stating if you make a recycling claim.</p>' },
     ],
   },
@@ -602,7 +602,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       {
         h2: 'Metal ends break the claim',
         body: [
-          'Spiral-wound board tubes are supplied with metal ends by default in most catalogues, and a consumer cannot separate them. That makes the tube unrecyclable as paper no matter how the body is specified.',
+          'Spiral-wound board tubes are supplied with metal ends by default in most catalogs, and a consumer cannot separate them. That makes the tube unrecyclable as paper no matter how the body is specified.',
           'Paperboard ends have to be specified explicitly. It is the single decision that determines whether a tube supports the environmental claim brands usually choose it for.',
         ],
       },
@@ -631,10 +631,10 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       { question: 'Where does the seam go?', answer: '<p>Wherever you place it deliberately. There is always a seam on a wrapped or printed tube, and placing it behind the pack is better than letting it fall through the logo.</p>' },
       { question: 'Do tubes use less material than a box?', answer: '<p>For the same capacity, generally yes, which is part of why brands choose them. The saving is undone if the ends are metal and the pack cannot be recycled.</p>' },
       { question: 'What products suit a tube?', answer: '<p>Cylindrical or rolled items — candles, supplements, textiles, posters. An angular product in a round tube wastes the space around it.</p>' },
-      { question: 'Can tubes be printed directly?', answer: '<p>Yes, or label-wrapped. Direct print avoids the label edge but has a narrower colour range on kraft board.</p>' },
+      { question: 'Can tubes be printed directly?', answer: '<p>Yes, or label-wrapped. Direct print avoids the label edge but has a narrower color range on kraft board.</p>' },
       { question: 'Are they strong enough for shipping?', answer: '<p>For light contents, yes. The ends are the weak point rather than the body, so a tube shipped alone should have well-fitted ends and ideally a tamper seal.</p>' },
       { question: 'Can you supply tubes with a window?', answer: '<p>Yes, though cutting a window in a wound tube reduces its structural strength considerably. It is better suited to display than to shipping.</p>' },
-      { question: 'What board is used?', answer: '<p>Spiral-wound kraft or white-lined board. Kraft suits natural positioning; white-lined gives better colour fidelity for direct print.</p>' },
+      { question: 'What board is used?', answer: '<p>Spiral-wound kraft or white-lined board. Kraft suits natural positioning; white-lined gives better color fidelity for direct print.</p>' },
       { question: 'Is there a minimum order?', answer: '<p>The standard minimum applies. Tube tooling is less costly than a die-cut box, which makes short runs relatively more affordable in this format.</p>' },
     ],
   },
@@ -771,7 +771,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
 
   'kraft-triangle-boxes': {
     intro:
-      'A triangular box is the most awkward shape in the catalogue to fill, to ship and to stand up. It is chosen when the silhouette itself is the point.',
+      'A triangular box is the most awkward shape in the catalog to fill, to ship and to stand up. It is chosen when the silhouette itself is the point.',
     sections: [
       {
         h2: 'Sharp corners are hard to fill',
@@ -814,7 +814,7 @@ export const cosmeticLuxuryContent: ProductContentMap = {
 
   'kraft-pyramid-boxes': {
     intro:
-      'A pyramid box is a novelty format — a four-sided taper closing at a point or a small top. It is bought for favours, promotions and small gifting.',
+      'A pyramid box is a novelty format — a four-sided taper closing at a point or a small top. It is bought for favors, promotions and small gifting.',
     sections: [
       {
         h2: 'The taper decides the capacity',
@@ -832,25 +832,25 @@ export const cosmeticLuxuryContent: ProductContentMap = {
       {
         h2: 'Best at small sizes',
         body: [
-          'The format works at favour and sample size. Scaled up, the wasted volume and the instability of a tapering structure both grow, and a conventional box does the job better.',
+          'The format works at favor and sample size. Scaled up, the wasted volume and the instability of a tapering structure both grow, and a conventional box does the job better.',
         ],
       },
     ],
     link: {
-      lead: 'For favour packaging in a more conventional construction, ',
+      lead: 'For favor packaging in a more conventional construction, ',
       href: '/product/kraft-favor-boxes/',
-      anchor: 'favour boxes cover the standard formats',
+      anchor: 'favor boxes cover the standard formats',
       tail: '.',
     },
     faqs: [
       { question: 'How much does a pyramid box hold?', answer: '<p>Less than the external dimensions suggest, because the taper narrows continuously. A product that fits the base does not necessarily go in through the top, so send the product rather than a capacity.</p>' },
       { question: 'How does it close?', answer: '<p>At the apex with a tuck, a tab or a ribbon. That point is the weakest part of the structure and it is where people pick the pack up, so the closure choice matters.</p>' },
-      { question: 'What size works best?', answer: '<p>Favour and sample size. Scaled up, both the wasted volume and the instability of a tapering structure grow, and a conventional box does the job better.</p>' },
-      { question: 'What is this format used for?', answer: '<p>Wedding and party favours, promotional handouts and small gifting, where the shape is the point rather than the protection.</p>' },
+      { question: 'What size works best?', answer: '<p>Favor and sample size. Scaled up, both the wasted volume and the instability of a tapering structure grow, and a conventional box does the job better.</p>' },
+      { question: 'What is this format used for?', answer: '<p>Wedding and party favors, promotional handouts and small gifting, where the shape is the point rather than the protection.</p>' },
       { question: 'Do they stand up reliably?', answer: '<p>On a flat surface, yes. They tip more easily than a cuboid because the mass sits low and the profile is tall.</p>' },
       { question: 'Do these need custom tooling?', answer: '<p>Yes, like any shaped box, with the die cost landing on the first run and carrying forward.</p>' },
       { question: 'Can they be printed all over?', answer: '<p>Yes, though the taper distorts artwork toward the apex. Designs that work as a band around the base hold up better than full-face graphics.</p>' },
-      { question: 'Is a ribbon closure practical for volume?', answer: '<p>It is hand-finished, so it adds labour per unit. For a few hundred favours that is usually acceptable; for thousands a tuck is more sensible.</p>' },
+      { question: 'Is a ribbon closure practical for volume?', answer: '<p>It is hand-finished, so it adds labor per unit. For a few hundred favors that is usually acceptable; for thousands a tuck is more sensible.</p>' },
       { question: 'How do they ship?', answer: '<p>Flat and erected on site in most cases, which keeps freight reasonable despite the awkward assembled shape.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and uncoated kraft suits the craft and wedding positioning this format is usually bought for.</p>' },
     ],

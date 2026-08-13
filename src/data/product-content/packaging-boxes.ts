@@ -66,7 +66,7 @@ export const packagingBoxesContent: ProductContentMap = {
 
   'kraft-drawer-boxes': {
     intro:
-      'A drawer box is a sleeve with a tray that slides out. The slide is the whole experience, and it is decided by a tolerance measured in fractions of a millimetre.',
+      'A drawer box is a sleeve with a tray that slides out. The slide is the whole experience, and it is decided by a tolerance measured in fractions of a millimeter.',
     sections: [
       {
         h2: 'The slide is the product',
@@ -78,7 +78,7 @@ export const packagingBoxesContent: ProductContentMap = {
       {
         h2: 'A pull or a thumb notch',
         body: [
-          'Without something to grip, the tray has to be shaken out. A ribbon pull, a die-cut thumb notch or a tab all solve it. A ribbon reads as most considered but is hand-finished and adds labour per unit at volume.',
+          'Without something to grip, the tray has to be shaken out. A ribbon pull, a die-cut thumb notch or a tab all solve it. A ribbon reads as most considered but is hand-finished and adds labor per unit at volume.',
         ],
       },
       {
@@ -98,9 +98,9 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Why does the tray stick or fall out?', answer: '<p>The tolerance between too tight and too loose is narrow, and it cannot be judged from a drawing. A physical sample is worth more on this format than almost any other.</p>' },
       { question: 'How does the customer open it?', answer: '<p>With a ribbon pull, a die-cut thumb notch or a tab. Without one the tray has to be shaken out, which is the most common complaint on this format.</p>' },
       { question: 'Should it be rigid or folding?', answer: '<p>Rigid holds the tolerance far better over repeated opening and feels heavier. Folding ships flat and costs a fraction, but the slide loosens with use.</p>' },
-      { question: 'Is a ribbon pull practical at volume?', answer: '<p>It is hand-finished, so it adds labour per unit. For a few hundred it is fine; for tens of thousands a die-cut notch is more sensible.</p>' },
+      { question: 'Is a ribbon pull practical at volume?', answer: '<p>It is hand-finished, so it adds labor per unit. For a few hundred it is fine; for tens of thousands a die-cut notch is more sensible.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents. Send what goes in the tray, including any insert, since the insert sets the internal depth.</p>' },
-      { question: 'Can the sleeve and tray be different colours?', answer: '<p>Yes, and it is a straightforward way to add contrast, since they are separate components that can run on different stocks.</p>' },
+      { question: 'Can the sleeve and tray be different colors?', answer: '<p>Yes, and it is a straightforward way to add contrast, since they are separate components that can run on different stocks.</p>' },
       { question: 'Do drawer boxes ship flat?', answer: '<p>Folding versions do. Rigid drawer boxes ship assembled, which takes noticeably more freight volume.</p>' },
       { question: 'Can I put a window in the sleeve?', answer: '<p>Yes, though it weakens the sleeve that has to hold the tray square. The board usually steps up to compensate.</p>' },
       { question: 'How do I stop contents moving in the tray?', answer: '<p>A fitted insert. Contents that shift make a noise as the tray slides, which undercuts the impression the format is bought for.</p>' },
@@ -158,7 +158,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Can you cut a size that is not standard?', answer: '<p>Every run is cut to your dimensions. Send the product measurements rather than a box size and we build the dieline around them.</p>' },
       { question: 'Should shipping boxes be printed?', answer: '<p>For business deliveries usually not — it adds cost with no selling function. For direct-to-consumer parcels where the customer opens it, print can be worth it.</p>' },
       { question: 'Are moisture-resistant options available?', answer: '<p>Yes, and worth considering for long storage or humid warehouses. Board loses stacking strength as it absorbs moisture.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes. Recycled fibre is slightly less stiff at the same caliper, so we step up a grade where stacking matters.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes. Recycled fiber is slightly less stiff at the same caliper, so we step up a grade where stacking matters.</p>' },
     ],
   },
 
@@ -202,7 +202,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Are these suitable for returns?', answer: '<p>With a double adhesive strip, yes. Tell us at quoting because the second strip is positioned at dieline stage.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your product. Send the item rather than a box size, and tell us if it is compressible, since that changes the depth.</p>' },
       { question: 'How many can I order?', answer: '<p>From the standard minimum upward, with unit cost falling sharply as quantity rises. We will show the breaks so the trade is visible.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes, and they suit the category. Plain kraft with one-colour print is both the cheapest and the most common specification here.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes, and they suit the category. Plain kraft with one-color print is both the cheapest and the most common specification here.</p>' },
     ],
   },
 
@@ -322,7 +322,7 @@ export const packagingBoxesContent: ProductContentMap = {
         ],
       },
       {
-        h2: 'Creasing behaviour',
+        h2: 'Creasing behavior',
         body: [
           'A carton is only as good as its creases. On heavier calipers the crease has to be cut deeper or the board cracks along the fold, showing a white line on kraft. That is a dieline specification rather than a print one.',
         ],
@@ -340,7 +340,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Is paperboard strong enough to post?', answer: '<p>Not on its own. It suits retail presentation and light contents; a paperboard carton posted alone arrives with crushed corners.</p>' },
       { question: 'What is the difference from corrugated?', answer: '<p>Paperboard is a single layer at a chosen caliper. Corrugated has a fluted layer between liners, which gives far more strength for very little extra weight.</p>' },
       { question: 'Can paperboard be food-safe?', answer: '<p>With a compliant grade, yes. Tell us whether contact is direct or through a liner, since that changes the stock options.</p>' },
-      { question: 'Does it take print well?', answer: '<p>Yes — it is the standard stock for high-quality carton printing. On kraft the substrate still pulls colours down, which is a stock characteristic rather than a print fault.</p>' },
+      { question: 'Does it take print well?', answer: '<p>Yes — it is the standard stock for high-quality carton printing. On kraft the substrate still pulls colors down, which is a stock characteristic rather than a print fault.</p>' },
       { question: 'Do these arrive flat?', answer: '<p>Yes, glued along one seam and erected on your line.</p>' },
       { question: 'What weights are available?', answer: '<p>A full range of calipers. We will recommend from the product and the span rather than leaving you to choose blind.</p>' },
       { question: 'Can it be laminated?', answer: '<p>Yes, though a plastic laminate takes the carton out of the paper recycling stream. An aqueous varnish gives protection without that cost.</p>' },
@@ -366,7 +366,7 @@ export const packagingBoxesContent: ProductContentMap = {
         ],
       },
       {
-        h2: 'Labelling for retrieval',
+        h2: 'Labeling for retrieval',
         body: [
           'The point of a storage box is finding what is in it later. A designated label area on the short end — the face visible when boxes are shelved — is worth more than print anywhere else on the box.',
         ],
@@ -388,7 +388,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Can sizes be made to stack together?', answer: '<p>Yes, and designing a range on a common footprint means mixed sizes stack squarely rather than in an unstable tower.</p>' },
       { question: 'What board is used?', answer: '<p>Single wall C for light duty, double wall where boxes are stacked more than two high or the contents are heavy.</p>' },
       { question: 'Are these suitable for archive storage?', answer: '<p>Yes, with a moisture-resistant grade and a lid that survives repeated access. Archive boxes are opened more often than people expect.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes, with a grade step-up. Recycled fibre creeps a little more under constant load, so we allow for it.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes, with a grade step-up. Recycled fiber creeps a little more under constant load, so we allow for it.</p>' },
     ],
   },
 
@@ -611,7 +611,7 @@ export const packagingBoxesContent: ProductContentMap = {
       },
     ],
     link: {
-      lead: 'For the full food range organised by product type, ',
+      lead: 'For the full food range organized by product type, ',
       href: '/product-category/kraft-food-packaging/',
       anchor: 'the kraft food packaging category',
       tail: ' covers the individual formats.',
@@ -669,7 +669,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'What sizes do you produce?', answer: '<p>Cut to your products, including height for decoration. Send the tallest item you box.</p>' },
       { question: 'Can these carry safely by hand?', answer: '<p>With a stiff base, yes. For larger boxes a handle helps, though the board around a die-cut handle needs reinforcing when filled.</p>' },
       { question: 'Are these suitable for delivery?', answer: '<p>Yes with a secure closure. Delivery adds tilting, so a locking tuck holds where a plain flap does not.</p>' },
-      { question: 'Can they be printed?', answer: '<p>Yes, with food-contact compliant inks where contact is direct. Kraft with one or two colours suits the category well.</p>' },
+      { question: 'Can they be printed?', answer: '<p>Yes, with food-contact compliant inks where contact is direct. Kraft with one or two colors suits the category well.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>For non-direct contact, yes. Where the product sits on the board a compliant grade is needed, which narrows the options.</p>' },
     ],
   },
@@ -724,7 +724,7 @@ export const packagingBoxesContent: ProductContentMap = {
       {
         h2: 'Movement breaks cookies',
         body: [
-          'A cookie loose in a box slides against its neighbours and against the wall, and the edges chip. A snug fit, a divider or a fitted tray stops it, and none of them costs much against a box of broken cookies.',
+          'A cookie loose in a box slides against its neighbors and against the wall, and the edges chip. A snug fit, a divider or a fitted tray stops it, and none of them costs much against a box of broken cookies.',
         ],
       },
       {
@@ -751,7 +751,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Will butter mark the box?', answer: '<p>Over time on uncoated board, yes. A grease-resistant board or an inner liner prevents it, and a liner keeps the outer fully recyclable.</p>' },
       { question: 'Should the box have a window?', answer: '<p>For gifting, usually. Cookies sell on appearance and a window shows them directly rather than relying on a printed image.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your cookie size and count. Send a filled sample if you have one, since cookies vary in thickness more than diameter.</p>' },
-      { question: 'Do you supply dividers and trays?', answer: '<p>Yes, in board or moulded pulp, specified with the box because they set the internal dimensions.</p>' },
+      { question: 'Do you supply dividers and trays?', answer: '<p>Yes, in board or molded pulp, specified with the box because they set the internal dimensions.</p>' },
       { question: 'Are these suitable for posting?', answer: '<p>With a fitted insert and an outer carton, yes. Cookies posted in a plain box arrive broken more often than not.</p>' },
       { question: 'Can they be printed inside?', answer: '<p>Yes, and on a gift box it is worth it. The interior is in view for the whole time the box is open.</p>' },
       { question: 'What closure suits a cookie box?', answer: '<p>A lift-off lid or a ribbon for gifting, a tuck end for everyday retail. The choice follows how it is sold.</p>' },
@@ -780,7 +780,7 @@ export const packagingBoxesContent: ProductContentMap = {
       {
         h2: 'Cost per unit at volume',
         body: [
-          'Pizza boxes are bought in large quantities and every press pass shows in the cost per box. One or two colours flexo direct to kraft is the sensible specification; anything more rarely returns its cost on a box thrown away after one meal.',
+          'Pizza boxes are bought in large quantities and every press pass shows in the cost per box. One or two colors flexo direct to kraft is the sensible specification; anything more rarely returns its cost on a box thrown away after one meal.',
         ],
       },
     ],
@@ -793,7 +793,7 @@ export const packagingBoxesContent: ProductContentMap = {
     faqs: [
       { question: 'Why does the pizza arrive soggy?', answer: '<p>Steam rather than grease. A hot pizza releases moisture that condenses on the lid and drips back onto the base. Ventilation holes let it escape and have a disproportionate effect on how the food arrives.</p>' },
       { question: 'Why does the lid sag onto the pizza?', answer: '<p>The lid is a wide unsupported span, and stacked in a delivery bag it carries the boxes above. Corner supports or a heavier grade prevent it.</p>' },
-      { question: 'How many colours should I print?', answer: '<p>One or two, flexo direct to kraft. Every pass shows in the cost per box at volume, and more rarely returns its cost on a box thrown away after one meal.</p>' },
+      { question: 'How many colors should I print?', answer: '<p>One or two, flexo direct to kraft. Every pass shows in the cost per box at volume, and more rarely returns its cost on a box thrown away after one meal.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your pizza diameters. Send the sizes you actually sell rather than standard inches, since bases vary between operations.</p>' },
       { question: 'Are these PFAS-free?', answer: '<p>We specify PFAS-free grease-resistant grades as standard. Several states require it, so tell us where you operate.</p>' },
       { question: 'Do they stack in a delivery bag?', answer: '<p>Yes, and that is where lid strength matters most. Tell us how many are stacked and we specify against it.</p>' },
@@ -840,7 +840,7 @@ export const packagingBoxesContent: ProductContentMap = {
       { question: 'Why does my pastry go soft in the bag?', answer: '<p>A warm product in a closed bag steams. Where crispness matters, an unsealed or perforated bag keeps the product better than a tightly closed one.</p>' },
       { question: 'What paper weight is used?', answer: '<p>Light, since bakery bags carry very little weight. The specification is driven by the grease barrier rather than by strength.</p>' },
       { question: 'Are these food-contact compliant?', answer: '<p>Yes, with compliant grades and inks. Bakery bags are almost always direct contact, so it is specified rather than optional.</p>' },
-      { question: 'Can they be printed?', answer: '<p>Yes, and one or two colours on kraft suits the category. Full-colour rarely returns its cost on a bag used once.</p>' },
+      { question: 'Can they be printed?', answer: '<p>Yes, and one or two colors on kraft suits the category. Full-color rarely returns its cost on a bag used once.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your products. Send the largest item you bag rather than an average, since it is the largest that decides the size.</p>' },
       { question: 'Are gusseted bags available?', answer: '<p>Yes, and they suit anything with depth. A flat bag suits single pastries; a gusseted one suits loaves and multiples.</p>' },
       { question: 'Do you supply plain unprinted bags?', answer: '<p>Yes, and many operations use plain bags with a printed sticker, which is cheaper for low volumes.</p>' },
@@ -850,12 +850,12 @@ export const packagingBoxesContent: ProductContentMap = {
 
   'kraft-paper-treat-bags': {
     intro:
-      'A treat bag is a small flat or gusseted paper bag for confectionery, favours and counter sales. It is the cheapest packaging in the catalogue.',
+      'A treat bag is a small flat or gusseted paper bag for confectionery, favors and counter sales. It is the cheapest packaging in the catalog.',
     sections: [
       {
         h2: 'Cost per unit is the whole constraint',
         body: [
-          'These sell in thousands and cost pennies, so every decision is a cost decision. One colour on plain kraft is the standard specification, and anything more has to justify itself against a bag used once and thrown away.',
+          'These sell in thousands and cost pennies, so every decision is a cost decision. One color on plain kraft is the standard specification, and anything more has to justify itself against a bag used once and thrown away.',
         ],
       },
       {
@@ -878,14 +878,14 @@ export const packagingBoxesContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'What is the cheapest way to brand these?', answer: '<p>A printed sticker on a plain bag, for low volumes. At higher quantities one-colour printing directly on kraft becomes cheaper per unit.</p>' },
+      { question: 'What is the cheapest way to brand these?', answer: '<p>A printed sticker on a plain bag, for low volumes. At higher quantities one-color printing directly on kraft becomes cheaper per unit.</p>' },
       { question: 'Flat or gusseted?', answer: '<p>Flat suits thin items and displays neatly; gusseted stands up and holds volume. It follows the product rather than the price, since gusseted costs only marginally more.</p>' },
       { question: 'How do these close?', answer: '<p>Most are folded and stickered, which is cheapest and lets the sticker carry the branding. Tin ties and resealable options exist where contents are kept.</p>' },
       { question: 'Are they food-safe?', answer: '<p>With a compliant grade, yes, and with a grease barrier for anything oily. Plain kraft marks quickly with buttery contents.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents. Send the item and roughly how full the bag should look, since a half-empty treat bag reads as mean.</p>' },
       { question: 'Can they have windows?', answer: '<p>Yes, and they suit confectionery. A window means the bag is no longer straight paper, which affects a recycling claim.</p>' },
       { question: 'What paper weight is used?', answer: '<p>Light. These carry very little and heavier paper adds cost without benefit at this price point.</p>' },
-      { question: 'Are these suitable for wedding favours?', answer: '<p>Yes, and short runs suit digital print with no plate cost, which makes personalised favours affordable at small quantities.</p>' },
+      { question: 'Are these suitable for wedding favors?', answer: '<p>Yes, and short runs suit digital print with no plate cost, which makes personalized favors affordable at small quantities.</p>' },
       { question: 'Do you supply plain bags?', answer: '<p>Yes, and for many operations plain plus a sticker is the sensible route.</p>' },
       { question: 'Are recycled papers available?', answer: '<p>Yes across the range, and they suit the natural look these bags are usually chosen for.</p>' },
     ],
@@ -893,18 +893,18 @@ export const packagingBoxesContent: ProductContentMap = {
 
   'kraft-favor-boxes': {
     intro:
-      'A favour box is a small gift carton produced for a single occasion in a fixed quantity, with no second run behind it.',
+      'A favor box is a small gift carton produced for a single occasion in a fixed quantity, with no second run behind it.',
     sections: [
       {
         h2: 'Order overage inside the run',
         body: [
-          'Favours are bought for one event and running out cannot be fixed afterwards. Producing spares inside the original run costs a fraction of a separate short run later, and it is the advice we give unprompted on occasion work.',
+          'Favors are bought for one event and running out cannot be fixed afterwards. Producing spares inside the original run costs a fraction of a separate short run later, and it is the advice we give unprompted on occasion work.',
         ],
       },
       {
         h2: 'Assembly time is a real cost',
         body: [
-          'Favours are usually assembled by hand, often by the customer, in quantities of a hundred or more. A box that folds in one movement saves hours; one that needs three folds and a tuck is a genuinely different proposition at that volume.',
+          'Favors are usually assembled by hand, often by the customer, in quantities of a hundred or more. A box that folds in one movement saves hours; one that needs three folds and a tuck is a genuinely different proposition at that volume.',
         ],
       },
       {
@@ -921,15 +921,15 @@ export const packagingBoxesContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'Should I order spare favour boxes?', answer: '<p>Yes, and it is the advice we give unprompted. Favours are bought for one event with no second run behind them, and overage inside the original run costs a fraction of a separate short run.</p>' },
+      { question: 'Should I order spare favor boxes?', answer: '<p>Yes, and it is the advice we give unprompted. Favors are bought for one event with no second run behind them, and overage inside the original run costs a fraction of a separate short run.</p>' },
       { question: 'How long do they take to assemble?', answer: '<p>It depends entirely on the structure. A box that folds in one movement saves hours over one needing three folds and a tuck, which matters when someone is assembling two hundred by hand.</p>' },
       { question: 'Can I have names or dates printed?', answer: '<p>Yes. Short runs suit digital print with no plate cost, which makes variable data affordable in a way litho is not at this quantity.</p>' },
-      { question: 'What is the minimum quantity?', answer: '<p>The standard minimum applies. At favour quantities digital is almost always the right print route.</p>' },
-      { question: 'What sizes do you produce?', answer: '<p>Cut to your contents. Send what goes in — favours are often filled with something the box was not originally designed around.</p>' },
+      { question: 'What is the minimum quantity?', answer: '<p>The standard minimum applies. At favor quantities digital is almost always the right print route.</p>' },
+      { question: 'What sizes do you produce?', answer: '<p>Cut to your contents. Send what goes in — favors are often filled with something the box was not originally designed around.</p>' },
       { question: 'Can these hold confectionery?', answer: '<p>Yes, with a food-contact compliant grade if the sweets touch the board directly. Tell us at quoting.</p>' },
-      { question: 'Are ribbons available?', answer: '<p>Yes, though they are hand-finished and add labour per unit. For a few hundred that is usually acceptable.</p>' },
+      { question: 'Are ribbons available?', answer: '<p>Yes, though they are hand-finished and add labor per unit. For a few hundred that is usually acceptable.</p>' },
       { question: 'Do they arrive flat?', answer: '<p>Yes, which is what keeps them affordable. Assembly is on your side, so the structure choice matters.</p>' },
-      { question: 'Can I get a window?', answer: '<p>Yes, and it suits confectionery favours. A plain aperture keeps the box recyclable.</p>' },
+      { question: 'Can I get a window?', answer: '<p>Yes, and it suits confectionery favors. A plain aperture keeps the box recyclable.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes, and uncoated kraft suits the craft and wedding positioning these are usually bought for.</p>' },
     ],
   },
@@ -960,7 +960,7 @@ export const packagingBoxesContent: ProductContentMap = {
     link: {
       lead: 'For single-occasion gifting quantities, ',
       href: '/product/kraft-favor-boxes/',
-      anchor: 'favour boxes cover event runs',
+      anchor: 'favor boxes cover event runs',
       tail: '.',
     },
     faqs: [

@@ -1,33 +1,33 @@
 import type { ProductContentMap } from './types'
 
 /**
- * Coloured and dyed stocks, and the paper products.
+ * Colored and dyed stocks, and the paper products.
  *
- * The coloured group all share one behaviour: kraft board is unbleached, so
- * every ink laid on it sits over brown. That single fact decides which colours
+ * The colored group all share one behavior: kraft board is unbleached, so
+ * every ink laid on it sits over brown. That single fact decides which colors
  * hold, which go muddy, and where a white underprint stops being optional.
  *
  * The wrapping group is about the material itself — weight, width and how it
  * behaves when folded or printed — rather than about structure.
  */
 export const coloredWrappingContent: ProductContentMap = {
-  /* ---------------------------- coloured ---------------------------- */
+  /* ---------------------------- colored ---------------------------- */
 
   'black-kraft-boxes': {
     intro:
-      'Black kraft is the hardest substrate in the catalogue to print on. Nothing reads on it without either an opaque white underbase or a finish that sits on top of the surface.',
+      'Black kraft is the hardest substrate in the catalog to print on. Nothing reads on it without either an opaque white underbase or a finish that sits on top of the surface.',
     sections: [
       {
         h2: 'Ink alone will not show',
         body: [
-          'Process inks are transparent. On white board they read because the board reflects light back through them; on black board there is nothing to reflect, so a colour printed directly is barely visible.',
-          'There are two honest routes. An opaque white underbase goes down first and the colours print over it, which costs an extra press pass. Or a foil block, which sits on the surface rather than soaking into it and reads without any underprint at all.',
+          'Process inks are transparent. On white board they read because the board reflects light back through them; on black board there is nothing to reflect, so a color printed directly is barely visible.',
+          'There are two honest routes. An opaque white underbase goes down first and the colors print over it, which costs an extra press pass. Or a foil block, which sits on the surface rather than soaking into it and reads without any underprint at all.',
         ],
       },
       {
         h2: 'Dyed through, or coated on the surface',
         body: [
-          'On a dyed-through stock a cut edge and a crease show the same black as the face. On a surface-coloured board the brown core shows at every cut and fold, which is visible on all twelve edges of a finished box.',
+          'On a dyed-through stock a cut edge and a crease show the same black as the face. On a surface-colored board the brown core shows at every cut and fold, which is visible on all twelve edges of a finished box.',
           'For a premium black pack this difference matters more than almost anything else, and it is worth confirming which stock a quote is based on.',
         ],
       },
@@ -45,40 +45,40 @@ export const coloredWrappingContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'Why does my printing barely show on black board?', answer: '<p>Process inks are transparent and rely on the board reflecting light back through them. On black there is nothing to reflect, so colours printed directly are barely visible. An opaque white underbase or a foil block is needed.</p>' },
-      { question: 'What is the difference between dyed-through and surface-coloured?', answer: '<p>On dyed-through stock the cut edges and creases show the same black as the face. On surface-coloured board the brown core shows at every cut and fold, which is visible on all twelve edges of a box.</p>' },
-      { question: 'Which is better, white underprint or foil?', answer: '<p>Underprint if you need full-colour artwork; foil if the design is a mark or a logo. Foil reads without any underbase and often costs less than an extra colour pass.</p>' },
+      { question: 'Why does my printing barely show on black board?', answer: '<p>Process inks are transparent and rely on the board reflecting light back through them. On black there is nothing to reflect, so colors printed directly are barely visible. An opaque white underbase or a foil block is needed.</p>' },
+      { question: 'What is the difference between dyed-through and surface-colored?', answer: '<p>On dyed-through stock the cut edges and creases show the same black as the face. On surface-colored board the brown core shows at every cut and fold, which is visible on all twelve edges of a box.</p>' },
+      { question: 'Which is better, white underprint or foil?', answer: '<p>Underprint if you need full-color artwork; foil if the design is a mark or a logo. Foil reads without any underbase and often costs less than an extra color pass.</p>' },
       { question: 'Does black board show fingerprints?', answer: '<p>More than any other stock. Matt lamination or soft-touch reduces it considerably; gloss makes it noticeably worse.</p>' },
-      { question: 'Is black kraft more expensive?', answer: '<p>Usually the most expensive of the coloured stocks, and the underprint pass adds to that. Whether it beats printing black onto plain kraft depends on the coverage your design needs.</p>' },
+      { question: 'Is black kraft more expensive?', answer: '<p>Usually the most expensive of the colored stocks, and the underprint pass adds to that. Whether it beats printing black onto plain kraft depends on the coverage your design needs.</p>' },
       { question: 'Can I get a true matt black?', answer: '<p>Yes, with a matt lamination or an uncoated dyed stock. An uncoated black has a depth that a laminated one does not, at the cost of showing marks more.</p>' },
-      { question: 'Is dyed board still recyclable?', answer: '<p>The board is, in the same stream as plain kraft. What changes recyclability is a plastic lamination on top, not the dye in the fibre.</p>' },
-      { question: 'What about spot UV on black?', answer: '<p>It works well and is one of the most effective treatments on this stock, because the contrast between matt black and a gloss varnish reads clearly without any colour.</p>' },
+      { question: 'Is dyed board still recyclable?', answer: '<p>The board is, in the same stream as plain kraft. What changes recyclability is a plastic lamination on top, not the dye in the fiber.</p>' },
+      { question: 'What about spot UV on black?', answer: '<p>It works well and is one of the most effective treatments on this stock, because the contrast between matt black and a gloss varnish reads clearly without any color.</p>' },
       { question: 'Can you match a specific black?', answer: '<p>Between dyed stocks there is batch variation. Where an exact black matters across runs, tell us and we hold stock from one batch where we can.</p>' },
-      { question: 'Should I approve a printed sample?', answer: '<p>On black, always. The gap between a screen proof and printed black board is wider than on any other substrate in the catalogue.</p>' },
+      { question: 'Should I approve a printed sample?', answer: '<p>On black, always. The gap between a screen proof and printed black board is wider than on any other substrate in the catalog.</p>' },
     ],
   },
 
   'brown-kraft-boxes': {
     intro:
-      'Brown kraft is the default substrate for most of this catalogue. It is unbleached, which is what gives it the colour and what changes how print behaves on it.',
+      'Brown kraft is the default substrate for most of this catalog. It is unbleached, which is what gives it the color and what changes how print behaves on it.',
     sections: [
       {
-        h2: 'The board subtracts from every colour',
+        h2: 'The board subtracts from every color',
         body: [
-          'Every ink printed on kraft sits over brown, so pale tints wash out, fine detail disappears, and colours read darker and duller than a proof on white stock suggests. This is the material behaving normally rather than a print fault.',
-          'Designs built for the substrate — one or two high-contrast colours, solid marks, generous space — hold up. Full-colour photography does not.',
+          'Every ink printed on kraft sits over brown, so pale tints wash out, fine detail disappears, and colors read darker and duller than a proof on white stock suggests. This is the material behaving normally rather than a print fault.',
+          'Designs built for the substrate — one or two high-contrast colors, solid marks, generous space — hold up. Full-color photography does not.',
         ],
       },
       {
         h2: 'When to add a white underbase',
         body: [
-          'A white underbase restores accurate colour at the cost of an extra press pass. It is worth it where colour fidelity is genuinely part of the brand and not worth it where the kraft look is the point — which is most of the time in this category.',
+          'A white underbase restores accurate color at the cost of an extra press pass. It is worth it where color fidelity is genuinely part of the brand and not worth it where the kraft look is the point — which is most of the time in this category.',
         ],
       },
       {
         h2: 'Strength and recycled content',
         body: [
-          'Kraft board is strong for its weight because the pulping process keeps the fibres long. Recycled kraft has shorter fibres and is marginally less stiff at the same caliper, which is easily addressed by stepping up a grade where it matters.',
+          'Kraft board is strong for its weight because the pulping process keeps the fibers long. Recycled kraft has shorter fibers and is marginally less stiff at the same caliper, which is easily addressed by stepping up a grade where it matters.',
         ],
       },
     ],
@@ -89,22 +89,22 @@ export const coloredWrappingContent: ProductContentMap = {
       tail: '.',
     },
     faqs: [
-      { question: 'Why do my colours look muddy on kraft?', answer: '<p>The brown substrate shows through the ink and pulls every colour down. It is the material behaving normally rather than a print fault, and designs built for it hold up far better than ones corrected for it.</p>' },
-      { question: 'When should I use a white underbase?', answer: '<p>Where colour fidelity is genuinely part of the brand. Where the kraft look is the point — which is most of this category — the underbase works against the reason for choosing kraft.</p>' },
-      { question: 'Is kraft board strong?', answer: '<p>Strong for its weight, because the pulping process keeps the fibres long. Recycled kraft has shorter fibres and is marginally less stiff at the same caliper.</p>' },
-      { question: 'What designs work best on kraft?', answer: '<p>One or two high-contrast colours, solid marks and generous space. Pale tints and fine detail disappear, and full-colour photography rarely survives the substrate.</p>' },
-      { question: 'Is the colour consistent between batches?', answer: '<p>There is natural variation in unbleached board, more than with bleached white stock. Where consistency matters across runs we hold stock from one batch where possible.</p>' },
+      { question: 'Why do my colors look muddy on kraft?', answer: '<p>The brown substrate shows through the ink and pulls every color down. It is the material behaving normally rather than a print fault, and designs built for it hold up far better than ones corrected for it.</p>' },
+      { question: 'When should I use a white underbase?', answer: '<p>Where color fidelity is genuinely part of the brand. Where the kraft look is the point — which is most of this category — the underbase works against the reason for choosing kraft.</p>' },
+      { question: 'Is kraft board strong?', answer: '<p>Strong for its weight, because the pulping process keeps the fibers long. Recycled kraft has shorter fibers and is marginally less stiff at the same caliper.</p>' },
+      { question: 'What designs work best on kraft?', answer: '<p>One or two high-contrast colors, solid marks and generous space. Pale tints and fine detail disappear, and full-color photography rarely survives the substrate.</p>' },
+      { question: 'Is the color consistent between batches?', answer: '<p>There is natural variation in unbleached board, more than with bleached white stock. Where consistency matters across runs we hold stock from one batch where possible.</p>' },
       { question: 'Can kraft be food-safe?', answer: '<p>With a compliant grade, yes. Tell us whether contact is direct or through a liner, since that changes which stocks are available.</p>' },
       { question: 'Does kraft need a coating?', answer: '<p>Only for a functional reason — grease, moisture or a leak risk. For appearance, uncoated kraft is usually the point of choosing it.</p>' },
-      { question: 'What weights are available?', answer: '<p>From light folding carton board up to heavy corrugated. The weight follows the product and the journey rather than the colour choice.</p>' },
+      { question: 'What weights are available?', answer: '<p>From light folding carton board up to heavy corrugated. The weight follows the product and the journey rather than the color choice.</p>' },
       { question: 'Is kraft recyclable?', answer: '<p>Plain uncoated kraft is, in the standard paper stream. A plastic lamination or a filmed window is what takes it out.</p>' },
-      { question: 'Should I approve a printed sample?', answer: '<p>For anything colour-critical, yes. The gap between a digital proof and printed kraft is wide enough that a screen approval is not reliable.</p>' },
+      { question: 'Should I approve a printed sample?', answer: '<p>For anything color-critical, yes. The gap between a digital proof and printed kraft is wide enough that a screen approval is not reliable.</p>' },
     ],
   },
 
   'colored-kraft-paper': {
     intro:
-      'Coloured kraft paper is sold by the sheet or the roll and cut to your width. It is a material rather than a format, so the questions are about weight and dye rather than structure.',
+      'Colored kraft paper is sold by the sheet or the roll and cut to your width. It is a material rather than a format, so the questions are about weight and dye rather than structure.',
     sections: [
       {
         h2: 'Weight decides what it can do',
@@ -113,7 +113,7 @@ export const coloredWrappingContent: ProductContentMap = {
         ],
         table: {
           caption: 'Weight by application',
-          head: ['Application', 'Weight band', 'Behaviour'],
+          head: ['Application', 'Weight band', 'Behavior'],
           rows: [
             ['Gift wrapping', 'Light', 'Creases cleanly, tears easily'],
             ['Void fill and interleaving', 'Light to medium', 'Crumples without springing back'],
@@ -123,9 +123,9 @@ export const coloredWrappingContent: ProductContentMap = {
         },
       },
       {
-        h2: 'Dyed through or surface-coloured',
+        h2: 'Dyed through or surface-colored',
         body: [
-          'A dyed-through paper shows the same colour at a torn or cut edge; a surface-coloured one shows brown. On wrapping that is highly visible at every fold and cut end, so it is worth confirming which a quote covers.',
+          'A dyed-through paper shows the same color at a torn or cut edge; a surface-colored one shows brown. On wrapping that is highly visible at every fold and cut end, so it is worth confirming which a quote covers.',
         ],
       },
       {
@@ -143,21 +143,21 @@ export const coloredWrappingContent: ProductContentMap = {
     },
     faqs: [
       { question: 'What weight paper should I order?', answer: '<p>It follows the job. Light kraft creases cleanly for wrapping; heavier weights hold a fold and carry load for bags and sleeves. Tell us the use and we specify the band.</p>' },
-      { question: 'Is the colour through the paper or on the surface?', answer: '<p>Both exist. Dyed-through shows the same colour at a torn or cut edge; surface-coloured shows brown, which is highly visible on wrapping at every fold and cut end.</p>' },
+      { question: 'Is the color through the paper or on the surface?', answer: '<p>Both exist. Dyed-through shows the same color at a torn or cut edge; surface-colored shows brown, which is highly visible on wrapping at every fold and cut end.</p>' },
       { question: 'Can I get custom widths?', answer: '<p>Yes, in sheets and on rolls. Ordering to your dispenser or bench width removes trimming waste on every use, which adds up faster than the paper cost difference.</p>' },
-      { question: 'Why do printed colours look flat?', answer: '<p>Uncoated stock absorbs ink, so colours dry back darker and duller than on coated board. Designing for the substrate holds up better than correcting for it.</p>' },
+      { question: 'Why do printed colors look flat?', answer: '<p>Uncoated stock absorbs ink, so colors dry back darker and duller than on coated board. Designing for the substrate holds up better than correcting for it.</p>' },
       { question: 'Can it be printed with a repeating pattern?', answer: '<p>Yes, with the repeat set against the sheet or roll width so the pattern runs continuously rather than breaking at each edge.</p>' },
-      { question: 'Is coloured kraft paper food-safe?', answer: '<p>With a compliant grade and, for greasy items, a grease-resistant treatment. Plain kraft strikes through with oily food regardless of colour.</p>' },
+      { question: 'Is colored kraft paper food-safe?', answer: '<p>With a compliant grade and, for greasy items, a grease-resistant treatment. Plain kraft strikes through with oily food regardless of color.</p>' },
       { question: 'Is it recyclable?', answer: '<p>Plain uncoated paper is, in the standard stream. The dye does not change that; a coating or lamination would.</p>' },
       { question: 'Can I order a small quantity to test?', answer: '<p>Yes, and on paper it is worth doing. How a weight creases and takes ink is difficult to judge from a specification alone.</p>' },
-      { question: 'How many colours are available?', answer: '<p>A range of dyed stocks, though the heaviest calipers are limited in some colours. If you need both a specific colour and a heavy weight, tell us early so we can confirm availability.</p>' },
+      { question: 'How many colors are available?', answer: '<p>A range of dyed stocks, though the heaviest calipers are limited in some colors. If you need both a specific color and a heavy weight, tell us early so we can confirm availability.</p>' },
       { question: 'Do you supply plain unprinted paper?', answer: '<p>Yes, in sheets and rolls. For interleaving and void fill plain stock is usually the sensible choice.</p>' },
     ],
   },
 
   'kraft-boxes-with-lid': {
     intro:
-      'A two-piece box is a base and a separate lid that lifts off rather than hinging. It is the simplest premium construction and the easiest to get wrong by a millimetre.',
+      'A two-piece box is a base and a separate lid that lifts off rather than hinging. It is the simplest premium construction and the easiest to get wrong by a millimeter.',
     sections: [
       {
         h2: 'Lid fit is the entire impression',
@@ -190,7 +190,7 @@ export const coloredWrappingContent: ProductContentMap = {
       { question: 'How deep should the lid be?', answer: '<p>An appearance decision rather than a structural one. A shallow lid shows more of the printed base; a deep lid covers most of the box and reads as more substantial.</p>' },
       { question: 'Should it be rigid or folding?', answer: '<p>Rigid holds its fit better over repeated opening and feels heavier; folding ships flat and costs considerably less. The choice follows whether the box gets kept.</p>' },
       { question: 'Do two-piece boxes ship flat?', answer: '<p>Folding versions do. Rigid two-piece boxes ship assembled and nested where possible, which still takes more freight volume than flat stock.</p>' },
-      { question: 'Can the lid and base be different colours?', answer: '<p>Yes, and it is a common way to add contrast without a second finish. They are separate components so they can run on different stocks.</p>' },
+      { question: 'Can the lid and base be different colors?', answer: '<p>Yes, and it is a common way to add contrast without a second finish. They are separate components so they can run on different stocks.</p>' },
       { question: 'Is a window possible in the lid?', answer: '<p>Yes, and it costs stiffness on the panel that already has to hold its shape when lifted. The board usually steps up a grade.</p>' },
       { question: 'How do I stop the contents moving?', answer: '<p>A fitted insert. Without one, contents shift when the lid is lifted and the presentation is lost at exactly the wrong moment.</p>' },
       { question: 'What board weights are used?', answer: '<p>It follows the lid span more than the contents weight — a wide lid on light board flexes when lifted regardless of what is inside.</p>' },
@@ -213,7 +213,7 @@ export const coloredWrappingContent: ProductContentMap = {
       {
         h2: 'Restraint reads as intent',
         body: [
-          'One or two colours on uncoated stock, generous space and a single strong mark reads as deliberate. Full-bleed print on a pack marketed as minimal reads as a contradiction, and customers notice.',
+          'One or two colors on uncoated stock, generous space and a single strong mark reads as deliberate. Full-bleed print on a pack marketed as minimal reads as a contradiction, and customers notice.',
         ],
       },
       {
@@ -232,7 +232,7 @@ export const coloredWrappingContent: ProductContentMap = {
     faqs: [
       { question: 'What actually saves the most material?', answer: '<p>Right-sizing rather than thinning the board. A box cut to the product ships more per pallet and cuts dimensional weight on every parcel without increasing damage; thinner board increases damage quite quickly.</p>' },
       { question: 'How far can I reduce the board?', answer: '<p>There is a product-specific point past which less material means more damage. Establishing it with a sample run at the lighter specification is far cheaper than finding it across a full order.</p>' },
-      { question: 'Does minimal have to mean plain?', answer: '<p>No, but restraint reads as intent. One or two colours on uncoated stock with a single strong mark reads as deliberate; full-bleed print on a pack marketed as minimal reads as a contradiction.</p>' },
+      { question: 'Does minimal have to mean plain?', answer: '<p>No, but restraint reads as intent. One or two colors on uncoated stock with a single strong mark reads as deliberate; full-bleed print on a pack marketed as minimal reads as a contradiction.</p>' },
       { question: 'Is a minimal pack cheaper?', answer: '<p>Usually, from both less material and fewer press passes. The saving is often larger in freight than in the board itself.</p>' },
       { question: 'What finishes suit this?', answer: '<p>Uncoated, or an aqueous varnish where some protection is needed. A plastic laminate works against both the look and any recycling claim.</p>' },
       { question: 'Can I still have a window?', answer: '<p>Yes, and a plain die-cut aperture with no film keeps the pack fully recyclable, which suits the positioning better than a filmed window.</p>' },
@@ -306,22 +306,22 @@ export const coloredWrappingContent: ProductContentMap = {
         ],
       },
       {
-        h2: 'Print behaviour on uncoated stock',
+        h2: 'Print behavior on uncoated stock',
         body: [
-          'Uncoated paper absorbs ink, so colours dry back darker and heavy solid coverage can cockle the sheet. Line work and single colours hold up far better than full-bleed photography.',
+          'Uncoated paper absorbs ink, so colors dry back darker and heavy solid coverage can cockle the sheet. Line work and single colors hold up far better than full-bleed photography.',
         ],
       },
     ],
     link: {
-      lead: 'For the coloured and dyed stocks in the same range, ',
+      lead: 'For the colored and dyed stocks in the same range, ',
       href: '/product/colored-kraft-paper/',
-      anchor: 'coloured kraft paper covers dyed options',
+      anchor: 'colored kraft paper covers dyed options',
       tail: '.',
     },
     faqs: [
       { question: 'How do I choose the right paper?', answer: '<p>By function rather than appearance. Grease-resistant for food, moisture-resistant for chilled, plain for interleaving, heavier for carrying — the same brown paper serves all of them at different weights and treatments.</p>' },
       { question: 'Rolls or sheets?', answer: '<p>Rolls cut to any length and suit continuous use but need a dispenser and produce off-cuts. Sheets suit repeatable pack sizes with no waste, provided the sheet size matches the job.</p>' },
-      { question: 'Why do printed colours look flat?', answer: '<p>Uncoated paper absorbs ink, so colours dry back darker. Heavy solid coverage can also cockle the sheet, which is why line work holds up better than full-bleed designs.</p>' },
+      { question: 'Why do printed colors look flat?', answer: '<p>Uncoated paper absorbs ink, so colors dry back darker. Heavy solid coverage can also cockle the sheet, which is why line work holds up better than full-bleed designs.</p>' },
       { question: 'Is this suitable for direct food contact?', answer: '<p>With a compliant grade, yes, and with a grease-resistant treatment for oily food. Plain kraft strikes through with anything greasy.</p>' },
       { question: 'Can I order custom widths?', answer: '<p>Yes. Ordering to your bench or dispenser width removes trimming waste on every use.</p>' },
       { question: 'What weights are available?', answer: '<p>From light interleaving papers up to heavy carrying weights. Tell us the application and we specify the band rather than a specific figure.</p>' },
@@ -351,7 +351,7 @@ export const coloredWrappingContent: ProductContentMap = {
       {
         h2: 'Kraft as a look rather than a compromise',
         body: [
-          'Unbleached kraft with a single-colour print has become a deliberate aesthetic rather than a budget choice. It also prints economically, since one or two colours on brown is far cheaper than full-colour on white.',
+          'Unbleached kraft with a single-color print has become a deliberate aesthetic rather than a budget choice. It also prints economically, since one or two colors on brown is far cheaper than full-color on white.',
         ],
       },
     ],
@@ -364,10 +364,10 @@ export const coloredWrappingContent: ProductContentMap = {
     faqs: [
       { question: 'What weight should gift wrap be?', answer: '<p>A narrow band. Too light and it tears at a corner while being wrapped; too heavy and it will not fold crisply and the corners bulk out.</p>' },
       { question: 'How is a repeating pattern set?', answer: '<p>Against the sheet or roll width, so the pattern runs continuously and meets when the paper wraps around rather than breaking at the edge.</p>' },
-      { question: 'Is kraft wrap cheaper than white?', answer: '<p>Generally yes, because one or two colours on brown costs far less than full-colour on white, and the unbleached look is now a deliberate aesthetic rather than a compromise.</p>' },
+      { question: 'Is kraft wrap cheaper than white?', answer: '<p>Generally yes, because one or two colors on brown costs far less than full-color on white, and the unbleached look is now a deliberate aesthetic rather than a compromise.</p>' },
       { question: 'Can I get it in rolls and sheets?', answer: '<p>Both, cut to your width. Sheets suit consistent gift sizes; rolls suit varied ones at the cost of off-cuts.</p>' },
       { question: 'Will the ink rub off?', answer: '<p>Not with a suitable ink and a light coating where needed. Tell us if the wrap will be handled heavily and we specify accordingly.</p>' },
-      { question: 'Can you match a brand colour?', answer: '<p>As a spot colour, yes, bearing in mind the brown substrate shifts it. A printed sample on the actual stock is the only reliable approval.</p>' },
+      { question: 'Can you match a brand color?', answer: '<p>As a spot color, yes, bearing in mind the brown substrate shifts it. A printed sample on the actual stock is the only reliable approval.</p>' },
       { question: 'Is it recyclable?', answer: '<p>Plain printed kraft is, in the standard paper stream. Foil or glitter finishes are not, which is worth weighing if the claim matters.</p>' },
       { question: 'Do you produce seasonal designs?', answer: '<p>Yes, and short runs suit digital print. Seasonal wrap has no second run behind it, so ordering overage inside the original run is worth considering.</p>' },
       { question: 'How much wrap do I need per gift?', answer: '<p>It depends on box size and wrapping style. Send the box dimensions you wrap most and we will work out sheet size or roll length with you.</p>' },
@@ -408,7 +408,7 @@ export const coloredWrappingContent: ProductContentMap = {
       { question: 'What measurements do you need?', answer: '<p>The roll diameter and width, or the sheet stack height — not a box size. Specifying a box dimension is how a dispenser arrives the roll will not fit.</p>' },
       { question: 'What makes a good tear edge?', answer: '<p>The edge geometry rather than the board weight. A dispenser is judged entirely on whether paper tears cleanly and straight, and a poor tear edge makes the product feel broken.</p>' },
       { question: 'Should the board be moisture-resistant?', answer: '<p>In food service, usually. These are handled all day with damp or greasy hands, and a softened dispenser collapses around the aperture first.</p>' },
-      { question: 'Can a dispenser hold sheets rather than a roll?', answer: '<p>Yes, with the aperture and internal height set to the stack. The dispensing behaviour is different, so tell us which at quoting.</p>' },
+      { question: 'Can a dispenser hold sheets rather than a roll?', answer: '<p>Yes, with the aperture and internal height set to the stack. The dispensing behavior is different, so tell us which at quoting.</p>' },
       { question: 'Can these be wall-mounted?', answer: '<p>Yes, with reinforced fixing points. Tell us the mounting method because it changes where the reinforcement goes.</p>' },
       { question: 'What board is used?', answer: '<p>Usually E flute corrugated for counter use, heavier where the dispenser is refilled repeatedly rather than replaced.</p>' },
       { question: 'Are these refillable or disposable?', answer: '<p>Both exist. A refillable dispenser needs a proper opening and a stronger board; a disposable one is specified for a single roll and is cheaper per unit.</p>' },
@@ -420,7 +420,7 @@ export const coloredWrappingContent: ProductContentMap = {
 
   'kraft-paper-boxes': {
     intro:
-      'This is the general folding carton in kraft board — the format most of the catalogue is built on, cut to whatever the product needs.',
+      'This is the general folding carton in kraft board — the format most of the catalog is built on, cut to whatever the product needs.',
     sections: [
       {
         h2: 'Where the folding carton fits',
@@ -468,13 +468,13 @@ export const coloredWrappingContent: ProductContentMap = {
       { question: 'Are windows available?', answer: '<p>Yes, filmed or as a plain die-cut aperture. Every square inch of aperture removes stiffness from that panel, so a large window usually means stepping up a grade.</p>' },
       { question: 'How many can I order?', answer: '<p>From the standard minimum upward. Unit cost falls sharply with quantity, and we will show the breaks so the trade is visible.</p>' },
       { question: 'Can you match a carton I already use?', answer: '<p>Send the existing box and we quote to match the structure and board rather than proposing an alternative you would have to re-approve.</p>' },
-      { question: 'Are recycled boards available?', answer: '<p>Yes across the range. Recycled fibre is slightly less stiff at the same caliper, so we step up a grade where panel span matters.</p>' },
+      { question: 'Are recycled boards available?', answer: '<p>Yes across the range. Recycled fiber is slightly less stiff at the same caliper, so we step up a grade where panel span matters.</p>' },
     ],
   },
 
   'kraft-boxes-for-gifts': {
     intro:
-      'A small gift carton is bought for favours, hampers and retail gifting where the box has to look considered without costing what a rigid box costs.',
+      'A small gift carton is bought for favors, hampers and retail gifting where the box has to look considered without costing what a rigid box costs.',
     sections: [
       {
         h2: 'Folding cartons that still present well',
@@ -486,7 +486,7 @@ export const coloredWrappingContent: ProductContentMap = {
       {
         h2: 'The interior is what is seen',
         body: [
-          'On any gift format the lid is open for the whole moment that matters. Interior print, a coloured lining or tissue does more for that moment than anything on the outside.',
+          'On any gift format the lid is open for the whole moment that matters. Interior print, a colored lining or tissue does more for that moment than anything on the outside.',
         ],
       },
       {
@@ -504,12 +504,12 @@ export const coloredWrappingContent: ProductContentMap = {
     },
     faqs: [
       { question: 'Do I need a rigid box for gifting?', answer: '<p>Not necessarily. A folding carton with a clean die-cut, a good board and one restrained finish reads far better than a cheap rigid box at a fraction of the cost. Rigid wins where the box is meant to be kept.</p>' },
-      { question: 'What makes a gift box feel considered?', answer: '<p>The interior more than the exterior. The lid is open for the whole moment that matters, so interior print, a coloured lining or tissue does more than anything on the outside.</p>' },
+      { question: 'What makes a gift box feel considered?', answer: '<p>The interior more than the exterior. The lid is open for the whole moment that matters, so interior print, a colored lining or tissue does more than anything on the outside.</p>' },
       { question: 'Should I order spare units for a season?', answer: '<p>Yes. Overage inside the original run costs a fraction of a separate short run later, and running out mid-season cannot be fixed.</p>' },
       { question: 'What sizes do you produce?', answer: '<p>Cut to your contents rather than picked from stock sizes. Send what goes in and we build the dieline around it.</p>' },
-      { question: 'Can you add a ribbon or a closure?', answer: '<p>Yes — ribbon pulls, tuck locks and magnetic closures are all available. Ribbon is hand-finished, so it adds labour per unit at volume.</p>' },
+      { question: 'Can you add a ribbon or a closure?', answer: '<p>Yes — ribbon pulls, tuck locks and magnetic closures are all available. Ribbon is hand-finished, so it adds labor per unit at volume.</p>' },
       { question: 'Are windows an option?', answer: '<p>Yes. On a gift box a window reveals part of the contents, which suits confectionery and similar products where the contents are attractive.</p>' },
-      { question: 'What finishes suit kraft gift cartons?', answer: '<p>Foil and deboss both read well against unbleached board and each is a single pass. Full-colour coverage tends to work against the kraft look.</p>' },
+      { question: 'What finishes suit kraft gift cartons?', answer: '<p>Foil and deboss both read well against unbleached board and each is a single pass. Full-color coverage tends to work against the kraft look.</p>' },
       { question: 'Can one box cover several gift sizes?', answer: '<p>Two or three sizes sharing one board, print and finish usually cover a range and keep it looking like a family.</p>' },
       { question: 'Do these ship flat?', answer: '<p>Yes, which keeps freight low. Rigid alternatives ship assembled and cost noticeably more to move.</p>' },
       { question: 'Are recycled boards available?', answer: '<p>Yes across the range, and they suit the natural positioning most kraft gifting takes.</p>' },

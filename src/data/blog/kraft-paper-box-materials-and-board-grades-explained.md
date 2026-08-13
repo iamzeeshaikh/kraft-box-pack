@@ -21,12 +21,12 @@ faqs:
       one with a lower one.
   - question: What is the difference between SBS and kraft board?
     answer: >-
-      SBS is bleached, so it is white through and prints colour accurately. Kraft is
-      unbleached, which gives it the brown colour and means every ink laid on it
+      SBS is bleached, so it is white through and prints color accurately. Kraft is
+      unbleached, which gives it the brown color and means every ink laid on it
       sits over brown.
   - question: Is recycled board weaker?
     answer: >-
-      Slightly, at the same caliper. Recycled fibres are shorter, so the board is a
+      Slightly, at the same caliper. Recycled fibers are shorter, so the board is a
       little less stiff and takes on moisture faster. Stepping up one caliper
       generally restores performance while keeping the recycled claim.
   - question: When do I need corrugated rather than folding carton board?
@@ -41,8 +41,8 @@ faqs:
       weaker in every direction.
   - question: Does board choice affect print quality?
     answer: >-
-      Considerably. Uncoated and kraft stocks absorb ink so colours dry back darker
-      and duller. Coated white board gives the widest colour range.
+      Considerably. Uncoated and kraft stocks absorb ink so colors dry back darker
+      and duller. Coated white board gives the widest color range.
   - question: How does humidity affect board?
     answer: >-
       Board absorbs moisture from the air until it equalises with its surroundings,
@@ -50,7 +50,7 @@ faqs:
       it is made can be measurably weaker after a month in a humid warehouse.
   - question: What is GSM and how does it relate to caliper?
     answer: >-
-      GSM measures weight per square metre; caliper measures thickness. They
+      GSM measures weight per square meter; caliper measures thickness. They
       correlate but are not interchangeable, since a bulky board can be thick at a
       lower weight than a dense one.
   - question: Can I mix board grades across one product range?
