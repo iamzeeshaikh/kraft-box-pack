@@ -105,11 +105,12 @@ const pageSchema = [
   {content && (
     <section class="section section--alt" aria-labelledby="cat-guide">
       <div class="wrap cat__guide">
-        <h2 id="cat-guide" class="visually-hidden">
+        <h2 id="cat-guide" class="cat__guide-head">
           Choosing {category.name.toLowerCase()}
         </h2>
+        <div class="cat__blocks">
         {content.sections.map((s) => (
-          <div class="cat__block prose">
+          <div class:list={['cat__block', 'prose', (s.table || s.list) && 'cat__block--wide']}>
             <h2>{s.h2}</h2>
             {s.body.map((p) => <p>{p}</p>)}
             {s.list && <ul>{s.list.map((li) => <li>{li}</li>)}</ul>}
@@ -134,6 +135,7 @@ const pageSchema = [
             )}
           </div>
         ))}
+        </div>
         {/* One contextual link out of the page, in its own paragraph so the
             one-link-per-paragraph rule holds structurally. */}
         {content.link && (
@@ -178,4 +180,67 @@ const pageSchema = [
     padding: 0;
   }
   .cat__children li { margin: 0; }
+
+  /* The guide block.
+     Every section here used to be an unstyled div stacked on the alt
+     background, which rendered as one undifferentiated slab — six headings and
+     their prose running together with nothing to separate them and no title on
+     the block at all, because its only h2 was visually-hidden. The content was
+     there and read as though nothing had been added.
+     Cards on the alt background give each section an edge, and the heading is
+     now visible so the block announces what it is. Tokens only: no new color,
+     radius or type step is introduced here. */
+  /* No standfirst under this heading on purpose: a line of lead-in copy would
+     be identical on all sixteen categories, and this file's whole argument is
+     that nothing on these pages should be. */
+  .cat__guide-head {
+    font-size: var(--step-3);
+    margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem);
+  }
+
+  .cat__blocks {
+    display: grid;
+    gap: var(--gap);
+  }
+
+  /* Two columns once there is room for two comfortable measures. Sections
+     carrying a table or a list span both, because a table squeezed into half a
+     column scrolls sideways and a list loses its scannability. */
+  @media (min-width: 60rem) {
+    .cat__blocks { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+    .cat__block--wide { grid-column: 1 / -1; }
+  }
+
+  .cat__block {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.1rem, 0.9rem + 0.9vw, 1.75rem);
+    /* A grid item defaults to min-width:auto, so a table inside one refuses to
+       shrink below its own content and pushes the page sideways. This is the
+       whole of the overflow a11y.mjs caught at 360 and 390px; minmax(0,1fr)
+       above fixes the track and this fixes the item. */
+    min-width: 0;
+  }
+
+  /* A kraft rule above each heading, which is what visually separates one
+     section from the next when several sit in a column. */
+  .cat__block h2 {
+    font-size: var(--step-2);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding-top: 0.75rem;
+    border-top: 3px solid var(--kraft-light);
+    display: inline-block;
+  }
+
+  .cat__block > :last-child { margin-bottom: 0; }
+
+  .cat__block table { margin-bottom: 0; }
+
+  .cat__link {
+    margin-top: var(--gap);
+    padding-left: 1rem;
+    border-left: 3px solid var(--kraft-light);
+  }
 </style>
