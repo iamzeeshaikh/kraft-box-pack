@@ -23,38 +23,44 @@ Preview with `npm run build && node scripts/preview-server.mjs`, then
 http://localhost:4321. Restart the server after a rebuild or it serves stale
 output.
 
-## The open question
+## Where the rewrite stands
 
-The client asked whether the old product content was actually improved for SEO.
-The honest answer, which they have been given:
+All 50 top pages are rewritten, and the remaining 108 are in progress. Check
+progress at any time with:
 
-- **104 of 158 imported descriptions are byte-identical to the WordPress
-  import.** The other 54 changed only through `fix-claims.py` (lead times
-  normalised, search-query fragments removed), the `kraft-cookie-boxes`
-  rewrite, one merged anchor on `kraft-mascara-boxes`, and table-wrapper
-  cleanup on 16 pages.
-- Original prose across the catalogue: **195,628 → 195,809 words, +0.09%.**
-  Effectively untouched.
-- What was added: roughly 158 words of written sections and 233 words of FAQs
-  per product — **65,570 new words, +33%** — plus hand-written metadata on 38
-  pages, 16 written category pages, schema, and internal linking.
+```
+python3 scripts/rewrite-progress.py
+```
 
-So everything *around* the prose was improved. The prose itself was not. The
-site ranks at positions 12–17 while CTR sits at 0.76%, and that gap is the
-untouched prose.
+It derives what is done from git rather than from a note — a product counts as
+rewritten when its description differs from commit `581e3a0`, the last commit
+before the rewrite began — so it cannot drift out of date.
 
-## Agreed next step, not started
+### How a rewrite is done
 
-Scan Search Console for product pages with **high impressions and the lowest
-CTR** — the signature of content that ranks for one thing and reads as
-another. `kraft-cookie-boxes` was exactly this: 1,350 impressions at position
-12.58 converting at 0.37%, because it ranked for cookies and its body was a
-copy of the bakery page, headings included.
+1. `python3 scripts/rewrite-progress.py` for the next products by impressions.
+2. Read the current copy for its **internal links and headings** — every link
+   has to survive.
+3. Write the new HTML, keeping the imported structure (h2/h3, ordered list,
+   spec table, closing "Choose ..." paragraph).
+4. `python3 scratchpad/setmany.py <file>` writes a dict of slug → HTML.
+5. `python3 scratchpad/insert.py <file>` appends extra sections before the
+   closing paragraph, where the page lands under 800 words. It always does —
+   budget for one extension pass per page.
+6. `python3 scripts/check-rewrite.py <slugs>` must pass.
+7. Rebuild, then `python3 scripts/content-audit.py` — watch **multi-link
+   paragraphs**, which new copy trips easily.
 
-Produce that ranked list, show the client, and let them choose how many to
-rewrite. **Do not rewrite all 162 blindly** — that scale has not been agreed.
+### What check-rewrite.py guards
 
-Data is in `reports/gsc.json` (keys: `pages`, `queries`).
+Word count 800-1000 (the client's target), no dropped internal link, the page
+must name its own subject in its own headings, and no paragraph of twelve
+words or more shared with another product. Self-links are exempt, and
+vercel.json redirects are resolved before comparing.
+
+It has caught real problems repeatedly — two drawer pages sharing paragraphs,
+corrugated and shipping ending on the same sentence, and my own copy putting
+two internal links in one paragraph.
 
 ## Client rules that still apply
 
