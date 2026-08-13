@@ -44,12 +44,6 @@ export const packagingBoxesContent: ProductContentMap = {
         },
       },
     ],
-    link: {
-      lead: 'Where shoes ship direct to customers rather than through a store, ',
-      href: '/product/kraft-mailer-boxes/',
-      anchor: 'mailer boxes handle courier journeys better',
-      tail: '.',
-    },
     faqs: [
       { question: 'What size should a shoe box be?', answer: '<p>Sized to the largest shoe in the range, or split across two or three footprints. A box that fits a size 8 will not close over a size 12, and two sizes cost less than returns from crushed boxes.</p>' },
       { question: 'Should I measure with tissue in?', answer: '<p>Yes. Tissue adds more depth than expected once a pair is wrapped, and it is a common reason a box that should fit does not close flat.</p>' },

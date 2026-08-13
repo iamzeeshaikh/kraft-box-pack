@@ -122,12 +122,6 @@ export const giftContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For arrangements built in foam rather than wrapped bunches, ',
-      href: '/product/kraft-flower-boxes/',
-      anchor: 'flower boxes cover lined constructions',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does the bouquet box tip over?', answer: '<p>The mass sits at the top, well above the base. A wider base than the bouquet strictly needs is what keeps it standing in a shop and in a car.</p>' },
       { question: 'How tall should the box be?', answer: '<p>Set by where the stem wrap ends rather than by the flowers, since the point of the format is that the blooms stay visible.</p>' },
@@ -295,12 +289,6 @@ export const giftContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For the separate-lid alternative, ',
-      href: '/product/kraft-lid-base-rigid-boxes/',
-      anchor: 'lid and base boxes are the two-piece format',
-      tail: '.',
-    },
     faqs: [
       { question: 'How long does the hinge last?', answer: '<p>It depends on the hinge construction, which is a specification rather than an assembly detail. On a box that gets reopened regularly it is the component that decides the life of the box.</p>' },
       { question: 'What holds a flip-top closed?', answer: '<p>Usually a magnetic catch, since gravity does not. A friction fit works but loosens with use.</p>' },
@@ -426,12 +414,6 @@ export const giftContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For square proportions rather than rectangular, ',
-      href: '/product/kraft-square-gift-boxes/',
-      anchor: 'square gift boxes suit different contents',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why choose a rectangular box?', answer: '<p>Efficiency. It nests, fills a pallet without void, cuts from a sheet with minimal waste and holds most products without a fitment. Shaped boxes cost more on every one of those.</p>' },
       { question: 'Does proportion matter?', answer: '<p>Considerably, and it is nearly free. A shallow wide box reads differently from a deep narrow one holding the same volume, at almost identical material cost.</p>' },
@@ -641,12 +623,6 @@ export const giftContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For invitations and similar flat printed items, ',
-      href: '/product/kraft-invitation-boxes/',
-      anchor: 'invitation boxes cover the larger flat formats',
-      tail: '.',
-    },
     faqs: [
       { question: 'Should the card be visible?', answer: '<p>Yes, or at least obvious. A card hidden in a plain unmarked box gives no clue what it is — a window, a die-cut slot or a printed panel all solve it.</p>' },
       { question: 'How do I stop the card falling out?', answer: '<p>A slit or corner slot holding it in position. It also presents the card face-on, which is better presentation than a loose card lying flat.</p>' },
@@ -728,12 +704,6 @@ export const giftContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For multi-bottle gift sets rather than single bottles, ',
-      href: '/product/kraft-gift-hamper-boxes/',
-      anchor: 'hamper boxes cover multi-item layouts',
-      tail: '.',
-    },
     faqs: [
       { question: 'What breaks bottles in packaging?', answer: '<p>Movement rather than impact. A bottle held rigidly survives handling that shatters one rattling in an oversized box, so the fit matters more than the wall thickness.</p>' },
       { question: 'Do I need an insert?', answer: '<p>For a single bottle, a collar or cradle holding it at the shoulder and base. That is the component doing the protection.</p>' },
@@ -771,12 +741,6 @@ export const giftContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For non-food favors in the same occasion range, ',
-      href: '/product/kraft-event-favor-boxes/',
-      anchor: 'event favor boxes cover the general formats',
-      tail: '.',
-    },
     faqs: [
       { question: 'How quickly do these assemble?', answer: '<p>It depends entirely on the structure. A box erecting in one movement saves hours over one needing three folds, which matters when someone is filling two hundred by hand the night before.</p>' },
       { question: 'Are these food-safe?', answer: '<p>Where sweets sit directly against the board, yes, with a compliant grade. Wrapped confectionery changes the requirement, so tell us which applies.</p>' },

@@ -88,12 +88,6 @@ export const pharmaContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For vitamin ranges specifically, which face the same panel constraint, ',
-      href: '/product/kraft-vitamin-packaging-boxes/',
-      anchor: 'the vitamin packaging page',
-      tail: ' covers multi-SKU ranges.',
-    },
     faqs: [
       { question: 'How much space does the Supplement Facts panel need?', answer: '<p>More than most brands allow for. It has a prescribed layout with minimum type sizes that scale with package surface area, and it usually takes most of one panel. Send the ingredient list at quoting and we block it in at legal size first.</p>' },
       { question: 'What happens if the type is too small?', answer: '<p>The run is unsaleable, and it is usually discovered after production. That is why the panel is laid out before the design rather than fitted around it.</p>' },
@@ -284,12 +278,6 @@ export const pharmaContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For mixed-content kits rather than single-item dispensing, ',
-      href: '/product/kraft-first-aid-kit-boxes/',
-      anchor: 'first aid kit boxes cover compartmented layouts',
-      tail: '.',
-    },
     faqs: [
       { question: 'What makes a good dispensing aperture?', answer: '<p>The opening size. Too small and items tear on the way out; too large and the contents spill when the box is knocked. It is worth testing on a sample with your actual product.</p>' },
       { question: 'Will the box fit our wall bracket?', answer: '<p>Send the bracket specification rather than the box you currently buy. Bracket dimensions are fixed, so the box is designed inward from them.</p>' },

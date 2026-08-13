@@ -49,12 +49,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         },
       },
     ],
-    link: {
-      lead: 'Where the range also covers fragrance in heavier glass, ',
-      href: '/product/kraft-perfume-boxes/',
-      anchor: 'perfume boxes deal with weight and stability',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I measure a jar or bottle for its carton?', answer: '<p>At the widest point, including the cap, pump or dropper as fitted, and with any label already applied. On a jar the widest point is often the shoulder rather than the base.</p>' },
       { question: 'How much room do ingredient lists need?', answer: '<p>More than most brands allow for. Ingredient copy and warnings compete directly with the design, and adding them after layout forces a reflow, so we block the area on the dieline first.</p>' },
@@ -93,12 +87,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For the lighter containers in the same range, ',
-      href: '/product/kraft-skincare-boxes/',
-      anchor: 'skincare cartons cover jars, tubes and droppers',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does my perfume carton bow at the base?', answer: '<p>Because the board was graded from the carton size rather than the filled weight. Glass fragrance bottles are dense for their size and need more board than the dimensions suggest.</p>' },
       { question: 'What is the widest point on a fragrance bottle?', answer: '<p>Usually the cap. Decorative caps are frequently wider than the bottle body and often taller too, so measuring the bottle and adding an allowance produces a carton that will not close.</p>' },
@@ -136,12 +124,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For a printed wrap around the tube rather than a carton, ',
-      href: '/product/kraft-soap-sleeve-boxes/',
-      anchor: 'sleeves are the lower-cost alternative',
-      tail: '.',
-    },
     faqs: [
       { question: 'Is a carton worth it for a single lip balm?', answer: '<p>Often not at this price point. A multipack carton for three or six, or a printed sleeve around the tube, usually works better commercially — we will price both against your margin.</p>' },
       { question: 'What size are these cartons?', answer: '<p>Around 0.8 × 0.8 × 2.8 in for a standard twist tube. Small enough that die and gluing tolerances matter proportionally more than on a larger carton.</p>' },
@@ -180,12 +162,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For the wider beauty range sharing one board and finish, ',
-      href: '/product-category/kraft-cosmetic-boxes/',
-      anchor: 'the cosmetic packaging range',
-      tail: ' keeps the family consistent.',
-    },
     faqs: [
       { question: 'Do mascara cartons need a lining?', answer: '<p>A coated inner face is close to essential. Mascara pigment is dark enough that any leak shows as a stain on the outside, usually before the product reaches the shelf.</p>' },
       { question: 'What size are these cartons?', answer: '<p>Around 1 × 1 × 4.5 in depending on the tube, measured with the wand seated rather than from the container specification alone.</p>' },
@@ -224,12 +200,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'Where the range extends into palettes and larger beauty formats, ',
-      href: '/product/kraft-makeup-palette-boxes/',
-      anchor: 'palette packaging covers flat, wide constructions',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I stop lashes being crushed?', answer: '<p>The lid must not contact the lash at any point. A lash pressed flat loses its curl permanently, so the pack usually needs slightly more depth than it looks like it needs.</p>' },
       { question: 'Should the pack have a window?', answer: '<p>Usually, because styles differ subtly and buyers compare them side by side. A closed box has to reproduce the style accurately on the panel instead.</p>' },
@@ -531,12 +501,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For the magnetic closure variant specifically, ',
-      href: '/product/kraft-magnetic-closure-boxes/',
-      anchor: 'magnetic closure boxes cover magnet strength and lid size',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why do rigid boxes cost more than folding cartons?', answer: '<p>They are hand-assembled rather than machine-glued, and the wrap, corner finish and lining are each separate operations. They also ship assembled, which raises freight against a flat-packed carton.</p>' },
       { question: 'How much bleed does a wrapped box need?', answer: '<p>More than a flat carton. Bleed carries around the turn-in as well as to the visible edge, so the artwork covers a larger area than the outside dimensions suggest.</p>' },
@@ -792,12 +756,6 @@ export const cosmeticLuxuryContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For a shaped format that fills and ships more efficiently, ',
-      href: '/product/kraft-hexagon-boxes/',
-      anchor: 'hexagon boxes are the more practical option',
-      tail: '.',
-    },
     faqs: [
       { question: 'What is the drawback of a triangular box?', answer: '<p>Three acute internal corners that almost no product reaches into. That void is wasted space and it lets the contents move unless an insert takes it up.</p>' },
       { question: 'Do they stack?', answer: '<p>Not meaningfully, and they fit a rectangular shipping case poorly. For retail display that is acceptable; for volume distribution it is a real cost.</p>' },

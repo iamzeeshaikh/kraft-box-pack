@@ -36,12 +36,6 @@ export const displayToyContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'Where the requirement is a case that opens into a shelf rather than a standalone unit, ',
-      href: '/product/kraft-shelf-ready-packaging/',
-      anchor: 'shelf-ready packaging covers the perforated format',
-      tail: '.',
-    },
     faqs: [
       { question: 'Will the display hold its shape when it is full?', answer: '<p>That is a structural calculation rather than a hope. Send the weight of a full facing and the number of facings, and we grade the board and reinforce the base and front lip where the load actually sits.</p>' },
       { question: 'Why does the front edge collapse first?', answer: '<p>Because customers drag stock forward over it rather than lifting it out. A doubled or folded front lip costs very little and is the change that most extends how long a unit looks new.</p>' },
@@ -91,12 +85,6 @@ export const displayToyContent: ProductContentMap = {
         },
       },
     ],
-    link: {
-      lead: 'For freestanding units rather than cases that convert, ',
-      href: '/product/kraft-pop-display-boxes/',
-      anchor: 'point-of-purchase displays are the other route',
-      tail: '.',
-    },
     faqs: [
       { question: 'How does a shelf-ready case open?', answer: '<p>Along a designed perforation. Too weak and it fails in transit; too strong and staff tear it badly. It is set at dieline stage, and we strongly recommend approving a physical sample before a run.</p>' },
       { question: 'Do I need to match a retailer specification?', answer: '<p>If you supply a grocery or pharmacy chain, almost certainly. Case dimensions, pallet pattern, barcode placement and often the opening method are published and fixed. Send it and we design inward from it.</p>' },
@@ -281,12 +269,6 @@ export const displayToyContent: ProductContentMap = {
         },
       },
     ],
-    link: {
-      lead: 'Puzzle boxes carry their weight differently and put the load on the base, covered on ',
-      href: '/product/kraft-puzzle-packaging-boxes/',
-      anchor: 'the puzzle packaging page',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does the lid tear after a few months?', answer: '<p>Because a crease cut for a single opening is being flexed hundreds of times. A telescoping lid that slides rather than folds survives that duty; adding board thickness to a tuck flap does not.</p>' },
       { question: 'What dimensions should I send?', answer: '<p>The folded board footprint for length and width, and the full filled stack for depth — insert, cards, tokens and rulebook together. Depth is where game boxes most often go wrong.</p>' },
@@ -370,12 +352,6 @@ export const displayToyContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'Where the range extends into toys rather than care products, ',
-      href: '/product/kraft-toy-packaging-boxes/',
-      anchor: 'toy packaging covers age grading and window options',
-      tail: '.',
-    },
     faqs: [
       { question: 'What board suits baby product packaging?', answer: '<p>A clean, well-finished stock, because the category is judged on perceived hygiene as much as on strength. Uncoated kraft reads well where a natural positioning is intended.</p>' },
       { question: 'Why does transit damage matter more here?', answer: '<p>Because buyers read a marked or dented pack as a hygiene question rather than a cosmetic one. A pack that arrives at retail looking handled has already lost the comparison on the shelf.</p>' },

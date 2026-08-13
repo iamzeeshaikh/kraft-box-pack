@@ -78,12 +78,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For tea, which has different barrier requirements again, ',
-      href: '/product/kraft-tea-packaging-boxes/',
-      anchor: 'tea packaging covers those needs',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does my coffee pack swell?', answer: '<p>Freshly roasted coffee releases CO2 for up to two weeks. Without a one-way valve that pressure has nowhere to go and the pack inflates and can burst.</p>' },
       { question: 'What does a one-way valve do?', answer: '<p>Lets gas out without letting oxygen in. Oxygen is what stales coffee, so venting alone would not work — it has to be one-directional.</p>' },
@@ -122,12 +116,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For coffee, where off-gassing rather than odor absorption is the constraint, ',
-      href: '/product/kraft-coffee-packaging-boxes/',
-      anchor: 'coffee packaging covers valves and barriers',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does my tea taste of the packaging?', answer: '<p>Leaf tea is highly absorbent and picks up odors from ink, adhesive or a neighbouring product. Low-odor inks and adhesives are worth specifying where contact is direct.</p>' },
       { question: 'Do I need an inner barrier?', answer: '<p>For loose leaf, yes. Individually wrapped sachets need only a carton; unwrapped bags sit between the two and are the most vulnerable to odor transfer.</p>' },
@@ -598,12 +586,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For frozen rather than fresh product, ',
-      href: '/product/kraft-frozen-food-boxes/',
-      anchor: 'frozen food boxes cover the cold-chain build',
-      tail: '.',
-    },
     faqs: [
       { question: 'How is meat liquid contained?', answer: '<p>An absorbent pad plus a leak-resistant construction. The pad is as much part of the specification as the board, since any liquid reaching the outside is unacceptable to retailers and customers.</p>' },
       { question: 'Why do seams crack in the chiller?', answer: '<p>Standard carton adhesive becomes brittle in sustained cold. A cold-tolerant adhesive is inexpensive and has to be specified at the start.</p>' },
@@ -772,12 +754,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For fruit, where bruising and ethylene are the main concerns, ',
-      href: '/product/kraft-fruit-packaging-boxes/',
-      anchor: 'fruit packaging covers those requirements',
-      tail: '.',
-    },
     faqs: [
       { question: 'Does the crop change the box specification?', answer: '<p>Considerably. Leafy crops need humidity retained, roots need airflow, fruiting vegetables bruise. One specification cannot serve all three well.</p>' },
       { question: 'Where should the vents go?', answer: '<p>Positioned so a stacked pallet cools through the stack rather than only at the sides. Vent placement affects cooling speed more than vent area does.</p>' },
@@ -859,12 +835,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For individually wrapped bars in a multipack outer, ',
-      href: '/product/kraft-granola-bar-boxes/',
-      anchor: 'granola bar cartons cover that case',
-      tail: '.',
-    },
     faqs: [
       { question: 'Does the box need to be a barrier?', answer: '<p>Only if the snack sits loose in it. Inside a sealed bag the carton is doing shelf presence and can be specified far more cheaply. Answering that first avoids over- and under-specifying.</p>' },
       { question: 'Will a carton keep crisps crisp?', answer: '<p>Not on its own — board is not a moisture barrier at any weight. Where the snack is loose, an inner bag or coated liner does the work.</p>' },
@@ -902,12 +872,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For sealed retail snack formats rather than service tubs, ',
-      href: '/product/kraft-snack-packaging-boxes/',
-      anchor: 'snack cartons cover the retail formats',
-      tail: '.',
-    },
     faqs: [
       { question: 'What decides the board on a popcorn box?', answer: '<p>Panel span and handling rather than the contents. Popcorn fills a large volume for very little weight, so these boxes are big and structurally under-loaded.</p>' },
       { question: 'Will butter mark the box?', answer: '<p>Quickly, on untreated board. A grease-resistant grade prevents it inexpensively, and a greasy box in a customer\'s hand is the visible failure.</p>' },
@@ -990,12 +954,6 @@ export const foodContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For ambient bottled drinks with lighter loads, ',
-      href: '/product/kraft-juice-bottle-carriers/',
-      anchor: 'juice carriers cover those formats',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why do milk carriers fail more than other carriers?', answer: '<p>They are heavier and almost always chilled, so a wet handle carries the largest load. Both the handle reinforcement and the base have to be specified against the filled weight.</p>' },
       { question: 'Is a moisture-resistant board necessary?', answer: '<p>For chilled dairy, effectively yes. Bottles sweat as soon as they leave the chiller and untreated board weakens fastest exactly where the load is.</p>' },

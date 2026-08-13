@@ -35,12 +35,6 @@ export const artIndustrialContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For certificates and awards that need presenting rather than posting, ',
-      href: '/product/kraft-certificate-boxes/',
-      anchor: 'certificate boxes are the rigid alternative',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I stop documents arriving creased?', answer: '<p>Stiffness across the span rather than thicker board. A corrugated backing board or a rigid mailer resists the bend that a flat pack takes across its middle.</p>' },
       { question: 'What size should the mailer be?', answer: '<p>Slightly larger than the contents, with the document held inboard of the corners. A drop lands on a corner, and if the paper reaches it the crease goes through the paper.</p>' },
@@ -123,12 +117,6 @@ export const artIndustrialContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For flat artwork without a frame, ',
-      href: '/product/kraft-art-supply-packaging/',
-      anchor: 'art packaging covers unframed and rolled work',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I stop frame glass breaking in transit?', answer: '<p>Cushion the corners specifically. A frame transmits impact straight to its corners and the glass breaks from there, so corner blocks do more than padding the whole pack — and use less material.</p>' },
       { question: 'Is loose fill enough?', answer: '<p>No. The frame still reaches the box corners, which is where the damage happens. Corner protection is the component that matters.</p>' },
@@ -167,12 +155,6 @@ export const artIndustrialContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For single documents posted individually rather than in bulk, ',
-      href: '/product/kraft-document-mailers/',
-      anchor: 'document mailers are the flat-pack route',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I specify the board for a box of brochures?', answer: '<p>By weight, not volume. Paper is far heavier per volume than most contents, and buyers routinely under-specify because they judge by box size. Send the quantity and paper weight.</p>' },
       { question: 'Why does the base give way?', answer: '<p>A dense evenly distributed load sits on the base for the whole journey. A single glued base seam opens under that; a full-overlap base carries it.</p>' },
@@ -453,12 +435,6 @@ export const artIndustrialContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For larger consignments handled by forklift, ',
-      href: '/product/kraft-bulk-shipping-crates/',
-      anchor: 'bulk shipping crates take the heavier loads',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does a small parts box fail?', answer: '<p>Because metal is heavy for its volume and the board was graded by box size rather than filled weight. Send the filled weight — it is almost always higher than a size-based estimate.</p>' },
       { question: 'Will oil from the parts damage the box?', answer: '<p>On untreated board, yes. Residual machining oil soaks in and weakens the fibers. A coated inner face handles it inexpensively.</p>' },

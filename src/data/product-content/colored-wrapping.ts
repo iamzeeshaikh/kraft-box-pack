@@ -38,12 +38,6 @@ export const coloredWrappingContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For the unbleached natural stock rather than a dyed one, ',
-      href: '/product/brown-kraft-boxes/',
-      anchor: 'brown kraft boxes are the standard substrate',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why does my printing barely show on black board?', answer: '<p>Process inks are transparent and rely on the board reflecting light back through them. On black there is nothing to reflect, so colors printed directly are barely visible. An opaque white underbase or a foil block is needed.</p>' },
       { question: 'What is the difference between dyed-through and surface-colored?', answer: '<p>On dyed-through stock the cut edges and creases show the same black as the face. On surface-colored board the brown core shows at every cut and fold, which is visible on all twelve edges of a box.</p>' },

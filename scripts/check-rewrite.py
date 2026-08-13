@@ -105,6 +105,14 @@ def main(slugs):
 
         ln, lo = links(new), links(old)
         for href, count in lo.items():
+            # Presence, not count. The imported copy sometimes linked one
+            # destination twice from the same page — the liquor page carried
+            # the gift category twice, mascara carried the home page twice —
+            # and the linking rules forbid that (do not link one destination
+            # repeatedly from a page). Reducing two to one is compliance, not
+            # loss; the failure this guard exists to catch is a link
+            # disappearing altogether, which the `>= 1` below still catches.
+            count = 1
             # A page is not required to keep a link to itself. The import left
             # one on kraft-paper-gift-boxes, which points at the page the
             # reader is already on.

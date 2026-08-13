@@ -44,12 +44,6 @@ export const jewelleryContent: ProductContentMap = {
         },
       },
     ],
-    link: {
-      lead: 'If you are specifying a jewelry range rather than a single box, ',
-      href: '/product-category/jewelry-accessories-boxes/',
-      anchor: 'the jewelry packaging range covers the other piece types',
-      tail: ' and how their interiors differ.',
-    },
     faqs: [
       { question: 'Will one ring box fit every ring I sell?', answer: '<p>The outer box will; the pillow slot will not. A slot cut for a 2 mm band will not hold an 8 mm signet, and one cut for the signet lets the thin band fall out. Tell us your narrowest and widest band and we will specify two slot widths behind one identical exterior.</p>' },
       { question: 'What size are these boxes?', answer: '<p>Around 2 × 2 × 1.75 in for a standard single-ring box. The depth follows the pillow height rather than the ring, which is why boxes sized from the ring alone end up too shallow to close.</p>' },
@@ -196,12 +190,6 @@ export const jewelleryContent: ProductContentMap = {
         },
       },
     ],
-    link: {
-      lead: 'For a mixed jewelry range sharing one visual system, ',
-      href: '/product-category/jewelry-accessories-boxes/',
-      anchor: 'the jewelry packaging range',
-      tail: ' sets out how the interiors differ by piece.',
-    },
     faqs: [
       { question: 'What measurement do you actually need for a watch box?', answer: '<p>Case thickness at its thickest point, including the crown and pushers, plus the lug-to-lug length. Face diameter is the figure most buyers send and it is the one that matters least — depth is what determines whether the lid clears the crystal.</p>' },
       { question: 'How do I stop the strap creasing in the box?', answer: '<p>Wrap it rather than fold it. A cushion or bolster the strap curves around removes the sharp fold entirely. Packing a strap flat against a board pad is what sets a permanent crease into leather and silicone.</p>' },

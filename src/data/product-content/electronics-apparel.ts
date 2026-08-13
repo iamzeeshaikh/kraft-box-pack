@@ -133,12 +133,6 @@ export const electronicsApparelContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'Where the notebook is part of a mixed desk set, ',
-      href: '/product/kraft-stationery-boxes/',
-      anchor: 'stationery boxes cover compartmented sets',
-      tail: '.',
-    },
     faqs: [
       { question: 'Why do notebooks arrive with dented corners?', answer: '<p>A drop concentrates on a corner, and a dense flat item transmits it straight through the cover. Holding the notebook inboard of the pack corners helps far more than adding board across the panel.</p>' },
       { question: 'Do I measure across the pages or the binding?', answer: '<p>The binding. A wire or spiral binding makes one edge thicker, and a pack sized from the flat cover will not close over it.</p>' },
@@ -219,12 +213,6 @@ export const electronicsApparelContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For keyrings and similar small carried items, ',
-      href: '/product/kraft-keychain-packaging-boxes/',
-      anchor: 'keychain packaging has the same peg constraints',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I stop the pin scratching the badge?', answer: '<p>Immobilise it. A slit card or a foam pad the pin pushes through holds it flat and separated; a loose pin works under the backing and scratches the enamel face.</p>' },
       { question: 'Should the pack have a window?', answer: '<p>Usually, because badges are bought on the design. Without one the design has to be reproduced on the front, which is an extra print consideration rather than a saving.</p>' },
@@ -262,12 +250,6 @@ export const electronicsApparelContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For pin badges sold from the same fixtures, ',
-      href: '/product/kraft-badge-packaging-boxes/',
-      anchor: 'badge packaging covers pin immobilisation',
-      tail: '.',
-    },
     faqs: [
       { question: 'How do I stop the fob getting marked?', answer: '<p>Secure the ring separately from the fob. The fob sits still; it is the ring and chain swinging against it that causes the marking.</p>' },
       { question: 'Should this be a peg pack or a box?', answer: '<p>Peg for retail, where the product has to be seen. A box or a printed sleeve for promotional handouts, where the recipient already knows the brand.</p>' },
@@ -448,12 +430,6 @@ export const electronicsApparelContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For the wider soft goods range sharing one visual system, ',
-      href: '/product-category/kraft-apparel-boxes/',
-      anchor: 'the apparel packaging range',
-      tail: ' covers the other formats.',
-    },
     faqs: [
       { question: 'How large can the window be?', answer: '<p>Past roughly a third of the panel the board usually needs to step up a grade, because every square inch of aperture removes stiffness. That cost is weighed against a smaller window.</p>' },
       { question: 'Where should the size marking go?', answer: '<p>Where it reads at arm\'s length. Size is the single thing a shopper scans for in this category, so putting it in the corner of a busy panel works against the sale.</p>' },
@@ -491,12 +467,6 @@ export const electronicsApparelContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'For scarves and other coiled or folded accessories, ',
-      href: '/product/kraft-scarf-boxes/',
-      anchor: 'scarf boxes cover the softer formats',
-      tail: '.',
-    },
     faqs: [
       { question: 'What measurement do you need for a belt box?', answer: '<p>The coil diameter as the belt will actually be rolled, plus the buckle. Belt length tells you almost nothing about the box.</p>' },
       { question: 'Why does the buckle mark the strap?', answer: '<p>Coiled tightly it presses into the leather beneath it, and that impression does not come out. A card between buckle and coil prevents it; a fitted seat is better still.</p>' },
@@ -534,12 +504,6 @@ export const electronicsApparelContent: ProductContentMap = {
         ],
       },
     ],
-    link: {
-      lead: 'Where scarves are packed alongside other accessories in one range, ',
-      href: '/product-category/kraft-apparel-boxes/',
-      anchor: 'the apparel packaging range',
-      tail: ' keeps the formats consistent.',
-    },
     faqs: [
       { question: 'How do I size a scarf box?', answer: '<p>To the fold you actually want to present. A loose fold looks better and takes more space; folding tightly to fit a small box creases the scarf.</p>' },
       { question: 'Does the box need to protect the scarf?', answer: '<p>Not really. There is no impact risk worth designing for, so board weight is chosen so the box holds its shape and feels substantial rather than to protect the contents.</p>' },
