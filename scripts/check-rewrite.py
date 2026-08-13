@@ -92,6 +92,11 @@ def main(slugs):
 
         ln, lo = links(new), links(old)
         for href, count in lo.items():
+            # A page is not required to keep a link to itself. The import left
+            # one on kraft-paper-gift-boxes, which points at the page the
+            # reader is already on.
+            if href.rstrip('/') == n['url'].rstrip('/'):
+                continue
             if ln[href] < count:
                 say(f'lost link {href} ({lo[href]} -> {ln[href]})')
 
