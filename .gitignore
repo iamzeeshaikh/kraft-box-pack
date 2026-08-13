@@ -19,3 +19,6 @@ reports/_*.json
 .DS_Store
 *.log
 .vercel
+
+# rewrite working files, not part of the site
+scratchpad/
