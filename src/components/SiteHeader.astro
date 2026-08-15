@@ -348,7 +348,13 @@ const navItems = NAV.map((item) => ({ ...item, sub: subFor(item.href) }));
     top: 100%;
     left: 0;
     z-index: 50;
+    /* Sized from the labels rather than to a fixed figure, so the panel grows
+       with whatever font the visitor's system resolves. Capped so a long
+       category cannot run off the screen; below that cap the max-content
+       tracks keep every entry on one line. */
+    width: max-content;
     min-width: 250px;
+    max-width: min(92vw, 640px);
     margin: 0;
     padding: 0.45rem;
     list-style: none;
@@ -379,9 +385,15 @@ const navItems = NAV.map((item) => ({ ...item, sub: subFor(item.href) }));
     right: 0;
   }
 
+  /* Two columns that size to their content rather than to a guessed 200px.
+     The fixed track was landing exactly on the width of the longest label —
+     "Kraft Cardboard Boxes" measured 200px inside a 200px track here — so any
+     system whose font is a shade wider pushed the text into the next column
+     and the two overlapped. Sizing from max-content removes the guess, and
+     the panel is allowed to grow with it. */
   .nav__sub--cols {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, max-content));
     column-gap: 0.35rem;
   }
 
@@ -399,6 +411,11 @@ const navItems = NAV.map((item) => ({ ...item, sub: subFor(item.href) }));
     font-family: var(--font);
     font-size: 0.92rem;
     font-weight: 500;
+    /* The bar above needs nowrap so its items never wrap onto two rows, and
+       these links were inheriting it. Inside the panel that is the wrong
+       behaviour: a label too wide for its column has to wrap, not run across
+       the one beside it. This is the safety net under the max-content tracks. */
+    white-space: normal;
   }
 
   .nav__list .nav__sub a:not(.btn):hover,
