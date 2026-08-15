@@ -1,7 +1,12 @@
 # Resume here
 
-Session ended 13 August 2026. Everything below is committed on `main`,
-working tree clean, **nothing pushed and nothing deployed**.
+Session ended 15 August 2026. Everything is committed, pushed, and **live on
+kraftboxpack.com** — the client lifted the hold and authorised the deploy.
+
+Deployed via `vercel --prod --yes` after pushing, because this project is
+Git-connected and rebuilds from GitHub. Verified against the live domain with
+content markers rather than the CLI's success line, which reports "ready" even
+when it has not promoted.
 
 The product-copy rewrite is **complete** — all 158 products, verified by
 `python3 scripts/rewrite-progress.py`, which derives "done" from git rather
@@ -74,7 +79,7 @@ two internal links in one paragraph.
 
 ## Client rules that still apply
 
-- **Do not deploy.** Local review first.
+- ~~Do not deploy.~~ Lifted 15 August 2026; the site is live. The rest of the client rules below still stand.
 - Keep FSC, food-safe and free-shipping claims. Keep the existing trust badges
   and payment marks as they are.
 - One lead time everywhere: 8-10 business days.
@@ -90,11 +95,22 @@ two internal links in one paragraph.
 
 ## Deferred by the client
 
-- Quote form production test — **the highest-risk item**; SMTP is local-only
-  and `api/quote.ts` only runs on Vercel, so the form has never been tested
-  live.
-- GA4 measurement ID. Must be set **before** a build, not just at runtime.
+- **GA4 measurement ID — the only thing still blocking.** Must be set
+  **before** a build, not just at runtime: `astro.config.mjs` only adds
+  Google's origins to the CSP when `PUBLIC_GA4_ID` is present, so setting it
+  without rebuilding gets the tag refused.
 - Merchant Center, and whether to lift the feed from 158 to 162.
 - Core Web Vitals field data.
 - Purpose-shot photography for the four recreated products, which currently
   borrow from the media library.
+
+## Closed
+
+- **Quote form — tested in production by the client on 15 August 2026 and
+  working.** This was the long-standing highest-risk item: SMTP was local-only
+  and `api/quote.ts` only runs on Vercel, so it had never been exercised live.
+- **Spam paths** — `/sitemap-removed.xml` lists the ten gambling URLs so Google
+  recrawls them and sees the 410; submitted to Search Console. Remove the file
+  and the submission once they stop being reported as indexed. `robots.txt`
+  deliberately does not block them, because a blocked URL cannot be crawled and
+  the 410 would never be seen.
