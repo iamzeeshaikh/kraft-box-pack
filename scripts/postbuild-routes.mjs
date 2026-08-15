@@ -16,7 +16,18 @@ import { fileURLToPath } from 'node:url';
 
 const CONFIG = fileURLToPath(new URL('../.vercel/output/config.json', import.meta.url));
 
-/** Every spam prefix seen in the old robots.txt, plus the obvious siblings. */
+/**
+ * Three of these — casino, slot, pokie — were named in the old robots.txt and
+ * already answered 410 on the old site, along with the variants /slot-gacor/
+ * and /casino-online/. Those five are the confirmed injections.
+ *
+ * judi, togel, sbobet, poker and bandar were 404 on the old site and have
+ * never been observed here. They are common gambling-spam prefixes included
+ * as a precaution, which costs nothing: a 410 on a path that never existed is
+ * indistinguishable from a 404 to a crawler.
+ *
+ * reports/SPAM_URL_MAP.csv records which is which, per URL.
+ */
 const SPAM = ['casino', 'slot', 'pokie', 'judi', 'togel', 'sbobet', 'poker', 'bandar'];
 
 const config = JSON.parse(await readFile(CONFIG, 'utf8'));
