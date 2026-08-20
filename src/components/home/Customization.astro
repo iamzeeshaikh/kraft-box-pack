@@ -7,7 +7,7 @@
  * specification tables, with one line per group explaining what decides the
  * choice — which is the part a buyer cannot get from a dropdown.
  */
-import { SPEC_GROUPS } from '../../data/home-content'
+import { SPEC_GROUPS, MATERIAL_SPECS, PRINT_METHODS } from '../../data/home-content'
 import BoxScene from './BoxScene.astro'
 ---
 
@@ -43,6 +43,142 @@ import BoxScene from './BoxScene.astro'
         ))}
       </dl>
     </div>
+  </div>
+
+  {/* The specification blocks sit outside the two-column grid: a four-column
+      table inside the 1.2fr track would scroll horizontally on a desktop,
+      which defeats the point of publishing it. */}
+  <div class="wrap cust__spec">
+      {/* ------------------------------------------------------------------
+          Specification detail.
+
+          Expanded in place rather than as separate sections: the chips above
+          already answer "what are the options", and a parallel materials or
+          printing section elsewhere on the page would have duplicated them.
+          What was missing is the specification behind each chip, which every
+          competitor ranking for the custom and wholesale queries publishes
+          and this page did not.
+          ------------------------------------------------------------------ */}
+
+      <div class="cust__detail" data-reveal>
+        <h3 id="cust-material">Material and board specifications</h3>
+
+        <div class="table-scroll">
+          <table class="spec-table">
+            <caption class="visually-hidden">
+              Board grades used for kraft packaging, with typical caliper,
+              characteristics and applications
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Material / board</th>
+                <th scope="col">Typical caliper</th>
+                <th scope="col">Typical characteristics</th>
+                <th scope="col">Common applications</th>
+              </tr>
+            </thead>
+            <tbody>
+              {MATERIAL_SPECS.map((m) => (
+                <tr>
+                  <th scope="row">{m.material}</th>
+                  <td>{m.caliper}</td>
+                  <td>{m.characteristics}</td>
+                  <td>{m.applications}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="cust__note">
+          Exact board weight is quoted per order, because grade and density
+          vary between stocks. We state the specification on every quote.
+        </p>
+
+        <p>
+          <strong>Natural kraft vs white board.</strong> Unbleached kraft has a
+          brown surface and higher absorbency, which softens ink — good for
+          minimal, single-color branding, less good for photographic artwork.
+          White or coated board gives a clean print surface and full color
+          fidelity. Where artwork is detailed, we will normally recommend a
+          coated kraft or a white liner rather than fighting the substrate.
+        </p>
+
+        <p>
+          <strong>Recyclability.</strong> Plain kraft paperboard is widely
+          recyclable where local facilities accept it, but that depends on what
+          is added to it. Coatings, laminates, foil, window film, adhesives and
+          some finishes all affect whether a box is accepted, and so does the
+          curbside stream where your customer lives. If recyclability is a
+          requirement, say so at quoting stage and we will specify the box
+          around it instead of adding a finish that compromises it.
+        </p>
+
+        <p>
+          <strong>Food contact.</strong> Boxes intended for direct food contact
+          need board and inks specified for that use, and grease resistance
+          where the product requires it. Tell us at quoting stage if the box
+          touches the product rather than a wrapper, because it changes what we
+          specify — the{' '}
+          <a href="/product-category/kraft-food-packaging/">kraft food packaging</a>{' '}
+          range is built around that requirement.
+        </p>
+      </div>
+
+      <div class="cust__detail" data-reveal>
+        <h3 id="cust-printing">Custom printing on kraft</h3>
+
+        <div class="table-scroll">
+          <table class="spec-table">
+            <caption class="visually-hidden">
+              Print methods available for kraft packaging, what each suits and
+              the color systems it supports
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Method</th>
+                <th scope="col">Best for</th>
+                <th scope="col">Color</th>
+              </tr>
+            </thead>
+            <tbody>
+              {PRINT_METHODS.map((m) => (
+                <tr>
+                  <th scope="row">{m.method}</th>
+                  <td>{m.bestFor}</td>
+                  <td>{m.color}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Which route your job takes follows run length more than it follows
+          the design. Digital carries no plate cost, so it wins on short runs
+          and on anything that changes between orders. Offset takes over once
+          the plate cost spreads across enough units to be cheaper per box, and
+          it holds color more consistently across a long run. Flexography is
+          the corrugated equivalent for high volumes with simpler artwork.
+        </p>
+
+        <p>
+          <strong>Printing on natural brown kraft.</strong> The brown ground
+          shifts how ink reads. The same CMYK file printed on unbleached kraft
+          comes out warmer and darker than it does on white, because the
+          substrate is showing through rather than sitting behind the ink.
+          There are four usual ways round it: print white on its own for a
+          clean minimal mark; lay a white underbase beneath CMYK so the colors
+          above it read true; match PMS colors against a kraft swatch rather
+          than a white one; or design with the brown as part of the artwork
+          instead of against it.
+        </p>
+
+        <p class="cust__note">
+          Proofing options are confirmed during the order process, and physical
+          samples can be arranged where required.
+        </p>
+      </div>
   </div>
 </section>
 
@@ -110,6 +246,39 @@ import BoxScene from './BoxScene.astro'
     border-radius: 999px;
     color: var(--ink-soft);
     transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .cust__spec {
+    margin-top: clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem);
+  }
+
+  .cust__detail {
+    margin-top: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+    padding-top: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+    border-top: 1px solid var(--line);
+  }
+
+  .cust__detail h3 {
+    margin: 0 0 1rem;
+  }
+
+  .cust__detail p {
+    color: var(--ink-soft);
+    font-size: var(--step--1);
+    max-width: 72ch;
+  }
+
+  .cust__detail .table-scroll {
+    margin-bottom: 1.1rem;
+    background: #fff;
+  }
+
+  .cust__note {
+    font-style: italic;
+  }
+
+  .cust__detail p:last-child {
+    margin-bottom: 0;
   }
 
   .cust__chips li:hover {

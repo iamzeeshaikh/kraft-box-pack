@@ -183,4 +183,212 @@ export const HOME_FAQS: HomeFaq[] = [
     question: 'What happens if I need to reorder?',
     answer: '<p>We hold your dieline, board specification and approved artwork on file. A reorder references the same specification exactly and skips most of prepress, so it is faster than a first order.</p>',
   },
+
+  /* ----------------------------------------------------------------------
+     The ten above are the original set and stay in their original order.
+     The eight below were added on 2026-08-20 to answer the query clusters
+     the page ranked for but never addressed: sizes (~648 impressions at
+     position 28.7, zero clicks), the material itself, the paperboard vs
+     corrugated confusion behind "kraft cardboard box", recyclability,
+     wholesale, white ink on brown kraft, the "craft boxes" spelling, and
+     food contact.
+
+     None repeats an answer already given above.
+     ---------------------------------------------------------------------- */
+  {
+    question: 'What sizes do kraft boxes come in?',
+    answer:
+      '<p>There is no fixed size range, because every run is cut to your dimensions. In practice most orders sit between a 2×2×2 favor box and a 16×12×6 shipper — the size table above gives reference examples. Send the product measurements rather than a box size and we build the dieline around them.</p>',
+  },
+  {
+    question: 'What is a kraft box made from?',
+    answer:
+      '<p>Kraft paperboard, produced by the kraft pulping process — a chemical method that keeps the wood fibers long, which is what makes the material strong for its weight. It is normally left unbleached, which is where the brown color comes from.</p>',
+  },
+  {
+    question: 'What is the difference between kraft paperboard and corrugated kraft?',
+    answer:
+      '<p>Cardboard is the everyday word for both, so it helps to separate the two terms. Kraft describes the material; corrugated describes the structure. A corrugated box has a fluted layer sandwiched between two liners, and those liners are usually kraft, so a kraft cardboard box of that type is both. Flat kraft paperboard is a single layer and suits retail cartons; corrugated suits anything that ships on its own.</p>',
+  },
+  {
+    question: 'Is kraft packaging recyclable?',
+    answer:
+      '<p>Plain kraft paperboard is widely recyclable where local facilities accept it. Coatings, laminations, foil, window film and some adhesives can affect that, so if recyclability is a requirement tell us at quoting stage and we will specify the box around it rather than adding finishes that compromise it.</p>',
+  },
+  {
+    question: 'Do you supply kraft boxes wholesale?',
+    answer:
+      '<p>Yes — all pricing is wholesale from the 100-piece minimum upward. There is no separate retail tier; a smaller first order simply spreads the setup cost across fewer units.</p>',
+  },
+  {
+    question: 'Can white ink be printed on brown kraft?',
+    answer:
+      '<p>Yes. White is the most useful ink on unbleached kraft, either on its own for a clean minimal mark, or as an underbase beneath CMYK so the colors above it read true rather than shifting warm against the brown ground.</p>',
+  },
+  {
+    question: 'Are kraft boxes sometimes called craft boxes?',
+    answer:
+      '<p>Kraft is the correct term — it comes from the German for strength and refers to the pulping process that keeps the paper fibers long. Craft is a common spelling variation and in almost every case means the same thing.</p>',
+  },
+  /* Food contact is a claim the business stands behind and asked to keep —
+     see CONFIRMED_BY_BUSINESS in business-facts.ts, where it is recorded as
+     retained across 68 products. It is therefore answered here rather than
+     omitted, and the wording sends specification to the quote stage. */
+  {
+    question: 'Are kraft boxes suitable for food products?',
+    answer:
+      '<p>They can be, when specified for it. Boxes for direct food contact need board and inks suited to that use, and grease resistance where the product requires it. Tell us at quoting whether the box touches the product directly.</p>',
+  },
+]
+
+/* ------------------------------------------------------------------------
+   Size reference
+   ------------------------------------------------------------------------
+   Size queries are the largest untouched gap on this page: roughly 648
+   impressions at position 28.7 with no clicks, of which `kraft box 8x10`
+   alone is ~484 at position 56.8 — and the page carried no size information
+   of any kind.
+
+   These are reference points, not a catalog. Every run is cut on a fresh
+   dieline around the customer's own product, which is why there is no board
+   column: board follows the weight of the product and the journey it makes,
+   not the outside dimensions of the box.
+   ------------------------------------------------------------------------ */
+
+export interface SizeRow {
+  size: string
+  products: string
+  /** The 8x10 row carries a query of its own, so it is set in bold. */
+  emphasis?: boolean
+}
+
+export const SIZE_REFERENCE: SizeRow[] = [
+  { size: '2 × 2 × 2 in', products: 'Rings, earrings, small favors, wax melts' },
+  { size: '3 × 3 × 3 in', products: 'Small candles, lip balm sets, jars' },
+  { size: '4 × 4 × 2 in', products: 'Soap bars, jewelry sets, confectionery' },
+  { size: '4 × 4 × 4 in', products: 'Medium candles, mugs, small gift sets' },
+  { size: '6 × 4 × 2 in', products: 'Cosmetics, supplements, tea' },
+  { size: '6 × 6 × 4 in', products: 'Gift sets, skincare kits, bakery items' },
+  { size: '8 × 10 × 2 in', products: 'Folded apparel, stationery, prints', emphasis: true },
+  { size: '8 × 8 × 3 in', products: 'Cookies, brownies, bakery products' },
+  { size: '9 × 6 × 3 in', products: 'Apparel and accessories' },
+  { size: '10 × 10 × 4 in', products: 'Gift sets and subscription products' },
+  { size: '12 × 9 × 4 in', products: 'Shoes, apparel and hampers' },
+  { size: '12 × 12 × 6 in', products: 'Larger gift sets and multipacks' },
+  { size: '14 × 10 × 4 in', products: 'Apparel and homeware' },
+  { size: '16 × 12 × 6 in', products: 'Large multipacks and shipping applications' },
+]
+
+/* ------------------------------------------------------------------------
+   Material specifications
+   ------------------------------------------------------------------------
+   Every competitor ranking for the custom and wholesale queries publishes a
+   material table; this page had none.
+
+   Caliper figures for the paperboard grades are arithmetic, not a supplier
+   claim: 1pt = 0.001in = 0.0254mm, so 12pt = 0.305mm and 24pt = 0.610mm.
+   Flute heights are approximate industry-standard profiles and keep their
+   ≈ notation for that reason.
+
+   Deliberately no gsm column. Caliper-to-gsm depends on the density of the
+   particular board, so there is no universal conversion that could be
+   published honestly — the closing line sends board weight to the quote
+   instead.
+   ------------------------------------------------------------------------ */
+
+export interface MaterialSpec {
+  material: string
+  caliper: string
+  characteristics: string
+  applications: string
+}
+
+/* TODO: verify with supplier specs — if real stock data (gsm, measured
+   caliper, flute profile) is ever supplied, replace these approximations
+   with the confirmed figures and drop the ≈ notation. */
+export const MATERIAL_SPECS: MaterialSpec[] = [
+  {
+    material: 'Natural kraft paperboard (12–14pt)',
+    caliper: '0.30 – 0.35 mm',
+    characteristics: 'Brown unbleached surface, light folding carton',
+    applications: 'Sleeves, small products, light retail cartons',
+  },
+  {
+    material: 'Natural kraft paperboard (16–18pt)',
+    caliper: '0.40 – 0.45 mm',
+    characteristics: 'Standard folding carton stiffness',
+    applications: 'Most retail packaging, cosmetics, soap',
+  },
+  {
+    material: 'Natural kraft paperboard (20–24pt)',
+    caliper: '0.50 – 0.60 mm',
+    characteristics: 'Heavier folding carton, holds windowed panels',
+    applications: 'Larger cartons, boxes with die-cut windows',
+  },
+  {
+    material: 'White kraft / coated board',
+    caliper: 'Varies by grade',
+    characteristics: 'Cleaner printing surface',
+    applications: 'Detailed artwork and full-color packaging',
+  },
+  {
+    material: 'E-flute corrugated',
+    caliper: '≈1.5 mm',
+    characteristics: 'Thin corrugated profile',
+    applications: 'Retail mailers, subscription packaging',
+  },
+  {
+    material: 'B-flute corrugated',
+    caliper: '≈3 mm',
+    characteristics: 'Greater cushioning and stacking strength',
+    applications: 'Shipping, heavier products',
+  },
+  {
+    material: 'C-flute corrugated',
+    caliper: '≈4 mm',
+    characteristics: 'Thicker corrugated structure',
+    applications: 'Larger shipping applications',
+  },
+  {
+    material: 'Rigid board',
+    caliper: '1.5 – 3 mm',
+    characteristics: 'Thick board for premium structures',
+    applications: 'Lid-and-base and presentation boxes',
+  },
+]
+
+/* ------------------------------------------------------------------------
+   Print methods
+   ------------------------------------------------------------------------
+   The routes already listed as chips in the Printing spec group, with what
+   actually decides between them. Run length matters more than the design.
+   ------------------------------------------------------------------------ */
+
+export interface PrintMethod {
+  method: string
+  bestFor: string
+  color: string
+}
+
+export const PRINT_METHODS: PrintMethod[] = [
+  {
+    method: 'Digital',
+    bestFor: 'Shorter runs, flexible or variable artwork, fast proofs',
+    color: 'CMYK',
+  },
+  {
+    method: 'Offset lithography',
+    bestFor: 'Larger runs, detailed artwork, consistent color',
+    color: 'CMYK or PMS',
+  },
+  {
+    method: 'Flexography',
+    bestFor: 'Long corrugated runs, simpler artwork',
+    color: 'Spot colors',
+  },
+  {
+    method: 'Screen printing',
+    bestFor: 'Bold single-color work, unusual substrates',
+    color: 'Spot colors',
+  },
 ]

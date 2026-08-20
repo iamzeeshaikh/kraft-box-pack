@@ -317,6 +317,61 @@ li + li {
   border-radius: var(--radius);
 }
 
+/* --- specification tables (home page size, material and print tables) ---
+   Declared globally rather than per component because three separate home
+   sections render the same table shape, and Astro's scoped styles would
+   otherwise ship three near-identical copies.
+
+   `min-width` is what makes the scroll container earn its keep: below it the
+   cells would wrap to two or three words per line and the table stops being
+   readable, so it scrolls inside its own box instead of stretching the page.
+   The page itself never scrolls sideways. */
+.spec-table {
+  width: 100%;
+  min-width: 32rem;
+  border-collapse: collapse;
+  font-size: var(--step--1);
+  background: #fff;
+}
+
+.spec-table :is(th, td) {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-table thead th {
+  background: var(--surface);
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.spec-table tbody th {
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.spec-table tbody td {
+  color: var(--ink-soft);
+}
+
+.spec-table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+/* Two-column tables (the size reference) have nothing to gain from a
+   horizontal scroll on a phone — the second column wraps perfectly well. */
+.spec-table--narrow {
+  min-width: 0;
+}
+
+.spec-table--narrow tbody td {
+  white-space: normal;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

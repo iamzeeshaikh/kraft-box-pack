@@ -4,6 +4,8 @@ import QuoteForm from '../components/QuoteForm.astro';
 import FeatureStrip from '../components/home/FeatureStrip.astro';
 import Industries from '../components/home/Industries.astro';
 import Customization from '../components/home/Customization.astro';
+import SizeGuide from '../components/home/SizeGuide.astro';
+import Pricing from '../components/home/Pricing.astro';
 import Process from '../components/home/Process.astro';
 import FaqAccordion from '../components/product/FaqAccordion.astro';
 import QuoteBand from '../components/QuoteBand.astro';
@@ -11,7 +13,8 @@ import ProductGrid from '../components/ProductGrid.astro';
 import { HOME_FAQS } from '../data/home-content';
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
-import { products, popular, pages } from '../data/content';
+import { products, popular } from '../data/content';
+import { ORDERING } from '../data/business-facts';
 import * as schema from '../lib/schema';
 
 import brownKraft from '../assets/site/brown-kraft-packaging.jpg';
@@ -21,8 +24,6 @@ import miniBoxes from '../assets/site/custom-mini-kraft-boxes.jpg';
 import blackKraft from '../assets/site/custom-black-kraft-packaging.jpg';
 import candyBoxes from '../assets/site/custom-kraft-candy-boxes.jpg';
 import { SEO_OVERRIDES } from '../data/seo-overrides';
-
-const home = pages.find((p) => p.slug === 'home');
 
 /**
  * The six hero photographs, in the order the supplied design shows them.
@@ -60,6 +61,23 @@ const pageSchema = [
   schema.webPage('/', title, description),
   /* The FAQ block below is visible on the page, so the schema matches it exactly. */
   schema.faqPage('/', HOME_FAQS),
+  /* The offering this page is actually about, with an AggregateOffer rather
+     than a single Offer — the catalog is 158 made-to-order formats sharing one
+     entry price, not one purchasable SKU. `lowPrice` is the same $0.30 figure
+     the Wholesale kraft box pricing section states in visible copy, and
+     `offerCount` is the real catalog size. No `highPrice`: there is no
+     confirmed ceiling, and a made-up one is worse than an absent one.
+
+     Note for anyone reconciling this against Search Console: the home page did
+     NOT carry Product markup before this change (the graph was WebPage,
+     FAQPage, CollectionPage and ItemList only). Any historic Product-snippet
+     impressions on `/` come from the pre-migration WordPress markup. */
+  schema.productOffering(
+    '/',
+    'Custom Kraft Boxes',
+    description,
+    products.length,
+  ),
   ...schema.collectionPage(
     '/',
     'Most requested custom kraft boxes',
@@ -82,11 +100,11 @@ const pageSchema = [
             Sustainability. packaging needs." Neither said what the company
             sells or to whom, on the page carrying 33,242 impressions at a
             0.55% click-through rate. */}
-        <h1>Custom Printed Kraft Boxes, Built to Your Size</h1>
+        <h1>Kraft Boxes &amp; Custom Kraft Box Packaging, Built to Your Size</h1>
         <p class="hero__lead">
-          Wholesale packaging for US brands, cut on a fresh dieline rather than
-          picked from stock sizes. Free design assistance, 100-unit minimum, and
-          a written quote within one business day.
+          Wholesale kraft box packaging for US brands — cut to your dimensions
+          rather than picked from fixed stock sizes. Free design assistance,
+          100-piece minimum, and a written quote within one business day.
         </p>
 
         <ul class="hero__collage" role="list">
@@ -110,6 +128,13 @@ const pageSchema = [
         <p class="hero__actions">
           <a href="/get-a-quote/" class="btn btn--primary">Get A Free Quote</a>
         </p>
+
+        {/* The qualification is load-bearing. $0.30 is the entry price on
+            qualifying volume, not what a 100-piece order costs per box. */}
+        <p class="hero__trust">
+          From {ORDERING.startPrice}/piece on qualifying volume orders ·
+          100-piece MOQ · Free US shipping
+        </p>
       </div>
     </div>
   </section>
@@ -119,7 +144,7 @@ const pageSchema = [
   <section class="section" aria-labelledby="all-heading">
     <div class="wrap">
       <div class="section__head" data-reveal>
-        <h2 id="all-heading">Browse Our High-Quality Custom Kraft Boxes</h2>
+        <h2 id="all-heading">Browse our custom kraft boxes</h2>
         <p>
           Our twenty most-requested styles. All {products.length} are made to your
           own dimensions and artwork.
@@ -132,22 +157,23 @@ const pageSchema = [
     </div>
   </section>
 
+  <SizeGuide />
+
   <Industries />
 
   <Customization />
 
+  <Pricing />
+
   <Process />
 
-  {
-    home?.html && (
-      <section class="section section--alt" aria-labelledby="about-heading">
-        <div class="wrap">
-          <h2 id="about-heading" class="visually-hidden">About our kraft packaging</h2>
-          <div class="prose home-prose" set:html={home.html} />
-        </div>
-      </section>
-    )
-  }
+  {/* The imported WordPress block that used to sit here — 1,542 words under
+      "About our kraft packaging", running from "Custom Kraft Boxes For All
+      Your Packaging Needs" to "Why Choose Kraft Box Pack?" — is gone. It
+      re-listed the colors, styles, finishes, printing routes and shapes that
+      "What you actually get to choose" now specifies properly, and carried no
+      internal links (its only link was a mailto). The page is shorter and
+      says more. */}
 
   <section class="section home-faq" aria-labelledby="home-faq-heading">
     <div class="wrap">
@@ -256,18 +282,15 @@ const pageSchema = [
     padding-inline: 2rem;
   }
 
+  .hero__trust {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--step--1);
+    margin: 0.85rem 0 0;
+  }
+
   .all-link {
     display: flex;
     justify-content: center;
     margin: clamp(1.5rem, 1.2rem + 1vw, 2.5rem) 0 0;
-  }
-
-  /* Single column, as the live site sets it. The page container is wide so the
-     hero heading fits on one line, but running body copy the full width of that
-     container gives a 200-character measure that is unreadable, so the prose
-     keeps its own limit. */
-  .home-prose {
-    max-width: 78ch;
-    margin-inline: auto;
   }
 </style>

@@ -22,3 +22,6 @@ reports/_*.json
 
 # rewrite working files, not part of the site
 scratchpad/
+
+# macOS AppleDouble sidecars, created by the exFAT drive
+._*

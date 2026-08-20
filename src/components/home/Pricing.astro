@@ -1,0 +1,88 @@
+---
+/**
+ * Wholesale pricing.
+ *
+ * The custom and wholesale query cluster — `custom kraft boxes`,
+ * `kraft boxes wholesale`, `wholesale kraft paper boxes` — is ~1,867
+ * impressions at around position 44 with effectively no clicks. Every
+ * competitor ranking above it publishes a visible price signal; this page
+ * published none.
+ *
+ * The figures here are the ones the business already stands behind, read from
+ * business-facts.ts rather than restated: a 100-unit minimum and a $0.30
+ * starting piece price on qualifying volume. The qualification is not
+ * decoration — it is what keeps the claim true, and Product schema's
+ * AggregateOffer lowPrice points at this visible text.
+ */
+import { ORDERING } from '../../data/business-facts'
+---
+
+<section class="section section--alt pricing" aria-labelledby="pricing-heading">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <h2 id="pricing-heading">Wholesale kraft box pricing</h2>
+      <p>
+        Prices can start from {ORDERING.startPrice} per piece on qualifying
+        high-volume orders. What your own run costs depends on the
+        specification, so here is what actually moves the number.
+      </p>
+    </div>
+
+    <div class="pricing__body" data-reveal>
+      <p>
+        A quote is built from the dimensions, the structure, the material and
+        board thickness, the print method, the number of colors, any finishes,
+        whether the box takes an insert, the quantity, and how it has to ship.
+        Change any one of those and the per-unit figure moves, which is why we
+        price each project rather than publish a list.
+      </p>
+
+      <p>
+        Quantity is the lever with the largest effect. Setup — the dieline, the
+        plates, the make-ready on press — is a fixed cost that is paid once
+        whether you order 100 boxes or 10,000. Spread across more units it
+        shrinks per box, and that is the whole reason a larger run carries a
+        lower piece price.
+      </p>
+
+      <p>
+        The minimum order is {ORDERING.minimumLabel}, and everything from that
+        minimum upward is priced at wholesale. There is no separate retail
+        tier and no small-order surcharge — a shorter first run simply carries
+        more of the setup cost per box than a repeat run of ten times the size.
+      </p>
+
+      <p>
+        Reordering does not change the price, but it does change the schedule.
+        We hold your dieline, board specification and approved artwork, so a
+        repeat run references the same specification and skips most of
+        prepress. That makes it faster than a first order rather than cheaper.
+      </p>
+
+      <p>
+        Send dimensions, quantity and artwork and you get a written figure with
+        the board grade, structure and print method stated alongside it,
+        usually within one business day. If you are not sure which format you
+        need yet, the <a href="/products/">full range of kraft boxes</a> is a
+        faster way in than describing it from scratch.
+      </p>
+
+      {/* TODO: pricing table — add only after real quantity pricing is confirmed */}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing__body {
+    max-width: 72ch;
+    margin-inline: auto;
+  }
+
+  .pricing__body p {
+    color: var(--ink-soft);
+  }
+
+  .pricing__body p:last-of-type {
+    margin-bottom: 0;
+  }
+</style>

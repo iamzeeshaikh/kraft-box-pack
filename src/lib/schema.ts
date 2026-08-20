@@ -231,6 +231,51 @@ export function product(p: Product, images: string[]) {
   return node;
 }
 
+/**
+ * The offering a hub page is about, as a Product carrying an AggregateOffer.
+ *
+ * Used on the home page, which represents 158 made-to-order kraft box formats
+ * sharing one entry price rather than a single purchasable SKU. A plain
+ * `Offer` would claim a fixed price for something that is quoted per job;
+ * `AggregateOffer` states the floor and the number of offers behind it, which
+ * is what is actually true.
+ *
+ * `lowPrice` is the same $0.30 figure the page states in visible copy under
+ * "Wholesale kraft box pricing" — structured data that outruns the page is the
+ * fastest route to a manual action.
+ *
+ * `highPrice` is deliberately absent. There is no confirmed ceiling anywhere
+ * in the business data, and both fields are optional, so an invented number
+ * would be worse than none. No `aggregateRating` either, for the reason given
+ * at the top of this file.
+ */
+export function productOffering(
+  path: string,
+  name: string,
+  description: string,
+  offerCount: number,
+) {
+  return {
+    '@type': 'Product',
+    '@id': `${abs(path)}#product`,
+    name,
+    description,
+    url: abs(path),
+    brand: { '@type': 'Brand', name: BRAND_NAME },
+    offers: {
+      '@type': 'AggregateOffer',
+      '@id': `${abs(path)}#offer`,
+      priceCurrency: 'USD',
+      lowPrice: FALLBACK_PRICE.toFixed(2),
+      offerCount,
+      availability: 'https://schema.org/InStock',
+      seller: { '@id': `${SITE_URL}/#organization` },
+      shippingDetails: shippingDetails(),
+      hasMerchantReturnPolicy: returnPolicy(),
+    },
+  };
+}
+
 export function collectionPage(
   path: string,
   name: string,

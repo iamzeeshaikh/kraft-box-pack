@@ -1,0 +1,101 @@
+---
+/**
+ * Kraft box size reference.
+ *
+ * The page ranked for roughly 648 impressions of size-related queries at an
+ * average position of 28.7 and took no clicks from any of them, because it
+ * carried no size information at all — `kraft box 8x10` alone is ~484
+ * impressions at position 56.8.
+ *
+ * This is deliberately a reference, not a catalog. Every run is cut on a
+ * fresh dieline around the customer's product, so a fixed size list would be
+ * a lie about how the business works. There is no board column for the same
+ * reason: board follows product weight and journey, not outside dimensions.
+ */
+import { SIZE_REFERENCE } from '../../data/home-content'
+---
+
+<section class="section sizes" aria-labelledby="sizes-heading">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <h2 id="sizes-heading">Kraft box sizes and how to choose one</h2>
+      <p>
+        Send us your product dimensions and we build the dieline around them, so
+        these are reference sizes rather than a fixed catalog. They are useful
+        starting points when working out what type of box your product needs.
+      </p>
+    </div>
+
+    <div class="table-scroll sizes__scroll" data-reveal>
+      <table class="spec-table spec-table--narrow">
+        <caption class="visually-hidden">
+          Reference kraft box sizes and the products they typically suit
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Approx. size</th>
+            <th scope="col">Typical products</th>
+          </tr>
+        </thead>
+        <tbody>
+          {SIZE_REFERENCE.map((r) => (
+            <tr>
+              <th scope="row">{r.emphasis ? <strong>{r.size}</strong> : r.size}</th>
+              <td>{r.products}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sizes__notes" data-reveal>
+      <p>
+        Treat the table as reference points rather than a range you order from.
+        Every box is manufactured around the actual dimensions of the product,
+        so the figure that matters is what you measure, not the nearest row
+        here.
+      </p>
+      <p>
+        If the box takes an insert, allow for it separately — the insert sits
+        between the product and the wall, and the box has to grow to carry it.
+        How much depends on the insert material and how the product is held, so
+        it is worked out per job rather than from a single clearance figure.
+      </p>
+      <p>
+        For anything that ships on its own, keep empty volume out of the box.
+        Couriers charge on dimensional weight, so a{' '}
+        <a href="/product/kraft-mailer-boxes/">kraft mailer box</a> cut one size
+        too large costs money on every parcel you send, not just the first.
+      </p>
+      <p>
+        Final structure and material follow from three things: how heavy the
+        product is, how much protection it needs, and how it is distributed.
+        Send those and we specify the box; the{' '}
+        <a href="/product-category/kraft-packaging-boxes/">kraft packaging boxes</a>{' '}
+        range shows the formats those decisions usually land on.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Room is reserved by the table's own row count rather than by a fixed
+     height, so nothing shifts once the fonts land. */
+  .sizes__scroll {
+    margin-top: clamp(1.25rem, 1rem + 1vw, 2rem);
+    background: #fff;
+  }
+
+  .sizes__notes {
+    margin: clamp(1.25rem, 1rem + 1vw, 2rem) auto 0;
+    max-width: 72ch;
+  }
+
+  .sizes__notes p {
+    color: var(--ink-soft);
+  }
+
+  .sizes__notes p:last-child {
+    margin-bottom: 0;
+  }
+</style>

@@ -37,10 +37,16 @@ export interface SeoOverride {
 
 export const SEO_OVERRIDES: Record<string, SeoOverride> = {
   /* ---------- homepage ---------- */
+  /* `kraft box packaging` is its own query — 1,840 impressions at position
+     21.8 — and is not interchangeable with `kraft packaging`, which is a
+     separate query at position 55. The exact phrase has to survive any future
+     edit to this title. The two largest opportunities on the page are
+     `kraft box` (3,836 impressions, position 18.2) and `kraft box packaging`,
+     so the title leads on those rather than on long-tail terms. */
   '/': {
-    title: 'Custom Printed Kraft Boxes Wholesale | Kraft Box Pack',
+    title: 'Kraft Boxes & Custom Kraft Box Packaging Wholesale | Kraft Box Pack',
     description:
-      'Custom kraft boxes printed to your size and artwork. Free design help, wholesale pricing and a written quote in one day.',
+      'Custom kraft boxes and kraft box packaging at wholesale prices. Custom sizes, 100-piece MOQ, free design support and quotes within one business day.',
   },
 
   /* ---------- highest-impression product pages ---------- */
