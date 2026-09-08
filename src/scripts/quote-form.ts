@@ -118,7 +118,11 @@ function fillAttribution(form: HTMLFormElement): void {
     const input = form.querySelector<HTMLInputElement>(`input[name="${name}"]`);
     if (input) input.value = value.slice(0, 500);
   };
-  set('landing_page', location.pathname + location.search);
+  // The whole URL, not just the path. The Gmail intake that files this
+  // enquiry places it either by a label on the thread or by our own domain
+  // inside the mail; a page of `/` gives it neither, and the lead is lost
+  // in silence (Beth Lyles, 8 Sep 2026 — four hours, recovered by hand).
+  set('landing_page', location.origin + location.pathname + location.search);
   set('referrer', document.referrer && !document.referrer.includes(location.host)
     ? document.referrer
     : '');

@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
 
+const LEAD_RECIPIENTS = ['shanimazhar82@gmail.com', 'dev@zeecustomboxes.com'] as const;
+
 /**
  * Quote request endpoint.
  *
@@ -187,12 +189,11 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     SMTP_PORT,
     SMTP_USER,
     SMTP_PASS,
-    SMTP_TO,
     SMTP_FROM_EMAIL,
     SMTP_FROM_NAME,
   } = import.meta.env;
 
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS || !SMTP_TO) {
+  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
     console.error('quote: SMTP environment variables are not configured');
     return fail('The form is not configured to send yet. Please email info@kraftboxpack.com.', 500);
   }
@@ -229,7 +230,15 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     ...(specLines.length ? ['', 'Specification:', ...specLines] : []),
     '',
     '--- where this came from ---',
-    attribution.landingPage && `Page:     ${attribution.landingPage}`,
+    // "Page URL: https://…" is the exact marker the ZeeOps Gmail intake
+    // matches on. A visitor on a cached copy of the old script still sends a
+    // bare path, so it is made absolute here as well — the site knows its own
+    // address and the browser should never have been the only source of it.
+    attribution.landingPage && `Page URL: ${
+      attribution.landingPage.startsWith('http')
+        ? attribution.landingPage
+        : `https://kraftboxpack.com${attribution.landingPage.startsWith('/') ? '' : '/'}${attribution.landingPage}`
+    }`,
     attribution.referrer && `Referrer: ${attribution.referrer}`,
     attribution.utm && `Campaign: ${attribution.utm}`,
     attribution.device && `Device:   ${attribution.device}`,
@@ -241,7 +250,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         name: String(SMTP_FROM_NAME ?? 'Kraft Box Pack'),
         address: String(SMTP_FROM_EMAIL ?? SMTP_USER),
       },
-      to: String(SMTP_TO),
+      to: [...LEAD_RECIPIENTS],
       replyTo: { name, address: email },
       subject: `Quote request${product ? `: ${product}` : ''} — ${name}`,
       text: lines.join('\n'),
@@ -288,7 +297,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         'correct it before quoting.',
         '',
         'Kraft Box Pack',
-        'info@kraftboxpack.com · (503) 358-0443',
+        'info@kraftboxpack.com · (503) 461-4788',
       ]
         .filter((l) => l !== null)
         .join('\n'),
