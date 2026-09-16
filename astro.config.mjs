@@ -9,10 +9,13 @@ import vercel from '@astrojs/vercel';
  * the tag blocked instead, which is the failure this file already warns about
  * below. So the origins follow the env var.
  */
-const GA4 = process.env.PUBLIC_GA4_ID
+// Live property for kraftboxpack.com (GA4 account "ZEE Portfolio", 2026-09-16).
+// Kept as the default rather than only an env var so any build — local, CI or
+// Vercel — ships the tag; PUBLIC_GA4_ID still overrides it.
+const GA4 = process.env.PUBLIC_GA4_ID ?? 'G-FE7XZT3HT0'
 const GA_SCRIPT = GA4 ? ['https://www.googletagmanager.com'] : []
 const GA_CONNECT = GA4
-  ? ' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com'
+  ? ' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com'
   : ''
 
 export default defineConfig({
@@ -50,7 +53,7 @@ export default defineConfig({
       //                          alternative if the beacon is not wanted.
       directives: [
         "default-src 'self'",
-        "img-src 'self' data: https://chat.zeeops.dev",
+        `img-src 'self' data: https://chat.zeeops.dev${GA4 ? ' https://www.googletagmanager.com https://*.google-analytics.com' : ''}`,
         "font-src 'self' data:",
         `connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev https://cloudflareinsights.com${GA_CONNECT}`,
         "frame-src https://chat.zeeops.dev",
