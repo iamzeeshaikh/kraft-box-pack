@@ -40,6 +40,8 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID ?? 'G-FE7XZT3HT0'
 {GA4_ID && <meta name="kbp:ga4-id" content={GA4_ID} />}
 
 {GA4_ID && <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />}
+{/* Portfolio-wide conversion events (phone_call, email_click, whatsapp_click, lead_form_submit) — served from /public so it passes the 'self' script-src. */}
+{GA4_ID && <script is:inline defer src="/ga4-events.js"></script>}
 
 <script>
   const metaContent = (name: string) =>
@@ -90,12 +92,11 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID ?? 'G-FE7XZT3HT0'
       if (!link) return
       const href = link.getAttribute('href') || ''
 
-      if (href.startsWith('tel:')) {
-        track('phone_click', { page_type: pageType })
-      } else if (href.startsWith('mailto:')) {
-        track('email_click', { page_type: pageType })
-      } else if (href.includes('wa.me') || href.includes('whatsapp')) {
-        track('whatsapp_click', { page_type: pageType })
+      if (href.startsWith('tel:') || href.startsWith('mailto:') || href.includes('wa.me') || href.includes('whatsapp')) {
+        /* Sent as phone_call / email_click / whatsapp_click by /ga4-events.js
+           (the portfolio-wide key events) — not repeated here, or GA4 would
+           count each click twice. */
+        return
       } else if (link.classList.contains('btn')) {
         /* The link text identifies the CTA. It is authored copy, never
            anything a visitor typed. */
