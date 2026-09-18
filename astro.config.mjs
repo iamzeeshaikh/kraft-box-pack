@@ -53,9 +53,9 @@ export default defineConfig({
       //                          alternative if the beacon is not wanted.
       directives: [
         "default-src 'self'",
-        `img-src 'self' data: https://chat.zeeops.dev${GA4 ? ' https://www.googletagmanager.com https://*.google-analytics.com' : ''}`,
+        `img-src 'self' data: https://chat.zeeops.dev https://*.clarity.ms${GA4 ? ' https://www.googletagmanager.com https://*.google-analytics.com' : ''}`,
         "font-src 'self' data:",
-        `connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev https://cloudflareinsights.com${GA_CONNECT}`,
+        `connect-src 'self' https://chat.zeeops.dev wss://chat.zeeops.dev https://cloudflareinsights.com https://*.clarity.ms https://*.microsoft.com${GA_CONNECT}`,
         "frame-src https://chat.zeeops.dev",
         "form-action 'self'",
         "base-uri 'self'",
@@ -69,6 +69,9 @@ export default defineConfig({
           "'self'",
           'https://chat.zeeops.dev',
           'https://static.cloudflareinsights.com',
+          // Microsoft Clarity — the tag loader and the scripts it pulls in.
+          'https://www.clarity.ms',
+          'https://*.clarity.ms',
           ...GA_SCRIPT,
         ],
       },
