@@ -126,7 +126,7 @@ export const packagingBoxesContent: ProductContentMap = {
       {
         h2: 'Box size costs more than board grade',
         body: [
-          'Couriers price on dimensional weight, so a box one size too large is charged as heavier on every parcel. Most operations run at least one band larger than they need with void fill making up the difference, and dropping a band saves on every single shipment.',
+          'Couriers price on dimensional weight, so a box one size too large is charged as heavier on every parcel. Most operations run at least one band larger than they need with void fill making up the difference, and dropping a band saves on every single shipment. When a mailer is the better choice, see <a href="/blog/kraft-shipping-boxes-and-kraft-mailer-boxes-compared/">shipping boxes and mailer boxes compared</a>.',
         ],
       },
       {
@@ -170,7 +170,7 @@ export const packagingBoxesContent: ProductContentMap = {
       {
         h2: 'Why roll-end rather than a tuck',
         body: [
-          'The roll-end construction wraps the contents and locks without tape, which is both faster to pack and better in transit. It also opens cleanly, which matters when the customer is the one opening it.',
+          'The roll-end construction wraps the contents and locks without tape, which is both faster to pack and better in transit. It also opens cleanly, which matters when the customer is the one opening it. For heavier orders, <a href="/blog/kraft-shipping-boxes-and-kraft-mailer-boxes-compared/">mailer boxes against shipping boxes</a> sets out where each one wins.',
         ],
       },
       {
@@ -306,7 +306,7 @@ export const packagingBoxesContent: ProductContentMap = {
         h2: 'Caliper is the specification',
         body: [
           'Paperboard is described by caliper — its thickness — and that single number does most of the work. Too light and the carton feels flimsy and creases badly; too heavy and it will not fold cleanly and the creases crack.',
-          'The right caliper follows the panel span and the contents weight together, and it is worth confirming with a sample rather than assuming.',
+          'The right caliper follows the panel span and the contents weight together, and it is worth confirming with a sample rather than assuming. Calipers, flutes and board types are explained in full in <a href="/blog/kraft-paper-box-materials-and-board-grades-explained/">kraft board grades explained</a>.',
         ],
       },
       {
@@ -535,7 +535,7 @@ export const packagingBoxesContent: ProductContentMap = {
         h2: 'Grease and steam are different problems',
         body: [
           'Fried food releases fat that soaks into untreated board. Hot food releases steam that softens it from the inside. A box treated for one and not the other still fails, just more slowly.',
-          'Anything hot and fried needs both a grease barrier and moisture tolerance, and that combination has to be specified rather than assumed from a general food-grade board.',
+          'Anything hot and fried needs both a grease barrier and moisture tolerance, and that combination has to be specified rather than assumed from a general food-grade board. The difference is set out further in our guide to <a href="/blog/food-safe-kraft-packaging-for-bakeries-and-takeout/">food-safe takeout packaging</a>.',
         ],
       },
       {
@@ -632,7 +632,7 @@ export const packagingBoxesContent: ProductContentMap = {
         h2: 'Warm baked goods release steam',
         body: [
           'A cake or pastry boxed while still warm releases moisture that has nowhere to go in a sealed box. The board softens and the product goes soft with it — which is a ventilation problem rather than a board weight problem.',
-          'Vent holes solve it. So does letting the product cool, but that is not always practical during service.',
+          'Vent holes solve it. So does letting the product cool, but that is not always practical during service. Coatings, inks and food contact are covered in more depth in our guide to <a href="/blog/food-safe-kraft-packaging-for-bakeries-and-takeout/">food-safe kraft packaging for bakeries</a>.',
         ],
       },
       {

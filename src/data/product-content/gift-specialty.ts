@@ -23,7 +23,7 @@ export const giftSpecialtyContent: ProductContentMap = {
       {
         h2: 'Lid depth is an appearance decision',
         body: [
-          'A shallow lid leaves more of the printed base showing; a deep lid covers most of the box and reads as more substantial. Neither is structurally better, so it is worth settling deliberately at dieline stage rather than accepting a default.',
+          'A shallow lid leaves more of the printed base showing; a deep lid covers most of the box and reads as more substantial. Neither is structurally better, so it is worth settling deliberately at dieline stage rather than accepting a default. Lid styles for retail shelves are compared in our guide to <a href="/blog/kraft-gift-boxes-with-lids-for-retail-products/">kraft gift boxes with lids</a>.',
         ],
       },
       {
@@ -153,7 +153,7 @@ export const giftSpecialtyContent: ProductContentMap = {
         h2: 'Film or a plain aperture',
         body: [
           'A PET or PLA film protects the product from handling and dust and keeps the pack sealed. A plain die-cut aperture keeps the whole box in the paper recycling stream but leaves the contents touchable in store.',
-          'Which is right follows the product rather than the preference — food and cosmetics usually need film; a candle or a toy often does not.',
+          'Which is right follows the product rather than the preference — food and cosmetics usually need film; a candle or a toy often does not. Window shape, film and placement are covered step by step in <a href="/blog/how-kraft-boxes-with-windows-are-designed/">how window boxes are designed</a>.',
         ],
         table: {
           caption: 'Window choice',

@@ -420,7 +420,7 @@ export const coloredWrappingContent: ProductContentMap = {
         h2: 'Where the folding carton fits',
         body: [
           'A folding carton arrives flat and glued along one seam and pops open on a packing line, which keeps both freight and handling cost low. It suits retail presentation and light to moderate weights.',
-          'Past a certain weight or handling severity, corrugated takes over. The crossover is not a fixed figure — it depends on how far the pack travels and how many times it is handled.',
+          'Past a certain weight or handling severity, corrugated takes over. The crossover is not a fixed figure — it depends on how far the pack travels and how many times it is handled. How folding carton compares with corrugated and rigid board is covered in <a href="/blog/kraft-paper-box-materials-and-board-grades-explained/">our guide to kraft box materials</a>.',
         ],
       },
       {

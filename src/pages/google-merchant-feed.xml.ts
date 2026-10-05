@@ -21,6 +21,7 @@ import type { APIRoute } from 'astro';
 import { products, absolute } from '../data/content';
 import { resolveAll } from '../lib/images';
 import { BRAND_NAME } from '../data/site';
+import { FEED_DESCRIPTIONS } from '../data/feed-descriptions';
 
 const OFFER_ID = (postId: string) => `gla_${postId}`;
 
@@ -62,7 +63,9 @@ export const GET: APIRoute = () => {
     .map((p) => {
     const images = resolveAll(p.images).map((i) => absolute(i.image.src));
     const price = Number.parseFloat(p.price);
+    const override = FEED_DESCRIPTIONS[p.slug];
     const description =
+      override?.description ||
       p.seoDescription ||
       p.plainShort ||
       `Custom ${p.name.toLowerCase()} at wholesale prices from ${BRAND_NAME}.`;
@@ -77,6 +80,7 @@ export const GET: APIRoute = () => {
       `<g:availability>${p.inStock ? 'in_stock' : 'out_of_stock'}</g:availability>`,
       ...(Number.isFinite(price) ? [`<g:price>${price.toFixed(2)} ${p.currency}</g:price>`] : []),
       `<g:condition>new</g:condition>`,
+      ...(override ? [`<g:material>${esc(override.material)}</g:material>`] : []),
       `<g:brand>${esc(BRAND_NAME)}</g:brand>`,
       // Made-to-order packaging has no GTIN or manufacturer part number.
       `<g:identifier_exists>no</g:identifier_exists>`,

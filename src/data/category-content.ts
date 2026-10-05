@@ -47,7 +47,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-food-packaging': {
     intro: [
       'Food packaging fails in two ways that have nothing to do with how it looks. Grease works through the board and the pack goes translucent and limp in the customer\'s hand, or steam from a hot fill softens the walls until the base gives way. Both are material decisions made before anything is printed.',
-      'This range covers the formats that go straight from a kitchen or a production line to a customer — bakery, produce, chilled, frozen and dry goods. What separates them is fill temperature and fat content, and those two answers decide the board and the coating.',
+      'This range covers the formats that go straight from a kitchen or a production line to a customer — bakery, produce, chilled, frozen and dry goods. What separates them is fill temperature and fat content, and those two answers decide the board and the coating. Packaging for non-food products sits in the main range of <a href="/">custom kraft boxes</a>.',
     ],
     sections: [
       {
@@ -163,7 +163,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-gift-specialty-boxes': {
     intro: [
       'A gift box is judged in the few seconds it is opened, and almost all of that impression comes from two things — whether the lid lifts cleanly and whether the contents are still sitting where they were packed. Neither is decided by the printing.',
-      'This range runs from small favor boxes up to large rigid lidded builds, plus the shapes that only exist for presentation: round, pillow, window-fronted. What varies most across it is construction, so that is where the choosing happens.',
+      'This range runs from small favor boxes up to large rigid lidded builds, plus the shapes that only exist for presentation: round, pillow, window-fronted. What varies most across it is construction, so that is where the choosing happens. For shipping cartons and everyday retail packs, start from the full <a href="/">kraft box packaging range</a>.',
     ],
     sections: [
       {
@@ -278,7 +278,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-packaging-boxes': {
     intro: [
       'This is the general range — the formats that are not tied to one industry. Mailers, cartons, corrugated cases, bags and trays, cut to whatever the product needs.',
-      'Because it spans several construction types, the first question is not which product but which build. A folding carton, a corrugated mailer and a rigid box solve different problems and cost very different amounts to ship.',
+      'Because it spans several construction types, the first question is not which product but which build. A folding carton, a corrugated mailer and a rigid box solve different problems and cost very different amounts to ship. Sizes and board grades for every format are compared on the <a href="/">kraft boxes overview</a>.',
     ],
     sections: [
       {
@@ -376,7 +376,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'custom-gift-boxes': {
     intro: [
       'These are the gifting formats built around an occasion rather than a product category — hampers, favors, flowers, invitations, influencer sends. What they share is that someone other than the buyer opens them.',
-      'That changes the priorities. The pack has to arrive arranged as it was packed, open without a struggle, and look deliberate rather than assembled from whatever was to hand.',
+      'That changes the priorities. The pack has to arrive arranged as it was packed, open without a struggle, and look deliberate rather than assembled from whatever was to hand. Formats that are not gifts are covered across our <a href="/">wholesale kraft boxes</a>.',
     ],
     sections: [
       {
@@ -481,7 +481,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-cosmetic-boxes': {
     intro: [
       'Nearly everything in this range is a carton around a container, and what decides the job is the container — its shape, whether it leaks, and how much regulated copy has to fit on the panel beside the brand.',
-      'Beauty buyers underestimate panel space more consistently than any other category. Ingredient lists, warnings and claims all compete with the design, and adding them late usually forces the layout to be rebuilt.',
+      'Beauty buyers underestimate panel space more consistently than any other category. Ingredient lists, warnings and claims all compete with the design, and adding them late usually forces the layout to be rebuilt. Shipping outers and retail mailers for the same line are part of our <a href="/">custom kraft box packaging</a>.',
     ],
     sections: [
       {
@@ -596,7 +596,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-luxury-packaging': {
     intro: [
       'This range is defined by construction rather than by what goes inside it. Rigid builds, tubes and the angular shapes — hexagon, octagon, triangle, pyramid — that only exist because a square box would not have made the same impression.',
-      'All of them are hand-assembled or specially formed, which is where both the feel and the cost come from.',
+      'All of them are hand-assembled or specially formed, which is where both the feel and the cost come from. Folding-carton versions of these styles, at lower unit costs, are in the main <a href="/">kraft boxes range</a>.',
     ],
     sections: [
       {
@@ -701,7 +701,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'colored-kraft-boxes': {
     intro: [
       'Kraft board is unbleached, so every color printed on it sits over brown. That single fact decides most of what happens on these pages — which colors hold, which go muddy, and where a white underprint becomes necessary.',
-      'This range covers the colored and dyed stocks, black and brown board, and the lidded and minimalist builds that use them.',
+      'This range covers the colored and dyed stocks, black and brown board, and the lidded and minimalist builds that use them. Natural brown board in the same styles is listed with the rest of our <a href="/">kraft boxes made to order</a>.',
     ],
     sections: [
       {
@@ -800,7 +800,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-industrial-packaging': {
     intro: [
       'Industrial packaging is specified against a number rather than a look. Stacking height, load weight, storage conditions and how many times a case is handled all have answers, and those answers set the board.',
-      'This range covers bulk crates, heavy-duty storage, chemical-safe and insulated builds, and the compostable stocks.',
+      'This range covers bulk crates, heavy-duty storage, chemical-safe and insulated builds, and the compostable stocks. The retail packs that travel inside these outers are part of the wider <a href="/">kraft box packaging line</a>.',
     ],
     sections: [
       {
@@ -910,7 +910,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-display-packaging': {
     intro: [
       'A display has one job that a box does not — it has to hold its shape while full, in a shop, for weeks, with people taking stock out of it.',
-      'This range covers counter and floor displays, hanging units, retail trays and shelf-ready cases. Each is a structural calculation rather than a print job.',
+      'This range covers counter and floor displays, hanging units, retail trays and shelf-ready cases. Each is a structural calculation rather than a print job. The product cartons that sit on these units come from the same <a href="/">wholesale kraft box range</a>.',
     ],
     sections: [
       {
@@ -1014,7 +1014,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-pharma-boxes': {
     intro: [
       'Pharmaceutical and supplement cartons are specified around required copy before anything else. The panel has to carry it at a legal minimum size, and design works around what is left rather than the other way round.',
-      'This range covers medicine and syrup cartons, supplement and vitamin boxes, first aid kits and PPE packaging.',
+      'This range covers medicine and syrup cartons, supplement and vitamin boxes, first aid kits and PPE packaging. Retail cartons for products outside this category sit with the rest of our <a href="/">custom kraft boxes</a>.',
     ],
     sections: [
       {
@@ -1119,7 +1119,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'jewelry-accessories-boxes': {
     intro: [
       'Almost nothing in this range is heavy, and almost everything in it moves. Chains tangle, earrings work loose, rings drop out of a slot cut slightly too wide. Retention is the whole problem.',
-      'The box is also opened in front of someone more often than not, which puts the interior and the hinge under more scrutiny than the printing.',
+      'The box is also opened in front of someone more often than not, which puts the interior and the hinge under more scrutiny than the printing. Gift and retail formats in larger sizes are in the wider range of <a href="/">kraft boxes wholesale</a>.',
     ],
     sections: [
       {
@@ -1218,7 +1218,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-apparel-boxes': {
     intro: [
       'Soft goods are forgiving about impact and unforgiving about volume. Nothing here breaks, but almost everything here ships larger than it needs to, and on apparel that is the whole cost problem.',
-      'This range covers shirt and apparel boxes, plus the smaller accessory formats — belts, socks, scarves, underwear.',
+      'This range covers shirt and apparel boxes, plus the smaller accessory formats — belts, socks, scarves, underwear. Boxes for the accessories and gift sets that ship with garments are in our <a href="/">kraft packaging boxes range</a>.',
     ],
     sections: [
       {
@@ -1317,7 +1317,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-art-boxes': {
     intro: [
       'Everything in this range protects something flat, and flat things fail in one specific way — they bend at the corner, and paper does not recover from a crease.',
-      'It covers document mailers, certificate and photo frame boxes, brochure and calendar packaging, and art supply and disc formats.',
+      'It covers document mailers, certificate and photo frame boxes, brochure and calendar packaging, and art supply and disc formats. Larger kits and shipping outers sit with the rest of our <a href="/">custom kraft box packaging</a>.',
     ],
     sections: [
       {
@@ -1417,7 +1417,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-electronics-boxes': {
     intro: [
       'This range covers the small carried items — pens, pencils, notebooks, keychains, badges and stationery. What they share is that the pack is small, the print area is limited, and the unit cost has to stay low because the product itself is inexpensive.',
-      'That combination rules out most of the decisions that would be obvious on a larger pack.',
+      'That combination rules out most of the decisions that would be obvious on a larger pack. Shipping cartons and mailers for the same products are part of the wider <a href="/">kraft boxes collection</a>.',
     ],
     sections: [
       {
@@ -1516,7 +1516,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-toy-packaging': {
     intro: [
       'Toy and baby packaging is bought by an adult who is checking two things quickly — what is inside, and whether it is safe. Both have to be answerable without opening the pack.',
-      'This range covers toy boxes, board game and puzzle packaging, and baby product cartons.',
+      'This range covers toy boxes, board game and puzzle packaging, and baby product cartons. Mailers and shipping outers for the same games are in the main <a href="/">custom kraft boxes range</a>.',
     ],
     sections: [
       {
@@ -1622,7 +1622,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   'kraft-wrapping-accessories': {
     intro: [
       'This range is the material rather than the structure — kraft paper by the sheet and roll, wrapping, dispenser boxes and the plain paper box formats that use them.',
-      'The questions here are about width, weight and how the paper behaves when it is folded or printed, rather than about construction.',
+      'The questions here are about width, weight and how the paper behaves when it is folded or printed, rather than about construction. The boxes these papers and accessories finish are listed across our <a href="/">wholesale kraft boxes</a>.',
     ],
     sections: [
       {

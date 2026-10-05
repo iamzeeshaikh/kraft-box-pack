@@ -242,7 +242,7 @@ export const giftContent: ProductContentMap = {
       {
         h2: 'Lid depth changes the look',
         body: [
-          'A shallow lid shows more of the base; a deep lid covers most of the box. Neither is structurally better, so it is worth deciding deliberately rather than accepting a default.',
+          'A shallow lid shows more of the base; a deep lid covers most of the box. Neither is structurally better, so it is worth deciding deliberately rather than accepting a default. Rigid and folding lid boxes are compared side by side in <a href="/blog/kraft-gift-boxes-with-lids-for-retail-products/">our lidded gift box guide</a>.',
         ],
       },
     ],

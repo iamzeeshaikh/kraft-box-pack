@@ -82,7 +82,7 @@ const pageSchema = [
   <div class="wrap cat">
     <h1>{category.name}</h1>
     {content ? (
-      <div class="cat__intro prose">{content.intro.map((p) => <p>{p}</p>)}</div>
+      <div class="cat__intro prose">{content.intro.map((p) => <p set:html={p} />)}</div>
     ) : category.description ? (
       <div class="prose cat__intro" set:html={category.description} />
     ) : (

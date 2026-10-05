@@ -798,7 +798,9 @@ export const SEO_OVERRIDES: Record<string, SeoOverride> = {
       'Send your size, quantity and artwork and we reply with wholesale pricing within one business day. Free design assistance.',
   },
   '/products/': {
-    title: 'All Custom Kraft Boxes and Packaging | Kraft Box Pack',
+    // Catalog intent, so it stops competing with the home page for
+    // "kraft boxes" / "custom kraft boxes" (2026-10-05 GSC: both ranked).
+    title: 'Product Catalog: 162 Packaging Styles | Kraft Box Pack',
     description:
       'Browse 162 kraft box styles across food, retail, gift, cosmetic, pharma and industrial ranges, all made to your own size.',
   },

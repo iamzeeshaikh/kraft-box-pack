@@ -353,7 +353,7 @@ export const foodContent: ProductContentMap = {
       {
         h2: 'The filling is the selling point',
         body: [
-          'A sandwich sells on what is visible at the cut face. A wedge box presents that face to the customer, which is why the window position matters more than its size — a window that shows bread rather than filling does the opposite of its job.',
+          'A sandwich sells on what is visible at the cut face. A wedge box presents that face to the customer, which is why the window position matters more than its size — a window that shows bread rather than filling does the opposite of its job. For the window itself, see <a href="/blog/how-kraft-boxes-with-windows-are-designed/">how kraft window boxes are designed</a>.',
         ],
       },
       {
