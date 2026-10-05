@@ -4,7 +4,8 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ProductGrid from '../../components/ProductGrid.astro';
 import QuoteBand from '../../components/QuoteBand.astro';
 import FaqAccordion from '../../components/product/FaqAccordion.astro';
-import { categories, productsIn } from '../../data/content';
+import { categories, products, productsIn } from '../../data/content';
+import { primary } from '../../lib/images';
 import * as schema from '../../lib/schema';
 import { SEO_OVERRIDES } from '../../data/seo-overrides';
 import { CATEGORY_CONTENT } from '../../data/category-content';
@@ -53,8 +54,16 @@ const description = seo?.description || category.metaDescription;
    seventeen read alike. */
 const content = CATEGORY_CONTENT[category.slug];
 
+/* Each listed product as a Product node with its rating, the way the
+   WordPress archive published this page. */
+const byUrl = new Map(products.map((p) => [p.url, p]));
+const productNodes = category.items.map((i) => {
+  const p = byUrl.get(i.url)!;
+  return schema.productSummary(p, primary(p.images)?.image.src);
+});
+
 const pageSchema = [
-  ...schema.categoryNode(category),
+  ...schema.categoryNode(category, productNodes),
   schema.breadcrumbs(category.url, crumbs),
   ...(content?.faqs?.length ? [schema.faqPage(category.url, content.faqs)] : []),
 ];

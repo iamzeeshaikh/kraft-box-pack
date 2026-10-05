@@ -42,8 +42,12 @@ const tabs = [
      all, which is how the four recreated products first built. */
   { id: 'description', label: 'Description', show: Boolean(written || product.description) },
   { id: 'specifications', label: 'Specifications', show: product.specs.rows.length > 0 },
-  { id: 'faqs', label: 'FAQs', show: faqs.length > 0 },
 ].filter((t) => t.show);
+
+/* The FAQs used to be a third tab, which shipped them in a `hidden` panel:
+   ten answers per product that a visitor only saw after clicking, and that
+   search engines weigh as secondary content. They now render as their own
+   section below the tabs, always on the page. */
 ---
 
 <div class="tabs" data-tabs>
@@ -89,11 +93,19 @@ const tabs = [
           </>
         )}
         {tab.id === 'specifications' && <SpecTable specs={product.specs} name={product.name} />}
-        {tab.id === 'faqs' && <FaqAccordion faqs={faqs} />}
       </section>
     ))
   }
 </div>
+
+{
+  faqs.length > 0 && (
+    <section class="product-faqs" aria-labelledby="product-faqs-heading">
+      <h2 id="product-faqs-heading">{product.name} FAQs</h2>
+      <FaqAccordion faqs={faqs} />
+    </section>
+  )
+}
 
 <style>
   .tabs__list {
@@ -126,6 +138,15 @@ const tabs = [
   .tabs__tab[aria-selected='true'] {
     color: var(--kraft-dark);
     border-bottom-color: var(--kraft);
+  }
+
+  .product-faqs {
+    margin-top: clamp(2rem, 1.6rem + 1.8vw, 3rem);
+  }
+
+  .product-faqs h2 {
+    font-size: var(--step-2);
+    margin-bottom: 1rem;
   }
 
   .tabs__panel {

@@ -195,8 +195,7 @@ await page.goto(`${BASE}/product/kraft-round-boxes/`, { waitUntil: 'load' });
 await page.click('#tab-specifications');
 check(await page.isVisible('#panel-specifications'), 'product tabs: specifications panel opens');
 check(await page.isHidden('#panel-description'), 'product tabs: description panel closes');
-await page.click('#tab-faqs');
-check(await page.isVisible('#panel-faqs'), 'product tabs: FAQs panel opens');
+check(await page.isVisible('.product-faqs .faq__item'), 'product FAQs: visible without opening a tab');
 await page.click('#tab-description');
 
 // gallery
@@ -206,7 +205,6 @@ const after = await page.getAttribute('#gallery-main', 'src');
 check(before !== after, 'product gallery: thumbnail swaps the main image');
 
 // FAQ accordion
-await page.click('#tab-faqs');
 const faq = page.locator('.faq__item').nth(1);
 await faq.locator('summary').click();
 check(await faq.locator('.faq__a').isVisible(), 'FAQ accordion: item expands');

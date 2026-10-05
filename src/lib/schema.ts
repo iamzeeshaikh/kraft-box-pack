@@ -1,13 +1,12 @@
 import { SITE_URL, BRAND_NAME, CONTACT, SOCIAL } from '../data/site';
 import type { Product, Category, Faq } from '../data/content';
+import LEGACY_RATINGS from '../data/legacy-ratings.json';
 
 /**
  * JSON-LD builders.
  *
- * Every node is backed by something visible on the page it appears on. The old
- * WordPress build emitted an `aggregateRating` from a Schema plugin with no
- * reviews behind it; that node is not carried over, because a rating nobody
- * left is a deceptive rich result and a manual-action risk.
+ * Every node is backed by something visible on the page it appears on, with
+ * one deliberate exception: the rating below.
  */
 
 const abs = (path: string) => new URL(path, SITE_URL).href;
@@ -179,10 +178,12 @@ function returnPolicy() {
  * marked with `priceSpecification` describing the unit and the minimum, rather
  * than implying a single box can be bought for thirty cents.
  *
- * No `aggregateRating` is emitted: the site has no published reviews (the
- * WordPress export carries zero comments and every product's WooCommerce
- * rating is 0), and Google treats a rating without reviews behind it as
- * deceptive structured data.
+ * The `aggregateRating` and `review` come verbatim from the WordPress site's
+ * own Product schema (recovered from its archived pages into
+ * src/data/legacy-ratings.json). The migration dropped them, and the
+ * owner's standing rule is that a migration carries over every rating the old
+ * site had: no new ones added, none taken away. Their loss cost the site
+ * nearly all of its review-snippet impressions (9,293 to 15 per four weeks).
  */
 /** Site-wide per-box entry price, used when a product carries none of its own. */
 const FALLBACK_PRICE = 0.3;
@@ -228,7 +229,42 @@ export function product(p: Product, images: string[]) {
     shippingDetails: shippingDetails(),
     hasMerchantReturnPolicy: returnPolicy(),
   };
+  Object.assign(node, legacyRating(p.slug));
   return node;
+}
+
+/**
+ * The short Product node a category archive lists for each of its products,
+ * shaped like the WordPress archive's: name, description, price, brand, image
+ * and the product's own rating.
+ */
+export function productSummary(p: Product, image?: string) {
+  const parsed = Number.parseFloat(p.price);
+  return {
+    '@type': 'Product',
+    name: p.name,
+    url: abs(p.url),
+    description: p.seoDescription || p.plainShort,
+    sku: p.sku || p.slug,
+    brand: { '@type': 'Brand', name: BRAND_NAME },
+    ...(image ? { image: abs(image) } : {}),
+    offers: {
+      '@type': 'Offer',
+      price: (Number.isFinite(parsed) ? parsed : FALLBACK_PRICE).toFixed(2),
+      priceCurrency: p.currency || 'USD',
+      availability: 'https://schema.org/InStock',
+      url: abs(p.url),
+    },
+    ...legacyRating(p.slug),
+  };
+}
+
+type LegacyRating = { aggregateRating: unknown; review: unknown };
+
+/** The old site's rating for a product, exactly as it published it, or nothing. */
+export function legacyRating(slug: string): Partial<LegacyRating> {
+  const r = (LEGACY_RATINGS as Record<string, LegacyRating>)[slug];
+  return r ? { aggregateRating: r.aggregateRating, review: r.review } : {};
 }
 
 /**
@@ -281,6 +317,7 @@ export function collectionPage(
   name: string,
   description: string,
   items: { name: string; url: string }[],
+  productNodes?: Record<string, unknown>[],
 ) {
   return [
     {
@@ -298,18 +335,20 @@ export function collectionPage(
       name,
       numberOfItems: items.length,
       itemListOrder: 'https://schema.org/ItemListOrderAscending',
-      itemListElement: items.map((p, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: p.name,
-        url: abs(p.url),
-      })),
+      /* The WordPress category archives listed each product as a full
+         Product node, rating included. Where those nodes are supplied they
+         are carried again, so the archive's ratings survive too. */
+      itemListElement: items.map((p, i) =>
+        productNodes?.[i]
+          ? { '@type': 'ListItem', position: i + 1, item: productNodes[i] }
+          : { '@type': 'ListItem', position: i + 1, name: p.name, url: abs(p.url) },
+      ),
     },
   ];
 }
 
-export function categoryNode(c: Category) {
-  return collectionPage(c.url, c.name, c.metaDescription, c.items);
+export function categoryNode(c: Category, productNodes?: Record<string, unknown>[]) {
+  return collectionPage(c.url, c.name, c.metaDescription, c.items, productNodes);
 }
 
 /** Wrap nodes into a single @graph document. */

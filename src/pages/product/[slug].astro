@@ -13,6 +13,7 @@ import * as schema from '../../lib/schema';
 import { SEO_OVERRIDES } from '../../data/seo-overrides';
 import { contentFor } from '../../data/product-content';
 import { FEATURES } from '../../data/site';
+import { PRODUCT_INTROS } from '../../data/product-intros';
 
 export function getStaticPaths() {
   return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
@@ -50,6 +51,12 @@ const description =
 const written = contentFor(product.slug);
 const visibleFaqs = written?.faqs ?? product.faqs;
 
+/* The paragraph under the H1. The imported WordPress short descriptions were
+   sales filler ("Get in touch today…", "Quote Now!") or empty; each product
+   now has its own hand-written intro. The import stays the fallback and still
+   feeds the Merchant Center feed, which is unchanged. */
+const intro = PRODUCT_INTROS[product.slug] ?? product.shortDescription;
+
 const pageSchema = [
   schema.product(product, imageUrls),
   schema.breadcrumbs(product.url, crumbs),
@@ -73,9 +80,7 @@ const pageSchema = [
 
     <div class="product__intro">
       <h1>{product.name}</h1>
-      {product.shortDescription && (
-        <div class="product__short prose" set:html={product.shortDescription} />
-      )}
+      {intro && <div class="product__short prose" set:html={intro} />}
       {Number.isFinite(startPrice) && (
         <p class="product__price">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"

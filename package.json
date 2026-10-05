@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/postbuild-routes.mjs",
+    "build": "astro build && node scripts/postbuild-routes.mjs && node scripts/postbuild-legacy-images.mjs",
     "preview": "node scripts/preview-server.mjs",
     "astro": "astro",
     "extract": "python3 tools/extract.py",
