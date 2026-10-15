@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
+import products from '../../data/products.json';
 
 const LEAD_RECIPIENTS = ['shanimazhar82@gmail.com', 'dev@zeecustomboxes.com'] as const;
 
@@ -21,12 +22,15 @@ const MAX_BYTES = 8 * 1024 * 1024;
 const MAX_FIELD = 4000;
 
 /**
- * Rate limit per instance. Not a substitute for a WAF, but it blunts floods.
+ * Flood detector per instance. Not a substitute for a WAF, and it never turns
+ * an enquiry away: crossing it marks the subject "[Possible spam]" and skips
+ * the acknowledgement to the sender, nothing more. The business reads every
+ * enquiry; the mailbox cannot be made to relay anything.
  *
  * The threshold is read from the environment so it can be tuned per
  * deployment, and so the end-to-end tests can exercise the real code path
- * without a bypass: they raise it, run the functional cases, then deliberately
- * cross it. It defaults to five a minute, which no genuine visitor reaches.
+ * without a bypass. It defaults to five a minute, which no genuine visitor
+ * reaches.
  */
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = Number(import.meta.env.QUOTE_RATE_LIMIT ?? 5);
@@ -85,6 +89,24 @@ const clean = (value: FormDataEntryValue | null, limit = 200): string =>
 /** Header injection guard for anything echoed into an address or subject. */
 const singleLine = (value: string): string => value.replace(/[\r\n]+/g, ' ').trim();
 
+/** One plain address: no lists, no display names, nothing a header could split on. */
+const EMAIL_RE = /^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/;
+
+const SPAM_TAG = '[Possible spam] ';
+
+/**
+ * The acknowledgement to the sender repeats nothing the visitor typed: a
+ * first name reduced to letters, the product only when it is one the site
+ * sells, and the quantity only when it is a plain number. Anything more would
+ * let the form deliver arbitrary text to any inbox under the business's name.
+ */
+const KNOWN_PRODUCTS = new Set<string>([
+  ...(products as { name: string }[]).map((p) => p.name),
+  'Other / Custom requirement',
+]);
+const greetingName = (value: string): string =>
+  (value.replace(/[^\p{L}\p{M}\s'-]/gu, '').trim().split(/\s+/)[0] ?? '').slice(0, 40);
+
 const json = (body: unknown, status: number) =>
   new Response(JSON.stringify(body), {
     status,
@@ -98,9 +120,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       ? json({ ok: false, error }, status)
       : new Response(error, { status, headers: { 'content-type': 'text/plain' } });
 
-  if (rateLimited(clientAddress ?? 'unknown')) {
-    return fail('Too many requests. Please try again in a minute.', 429);
-  }
+  const flooded = rateLimited(clientAddress ?? 'unknown');
 
   let form: FormData;
   try {
@@ -109,9 +129,10 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     return fail('That submission could not be read.', 400);
   }
 
-  // Honeypot: a real visitor never sees this field, so anything in it is a bot.
-  // Answered with a success shape so the sender learns nothing from the reply.
-  if (clean(form.get('website'))) return wantsJson ? json({ ok: true }, 200) : new Response('OK');
+  // Honeypot: a real visitor never sees this field, so anything in it is
+  // probably a bot. The enquiry is still delivered, marked, with no
+  // acknowledgement to the sender — and the reply looks the same either way.
+  const trapped = Boolean(clean(form.get('website')));
 
   const name = singleLine(clean(form.get('name'), 120));
   const email = singleLine(clean(form.get('email'), 180));
@@ -164,7 +185,10 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   }
 
   if (!name || !email || !message) return fail('Name, email and message are required.', 400);
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return fail('Enter a valid email address.', 400);
+  // A malformed address never blocks the enquiry: it is delivered marked, with
+  // the address shown as typed, and only the acknowledgement is skipped.
+  const emailOk = email.length <= 254 && EMAIL_RE.test(email);
+  const suspect = flooded || trapped || !emailOk;
 
   // ------------------------------------------------------------- attachment
   const attachments: { filename: string; content: Buffer }[] = [];
@@ -251,8 +275,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         address: String(SMTP_FROM_EMAIL ?? SMTP_USER),
       },
       to: [...LEAD_RECIPIENTS],
-      replyTo: { name, address: email },
-      subject: `Quote request${product ? `: ${product}` : ''} — ${name}`,
+      replyTo: emailOk ? { name, address: email } : undefined,
+      subject: `${suspect ? SPAM_TAG : ''}Quote request${product ? `: ${product}` : ''} — ${name}`,
       text: lines.join('\n'),
       attachments,
     });
@@ -269,42 +293,47 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
    * bounced acknowledgement is a logging matter rather than something the
    * visitor should be shown an error for.
    *
-   * It restates what was sent so the sender has a record, and it sets
-   * expectations with the published turnaround rather than inventing one.
+   * It goes to one validated address and carries only what the site itself
+   * knows — the product chosen from its own list, a numeric quantity and the
+   * published turnaround — never the visitor's own words, so nobody can use
+   * the form to send text of their choosing to an inbox of their choosing.
+   * A marked submission gets no acknowledgement at all.
    */
-  try {
-    await transport.sendMail({
-      from: {
-        name: String(SMTP_FROM_NAME ?? 'Kraft Box Pack'),
-        address: String(SMTP_FROM_EMAIL ?? SMTP_USER),
-      },
-      to: { name, address: email },
-      subject: 'We have your quote request — Kraft Box Pack',
-      text: [
-        `Hi ${name.split(' ')[0] || name},`,
-        '',
-        'Thank you for your enquiry. We have it, and you can expect a written',
-        'reply with a specification and a price within one business day.',
-        '',
-        product ? `Product: ${product}` : null,
-        '',
-        'What you sent us:',
-        message,
-        ...(specLines.length ? ['', 'Specification:', ...specLines] : []),
-        attachments.length ? `\nAttachment: ${attachments[0].filename}` : null,
-        '',
-        'If anything above is wrong, just reply to this email and we will',
-        'correct it before quoting.',
-        '',
-        'Kraft Box Pack',
-        'info@kraftboxpack.com · (503) 461-4788',
-      ]
-        .filter((l) => l !== null)
-        .join('\n'),
-    });
-  } catch (error) {
-    // The enquiry is already delivered; the sender should not see an error.
-    console.error('quote: acknowledgement to sender failed', error);
+  if (!suspect) {
+    const knownProduct = KNOWN_PRODUCTS.has(product) ? product : '';
+    const quantity = /^\d{1,9}$/.test(spec.quantity) ? spec.quantity : '';
+    const first = greetingName(name);
+    try {
+      await transport.sendMail({
+        from: {
+          name: String(SMTP_FROM_NAME ?? 'Kraft Box Pack'),
+          address: String(SMTP_FROM_EMAIL ?? SMTP_USER),
+        },
+        to: email,
+        subject: 'We have your quote request — Kraft Box Pack',
+        text: [
+          `Hi${first ? ` ${first}` : ''},`,
+          '',
+          'Thank you for your enquiry. We have it, and you can expect a written',
+          'reply with a specification and a price within one business day.',
+          '',
+          knownProduct ? `Product: ${knownProduct}` : null,
+          quantity ? `Quantity: ${quantity}` : null,
+          attachments.length ? 'Attachment: received' : null,
+          '',
+          'If anything needs correcting, just reply to this email and we will',
+          'sort it out before quoting.',
+          '',
+          'Kraft Box Pack',
+          'info@kraftboxpack.com · (503) 461-4788',
+        ]
+          .filter((l) => l !== null)
+          .join('\n'),
+      });
+    } catch (error) {
+      // The enquiry is already delivered; the sender should not see an error.
+      console.error('quote: acknowledgement to sender failed', error);
+    }
   }
 
   if (wantsJson) return json({ ok: true }, 200);

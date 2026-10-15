@@ -109,16 +109,17 @@ check(huge.status === 413, 'an oversized upload is rejected', `got ${huge.status
 
 // -------------------------------------------------------------- rate limit
 // Checked in its own run against a server using the production threshold of
-// five a minute, because crossing it here would answer every later case 429
-// regardless of correctness. `npm run test:forms` performs both runs.
+// five a minute. Crossing it must never turn an enquiry away: every
+// submission past the threshold is still accepted (it is delivered marked
+// "[Possible spam]" instead). `npm run test:forms` performs both runs.
 if (process.env.RATE_LIMIT_ONLY === '1') {
-  let tripped = 0;
+  let refused = 0;
   for (let i = 1; i <= 9; i++) {
     const r = await post({ ...valid, message: `rate limit probe ${i}` });
-    if (r.status === 429 && tripped === 0) tripped = i;
+    if (r.status === 429 && refused === 0) refused = i;
   }
-  check(tripped === 6, 'rate limit engages on the sixth submission in a minute',
-    tripped === 0 ? 'never engaged' : `engaged at ${tripped}`);
+  check(refused === 0, 'a flood is accepted and marked, never answered 429',
+    refused === 0 ? 'none refused' : `refused at ${refused}`);
 }
 
 console.log(`${pass} passed, ${fail.length} failed`);
