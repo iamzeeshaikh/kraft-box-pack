@@ -184,6 +184,23 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     remember(token);
   }
 
+  /*
+   * Certain bots, refused quietly (owner, 2026-10-26: a flood of "$3,222
+   * payment available! Confirm your transaction" posts with an <a href> in the
+   * name). Only signatures no person types: HTML markup in a one-line field,
+   * or the money-bait phrase. Anything merely odd is still delivered, marked
+   * [Possible spam] — a real customer is never refused on a guess.
+   */
+  const oneLiners = [name, company, product, phone]
+  const markup = oneLiners.some((v) => /<\s*a\s+href|<\/?[a-z][^>]*>|\bhref\s*=/i.test(v))
+  const moneyBait = /\$\s?\d{1,3}(,\d{3})+(\.\d{2})?\s+(payment|credit|deposit|transfer|funds?|bonus)\s+(is\s+)?(available|pending|waiting)/i.test(`${name} ${product} ${message}`)
+  if (markup || moneyBait) {
+    console.warn('[quote] bot refused', { markup, moneyBait, ip: clientAddress, name: name.slice(0, 60) })
+    return wantsJson
+      ? json({ ok: true }, 200)
+      : new Response(null, { status: 303, headers: { location: '/thank-you/' } });
+  }
+
   if (!name || !email || !message) return fail('Name, email and message are required.', 400);
   // A malformed address never blocks the enquiry: it is delivered marked, with
   // the address shown as typed, and only the acknowledgement is skipped.
